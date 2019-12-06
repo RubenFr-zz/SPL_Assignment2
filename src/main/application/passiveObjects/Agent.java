@@ -1,4 +1,4 @@
-package bgu.spl.mics.application.passiveObjects;
+package main.application.passiveObjects;
 
 /**
  * Passive data-object representing a information about an agent in MI6.

@@ -1,6 +1,6 @@
-package bgu.spl.mics.application.subscribers;
+package main.application.subscribers;
 
-import bgu.spl.mics.Subscriber;
+import main.Subscriber;
 
 /**
  * Only this type of Subscriber can access the squad.

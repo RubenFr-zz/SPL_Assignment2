@@ -1,7 +1,6 @@
-package bgu.spl.mics.application.publishers;
+package main.application.publishers;
 
-import bgu.spl.mics.Publisher;
-import bgu.spl.mics.Subscriber;
+import main.Publisher;
 
 /**
  * A Publisher only.

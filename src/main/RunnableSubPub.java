@@ -1,4 +1,4 @@
-package bgu.spl.mics;
+package main;
 
 abstract class RunnableSubPub implements Runnable {
     private final String name;

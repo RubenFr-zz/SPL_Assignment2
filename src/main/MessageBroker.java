@@ -1,4 +1,4 @@
-package bgu.spl.mics;
+package main;
 
 /**
  * The MessageBroker is a shared object used for communication between
@@ -18,7 +18,7 @@ public interface MessageBroker {
      * @param type The type to subscribe to,
      * @param s    The subscribing Subscriber.
      */
-    <T> void subscribeEvent(Class<? extends bgu.spl.mics.Event<T>> type, Subscriber s);
+    <T> void subscribeEvent(Class<? extends main.Event<T>> type, Subscriber s);
 
     /**
      * Subscribes {@code m} to receive {@link Broadcast}s of type {@code type}.
@@ -26,7 +26,7 @@ public interface MessageBroker {
      * @param type 	The type to subscribe to.
      * @param s    	The Subscriber.
      */
-    void subscribeBroadcast(Class<? extends bgu.spl.mics.Broadcast> type, Subscriber s);
+    void subscribeBroadcast(Class<? extends main.Broadcast> type, Subscriber s);
 
     /**
      * Notifies the MessageBroker that the event {@code e} is completed and its
@@ -38,7 +38,7 @@ public interface MessageBroker {
      * @param e      The completed event.
      * @param result The resolved result of the completed event.
      */
-    <T> void complete(bgu.spl.mics.Event<T> e, T result);
+    <T> void complete(main.Event<T> e, T result);
 
     /**
      * Adds the {@link Broadcast} {@code b} to the message queues of all the
@@ -46,7 +46,7 @@ public interface MessageBroker {
      * <p>
      * @param b 	The message to added to the queues.
      */
-    void sendBroadcast(bgu.spl.mics.Broadcast b);
+    void sendBroadcast(main.Broadcast b);
 
     /**
      * Adds the {@link Event} {@code e} to the message queue of one of the
@@ -58,7 +58,7 @@ public interface MessageBroker {
      * @return {@link Future<T>} object to be resolved once the processing is complete,
      * 	       null in case no Subscriber has subscribed to {@code e.getClass()}.
      */
-    <T> Future<T> sendEvent(bgu.spl.mics.Event<T> e);
+    <T> Future<T> sendEvent(main.Event<T> e);
 
     /**
      * Allocates a message-queue for the {@link Subscriber} {@code m}.
@@ -92,6 +92,6 @@ public interface MessageBroker {
      * @throws InterruptedException if interrupted while waiting for a message
      *                              to became available.
      */
-    bgu.spl.mics.Message awaitMessage(Subscriber s) throws InterruptedException;
+    main.Message awaitMessage(Subscriber s) throws InterruptedException;
     
 }

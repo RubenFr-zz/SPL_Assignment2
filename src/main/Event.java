@@ -1,4 +1,4 @@
-package bgu.spl.mics;
+package main;
 
 /**
  * A "Marker" interface extending {@link Message}. A Publisher that sends an
@@ -7,6 +7,6 @@ package bgu.spl.mics;
  * When sending an event, it will be received only by a single subscriber in a
  * Round-Robin fashion.
  */
-public interface Event<T> extends bgu.spl.mics.Message {
+public interface Event<T> extends main.Message {
 
 }

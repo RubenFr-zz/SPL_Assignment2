@@ -1,6 +1,6 @@
-package bgu.spl.mics.application.publishers;
+package main.application.publishers;
 
-import bgu.spl.mics.Publisher;
+import main.Publisher;
 
 /**
  * TimeService is the global system timer There is only one instance of this Publisher.

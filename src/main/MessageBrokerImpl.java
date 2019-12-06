@@ -1,4 +1,4 @@
-package bgu.spl.mics;
+package main;
 
 /**
  * The {@link MessageBrokerImpl class is the implementation of the MessageBroker interface.
@@ -16,7 +16,7 @@ public class MessageBrokerImpl implements MessageBroker {
 	}
 
 	@Override
-	public <T> void subscribeEvent(Class<? extends Event<T>> type, Subscriber m) {
+	public <T> void subscribeEvent(Class<? extends main.Event<T>> type, Subscriber m) {
 		// TODO Auto-generated method stub
 
 	}
@@ -28,7 +28,7 @@ public class MessageBrokerImpl implements MessageBroker {
 	}
 
 	@Override
-	public <T> void complete(Event<T> e, T result) {
+	public <T> void complete(main.Event<T> e, T result) {
 		// TODO Auto-generated method stub
 
 	}
@@ -41,7 +41,7 @@ public class MessageBrokerImpl implements MessageBroker {
 
 	
 	@Override
-	public <T> Future<T> sendEvent(Event<T> e) {
+	public <T> Future<T> sendEvent(main.Event<T> e) {
 		// TODO Auto-generated method stub
 		return null;
 	}

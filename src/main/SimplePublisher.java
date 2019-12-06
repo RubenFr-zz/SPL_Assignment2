@@ -1,4 +1,4 @@
-package bgu.spl.mics;
+package main;
 
 /**
  * The SimplePublisher is a class that any publisher in the system
@@ -22,7 +22,7 @@ public final class SimplePublisher {
      *         			subscriber processing this event.
      * 	       			null in case no Subscriber has subscribed to {@code e.getClass()}.
      */
-    public final <T> Future<T> sendEvent(Event<T> e) {
+    public final <T> Future<T> sendEvent(main.Event<T> e) {
         //TODO: implement this.
         return null; //TODO: delete this line :)
     }
