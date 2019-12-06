@@ -13,7 +13,6 @@ public class M extends Subscriber {
 	public M() {
 		super("Change_This_Name");
 		// TODO Implement this
-		
 	}
 
 	@Override
