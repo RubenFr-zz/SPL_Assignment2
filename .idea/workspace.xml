@@ -3,29 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="56f2e87f-baab-46b1-9bf7-8153c38bde80" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Broadcast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Broadcast.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Callback.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Callback.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Event.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Future.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Future.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/MessageBroker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/MessageBroker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/MessageBrokerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/MessageBrokerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Publisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Publisher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/RunnableSubPub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/RunnableSubPub.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/SimplePublisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/SimplePublisher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Subscriber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Subscriber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/application/MI6Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/application/MI6Runner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/application/passiveObjects/Agent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/application/passiveObjects/Agent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/application/passiveObjects/Diary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/application/passiveObjects/Diary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/application/passiveObjects/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/application/passiveObjects/Inventory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/application/passiveObjects/MissionInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/application/passiveObjects/MissionInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/application/passiveObjects/Report.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/application/passiveObjects/Report.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/application/passiveObjects/Squad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/application/passiveObjects/Squad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/application/publishers/Intelligence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/application/publishers/Intelligence.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/application/publishers/TimeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/application/publishers/TimeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/application/subscribers/M.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/application/subscribers/M.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/application/subscribers/Moneypenny.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/application/subscribers/Moneypenny.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/application/subscribers/Q.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/application/subscribers/Q.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

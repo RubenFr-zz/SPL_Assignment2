@@ -1,4 +1,4 @@
-package test.java.bgu.mics;
+package test;
 
 public class InventoryTest {
 }
