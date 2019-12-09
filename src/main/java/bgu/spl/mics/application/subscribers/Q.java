@@ -1,7 +1,8 @@
-package main.java.bgu.spl.mics.application.subscribers;
+package bgu.spl.mics.application.subscribers;
 
-import main.java.bgu.spl.mics.Subscriber;
-import main.java.bgu.spl.mics.application.passiveObjects.Inventory;
+import bgu.spl.mics.Subscriber;
+import bgu.spl.mics.application.passiveObjects.Inventory;
+
 
 /**
  * Q is the only Subscriber\Publisher that has access to the {@link Inventory}.

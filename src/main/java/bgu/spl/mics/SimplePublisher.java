@@ -1,4 +1,6 @@
-package main.java.bgu.spl.mics;
+package bgu.spl.mics;
+
+import java.util.concurrent.Future;
 
 /**
  * The SimplePublisher is a class that any publisher in the system

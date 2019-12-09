@@ -1,4 +1,4 @@
-package main.java.bgu.spl.mics.application.passiveObjects;
+package bgu.spl.mics.application.passiveObjects;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.List;
  */
 public class Diary {
 
-	private List<Report> reports;
+	private List<bgu.spl.mics.application.passiveObjects.Report> reports;
 	private int total;
 
 	/**
@@ -39,7 +39,7 @@ public class Diary {
 		return DiaryHolder.instance;
 	}
 
-	public List<Report> getReports() {
+	public List<bgu.spl.mics.application.passiveObjects.Report> getReports() {
 		return null;
 	}
 
@@ -47,7 +47,7 @@ public class Diary {
 	 * adds a report to the diary
 	 * @param reportToAdd - the report to add
 	 */
-	public void addReport(Report reportToAdd){
+	public void addReport(bgu.spl.mics.application.passiveObjects.Report reportToAdd){
 		//TODO: Implement this
 	}
 

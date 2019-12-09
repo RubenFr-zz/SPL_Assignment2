@@ -1,4 +1,4 @@
-package main.java.bgu.spl.mics;
+package bgu.spl.mics;
 
 /**
  * A message is a data-object which is passed between Publishers\Subscribers as a means

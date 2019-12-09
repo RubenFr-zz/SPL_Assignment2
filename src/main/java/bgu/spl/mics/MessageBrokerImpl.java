@@ -1,4 +1,6 @@
-package main.java.bgu.spl.mics;
+package bgu.spl.mics;
+
+import java.util.concurrent.Future;
 
 /**
  * The {@link MessageBrokerImpl class is the implementation of the MessageBroker interface.

@@ -1,13 +1,15 @@
-package test.java.bgu.spl.mics;
+package bgu.spl.mics;
 
-import main.java.bgu.spl.mics.application.passiveObjects.Agent;
-import main.java.bgu.spl.mics.application.passiveObjects.Squad;
+import bgu.spl.mics.application.passiveObjects.Agent;
+import bgu.spl.mics.application.passiveObjects.Squad;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  * This is a Unit Test for the {@link Squad} class.
@@ -39,7 +41,7 @@ public class SquadTest {
      */
     @Test
     public void testGetAgents(){
-        
+        assertTrue(true);
     }
 }
 

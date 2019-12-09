@@ -1,4 +1,4 @@
-package test.java.bgu.spl.mics;
+package bgu.spl.mics;
 
 public class FutureTest {
 }

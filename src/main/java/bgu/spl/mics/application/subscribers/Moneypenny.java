@@ -1,6 +1,7 @@
-package main.java.bgu.spl.mics.application.subscribers;
+package bgu.spl.mics.application.subscribers;
 
-import main.java.bgu.spl.mics.Subscriber;
+import bgu.spl.mics.Subscriber;
+
 
 /**
  * Only this type of Subscriber can access the squad.

@@ -1,4 +1,6 @@
-package main.java.bgu.spl.mics.application.passiveObjects;
+package bgu.spl.mics.application.passiveObjects;
+
+
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -39,11 +41,13 @@ public class Squad {
 	/**
 	 * Initializes the squad. This method adds all the agents to the squad.
 	 * <p>
-	 * @param inventory 	Data structure containing all data necessary for initialization
+	 * @param agents 	Data structure containing all data necessary for initialization
 	 * 						of the squad.
 	 */
-	public void load (Agent[] inventory) {
-		// TODO Implement this
+	public void load (Agent[] agents) {
+		for (Agent agent : agents){
+			this.agents.put(agent.getSerialNumber(),agent);
+		}
 	}
 
 	/**
