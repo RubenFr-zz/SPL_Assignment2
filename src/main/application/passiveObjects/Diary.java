@@ -1,5 +1,6 @@
 package main.application.passiveObjects;
 
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -11,12 +12,31 @@ import java.util.List;
  * You can add ONLY private fields and methods to this class as you see fit.
  */
 public class Diary {
+
+	private List<Report> reports;
+	private int total;
+
+	/**
+	 * Initialize a Diary
+	 */
+	private Diary(){
+		this.reports = new LinkedList<>();
+		this.total = 0;
+	}
+
+	/**
+	 * Static inner class (Bill Push singleton method)
+	 * That way we are sure the class instance is only defined once !
+	 */
+	private static class DiaryHolder {
+		private static Diary instance = new Diary();
+	}
+
 	/**
 	 * Retrieves the single instance of this class.
 	 */
 	public static Diary getInstance() {
-		//TODO: Implement this
-		return null;
+		return DiaryHolder.instance;
 	}
 
 	public List<Report> getReports() {
@@ -47,7 +67,6 @@ public class Diary {
 	 * @return the total number of received missions (executed / aborted) be all the M-instances.
 	 */
 	public int getTotal(){
-		//TODO: Implement this
-		return 0;
+		return this.total;
 	}
 }
