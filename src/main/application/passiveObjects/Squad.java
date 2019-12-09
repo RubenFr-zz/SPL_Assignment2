@@ -11,13 +11,16 @@ import java.util.Map;
 public class Squad {
 
 	private Map<String, Agent> agents;
+	private static Squad instance = null;
 
 	/**
 	 * Retrieves the single instance of this class.
 	 */
 	public static Squad getInstance() {
-		//TODO: Implement this
-		return null;
+		if (instance == null){
+			instance = new Squad();
+		}
+		return instance;
 	}
 
 	/**
@@ -61,7 +64,7 @@ public class Squad {
      * @return a list of the names of the agents with the specified serials.
      */
     public List<String> getAgentsNames(List<String> serials){
-        // TODO Implement this
+
 	    return null;
     }
 
