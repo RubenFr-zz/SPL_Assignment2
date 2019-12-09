@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="56f2e87f-baab-46b1-9bf7-8153c38bde80" name="Default Changelist" comment="started agent and diary">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SPL_Assignment2/main/application/MI6Runner.class" beforeDir="false" />
@@ -46,6 +47,17 @@
       <change beforePath="$PROJECT_DIR$/src/test/InventoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/bgu/spl/mics/InventoryTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/MessageBrokerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/bgu/spl/mics/MessageBrokerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/SquadTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/bgu/spl/mics/SquadTest.java" afterDir="false" />
+=======
+    <list default="true" id="56f2e87f-baab-46b1-9bf7-8153c38bde80" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/rubenf.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SPL_Assignment2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SPL_Assignment2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/application/MI6Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/application/MI6Runner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/application/passiveObjects/Agent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/application/passiveObjects/Agent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/application/passiveObjects/Diary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/application/passiveObjects/Diary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/SquadTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/SquadTest.java" afterDir="false" />
+>>>>>>> aad4b39f722a27b090958bd6d096320d342f4814
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +107,11 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
+<<<<<<< HEAD
   <component name="RunManager" selected="JUnit.test.java.bgu.spl.mics in SPL_Assignment2">
+=======
+  <component name="RunManager" selected="Application.MI6Runner">
+>>>>>>> aad4b39f722a27b090958bd6d096320d342f4814
     <configuration name="MI6Runner" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="main.application.MI6Runner" />
       <module name="SPL_Assignment2" />
@@ -119,6 +135,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+<<<<<<< HEAD
     <configuration name="test.java.bgu.spl.mics in SPL_Assignment2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SPL_Assignment2" />
       <extension name="coverage">
@@ -141,6 +158,14 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.test.java.bgu.spl.mics in SPL_Assignment2" />
+=======
+    <list>
+      <item itemvalue="Application.MI6Runner" />
+      <item itemvalue="JUnit.MessageBrokerTest.test" />
+    </list>
+    <recent_temporary>
+      <list>
+>>>>>>> aad4b39f722a27b090958bd6d096320d342f4814
         <item itemvalue="JUnit.MessageBrokerTest.test" />
       </list>
     </recent_temporary>
@@ -193,6 +218,7 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="1110" y="339" width="525" height="428" key="#com.intellij.ide.util.TreeClassChooserDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1575719813223" />
+<<<<<<< HEAD
     <state x="600" y="149" width="777" height="807" key="CommitChangelistDialog2" timestamp="1575910525122">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -232,6 +258,47 @@
     <state x="242" y="116" width="1482" height="872" key="MergeDialog" timestamp="1575905729273">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
+=======
+    <state x="600" y="149" width="777" height="807" key="CommitChangelistDialog2" timestamp="1575905816221">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="600" y="149" width="777" height="807" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1575905816221" />
+    <state width="941" height="278" key="GridCell.Tab.0.bottom" timestamp="1575725034123">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="941" height="278" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1575725034123" />
+    <state width="941" height="278" key="GridCell.Tab.0.center" timestamp="1575725034121">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="941" height="278" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1575725034121" />
+    <state width="941" height="278" key="GridCell.Tab.0.left" timestamp="1575725034120">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="941" height="278" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1575725034120" />
+    <state width="941" height="278" key="GridCell.Tab.0.right" timestamp="1575725034122">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="941" height="278" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1575725034122" />
+    <state width="1807" height="344" key="GridCell.Tab.1.bottom" timestamp="1575721834138">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="344" key="GridCell.Tab.1.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1575721834138" />
+    <state width="1807" height="344" key="GridCell.Tab.1.center" timestamp="1575721834138">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="344" key="GridCell.Tab.1.center/67.27.1853.1053@67.27.1853.1053" timestamp="1575721834138" />
+    <state width="1807" height="344" key="GridCell.Tab.1.left" timestamp="1575721834138">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="344" key="GridCell.Tab.1.left/67.27.1853.1053@67.27.1853.1053" timestamp="1575721834138" />
+    <state width="1807" height="344" key="GridCell.Tab.1.right" timestamp="1575721834138">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="344" key="GridCell.Tab.1.right/67.27.1853.1053@67.27.1853.1053" timestamp="1575721834138" />
+    <state x="242" y="116" width="1482" height="872" key="MergeDialog" timestamp="1575905729273">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+>>>>>>> aad4b39f722a27b090958bd6d096320d342f4814
     <state x="242" y="116" width="1482" height="872" key="MergeDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1575905729273" />
     <state x="698" y="270" width="580" height="564" key="MultipleFileMergeDialog" timestamp="1575905729276">
       <screen x="67" y="27" width="1853" height="1053" />
@@ -241,15 +308,19 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="482" y="187" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1575720952714" />
+<<<<<<< HEAD
     <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1575910499213">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1575910499213" />
+=======
+>>>>>>> aad4b39f722a27b090958bd6d096320d342f4814
     <state x="649" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1575652098331">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="649" y="380" key="com.intellij.ide.util.TipDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1575652098331" />
     <state x="665" y="448" width="646" height="224" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1575714926381">
+<<<<<<< HEAD
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="665" y="448" width="646" height="224" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/67.27.1853.1053@67.27.1853.1053" timestamp="1575714926381" />
@@ -266,5 +337,18 @@
     <SUITE FILE_PATH="coverage/SPL_Assignment2$test_java_bgu_spl_mics_in_SPL_Assignment2.ic" NAME="test.java.bgu.spl.mics in SPL_Assignment2 Coverage Results" MODIFIED="1575910045481" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>test.java.bgu.spl.mics.*</FILTER>
     </SUITE>
+=======
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="665" y="448" width="646" height="224" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/67.27.1853.1053@67.27.1853.1053" timestamp="1575714926381" />
+    <state x="761" y="472" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1575905629331">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="761" y="472" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/67.27.1853.1053@67.27.1853.1053" timestamp="1575905629331" />
+    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1575720946488">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1575720946488" />
+>>>>>>> aad4b39f722a27b090958bd6d096320d342f4814
   </component>
 </project>
