@@ -1,9 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="56f2e87f-baab-46b1-9bf7-8153c38bde80" name="Default Changelist" comment="started agent and diary">
+    <list default="true" id="19a61722-e5de-463b-ba63-2632f7fa0e3e" name="Default Changelist" comment="fixed directory to match requests">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_6_0_M1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_6_0_M1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_6_0_M1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_6_0_M1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/java/bgu/spl/mics/Broadcast.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/java/bgu/spl/mics/Callback.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/java/bgu/spl/mics/Event.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/java/bgu/spl/mics/Future.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/java/bgu/spl/mics/Message.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/java/bgu/spl/mics/MessageBroker.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/java/bgu/spl/mics/MessageBrokerImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/java/bgu/spl/mics/Publisher.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/java/bgu/spl/mics/RunnableSubPub.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/java/bgu/spl/mics/SimplePublisher.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/java/bgu/spl/mics/Subscriber.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/java/bgu/spl/mics/application/MI6Runner.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/java/bgu/spl/mics/application/passiveObjects/Agent$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/java/bgu/spl/mics/application/passiveObjects/Agent$AgentHolder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/java/bgu/spl/mics/application/passiveObjects/Agent.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/java/bgu/spl/mics/application/passiveObjects/Diary$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/java/bgu/spl/mics/application/passiveObjects/Diary$DiaryHolder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/java/bgu/spl/mics/application/passiveObjects/Diary.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/java/bgu/spl/mics/application/passiveObjects/Inventory$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/java/bgu/spl/mics/application/passiveObjects/Inventory$InventoryHolder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/java/bgu/spl/mics/application/passiveObjects/Inventory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/java/bgu/spl/mics/application/passiveObjects/MissionInfo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/java/bgu/spl/mics/application/passiveObjects/Report.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/java/bgu/spl/mics/application/passiveObjects/Squad$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/java/bgu/spl/mics/application/passiveObjects/Squad$SquadHolder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/java/bgu/spl/mics/application/passiveObjects/Squad.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/java/bgu/spl/mics/application/publishers/Intelligence.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/java/bgu/spl/mics/application/publishers/TimeService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/java/bgu/spl/mics/application/subscribers/M.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/java/bgu/spl/mics/application/subscribers/Moneypenny.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/java/bgu/spl/mics/application/subscribers/Q.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-test.java.bgu.spl.mics.InventoryTest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-test.java.bgu.spl.mics.MessageBrokerTest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-test.java.bgu.spl.mics.SquadTest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/surefire-reports/test.java.bgu.spl.mics.InventoryTest.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/surefire-reports/test.java.bgu.spl.mics.MessageBrokerTest.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/surefire-reports/test.java.bgu.spl.mics.SquadTest.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/test/java/bgu/spl/mics/FutureTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/test/java/bgu/spl/mics/InventoryTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/test/java/bgu/spl/mics/MessageBrokerTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/test/java/bgu/spl/mics/SquadTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/rubenf.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/rubenf.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SPL_Assignment2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SPL_Assignment2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/apiguardian-api-1.0.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/junit-jupiter-5.4.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/junit-jupiter-api-5.4.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/junit-jupiter-engine-5.4.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/junit-jupiter-params-5.4.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/junit-platform-commons-1.4.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/junit-platform-engine-1.4.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/opentest4j-1.1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPL_Assignment2/META-INF/SPL_Assignment2.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPL_Assignment2/main/Broadcast.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPL_Assignment2/main/Callback.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPL_Assignment2/main/Event.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPL_Assignment2/main/Future.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPL_Assignment2/main/Message.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPL_Assignment2/main/MessageBroker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPL_Assignment2/main/MessageBrokerImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPL_Assignment2/main/Publisher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPL_Assignment2/main/RunnableSubPub.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPL_Assignment2/main/SimplePublisher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPL_Assignment2/main/Subscriber.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SPL_Assignment2/main/application/MI6Runner.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SPL_Assignment2/main/application/passiveObjects/Agent.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SPL_Assignment2/main/application/passiveObjects/Diary.class" beforeDir="false" />
@@ -16,70 +90,58 @@
       <change beforePath="$PROJECT_DIR$/out/production/SPL_Assignment2/main/application/subscribers/M.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SPL_Assignment2/main/application/subscribers/Moneypenny.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SPL_Assignment2/main/application/subscribers/Q.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPL_Assignment2/main/java/bgu/spl/mics/Broadcast.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPL_Assignment2/main/java/bgu/spl/mics/Callback.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPL_Assignment2/main/java/bgu/spl/mics/Event.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPL_Assignment2/main/java/bgu/spl/mics/Future.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPL_Assignment2/main/java/bgu/spl/mics/Message.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPL_Assignment2/main/java/bgu/spl/mics/MessageBroker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPL_Assignment2/main/java/bgu/spl/mics/MessageBrokerImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPL_Assignment2/main/java/bgu/spl/mics/Publisher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPL_Assignment2/main/java/bgu/spl/mics/RunnableSubPub.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPL_Assignment2/main/java/bgu/spl/mics/SimplePublisher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPL_Assignment2/main/java/bgu/spl/mics/Subscriber.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPL_Assignment2/main/java/bgu/spl/mics/application/MI6Runner.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPL_Assignment2/main/java/bgu/spl/mics/application/passiveObjects/Agent$AgentHolder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPL_Assignment2/main/java/bgu/spl/mics/application/passiveObjects/Agent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPL_Assignment2/main/java/bgu/spl/mics/application/passiveObjects/Diary$DiaryHolder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPL_Assignment2/main/java/bgu/spl/mics/application/passiveObjects/Diary.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPL_Assignment2/main/java/bgu/spl/mics/application/passiveObjects/Inventory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPL_Assignment2/main/java/bgu/spl/mics/application/passiveObjects/MissionInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPL_Assignment2/main/java/bgu/spl/mics/application/passiveObjects/Report.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPL_Assignment2/main/java/bgu/spl/mics/application/passiveObjects/Squad$SquadHolder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPL_Assignment2/main/java/bgu/spl/mics/application/passiveObjects/Squad.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPL_Assignment2/main/java/bgu/spl/mics/application/publishers/Intelligence.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPL_Assignment2/main/java/bgu/spl/mics/application/publishers/TimeService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPL_Assignment2/main/java/bgu/spl/mics/application/subscribers/M.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPL_Assignment2/main/java/bgu/spl/mics/application/subscribers/Moneypenny.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPL_Assignment2/main/java/bgu/spl/mics/application/subscribers/Q.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SPL_Assignment2/test/FutureTest.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SPL_Assignment2/test/InventoryTest.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SPL_Assignment2/test/MessageBrokerTest.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SPL_Assignment2/test/SquadTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Broadcast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/Broadcast.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Callback.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/Callback.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/Event.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Future.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/Future.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/MessageBroker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/MessageBroker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/MessageBrokerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/MessageBrokerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Publisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/Publisher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/RunnableSubPub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/RunnableSubPub.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/SimplePublisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/SimplePublisher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Subscriber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/Subscriber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/application/MI6Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/application/MI6Runner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/application/passiveObjects/Agent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/application/passiveObjects/Agent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/application/passiveObjects/Diary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/application/passiveObjects/Diary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/application/passiveObjects/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/application/passiveObjects/Inventory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/application/passiveObjects/MissionInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/application/passiveObjects/MissionInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/application/passiveObjects/Report.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/application/passiveObjects/Report.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/application/passiveObjects/Squad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/application/passiveObjects/Squad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/application/publishers/Intelligence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/application/publishers/Intelligence.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/application/publishers/TimeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/application/publishers/TimeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/application/subscribers/M.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/application/subscribers/M.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/application/subscribers/Moneypenny.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/application/subscribers/Moneypenny.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/application/subscribers/Q.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/application/subscribers/Q.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/FutureTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/bgu/spl/mics/FutureTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/InventoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/bgu/spl/mics/InventoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/MessageBrokerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/bgu/spl/mics/MessageBrokerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/SquadTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/bgu/spl/mics/SquadTest.java" afterDir="false" />
-=======
-    <list default="true" id="56f2e87f-baab-46b1-9bf7-8153c38bde80" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/rubenf.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SPL_Assignment2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SPL_Assignment2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/application/MI6Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/application/MI6Runner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/application/passiveObjects/Agent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/application/passiveObjects/Agent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/application/passiveObjects/Diary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/application/passiveObjects/Diary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/SquadTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/SquadTest.java" afterDir="false" />
->>>>>>> aad4b39f722a27b090958bd6d096320d342f4814
+      <change beforePath="$PROJECT_DIR$/out/production/SPL_Assignment2/test/java/bgu/spl/mics/FutureTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPL_Assignment2/test/java/bgu/spl/mics/InventoryTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPL_Assignment2/test/java/bgu/spl/mics/MessageBrokerTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SPL_Assignment2/test/java/bgu/spl/mics/SquadTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/application/publishers/TimeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/application/publishers/TimeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/bgu/spl/mics/InventoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/bgu/spl/mics/InventoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CodeInsightWorkspaceSettings">
-    <option name="optimizeImportsOnTheFly" value="true" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
-  <component name="ProjectId" id="1UcKbUTvBYb6LSylPvkfUe5w7Gf" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+  <component name="ProjectId" id="1UlRybbFujhNkfr1z5Nqm0FnDtL" />
+  <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -89,54 +151,52 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="Downloaded.Files.Path.Enabled" value="true" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="reference.idesettings.debugger.capture" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main.java" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main.java/bgu.spl.mics/application/subscribers" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/main.java/bgu.spl.mics/application/subscribers" />
     </key>
   </component>
-<<<<<<< HEAD
-  <component name="RunManager" selected="JUnit.test.java.bgu.spl.mics in SPL_Assignment2">
-=======
-  <component name="RunManager" selected="Application.MI6Runner">
->>>>>>> aad4b39f722a27b090958bd6d096320d342f4814
-    <configuration name="MI6Runner" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="main.application.MI6Runner" />
+  <component name="RunManager" selected="JUnit.bgu.spl.mics in SPL_Assignment2">
+    <configuration name="All in SPL_Assignment2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SPL_Assignment2" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MessageBrokerTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="InventoryTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SPL_Assignment2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.*" />
+          <option name="PATTERN" value="bgu.spl.mics.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.MessageBrokerTest" />
-      <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="bgu.spl.mics" />
+      <option name="MAIN_CLASS_NAME" value="bgu.spl.mics.InventoryTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-<<<<<<< HEAD
-    <configuration name="test.java.bgu.spl.mics in SPL_Assignment2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="InventoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SPL_Assignment2" />
       <extension name="coverage">
         <pattern>
@@ -145,28 +205,49 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="test.java.bgu.spl.mics" />
+      <option name="MAIN_CLASS_NAME" value="test.java.bgu.spl.mics.InventoryTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InventoryTest.Load" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SPL_Assignment2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="bgu.spl.mics.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="bgu.spl.mics" />
+      <option name="MAIN_CLASS_NAME" value="bgu.spl.mics.InventoryTest" />
+      <option name="METHOD_NAME" value="Load" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="bgu.spl.mics in SPL_Assignment2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SPL_Assignment2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="bgu.spl.mics.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="bgu.spl.mics" />
       <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <list>
-      <item itemvalue="Application.MI6Runner" />
-      <item itemvalue="JUnit.MessageBrokerTest.test" />
-      <item itemvalue="JUnit.test.java.bgu.spl.mics in SPL_Assignment2" />
-    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.test.java.bgu.spl.mics in SPL_Assignment2" />
-=======
-    <list>
-      <item itemvalue="Application.MI6Runner" />
-      <item itemvalue="JUnit.MessageBrokerTest.test" />
-    </list>
-    <recent_temporary>
-      <list>
->>>>>>> aad4b39f722a27b090958bd6d096320d342f4814
-        <item itemvalue="JUnit.MessageBrokerTest.test" />
+        <item itemvalue="JUnit.bgu.spl.mics in SPL_Assignment2" />
+        <item itemvalue="JUnit.InventoryTest.Load" />
+        <item itemvalue="JUnit.InventoryTest (1)" />
+        <item itemvalue="JUnit.All in SPL_Assignment2" />
+        <item itemvalue="JUnit.InventoryTest" />
       </list>
     </recent_temporary>
   </component>
@@ -187,168 +268,112 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="56f2e87f-baab-46b1-9bf7-8153c38bde80" name="Default Changelist" comment="" />
-      <created>1575650514943</created>
+      <changelist id="19a61722-e5de-463b-ba63-2632f7fa0e3e" name="Default Changelist" comment="" />
+      <created>1575917484886</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1575650514943</updated>
+      <updated>1575917484886</updated>
     </task>
+    <task id="LOCAL-00001" summary="did invetory class and tester">
+      <created>1575921774828</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1575921774828</updated>
+    </task>
+    <task id="LOCAL-00002" summary="fixed directory to match requests">
+      <created>1575928377492</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1575928377492</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="started agent and diary object" />
-    <MESSAGE value="started agent and diary" />
-    <option name="LAST_COMMIT_MESSAGE" value="started agent and diary" />
+    <MESSAGE value="did invetory class and tester" />
+    <MESSAGE value="fixed directory to match requests" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed directory to match requests" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="836" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1575719845369">
+    <state x="588" y="214" width="800" height="677" key="#Project_Structure" timestamp="1575925504599">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="836" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1575719845369" />
-    <state x="684" y="357" width="608" height="390" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1575651865980">
+    <state x="588" y="214" width="800" height="677" key="#Project_Structure/67.27.1853.1053@67.27.1853.1053" timestamp="1575925504599" />
+    <state x="602" y="242" width="772" height="621" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog" timestamp="1575928784450">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="684" y="357" width="608" height="390" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1575651865980" />
-    <state x="1264" y="265" width="374" height="575" key="#com.intellij.ide.util.MemberChooser" timestamp="1575715868708">
+    <state x="602" y="242" width="772" height="621" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1575928784450" />
+    <state x="726" y="331" width="524" height="444" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1575926690974">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="1264" y="265" width="374" height="575" key="#com.intellij.ide.util.MemberChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1575715868708" />
-    <state x="1110" y="339" width="525" height="428" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1575719813223">
+    <state x="726" y="331" width="524" height="444" key="#com.intellij.ide.util.PackageChooserDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1575926690974" />
+    <state x="746" y="413" width="494" height="290" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1575926742166">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="1110" y="339" width="525" height="428" key="#com.intellij.ide.util.TreeClassChooserDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1575719813223" />
-<<<<<<< HEAD
-    <state x="600" y="149" width="777" height="807" key="CommitChangelistDialog2" timestamp="1575910525122">
+    <state x="746" y="413" width="494" height="290" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/67.27.1853.1053@67.27.1853.1053" timestamp="1575926742166" />
+    <state x="746" y="425" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1575926707638">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="600" y="149" width="777" height="807" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1575910525122" />
-    <state width="1807" height="278" key="GridCell.Tab.0.bottom" timestamp="1575910141381">
+    <state x="746" y="425" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/67.27.1853.1053@67.27.1853.1053" timestamp="1575926707638" />
+    <state x="580" y="149" width="817" height="807" key="CommitChangelistDialog2" timestamp="1575992903270">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="278" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1575910141381" />
-    <state width="1807" height="278" key="GridCell.Tab.0.center" timestamp="1575910141380">
+    <state x="580" y="149" width="817" height="807" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1575992903270" />
+    <state width="1807" height="278" key="GridCell.Tab.0.bottom" timestamp="1575992298016">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="278" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1575910141380" />
-    <state width="1807" height="278" key="GridCell.Tab.0.left" timestamp="1575910141380">
+    <state width="1807" height="278" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1575992298016" />
+    <state width="1807" height="278" key="GridCell.Tab.0.center" timestamp="1575992298014">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="278" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1575910141380" />
-    <state width="1807" height="278" key="GridCell.Tab.0.right" timestamp="1575910141381">
+    <state width="1807" height="278" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1575992298014" />
+    <state width="1807" height="278" key="GridCell.Tab.0.left" timestamp="1575992298012">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="278" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1575910141381" />
-    <state width="1807" height="344" key="GridCell.Tab.1.bottom" timestamp="1575721834138">
+    <state width="1807" height="278" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1575992298012" />
+    <state width="1807" height="278" key="GridCell.Tab.0.right" timestamp="1575992298015">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="344" key="GridCell.Tab.1.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1575721834138" />
-    <state width="1807" height="344" key="GridCell.Tab.1.center" timestamp="1575721834138">
+    <state width="1807" height="278" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1575992298015" />
+    <state x="482" y="187" width="1024" height="845" key="SettingsEditor" timestamp="1575992210987">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="344" key="GridCell.Tab.1.center/67.27.1853.1053@67.27.1853.1053" timestamp="1575721834138" />
-    <state width="1807" height="344" key="GridCell.Tab.1.left" timestamp="1575721834138">
+    <state x="482" y="187" width="1024" height="845" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1575992210987" />
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1575928379514">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="344" key="GridCell.Tab.1.left/67.27.1853.1053@67.27.1853.1053" timestamp="1575721834138" />
-    <state width="1807" height="344" key="GridCell.Tab.1.right" timestamp="1575721834138">
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1575928379514" />
+    <state x="765" y="332" width="446" height="440" key="chooseDestDirectoryDialog" timestamp="1575926904456">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="344" key="GridCell.Tab.1.right/67.27.1853.1053@67.27.1853.1053" timestamp="1575721834138" />
-    <state x="242" y="116" width="1482" height="872" key="MergeDialog" timestamp="1575905729273">
+    <state x="765" y="332" width="446" height="440" key="chooseDestDirectoryDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1575926904456" />
+    <state x="665" y="448" width="646" height="224" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1575928620582">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-=======
-    <state x="600" y="149" width="777" height="807" key="CommitChangelistDialog2" timestamp="1575905816221">
+    <state x="665" y="448" width="646" height="224" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/67.27.1853.1053@67.27.1853.1053" timestamp="1575928620582" />
+    <state x="638" y="156" width="869" height="792" key="find.popup" timestamp="1575929331923">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="600" y="149" width="777" height="807" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1575905816221" />
-    <state width="941" height="278" key="GridCell.Tab.0.bottom" timestamp="1575725034123">
+    <state x="638" y="156" width="869" height="792" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1575929331923" />
+    <state x="647" y="346" width="682" height="413" key="git4idea.merge.GitPullDialog" timestamp="1575930351592">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="941" height="278" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1575725034123" />
-    <state width="941" height="278" key="GridCell.Tab.0.center" timestamp="1575725034121">
+    <state x="647" y="346" width="682" height="413" key="git4idea.merge.GitPullDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1575930351592" />
+    <state x="583" y="214" width="800" height="677" key="scopes" timestamp="1575927373533">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="941" height="278" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1575725034121" />
-    <state width="941" height="278" key="GridCell.Tab.0.left" timestamp="1575725034120">
+    <state x="583" y="214" width="800" height="677" key="scopes/67.27.1853.1053@67.27.1853.1053" timestamp="1575927373533" />
+    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1575929125408">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="941" height="278" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1575725034120" />
-    <state width="941" height="278" key="GridCell.Tab.0.right" timestamp="1575725034122">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state width="941" height="278" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1575725034122" />
-    <state width="1807" height="344" key="GridCell.Tab.1.bottom" timestamp="1575721834138">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state width="1807" height="344" key="GridCell.Tab.1.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1575721834138" />
-    <state width="1807" height="344" key="GridCell.Tab.1.center" timestamp="1575721834138">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state width="1807" height="344" key="GridCell.Tab.1.center/67.27.1853.1053@67.27.1853.1053" timestamp="1575721834138" />
-    <state width="1807" height="344" key="GridCell.Tab.1.left" timestamp="1575721834138">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state width="1807" height="344" key="GridCell.Tab.1.left/67.27.1853.1053@67.27.1853.1053" timestamp="1575721834138" />
-    <state width="1807" height="344" key="GridCell.Tab.1.right" timestamp="1575721834138">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state width="1807" height="344" key="GridCell.Tab.1.right/67.27.1853.1053@67.27.1853.1053" timestamp="1575721834138" />
-    <state x="242" y="116" width="1482" height="872" key="MergeDialog" timestamp="1575905729273">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
->>>>>>> aad4b39f722a27b090958bd6d096320d342f4814
-    <state x="242" y="116" width="1482" height="872" key="MergeDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1575905729273" />
-    <state x="698" y="270" width="580" height="564" key="MultipleFileMergeDialog" timestamp="1575905729276">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="698" y="270" width="580" height="564" key="MultipleFileMergeDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1575905729276" />
-    <state x="482" y="187" key="SettingsEditor" timestamp="1575720952714">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="482" y="187" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1575720952714" />
-<<<<<<< HEAD
-    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1575910499213">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1575910499213" />
-=======
->>>>>>> aad4b39f722a27b090958bd6d096320d342f4814
-    <state x="649" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1575652098331">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="649" y="380" key="com.intellij.ide.util.TipDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1575652098331" />
-    <state x="665" y="448" width="646" height="224" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1575714926381">
-<<<<<<< HEAD
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="665" y="448" width="646" height="224" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/67.27.1853.1053@67.27.1853.1053" timestamp="1575714926381" />
-    <state x="761" y="472" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1575905629331">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="761" y="472" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/67.27.1853.1053@67.27.1853.1053" timestamp="1575905629331" />
-    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1575910492955">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1575910492955" />
+    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1575929125408" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/SPL_Assignment2$test_java_bgu_spl_mics_in_SPL_Assignment2.ic" NAME="test.java.bgu.spl.mics in SPL_Assignment2 Coverage Results" MODIFIED="1575910045481" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/SPL_Assignment2$InventoryTest.ic" NAME="InventoryTest Coverage Results" MODIFIED="1575921504017" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>test.java.bgu.spl.mics.*</FILTER>
     </SUITE>
-=======
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="665" y="448" width="646" height="224" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/67.27.1853.1053@67.27.1853.1053" timestamp="1575714926381" />
-    <state x="761" y="472" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1575905629331">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="761" y="472" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/67.27.1853.1053@67.27.1853.1053" timestamp="1575905629331" />
-    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1575720946488">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1575720946488" />
->>>>>>> aad4b39f722a27b090958bd6d096320d342f4814
   </component>
 </project>
