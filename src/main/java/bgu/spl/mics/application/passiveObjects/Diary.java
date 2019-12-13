@@ -3,6 +3,10 @@ package bgu.spl.mics.application.passiveObjects;
 import java.util.LinkedList;
 import java.util.List;
 
+import java.io.FileWriter;
+import java.io.PrintWriter;
+import java.io.IOException;
+
 /**
  * Passive object representing the diary where all reports are stored.
  * <p>
@@ -13,7 +17,7 @@ import java.util.List;
  */
 public class Diary {
 
-	private List<bgu.spl.mics.application.passiveObjects.Report> reports;
+	private List<Report> reports;
 	private int total;
 
 	/**
@@ -39,16 +43,17 @@ public class Diary {
 		return DiaryHolder.instance;
 	}
 
-	public List<bgu.spl.mics.application.passiveObjects.Report> getReports() {
-		return null;
+	public List<Report> getReports() {
+		return reports;
 	}
 
 	/**
 	 * adds a report to the diary
 	 * @param reportToAdd - the report to add
 	 */
-	public void addReport(bgu.spl.mics.application.passiveObjects.Report reportToAdd){
-		//TODO: Implement this
+	public void addReport(Report reportToAdd){
+		reports.add(reportToAdd);
+		this.total++;
 	}
 
 	/**
@@ -58,8 +63,13 @@ public class Diary {
 	 * List of all the reports in the diary.
 	 * This method is called by the main method in order to generate the output.
 	 */
-	public void printToFile(String filename){
-		//TODO: Implement this
+	public void printToFile(String filename) throws IOException {
+		FileWriter write = new FileWriter(filename, false);
+		PrintWriter print_line = new PrintWriter(write);
+		for (Report report : reports) {
+			print_line.printf(report.toString());
+		}
+		print_line.close();
 	}
 
 	/**

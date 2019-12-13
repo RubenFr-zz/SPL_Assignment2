@@ -1,5 +1,6 @@
 package bgu.spl.mics.application.passiveObjects;
 
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -10,49 +11,53 @@ import java.util.List;
  */
 public class MissionInfo {
 
+	private String missionName;
+	private List<String> serialAgentsNumbers;
+	private String gadget;
+	private int timeIssued;
+	private int timeExpired;
+	private int duration;
+
     /**
      * Sets the name of the mission.
      */
     public void setMissionName(String missionName) {
-        // TODO Implement this
+        this.missionName = missionName;
     }
 
 	/**
      * Retrieves the name of the mission.
      */
 	public String getMissionName() {
-		// TODO Implement this
-		return null;
+		return this.missionName;
 	}
 
     /**
      * Sets the serial agent number.
      */
     public void setSerialAgentsNumbers(List<String> serialAgentsNumbers) {
-        // TODO Implement this
+        this.serialAgentsNumbers.addAll(serialAgentsNumbers);
     }
 
 	/**
      * Retrieves the serial agent number.
      */
 	public List<String> getSerialAgentsNumbers() {
-		// TODO Implement this
-		return null;
+		return this.serialAgentsNumbers;
 	}
 
     /**
      * Sets the gadget name.
      */
     public void setGadget(String gadget) {
-        // TODO Implement this
+        this.gadget = gadget;
     }
 
 	/**
      * Retrieves the gadget name.
      */
 	public String getGadget() {
-		// TODO Implement this
-		return null;
+		return this.gadget;
 	}
 
     /**

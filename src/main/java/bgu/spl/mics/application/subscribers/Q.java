@@ -12,9 +12,11 @@ import bgu.spl.mics.application.passiveObjects.Inventory;
  */
 public class Q extends Subscriber {
 
+	private Inventory inventory;
+
 	public Q() {
 		super("Change_This_Name");
-		// TODO Implement this
+		this.inventory = Inventory.getInstance();
 	}
 
 	@Override

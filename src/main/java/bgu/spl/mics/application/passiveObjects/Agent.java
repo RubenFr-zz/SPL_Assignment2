@@ -97,6 +97,7 @@ public class Agent {
 	 */
 	public void release(){
 		this.available = true;
+		notifyAll();
 	}
 
 	/**

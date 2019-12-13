@@ -1,9 +1,10 @@
 package bgu.spl.mics.application.passiveObjects;
 
 
+import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * Passive data-object representing a information about an agent in MI6.
@@ -14,13 +15,12 @@ import java.util.concurrent.ConcurrentHashMap;
 public class Squad {
 
 	private Map<String, Agent> agents;
-	private static Squad instance = null;
 
 	/**
 	 * Constructor
 	 */
 	private Squad(){
-			this.agents = new ConcurrentHashMap<>();
+			this.agents = new HashMap<>();
 	}
 
 	/**
@@ -35,7 +35,7 @@ public class Squad {
 	 * Retrieves the single instance of this class.
 	 */
 	public static Squad getInstance() {
-		return Squad.SquadHolder.instance;
+		return SquadHolder.instance;
 	}
 
 	/**
@@ -46,7 +46,7 @@ public class Squad {
 	 */
 	public void load (Agent[] agents) {
 		for (Agent agent : agents){
-			this.agents.put(agent.getSerialNumber(),agent);
+			this.agents.putIfAbsent(agent.getSerialNumber(),agent);
 		}
 	}
 
@@ -54,7 +54,9 @@ public class Squad {
 	 * Releases agents.
 	 */
 	public void releaseAgents(List<String> serials){
-		// TODO Implement this
+		for (String serial : serials){
+			agents.get(serial).release();
+		}
 	}
 
 	/**
@@ -70,9 +72,16 @@ public class Squad {
 	 * @param serials   the serial numbers of the agents
 	 * @return ‘false’ if an agent of serialNumber ‘serial’ is missing, and ‘true’ otherwise
 	 */
-	public boolean getAgents(List<String> serials){
-		// TODO Implement this
-		return false;
+	public synchronized boolean getAgents(List<String> serials) throws InterruptedException {
+		for (String serial : serials){
+			Agent agent = agents.get(serial);
+			if (agent == null) return false;
+			else{
+				while (!agent.isAvailable()) wait();
+				agent.acquire();
+			}
+		}
+		return true;
 	}
 
     /**
@@ -81,8 +90,13 @@ public class Squad {
      * @return a list of the names of the agents with the specified serials.
      */
     public List<String> getAgentsNames(List<String> serials){
-
-	    return null;
+    	List<String> list = new LinkedList<>();
+    	for (String serial : serials){
+    		if (agents.get(serial) != null)
+    			list.add(agents.get(serial).getName());
+    		else System.out.println(new NullPointerException("serial isn't an agent").toString());
+		}
+	    return list;
     }
 
 }

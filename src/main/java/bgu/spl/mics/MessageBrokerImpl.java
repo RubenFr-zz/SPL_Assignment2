@@ -1,5 +1,7 @@
 package bgu.spl.mics;
 
+import bgu.spl.mics.application.passiveObjects.Diary;
+
 import java.util.concurrent.Future;
 
 /**
@@ -9,12 +11,22 @@ import java.util.concurrent.Future;
  */
 public class MessageBrokerImpl implements MessageBroker {
 
+	private MessageBrokerImpl(){
+
+	}
+	/**
+	 * Static inner class (Bill Push singleton method)
+	 * That way we are sure the class instance is only defined once !
+	 */
+	private static class MessageBrokerHolder {
+		private static MessageBroker instance = new MessageBrokerImpl();
+	}
+
 	/**
 	 * Retrieves the single instance of this class.
 	 */
 	public static MessageBroker getInstance() {
-		//TODO: Implement this
-		return null;
+		return MessageBrokerHolder.instance;
 	}
 
 	@Override

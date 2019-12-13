@@ -16,6 +16,7 @@ package bgu.spl.mics;
  * <p>
  */
 public abstract class Subscriber extends RunnableSubPub {
+
     private boolean terminated = false;
 
     /**
