@@ -1,7 +1,6 @@
 package main.java.bgu.spl.mics.application.passiveObjects;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * Passive data-object representing a information about an agent in MI6.
@@ -12,14 +11,6 @@ import java.util.concurrent.ConcurrentHashMap;
 public class Squad {
 
 	private Map<String, Agent> agents;
-	private static Squad instance = null;
-
-	/**
-	 * Constructor
-	 */
-	private Squad(){
-			this.agents = new ConcurrentHashMap<>();
-	}
 
 	/**
 	 * Static inner class (Bill Push singleton method)

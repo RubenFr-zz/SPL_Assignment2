@@ -3,8 +3,6 @@ package test.java.bgu.spl.mics;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.fail;
-
 public class MessageBrokerTest {
     @BeforeEach
     public void setUp(){
@@ -12,8 +10,54 @@ public class MessageBrokerTest {
     }
 
     @Test
-    public void test(){
-        //TODO: change this test and add more tests :)
-        fail("Not a good test");
+    public void testGetInstance() {
+
     }
+
+    @Test
+    public void testSubscribeEvent() {
+        // TODO Auto-generated method stub
+
+    }
+
+    @Test
+    public void testSubscribeBroadcast() {
+        // TODO Auto-generated method stub
+
+    }
+
+    @Test
+    public void testComplete() {
+        // TODO Auto-generated method stub
+
+    }
+
+    @Test
+    public void testSendBroadcast() {
+        // TODO Auto-generated method stub
+
+    }
+
+    @Test
+    public void testSendEvent() {
+        // TODO Auto-generated method stub
+    }
+
+    @Test
+    public void testRegister() {
+        // TODO Auto-generated method stub
+
+    }
+
+    @Test
+    public void testUnregister() {
+        // TODO Auto-generated method stub
+
+    }
+
+    @Test
+    public void testAwaitMessage() throws InterruptedException {
+        // TODO Auto-generated method stub
+    }
+
 }

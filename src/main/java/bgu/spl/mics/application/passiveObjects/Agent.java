@@ -13,34 +13,10 @@ public class Agent {
 	private Boolean available;
 
 	/**
-	 * Initialize an agent
-	 */
-	private Agent(){
-		this.available = true;
-	}
-
-	/**
 	 * Static inner class (Bill Push singleton method)
 	 * That way we are sure the class instance is only defined once !
 	 */
-	private static class AgentHolder {
-		private static Agent instance = new Agent();
-	}
 
-	/**
-	 * Retrieves the single instance of this class.
-	 */
-	public static Agent getInstance() {
-		return AgentHolder.instance;
-	}
-
-	/**
-	 * Sets the serial number of an agent. (command)
-	 * @param serialNumber
-	 *                     any non null String object
-	 * @pre: none.
-	 * @post: this.serialNumber == @param
-	 */
 	public void setSerialNumber(String serialNumber) {
 		this.serialNumber = serialNumber;
 	}
