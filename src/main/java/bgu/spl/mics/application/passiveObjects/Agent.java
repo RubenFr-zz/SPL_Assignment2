@@ -10,29 +10,8 @@ public class Agent {
 
 	private String serialNumber;
 	private String name;
-	private Boolean available;
+	private Boolean available = true;
 
-	/**
-	 * Initialize an agent
-	 */
-	private Agent(){
-		this.available = true;
-	}
-
-	/**
-	 * Static inner class (Bill Push singleton method)
-	 * That way we are sure the class instance is only defined once !
-	 */
-	private static class AgentHolder {
-		private static Agent instance = new Agent();
-	}
-
-	/**
-	 * Retrieves the single instance of this class.
-	 */
-	public static Agent getInstance() {
-		return AgentHolder.instance;
-	}
 
 	/**
 	 * Sets the serial number of an agent. (command)
@@ -102,12 +81,15 @@ public class Agent {
 
 	/**
 	 * toString method (query)
+	 *
 	 * @return A string of this
 	 */
+	@Override
 	public String toString() {
-		String str ="Serial Number: " + this.serialNumber + ", Name: " + this.name;
-		if (available) str += ", Available";
-		else str += ", Not Available";
-		return str;
+		return "Agent{" +
+				"serialNumber='" + serialNumber + '\'' +
+				", name='" + name + '\'' +
+				", available=" + available +
+				'}';
 	}
 }

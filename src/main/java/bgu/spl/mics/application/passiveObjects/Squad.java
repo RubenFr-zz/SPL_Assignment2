@@ -99,4 +99,8 @@ public class Squad {
 	    return list;
     }
 
+    public Map<String, Agent> getAgents(){
+    	return this.agents;
+	}
+
 }
