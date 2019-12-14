@@ -1,6 +1,6 @@
 package bgu.spl.mics;
 
-import java.util.concurrent.Future;
+import bgu.spl.mics.Future;
 
 /**
  * The MessageBroker is a shared object used for communication between

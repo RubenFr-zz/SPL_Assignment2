@@ -12,68 +12,70 @@ import java.util.concurrent.TimeUnit;
  */
 public class Future<T> {
 
-	private boolean done;
-	private T result;
+    private boolean done;
+    private T result;
 
-	/**
-	 * This should be the the only public constructor in this class.
-	 */
-	public Future() {
-		this.done = false;
-	}
+    /**
+     * This should be the the only public constructor in this class.
+     */
+    public Future() {
+        this.done = false;
+        this.result = null;
+    }
 
-	/**
-	 * retrieves the result the Future object holds if it has been resolved.
-	 * This is a blocking method! It waits for the computation in case it has
-	 * not been completed.
-	 * <p>
-	 *
-	 * @return return the result of type T if it is available, if not wait until it is available.
-	 */
-	public synchronized T get() throws InterruptedException {
-		while (!isDone()) wait();
-		return result;
-	}
+    /**
+     * retrieves the result the Future object holds if it has been resolved.
+     * This is a blocking method! It waits for the computation in case it has
+     * not been completed.
+     * <p>
+     *
+     * @return return the result of type T if it is available, if not wait until it is available.
+     */
+    public synchronized T get() throws InterruptedException {
+        while (!isDone()) wait();
+        return result;
+    }
 
-	/**
-	 * Resolves the result of this Future object.
-	 */
-	public synchronized void resolve(T result) {
-		this.result = result;
-		this.done = true;
-		notifyAll();
-	}
+    /**
+     * Resolves the result of this Future object.
+     */
+    public void resolve(T result) {
+        this.result = result;
+        this.done = true;
+        this.notifyAll();
+    }
 
-	/**
-	 * @return true if this object has been resolved, false otherwise
-	 */
-	public boolean isDone() {
-		return done;
-	}
+    /**
+     * @return true if this object has been resolved, false otherwise
+     */
+    public boolean isDone() {
+        return done;
+    }
 
-	/**
-	 * retrieves the result the Future object holds if it has been resolved,
-	 * This method is non-blocking, it has a limited amount of time determined
-	 * by {@code timeout}
-	 * <p>
-	 *
-	 * @param timeout the maximal amount of time units to wait for the result.
-	 * @param unit    the {@link TimeUnit} time units to wait.
-	 * @return return the result of type T if it is available, if not,
-	 * wait for {@code timeout} TimeUnits {@code unit}. If time has
-	 * elapsed, return null.
-	 */
-	public synchronized T get(long timeout, TimeUnit unit) throws InterruptedException {
-		if (isDone()) return result;
-		else {
-			long startTime = System.currentTimeMillis();
-			long time = TimeUnit.MILLISECONDS.convert(timeout, unit);
+    /**
+     * retrieves the result the Future object holds if it has been resolved,
+     * This method is non-blocking, it has a limited amount of time determined
+     * by {@code timeout}
+     * <p>
+     *
+     * @param timeout the maximal amount of time units to wait for the result.
+     * @param unit    the {@link TimeUnit} time units to wait.
+     * @return return the result of type T if it is available, if not,
+     * wait for {@code timeout} TimeUnits {@code unit}. If time has
+     * elapsed, return null.
+     */
+    public T get (long timeout, TimeUnit unit){
+        if (isDone()) return result;
 
-//			unit.sleep(timeout); // How to use the TimeUnit unit ???
-			while (System.currentTimeMillis() - startTime > time) wait(time);
-			if (isDone()) return result;
+        long startTime = System.currentTimeMillis();
+
+        while (System.currentTimeMillis() - startTime > timeout) {
+        	try{
+        		unit.sleep(timeout - (System.currentTimeMillis() - startTime));
+				if (isDone()) return result;
+			}catch (InterruptedException e) { e.printStackTrace(); }
 		}
-		return null;
-	}
+        return null;
+    }
 
 }
