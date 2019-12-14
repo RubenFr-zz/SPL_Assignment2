@@ -8,14 +8,42 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
 
 public class MessageBrokerTest {
+
+    private MessageBroker messageBroker;
     @BeforeEach
     public void setUp(){
-
+        this.messageBroker = MessageBrokerImpl.getInstance();
     }
 
     @Test
-    public void test(){
-        //TODO: change this test and add more tests :)
-        assertTrue(true);
+    void testSubscribeEvent() {
+    }
+
+    @Test
+    void testSubscribeBroadcast() {
+    }
+
+    @Test
+    void testComplete() {
+    }
+
+    @Test
+    void testSendBroadcast() {
+    }
+
+    @Test
+    void testSendEvent() {
+    }
+
+    @Test
+    void testRegister() {
+    }
+
+    @Test
+    void testUnregister() {
+    }
+
+    @Test
+    void testAwaitMessage() {
     }
 }
