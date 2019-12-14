@@ -14,10 +14,24 @@ public class Q extends Subscriber {
 
 	private Inventory inventory;
 
-	public Q() {
-		super("Change_This_Name");
+	private Q() {
+		super("Q");
 		this.inventory = Inventory.getInstance();
 	}
+
+	/**
+	 * Static inner class (Bill Push singleton method)
+	 * That way we are sure the class instance is only defined once !
+	 */
+	private static class QHolder {
+		private static Q instance = new Q();
+	}
+
+	/**
+	 * @return The only instance of the class Q
+	 */
+	public static Q getInstance() { return QHolder.instance; }
+
 
 	@Override
 	protected void initialize() {

@@ -1,6 +1,9 @@
 package bgu.spl.mics.application.subscribers;
 
 import bgu.spl.mics.Subscriber;
+import bgu.spl.mics.application.passiveObjects.Diary;
+import bgu.spl.mics.application.passiveObjects.MissionInfo;
+import bgu.spl.mics.application.passiveObjects.Squad;
 
 
 /**
@@ -11,9 +14,12 @@ import bgu.spl.mics.Subscriber;
  */
 public class M extends Subscriber {
 
-	public M() {
-		super("Change_This_Name");
-		// TODO Implement this
+	private MissionInfo missionReceivedEvent;
+	private Diary diary;
+
+	public M(String name) {
+		super(name);
+		this.diary = Diary.getInstance();
 	}
 
 	@Override

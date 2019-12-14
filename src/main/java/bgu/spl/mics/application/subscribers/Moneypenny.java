@@ -1,6 +1,7 @@
 package bgu.spl.mics.application.subscribers;
 
 import bgu.spl.mics.Subscriber;
+import bgu.spl.mics.application.passiveObjects.Squad;
 
 
 /**
@@ -12,9 +13,12 @@ import bgu.spl.mics.Subscriber;
  */
 public class Moneypenny extends Subscriber {
 
-	public Moneypenny() {
-		super("Change_This_Name");
+	private Squad squad;
+
+	public Moneypenny(String name) {
+		super(name);
 		// TODO Implement this
+		this.squad = Squad.getInstance();
 	}
 
 	@Override
