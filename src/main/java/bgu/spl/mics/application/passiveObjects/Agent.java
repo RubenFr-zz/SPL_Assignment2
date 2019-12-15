@@ -65,9 +65,15 @@ public class Agent {
 	/**
 	 * Acquires an agent. (command)
 	 * @pre: this.available == true
+	 *
+	 * Synchronized because we don't want two MonnyPenny to acquire the same
+	 * agent at the same time
 	 */
-	public void acquire(){
-		this.available = false;
+	public synchronized void acquire(){
+		if (this.available)
+			this.available = false;
+		else
+			throw new IllegalStateException("Try to acquire a none available agent");
 	}
 
 	/**

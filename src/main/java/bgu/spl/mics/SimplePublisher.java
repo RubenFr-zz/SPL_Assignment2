@@ -1,6 +1,6 @@
 package bgu.spl.mics;
 
-import java.util.concurrent.Future;
+import bgu.spl.mics.Future;
 
 /**
  * The SimplePublisher is a class that any publisher in the system
@@ -12,6 +12,9 @@ import java.util.concurrent.Future;
  * <p>
  */
 public final class SimplePublisher {
+
+//    private MessageBroker _MessageBroker = MessageBrokerImpl.getInstance();
+
     /**
      * Sends the event {@code e} using the MessageBroker and receive a {@link Future<T>}
      * object that may be resolved to hold a result. This method must be Non-Blocking since
