@@ -1,6 +1,13 @@
 package bgu.spl.mics.application.publishers;
 
 import bgu.spl.mics.Publisher;
+import bgu.spl.mics.application.messages.TerminationBroadcast;
+import bgu.spl.mics.application.messages.TickBroadcast;
+
+import java.util.Timer;
+import java.util.TimerTask;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.CountDownLatch;
 
 
 /**
@@ -14,14 +21,58 @@ import bgu.spl.mics.Publisher;
  */
 public class TimeService extends Publisher {
 
-	public TimeService() {
-		super("Change_This_Name");
-		// TODO Implement this
+	private int projectTime;
+	private int speed;
+	private Timer timer;
+	private AtomicInteger current;
+	private CountDownLatch latch;
+	private TimerTask timerTask;
+
+	//Check if need singleton ??
+	public TimeService(String name, int projectTime, int speed, CountDownLatch latch) {
+		super(name);
+		this.projectTime = projectTime;
+		this.speed = speed;
+		this.current = new AtomicInteger(0);
+		this.latch = latch;
+
+
 	}
+
+//	private static class TimeServiceHolder{
+//		private static TimeService instance = new TimeService();
+//	}
+//
+//	public TimeService getInstance(){
+//		return TimeServiceHolder.instance;
+//	}
 
 	@Override
 	protected void initialize() {
-		// TODO Implement this
+		try{
+			/**
+			 * {@code await()}: Cause the current thread to wait until the latch has counted
+			 * down to zero
+			 * @catch InterruptedException
+			 */
+			latch.await();
+		}catch (InterruptedException e){
+			e.printStackTrace();
+		}
+		this.timer = new Timer();
+		this.timerTask = new TimerTask() {
+			@Override
+			public void run() {
+				if (current.get() == projectTime){
+					getSimplePublisher().sendBroadcast(new TerminationBroadcast()); //Broadcast that terminates the program
+					timer.cancel();
+					timerTask.cancel();
+				}else{
+					getSimplePublisher().sendBroadcast(new TickBroadcast(getName(), current.incrementAndGet()));
+				}
+			}
+		};
+		timer.schedule(timerTask, 0, speed);
 
 	}
 
