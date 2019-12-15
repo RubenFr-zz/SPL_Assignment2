@@ -1,6 +1,7 @@
-package test.java.bgu.spl.mics;
+package bgu.spl.mics;
 
-import main.java.bgu.spl.mics.application.passiveObjects.Inventory;
+
+import bgu.spl.mics.application.passiveObjects.Inventory;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
@@ -11,7 +12,6 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
-
 
 
 public class InventoryTest {

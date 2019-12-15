@@ -1,16 +1,14 @@
-package test.java.bgu.spl.mics;
+package bgu.spl.mics;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Assertions;
 
 public class MessageBrokerTest {
+
+    private MessageBroker messageBroker;
     @BeforeEach
     public void setUp(){
-
-    }
-
-    @Test
-    public void testGetInstance() {
 
     }
 

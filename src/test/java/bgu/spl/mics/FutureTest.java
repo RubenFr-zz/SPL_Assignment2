@@ -1,6 +1,6 @@
-package test.java.bgu.spl.mics;
+package bgu.spl.mics;
 
-import main.java.bgu.spl.mics.Future;
+import bgu.spl.mics.Future;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -18,13 +18,13 @@ public class FutureTest {
     }
 
     @Test
-    public void getTest() {
+    public void getTest() throws InterruptedException {
         future.resolve(result);
         assertEquals(result,future.get());
     }
 
     @Test
-    public void resolveTest() {
+    public void resolveTest() throws InterruptedException {
         future.resolve(result);
         assertEquals(result,future.get());
     }

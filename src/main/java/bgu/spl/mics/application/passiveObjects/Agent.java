@@ -1,4 +1,4 @@
-package main.java.bgu.spl.mics.application.passiveObjects;
+package bgu.spl.mics.application.passiveObjects;
 
 /**
  * Passive data-object representing a information about an agent in MI6.
@@ -10,13 +10,15 @@ public class Agent {
 
 	private String serialNumber;
 	private String name;
-	private Boolean available;
+	private Boolean available = true;
 
 	/**
-	 * Static inner class (Bill Push singleton method)
-	 * That way we are sure the class instance is only defined once !
+	 * Sets the serial number of an agent. (command)
+	 * @param serialNumber
+	 *                     any non null String object
+	 * @pre: none.
+	 * @post: this.serialNumber == @param
 	 */
-
 	public void setSerialNumber(String serialNumber) {
 		this.serialNumber = serialNumber;
 	}
@@ -62,9 +64,15 @@ public class Agent {
 	/**
 	 * Acquires an agent. (command)
 	 * @pre: this.available == true
+	 *
+	 * Synchronized because we don't want two MonnyPenny to acquire the same
+	 * agent at the same time
 	 */
-	public void acquire(){
-		this.available = false;
+	public synchronized void acquire(){
+		if (this.available)
+			this.available = false;
+		else
+			throw new IllegalStateException("Try to acquire a none available agent");
 	}
 
 	/**
@@ -73,16 +81,20 @@ public class Agent {
 	 */
 	public void release(){
 		this.available = true;
+		notifyAll();
 	}
 
 	/**
 	 * toString method (query)
+	 *
 	 * @return A string of this
 	 */
+	@Override
 	public String toString() {
-		String str ="Serial Number: " + this.serialNumber + ", Name: " + this.name;
-		if (available) str += ", Available";
-		else str += ", Not Available";
-		return str;
+		return "Agent{" +
+				"serialNumber='" + serialNumber + '\'' +
+				", name='" + name + '\'' +
+				", available=" + available +
+				'}';
 	}
 }
