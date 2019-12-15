@@ -1,6 +1,13 @@
-package main.java.bgu.spl.mics.application.publishers;
+package bgu.spl.mics.application.publishers;
 
-import main.java.bgu.spl.mics.Publisher;
+import bgu.spl.mics.Publisher;
+import bgu.spl.mics.Subscriber;
+import bgu.spl.mics.application.passiveObjects.MissionInfo;
+
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
+
 
 /**
  * A Publisher only.
@@ -11,9 +18,15 @@ import main.java.bgu.spl.mics.Publisher;
  */
 public class Intelligence extends Publisher {
 
-	public Intelligence() {
-		super("Change_This_Name");
-		// TODO Implement this
+	private List<MissionInfo> missions;
+
+	public Intelligence(String name) {
+		super(name);
+		missions = new LinkedList<>();
+	}
+
+	public void loadMission(MissionInfo[] missions){
+		this.missions.addAll(Arrays.asList(missions));
 	}
 
 	@Override

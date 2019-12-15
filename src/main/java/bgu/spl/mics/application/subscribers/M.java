@@ -1,6 +1,10 @@
-package main.java.bgu.spl.mics.application.subscribers;
+package bgu.spl.mics.application.subscribers;
 
-import main.java.bgu.spl.mics.Subscriber;
+import bgu.spl.mics.Subscriber;
+import bgu.spl.mics.application.passiveObjects.Diary;
+import bgu.spl.mics.application.passiveObjects.MissionInfo;
+import bgu.spl.mics.application.passiveObjects.Squad;
+
 
 /**
  * M handles ReadyEvent - fills a report and sends agents to mission.
@@ -10,9 +14,12 @@ import main.java.bgu.spl.mics.Subscriber;
  */
 public class M extends Subscriber {
 
-	public M() {
-		super("Change_This_Name");
-		// TODO Implement this
+	private MissionInfo missionReceivedEvent;
+	private Diary diary;
+
+	public M(String name) {
+		super(name);
+		this.diary = Diary.getInstance();
 	}
 
 	@Override

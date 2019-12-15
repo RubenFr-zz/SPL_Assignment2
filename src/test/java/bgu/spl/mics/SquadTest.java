@@ -1,7 +1,7 @@
-package test.java.bgu.spl.mics;
+package bgu.spl.mics;
 
-import main.java.bgu.spl.mics.application.passiveObjects.Agent;
-import main.java.bgu.spl.mics.application.passiveObjects.Squad;
+import bgu.spl.mics.application.passiveObjects.Agent;
+import bgu.spl.mics.application.passiveObjects.Squad;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -11,7 +11,6 @@ import java.util.List;
 import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.junit.jupiter.api.Assertions.assertFalse;
 
 /**
  * This is a Unit Test for the {@link Squad} class.
@@ -19,6 +18,7 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
  */
 public class SquadTest {
 
+    private Squad squad;
     private Map<String, Agent> agents;
     private Squad s;
 
@@ -65,7 +65,7 @@ public class SquadTest {
      *
      */
     @Test
-    public void testGetAgents(){
+    public void testGetAgents() throws InterruptedException {
         List<String> test1 = new LinkedList<>();
         test1.add("001");
         test1.add("002");
