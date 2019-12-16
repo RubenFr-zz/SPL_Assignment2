@@ -1,6 +1,9 @@
 package bgu.spl.mics.application.subscribers;
 
 import bgu.spl.mics.Subscriber;
+import bgu.spl.mics.application.messages.AgentsAvailableEvent;
+import bgu.spl.mics.application.messages.GadgetAvailableEvent;
+import bgu.spl.mics.application.messages.TickBroadcast;
 import bgu.spl.mics.application.passiveObjects.Inventory;
 
 
@@ -13,9 +16,12 @@ import bgu.spl.mics.application.passiveObjects.Inventory;
 public class Q extends Subscriber {
 
 	private Inventory inventory;
+	private int currTick;
 
-	private Q() {
-		super("Q");
+
+
+	private Q(String name) {
+		super(name);
 		this.inventory = Inventory.getInstance();
 	}
 
@@ -24,7 +30,7 @@ public class Q extends Subscriber {
 	 * That way we are sure the class instance is only defined once !
 	 */
 	private static class QHolder {
-		private static Q instance = new Q();
+		private static Q instance = new Q("Q");
 	}
 
 	/**
@@ -33,10 +39,18 @@ public class Q extends Subscriber {
 	public static Q getInstance() { return QHolder.instance; }
 
 
+	/**
+	 * Subscribe to {@link AgentsAvailableEvent} and {@link TickBroadcast}
+	 */
 	@Override
 	protected void initialize() {
-		// TODO Implement this
-		
+		subscribeBroadcast(TickBroadcast.class, callback -> {
+			currTick = callback.getTick();
+		});
+		subscribeEvent(GadgetAvailableEvent.class, callback -> {
+			boolean found  = inventory.getItem(callback.getGadget());
+			complete(callback, found);
+		});
 	}
 
 }

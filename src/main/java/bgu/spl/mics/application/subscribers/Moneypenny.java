@@ -1,6 +1,8 @@
 package bgu.spl.mics.application.subscribers;
 
 import bgu.spl.mics.Subscriber;
+import bgu.spl.mics.application.messages.AgentsAvailableEvent;
+import bgu.spl.mics.application.messages.TickBroadcast;
 import bgu.spl.mics.application.passiveObjects.Squad;
 
 
@@ -14,17 +16,27 @@ import bgu.spl.mics.application.passiveObjects.Squad;
 public class Moneypenny extends Subscriber {
 
 	private Squad squad;
+	private int currTick;
 
 	public Moneypenny(String name) {
 		super(name);
-		// TODO Implement this
 		this.squad = Squad.getInstance();
 	}
 
 	@Override
 	protected void initialize() {
-		// TODO Implement this
-		
+		subscribeBroadcast(TickBroadcast.class, callback -> {
+			currTick = callback.getTick();
+		});
+		subscribeEvent(AgentsAvailableEvent.class, callback -> {
+			try {
+				boolean gotAgents = squad.getAgents(callback.getSerialNumbers());
+				complete(callback, gotAgents);
+			}catch (InterruptedException e) {
+				e.printStackTrace();
+				complete(callback, null);
+			}
+		});
 	}
 
 }
