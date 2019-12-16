@@ -2,6 +2,9 @@ package bgu.spl.mics;
 
 import bgu.spl.mics.Future;
 
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentMap;
+
 /**
  * The SimplePublisher is a class that any publisher in the system
  * stores. The SimplePublisher class is responsible to send
@@ -13,7 +16,7 @@ import bgu.spl.mics.Future;
  */
 public final class SimplePublisher {
 
-//    private MessageBroker _MessageBroker = MessageBrokerImpl.getInstance();
+    private MessageBrokerImpl _MessageBroker = MessageBrokerImpl.getInstance();
 
     /**
      * Sends the event {@code e} using the MessageBroker and receive a {@link Future<T>}
@@ -28,8 +31,7 @@ public final class SimplePublisher {
      * 	       			null in case no Subscriber has subscribed to {@code e.getClass()}.
      */
     public final <T> Future<T> sendEvent(Event<T> e) {
-        //TODO: implement this.
-        return null; //TODO: delete this line :)
+        return _MessageBroker.sendEvent(e);
     }
 
     /**
@@ -39,6 +41,6 @@ public final class SimplePublisher {
      * @param b The broadcast message to send
      */
     public final void sendBroadcast(Broadcast b) {
-        //TODO: implement this.
+        _MessageBroker.sendBroadcast(b);
     }
 }

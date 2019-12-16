@@ -1,5 +1,6 @@
 package bgu.spl.mics.application;
 
+import bgu.spl.mics.Publisher;
 import bgu.spl.mics.application.passiveObjects.Agent;
 import bgu.spl.mics.application.passiveObjects.Inventory;
 import bgu.spl.mics.application.passiveObjects.MissionInfo;
@@ -43,7 +44,7 @@ public class MI6Runner {
             JSONObject JsonObj = (JSONObject) parser.parse(new FileReader(args[0]));
             initInventory(JsonObj);
             initSquad(JsonObj);
-            Intelligence[] intelligences = initServices(JsonObj);
+            Publisher[] intelligences = initServices(JsonObj);
             System.out.println(intelligences);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -58,7 +59,7 @@ public class MI6Runner {
 
     }
 
-    private static Intelligence[] initServices(JSONObject jsonObj) {
+    private static Publisher[] initServices(JSONObject jsonObj) {
         JSONObject services = (JSONObject) jsonObj.get("services");
         initM(services);
         initMonneyPenny(services);
@@ -76,10 +77,10 @@ public class MI6Runner {
     /**
      * @param services is the section in the json of the service (publisher, subscribers)
      */
-    private static Intelligence[] initIntelligence(JSONObject services) {
+    private static Publisher[] initIntelligence(JSONObject services) {
         JSONArray intelligenceJSON = (JSONArray) services.get("intelligence"); //Array of all intelligences
         Iterator<JSONObject> iterator = intelligenceJSON.iterator();
-        Intelligence[] intelligences = new Intelligence[intelligenceJSON.size()];
+        Publisher[] intelligences = new Intelligence[intelligenceJSON.size()];
         int i = 0;
         while (iterator.hasNext()) {
             JSONObject IntelligenceObject = iterator.next(); //Intelligence

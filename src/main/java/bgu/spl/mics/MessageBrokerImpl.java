@@ -3,9 +3,9 @@ package bgu.spl.mics;
 import bgu.spl.mics.Future;
 
 import java.util.LinkedList;
-import java.util.Map;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.LinkedBlockingQueue;
 
 
@@ -22,10 +22,10 @@ public class MessageBrokerImpl implements MessageBroker {
      * @param BroadcastSubscriber holds the broadcasts with its subscribed subscribers
      * @param toBeSolved will hold the events with its unsolved futures (futures to be solved)
      */
-    private Map<Subscriber, BlockingQueue<Message>> hashMapSubscriber;
-    private Map<Class<? extends Message>, LinkedList<Subscriber>> EventSubscribers;
-    private Map<Class<? extends Message>, LinkedList<Subscriber>> BroadcastSubscribers;
-    private Map<Event<?>, Future<?>> toBeSolved;
+    private ConcurrentMap<Subscriber, BlockingQueue<Message>> hashMapSubscriber;
+    private ConcurrentMap<Class<? extends Message>, LinkedList<Subscriber>> EventSubscribers;
+    private ConcurrentMap<Class<? extends Message>, LinkedList<Subscriber>> BroadcastSubscribers;
+    private ConcurrentMap<Event<?>, Future<?>> toBeSolved;
 
     public MessageBrokerImpl() {
         this.hashMapSubscriber = new ConcurrentHashMap<>();
@@ -40,13 +40,13 @@ public class MessageBrokerImpl implements MessageBroker {
      * That way we are sure the class instance is only defined once !
      */
     private static class MessageBrokerHolder {
-        private static MessageBroker instance = new MessageBrokerImpl();
+        private static MessageBrokerImpl instance = new MessageBrokerImpl();
     }
 
     /**
      * Retrieves the single instance of this class.
      */
-    public static MessageBroker getInstance() {
+    public static MessageBrokerImpl getInstance() {
         return MessageBrokerHolder.instance;
     }
 
@@ -67,7 +67,6 @@ public class MessageBrokerImpl implements MessageBroker {
                 subType.addLast(m);
                 EventSubscribers.put(type, subType);
             }
-
     }
 
     /**

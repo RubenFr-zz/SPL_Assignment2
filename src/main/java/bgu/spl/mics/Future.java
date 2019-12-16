@@ -39,10 +39,10 @@ public class Future<T> {
     /**
      * Resolves the result of this Future object.
      */
-    public void resolve(T result) {
+    public synchronized void resolve(T result) {
         this.result = result;
         this.done = true;
-        this.notifyAll();
+        notifyAll();
     }
 
     /**
