@@ -1,61 +1,46 @@
 package bgu.spl.mics;
 
+import bgu.spl.mics.application.messages.GadgetAvailableEvent;
+import bgu.spl.mics.application.passiveObjects.Inventory;
+import bgu.spl.mics.application.subscribers.Q;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.Assertions;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class MessageBrokerTest {
 
     private MessageBroker messageBroker;
+
+
     @BeforeEach
-    public void setUp(){
-
+    public void setUp() {
+        messageBroker = MessageBrokerImpl.getInstance();
     }
 
     @Test
-    public void testSubscribeEvent() {
-        // TODO Auto-generated method stub
-
+    public void Test() {
+        Inventory.getInstance().load(new String[]{"gun"});
+        GadgetAvailableEvent event = new GadgetAvailableEvent("0", "gun");
+        Subscriber m = Q.getInstance();
+        messageBroker.register(m);
+        m.initialize();
+        messageBroker.subscribeEvent(event.getClass(), m);
+        Future<Boolean> fut = messageBroker.sendEvent(event);
+        assertFalse(fut.isDone());
+        Thread t = new Thread(() -> {
+            try {
+                fut.get();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        });
+        t.start();
+        fut.resolve(true);
+        try {
+            assertTrue(fut.get());
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
-
-    @Test
-    public void testSubscribeBroadcast() {
-        // TODO Auto-generated method stub
-
-    }
-
-    @Test
-    public void testComplete() {
-        // TODO Auto-generated method stub
-
-    }
-
-    @Test
-    public void testSendBroadcast() {
-        // TODO Auto-generated method stub
-
-    }
-
-    @Test
-    public void testSendEvent() {
-        // TODO Auto-generated method stub
-    }
-
-    @Test
-    public void testRegister() {
-        // TODO Auto-generated method stub
-
-    }
-
-    @Test
-    public void testUnregister() {
-        // TODO Auto-generated method stub
-
-    }
-
-    @Test
-    public void testAwaitMessage() throws InterruptedException {
-        // TODO Auto-generated method stub
-    }
-
 }
