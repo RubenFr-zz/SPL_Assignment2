@@ -1,7 +1,5 @@
 package bgu.spl.mics;
 
-import bgu.spl.mics.Future;
-
 import java.util.LinkedList;
 import java.util.Map;
 import java.util.concurrent.BlockingQueue;
@@ -27,7 +25,7 @@ public class MessageBrokerImpl implements MessageBroker {
     private Map<Class<? extends Message>, LinkedList<Subscriber>> BroadcastSubscribers;
     private Map<Event<?>, Future<?>> toBeSolved;
 
-    public MessageBrokerImpl() {
+    private MessageBrokerImpl() {// Important to singleton
         this.hashMapSubscriber = new ConcurrentHashMap<>();
         this.EventSubscribers = new ConcurrentHashMap<>();
         this.BroadcastSubscribers = new ConcurrentHashMap<>();
