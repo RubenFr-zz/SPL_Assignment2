@@ -1,5 +1,8 @@
 package bgu.spl.mics;
 
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentMap;
+
 /**
  * The Subscriber is an abstract class that any subscriber in the system
  * must extend. The abstract Subscriber class is responsible to get and
@@ -17,7 +20,15 @@ package bgu.spl.mics;
  */
 public abstract class Subscriber extends RunnableSubPub {
 
-    private boolean terminated = false;
+    /**
+     * @param MessageCallMap stores the callback function for a message
+     * @param EventCallMap stores the callback function for an event
+     * @param EventCall stores the Future for an event running
+     */
+    private boolean terminated;
+    private MessageBrokerImpl _MessageBroker;
+    private ConcurrentMap<Class<? extends Message>, Callback<?>> MessageCallMap;
+    private ConcurrentMap<Class<? extends Event<?>>, Callback<?>> EventCallMap;
 
     /**
      * @param name the Subscriber name (used mainly for debugging purposes -
@@ -25,6 +36,10 @@ public abstract class Subscriber extends RunnableSubPub {
      */
     public Subscriber(String name) {
         super(name);
+        this.terminated = false;
+        this.MessageCallMap = new ConcurrentHashMap<>();
+        this.EventCallMap = new ConcurrentHashMap<>();
+        this._MessageBroker = MessageBrokerImpl.getInstance();
     }
 
     /**
@@ -49,7 +64,8 @@ public abstract class Subscriber extends RunnableSubPub {
      *                 queue.
      */
     protected final <T, E extends Event<T>> void subscribeEvent(Class<E> type, Callback<E> callback) {
-        //TODO: implement this.
+        _MessageBroker.subscribeEvent(type, this);
+        EventCallMap.put(type, callback);
     }
 
     /**
@@ -73,7 +89,8 @@ public abstract class Subscriber extends RunnableSubPub {
      *                 queue.
      */
     protected final <B extends Broadcast> void subscribeBroadcast(Class<B> type, Callback<B> callback) {
-        //TODO: implement this.
+        _MessageBroker.subscribeBroadcast(type, this);
+        MessageCallMap.put(type, callback);
     }
 
     /**
@@ -87,7 +104,7 @@ public abstract class Subscriber extends RunnableSubPub {
      *               {@code e}.
      */
     protected final <T> void complete(Event<T> e, T result) {
-        //TODO: implement this.
+        _MessageBroker.complete(e, result);
     }
 
     /**
@@ -99,15 +116,32 @@ public abstract class Subscriber extends RunnableSubPub {
     }
 
     /**
-     * The entry point of the Subscriber. TODO: you must complete this code
+     * The entry point of the Subscriber.
      * otherwise you will end up in an infinite loop.
      */
     @Override
     public final void run() {
+        _MessageBroker.register(this);
         initialize();
         while (!terminated) {
-            System.out.println("NOT IMPLEMENTED!!!"); //TODO: you should delete this line :)
+            try{
+                Message message = _MessageBroker.awaitMessage(this);
+                if (message != null){
+                    if (EventCallMap.containsKey(message.getClass())){
+                        @SuppressWarnings("unchecked")
+                        Callback<Message> c = (Callback<Message>) EventCallMap.get(message.getClass());
+                        c.call(message);
+                    }else{
+                        @SuppressWarnings("unchecked")
+                        Callback<Message> c = (Callback<Message>) MessageCallMap.get(message.getClass());
+                        c.call(message);
+                    }
+                }
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
+        _MessageBroker.unregister(this);
     }
 
 }
