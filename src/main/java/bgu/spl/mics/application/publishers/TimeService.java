@@ -68,7 +68,7 @@ public class TimeService extends Publisher {
 					timer.cancel();
 					timerTask.cancel();
 				}else{
-					getSimplePublisher().sendBroadcast(new TickBroadcast(getName(), current.incrementAndGet()));
+					getSimplePublisher().sendBroadcast(new TickBroadcast(current.incrementAndGet()));
 				}
 			}
 		};

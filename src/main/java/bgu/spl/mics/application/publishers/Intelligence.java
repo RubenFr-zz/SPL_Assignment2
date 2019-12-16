@@ -19,6 +19,8 @@ import java.util.List;
 public class Intelligence extends Publisher {
 
 	private List<MissionInfo> missions;
+	private int currTick;
+
 
 	public Intelligence(String name) {
 		super(name);
@@ -32,6 +34,7 @@ public class Intelligence extends Publisher {
 	@Override
 	protected void initialize() {
 		// TODO Implement this
+
 	}
 
 	@Override
