@@ -1,7 +1,5 @@
 package bgu.spl.mics;
 
-import bgu.spl.mics.Future;
-
 import java.util.LinkedList;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.ConcurrentHashMap;
@@ -17,18 +15,18 @@ import java.util.concurrent.LinkedBlockingQueue;
 public class MessageBrokerImpl implements MessageBroker {
 
     /**
-     * @param hashMapSubscriber Subscribers with their message queue
+     * @param SubscribersQueue Subscribers with their message queue
      * @param EventSubscriber holds the events with its subscribed subscribers
      * @param BroadcastSubscriber holds the broadcasts with its subscribed subscribers
-     * @param toBeSolved will hold the events with its unsolved futures (futures to be solved)
+     * @param toBeSolved holds the events with its unsolved futures (futures to be solved)
      */
-    private ConcurrentMap<Subscriber, BlockingQueue<Message>> hashMapSubscriber;
+    private ConcurrentMap<Subscriber, BlockingQueue<Message>> SubscribersQueue;
     private ConcurrentMap<Class<? extends Message>, LinkedList<Subscriber>> EventSubscribers;
     private ConcurrentMap<Class<? extends Message>, LinkedList<Subscriber>> BroadcastSubscribers;
     private ConcurrentMap<Event<?>, Future<?>> toBeSolved;
 
     public MessageBrokerImpl() {
-        this.hashMapSubscriber = new ConcurrentHashMap<>();
+        this.SubscribersQueue = new ConcurrentHashMap<>();
         this.EventSubscribers = new ConcurrentHashMap<>();
         this.BroadcastSubscribers = new ConcurrentHashMap<>();
         this.toBeSolved = new ConcurrentHashMap<>();
@@ -120,15 +118,15 @@ public class MessageBrokerImpl implements MessageBroker {
         if (!BroadcastSubscribers.containsKey(b.getClass()) || BroadcastSubscribers.get(b.getClass()) == null)
             return;
         LinkedList<Subscriber> subscribers = BroadcastSubscribers.get(b.getClass());
-        synchronized (BroadcastSubscribers.get(b.getClass())) {
+//        synchronized (BroadcastSubscribers.get(b.getClass())) {
             for (Subscriber sub : subscribers) {
                 try {
-                    hashMapSubscriber.get(sub).put(b);
+                    SubscribersQueue.get(sub).put(b);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
             }
-        }
+//        }
 
     }
 
@@ -148,13 +146,13 @@ public class MessageBrokerImpl implements MessageBroker {
              * and put it last {@link LinkedList#addLast(@code firstSub)}
              */
             Subscriber firstSub = EventSubscribers.get(e.getClass()).pollFirst();
-            if (firstSub != null && hashMapSubscriber.containsKey(firstSub)) {
+            if (firstSub != null && SubscribersQueue.containsKey(firstSub)) {
                 Future<T> future = new Future<>();
                 toBeSolved.put(e, future);
                 EventSubscribers.get(e.getClass()).addLast(firstSub);
 
                 try {
-                    hashMapSubscriber.get(firstSub).put(e);
+                    SubscribersQueue.get(firstSub).put(e);
                 } catch (InterruptedException ex) {
                     ex.printStackTrace();
                 }
@@ -173,7 +171,7 @@ public class MessageBrokerImpl implements MessageBroker {
     @Override
     public void register(Subscriber m) {
         BlockingQueue<Message> queue = new LinkedBlockingQueue<>();
-        hashMapSubscriber.putIfAbsent(m, queue);
+        SubscribersQueue.putIfAbsent(m, queue);
 
     }
 
@@ -206,7 +204,7 @@ public class MessageBrokerImpl implements MessageBroker {
             }
 //            }
         }
-        hashMapSubscriber.remove(m);
+        SubscribersQueue.remove(m);
     }
 
     /**
@@ -216,13 +214,13 @@ public class MessageBrokerImpl implements MessageBroker {
      */
     @Override
     public Message awaitMessage(Subscriber m) throws InterruptedException {
-        if (!hashMapSubscriber.containsKey(m))
+        if (!SubscribersQueue.containsKey(m))
             throw new IllegalArgumentException("no such subscriber");
         /**
          * {@code take()}: Retrieves and removes the head of this queue,
          * waiting if necessary until an element becomes available.
          * @return the head of the queue
          */
-        return hashMapSubscriber.get(m).take();
+        return SubscribersQueue.get(m).take();
     }
 }

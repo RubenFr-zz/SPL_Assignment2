@@ -2,6 +2,7 @@ package bgu.spl.mics;
 
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
+import java.util.concurrent.CountDownLatch;
 
 /**
  * The Subscriber is an abstract class that any subscriber in the system
@@ -14,7 +15,7 @@ import java.util.concurrent.ConcurrentMap;
  * message-queue (see {@link MessageBroker#register(Subscriber)}
  * method). The abstract Subscriber stores this callback together with the
  * type of the message is related to.
- * 
+ * <p>
  * Only private fields and methods may be added to this class.
  * <p>
  */
@@ -28,18 +29,18 @@ public abstract class Subscriber extends RunnableSubPub {
     private boolean terminated;
     private MessageBrokerImpl _MessageBroker;
     private ConcurrentMap<Class<? extends Message>, Callback<?>> MessageCallMap;
-    private ConcurrentMap<Class<? extends Event<?>>, Callback<?>> EventCallMap;
+    private CountDownLatch startSignal;
 
     /**
      * @param name the Subscriber name (used mainly for debugging purposes -
      *             does not have to be unique)
      */
-    public Subscriber(String name) {
+    public Subscriber(String name, CountDownLatch latch) {
         super(name);
         this.terminated = false;
         this.MessageCallMap = new ConcurrentHashMap<>();
-        this.EventCallMap = new ConcurrentHashMap<>();
         this._MessageBroker = MessageBrokerImpl.getInstance();
+        this.startSignal = latch;
     }
 
     /**
@@ -55,6 +56,7 @@ public abstract class Subscriber extends RunnableSubPub {
      * {@link Callback#call(java.lang.Object)} by calling
      * {@code callback.call(m)}.
      * <p>
+     *
      * @param <E>      The type of event to subscribe to.
      * @param <T>      The type of result expected for the subscribed event.
      * @param type     The {@link Class} representing the type of event to
@@ -65,7 +67,7 @@ public abstract class Subscriber extends RunnableSubPub {
      */
     protected final <T, E extends Event<T>> void subscribeEvent(Class<E> type, Callback<E> callback) {
         _MessageBroker.subscribeEvent(type, this);
-        EventCallMap.put(type, callback);
+        MessageCallMap.put(type, callback);
     }
 
     /**
@@ -81,6 +83,7 @@ public abstract class Subscriber extends RunnableSubPub {
      * {@link Callback#call(java.lang.Object)} by calling
      * {@code callback.call(m)}.
      * <p>
+     *
      * @param <B>      The type of broadcast message to subscribe to
      * @param type     The {@link Class} representing the type of broadcast
      *                 message to subscribe to.
@@ -97,6 +100,7 @@ public abstract class Subscriber extends RunnableSubPub {
      * Completes the received request {@code e} with the result {@code result}
      * using the MessageBroker.
      * <p>
+     *
      * @param <T>    The type of the expected result of the processed event
      *               {@code e}.
      * @param e      The event to complete.
@@ -121,27 +125,24 @@ public abstract class Subscriber extends RunnableSubPub {
      */
     @Override
     public final void run() {
-        _MessageBroker.register(this);
-        initialize();
-        while (!terminated) {
-            try{
+        try {
+            startSignal.await();
+            _MessageBroker.register(this);
+            initialize();
+            while (!terminated) {
+
                 Message message = _MessageBroker.awaitMessage(this);
-                if (message != null){
-                    if (EventCallMap.containsKey(message.getClass())){
-                        @SuppressWarnings("unchecked")
-                        Callback<Message> c = (Callback<Message>) EventCallMap.get(message.getClass());
-                        c.call(message);
-                    }else{
-                        @SuppressWarnings("unchecked")
-                        Callback<Message> c = (Callback<Message>) MessageCallMap.get(message.getClass());
-                        c.call(message);
-                    }
+                if (message != null) {
+                    @SuppressWarnings("unchecked")
+                    Callback<Message> c = (Callback<Message>) MessageCallMap.get(message.getClass());
+                    c.call(message);
                 }
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+
             }
+            _MessageBroker.unregister(this);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
-        _MessageBroker.unregister(this);
     }
 
 }

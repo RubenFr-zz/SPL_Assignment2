@@ -79,7 +79,7 @@ public class Agent {
 	 * Releases an agent. (command)
 	 * @pre: this.available == false
 	 */
-	public void release(){
+	public synchronized void release(){
 		this.available = true;
 		notifyAll();
 	}

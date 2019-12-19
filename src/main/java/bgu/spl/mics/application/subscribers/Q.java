@@ -3,8 +3,11 @@ package bgu.spl.mics.application.subscribers;
 import bgu.spl.mics.Subscriber;
 import bgu.spl.mics.application.messages.AgentsAvailableEvent;
 import bgu.spl.mics.application.messages.GadgetAvailableEvent;
+import bgu.spl.mics.application.messages.TerminationBroadcast;
 import bgu.spl.mics.application.messages.TickBroadcast;
 import bgu.spl.mics.application.passiveObjects.Inventory;
+
+import java.util.concurrent.CountDownLatch;
 
 
 /**
@@ -21,7 +24,7 @@ public class Q extends Subscriber {
 
 
 	private Q(String name) {
-		super(name);
+		super(name, new CountDownLatch(0));
 		this.inventory = Inventory.getInstance();
 	}
 
@@ -47,6 +50,11 @@ public class Q extends Subscriber {
 		subscribeBroadcast(TickBroadcast.class, callback -> {
 			currTick = callback.getTick();
 		});
+
+		subscribeBroadcast(TerminationBroadcast.class, callback -> {
+			this.terminate();
+		});
+
 		subscribeEvent(GadgetAvailableEvent.class, callback -> {
 			boolean found  = inventory.getItem(callback.getGadget());
 			complete(callback, found);

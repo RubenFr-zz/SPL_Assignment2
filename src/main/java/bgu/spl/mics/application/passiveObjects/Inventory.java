@@ -1,5 +1,10 @@
 package bgu.spl.mics.application.passiveObjects;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -16,7 +21,8 @@ import java.util.List;
  * You can add ONLY private fields and methods to this class as you see fit.
  */
 public class Inventory {
-    private List<String> gadgets;
+
+    private final List<String> gadgets;
 
     private Inventory() {
         this.gadgets = new LinkedList<>();
@@ -59,13 +65,20 @@ public class Inventory {
      *
      * @param gadget Name of the gadget to check if available
      * @return ‘false’ if the gadget is missing, and ‘true’ otherwise
+     * <p>
+     * After checking the gadget is in the list we lock the array so that if two threads
+     * wish to get the same item only one get it
      */
     public boolean getItem(String gadget) {
-        if(gadgets.contains(gadget)){
-            gadgets.remove(gadget);
-            return true;
+        if (gadgets.contains(gadget)) {
+            synchronized (gadgets) {
+                if (gadgets.contains(gadget)) {
+                    gadgets.remove(gadget);
+                    return true;
+                }
+            }
         }
-        else return false;
+        return false;
     }
 
     /**
@@ -75,11 +88,14 @@ public class Inventory {
      * This method is called by the main method in order to generate the output.
      */
     public void printToFile(String filename) throws IOException {
-        FileWriter fileWriter = new FileWriter(filename);
-        PrintWriter printWriter = new PrintWriter(fileWriter);
-        for (String gadget : gadgets){
-        	printWriter.println(gadget);
-		}
-        printWriter.close();
+        JsonObject jsonObject = new JsonObject();
+        JsonArray inventory = new JsonArray();
+        for ( String gadget : gadgets)
+            inventory.add(gadget);
+        jsonObject.add("Inventory", inventory);
+
+        FileWriter file = new FileWriter(filename);
+        file.write(new GsonBuilder().setPrettyPrinting().create().toJson(jsonObject));
+        file.close();
     }
 }

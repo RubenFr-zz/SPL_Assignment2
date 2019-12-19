@@ -102,4 +102,15 @@ public class MissionInfo {
 	public int getDuration() {
 		return this.duration;
 	}
+
+	@Override
+	public String toString() {
+		return  "{ missionName='" + missionName + '\'' +
+				", serialAgentsNumbers=" + serialAgentsNumbers +
+				", gadget='" + gadget + '\'' +
+				", timeIssued=" + timeIssued +
+				", timeExpired=" + timeExpired +
+				", duration=" + duration +
+				'}';
+	}
 }

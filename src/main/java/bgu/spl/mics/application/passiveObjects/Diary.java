@@ -53,7 +53,6 @@ public class Diary {
 	 */
 	public void addReport(Report reportToAdd){
 		reports.add(reportToAdd);
-		this.total++;
 	}
 
 	/**
@@ -78,5 +77,9 @@ public class Diary {
 	 */
 	public int getTotal(){
 		return this.total;
+	}
+
+	public void increment(){
+		total++;
 	}
 }

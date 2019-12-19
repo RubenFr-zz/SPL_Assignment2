@@ -28,13 +28,13 @@ public class TimeService extends Publisher {
 	private CountDownLatch latch;
 	private TimerTask timerTask;
 
-	//Check if need singleton ??
-	public TimeService(String name, int projectTime, int speed, CountDownLatch latch) {
-		super(name);
+
+	public TimeService(int projectTime, int speed) {
+		super("Time Service");
 		this.projectTime = projectTime;
 		this.speed = speed;
 		this.current = new AtomicInteger(0);
-		this.latch = latch;
+//		this.latch = latch;
 
 
 	}
@@ -49,16 +49,16 @@ public class TimeService extends Publisher {
 
 	@Override
 	protected void initialize() {
-		try{
-			/**
-			 * {@code await()}: Cause the current thread to wait until the latch has counted
-			 * down to zero
-			 * @catch InterruptedException
-			 */
-			latch.await();
-		}catch (InterruptedException e){
-			e.printStackTrace();
-		}
+//		try{
+//			/**
+//			 * {@code await()}: Cause the current thread to wait until the latch has counted
+//			 * down to zero
+//			 * @catch InterruptedException
+//			 */
+//			latch.await();
+//		}catch (InterruptedException e){
+//			e.printStackTrace();
+//		}
 		this.timer = new Timer();
 		this.timerTask = new TimerTask() {
 			@Override
@@ -78,7 +78,7 @@ public class TimeService extends Publisher {
 
 	@Override
 	public void run() {
-		// TODO Implement this
+		initialize();
 	}
 
 }

@@ -1,5 +1,6 @@
 package bgu.spl.mics.application.passiveObjects;
 
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -10,12 +11,12 @@ import java.util.List;
  */
 public class Report {
 
-	private String missionName;
+	private String missionName = "";
 	private int M;
 	private int MoneyPenny;
-	private List<String> agentsSerialNumbers;
-	private List<String> agentsName;
-	private String gadgetName;
+	private List<String> agentsSerialNumbers = new LinkedList<>();
+	private List<String> agentsName = new LinkedList<>();
+	private String gadgetName = "";
 	private int timeIssued;
 	private int QTime;
 	private int timeCreated;
@@ -156,7 +157,16 @@ public class Report {
 	 * ToString method
 	 * @return string of the object
 	 */
-	public String ToString(){
-		return null;
+	public String toString() {
+		return  "{ \n\tmissionName = " + missionName +
+				", \n\tM = " + M +
+				", \n\tMoneyPenny = " + MoneyPenny +
+				", \n\tagentsSerialNumbers = " + agentsSerialNumbers +
+				", \n\tagentsName = " + agentsName +
+				", \n\tgadgetName = " + gadgetName +
+				", \n\ttimeIssued = " + timeIssued +
+				", \n\tQTime = " + QTime +
+				", \n\ttimeCreated = " + timeCreated +
+				"\n}\n";
 	}
 }

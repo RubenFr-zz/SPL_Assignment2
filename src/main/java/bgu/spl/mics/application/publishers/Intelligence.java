@@ -1,12 +1,16 @@
 package bgu.spl.mics.application.publishers;
 
+import bgu.spl.mics.Event;
+import bgu.spl.mics.Future;
 import bgu.spl.mics.Publisher;
 import bgu.spl.mics.Subscriber;
+import bgu.spl.mics.application.messages.MissionReceivedEvent;
+import bgu.spl.mics.application.messages.TerminationBroadcast;
+import bgu.spl.mics.application.messages.TickBroadcast;
 import bgu.spl.mics.application.passiveObjects.MissionInfo;
 
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
+import java.util.concurrent.CountDownLatch;
 
 
 /**
@@ -16,30 +20,57 @@ import java.util.List;
  * You can add private fields and public methods to this class.
  * You MAY change constructor signatures and even add new public constructors.
  */
-public class Intelligence extends Publisher {
+public class Intelligence extends Subscriber {
 
-	private List<MissionInfo> missions;
-	private int currTick;
+	private HashMap<Integer, LinkedList<MissionInfo>> missions;
+	private HashMap<MissionReceivedEvent,  Future<?>> futures;
+	int currTick;
 
-
-	public Intelligence(String name) {
-		super(name);
-		missions = new LinkedList<>();
+	public Intelligence(String name, CountDownLatch latch) {
+		super(name, latch);
+		missions = new HashMap<>();
+		futures = new HashMap<>();
 	}
 
 	public void loadMission(MissionInfo[] missions){
-		this.missions.addAll(Arrays.asList(missions));
+		for ( MissionInfo mission : missions){
+			int time = mission.getTimeIssued();
+			if (! this.missions.containsKey(time))
+			{
+				LinkedList<MissionInfo> list = new LinkedList<>();
+				list.add(mission);
+				this.missions.put(time, list);
+			}
+			else { this.missions.get(time).addLast(mission); }
+		}
 	}
 
 	@Override
 	protected void initialize() {
-		// TODO Implement this
+		subscribeBroadcast(TickBroadcast.class, callback -> {
+			currTick = callback.getTick();
 
+			if ( missions.containsKey(currTick)){
+				for ( MissionInfo mission : missions.get(currTick)) {
+					MissionReceivedEvent event = new MissionReceivedEvent(getName(), mission);
+					Future<Boolean> future = this.getSimplePublisher().sendEvent(event);
+					futures.putIfAbsent(event, future);
+				}
+			}
+		});
+
+		subscribeBroadcast(TerminationBroadcast.class, callback -> {
+			this.terminate();
+		});
 	}
+
+//	@Override
+//	public void run() {
+//		initialize();
+//	}
 
 	@Override
-	public void run() {
-		// TODO Implement this
+	public String toString() {
+		return "Publisher " + getName() + ": \nMissions: " + missions.toString() + "\n";
 	}
-
 }

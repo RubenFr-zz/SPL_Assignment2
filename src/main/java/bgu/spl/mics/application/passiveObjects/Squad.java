@@ -4,7 +4,7 @@ package bgu.spl.mics.application.passiveObjects;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Passive data-object representing a information about an agent in MI6.
@@ -14,7 +14,11 @@ import java.util.Map;
  */
 public class Squad {
 
-	private Map<String, Agent> agents;
+    private HashMap<String, Agent> agents;
+
+    private Squad() {
+        this.agents = new HashMap<>();
+    }
 
     /**
      * Static inner class (Bill Push singleton method)
@@ -59,7 +63,17 @@ public class Squad {
      * @param time milliseconds to sleep
      */
     public void sendAgents(List<String> serials, int time) {
-        // TODO Implement this
+        LinkedList<Agent> agents = new LinkedList<>();
+        for (String serial : serials) {
+            agents.addLast(this.agents.get(serial));
+        }
+        try {
+            TimeUnit.MILLISECONDS.sleep(time * 100);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        for (Agent agent : agents)
+            agent.release();
     }
 
     /**
@@ -73,9 +87,10 @@ public class Squad {
             Agent agent = agents.get(serial);
             if (agent == null) return false;
             else {
-                while (!agent.isAvailable()) wait();
-                agent.acquire();
-
+                synchronized (this) {
+                    while (!agent.isAvailable()) wait();
+                    agent.acquire();
+                }
             }
         }
         return true;
@@ -96,9 +111,4 @@ public class Squad {
         }
         return list;
     }
-
-    public Map<String, Agent> getAgents() {
-        return this.agents;
-    }
-
 }

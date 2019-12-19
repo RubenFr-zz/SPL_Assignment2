@@ -1,27 +1,26 @@
 package bgu.spl.mics.application;
 
 import bgu.spl.mics.Publisher;
-import bgu.spl.mics.application.passiveObjects.Agent;
-import bgu.spl.mics.application.passiveObjects.Inventory;
-import bgu.spl.mics.application.passiveObjects.MissionInfo;
-import bgu.spl.mics.application.passiveObjects.Squad;
+import bgu.spl.mics.Subscriber;
+import bgu.spl.mics.application.passiveObjects.*;
 
 import bgu.spl.mics.application.publishers.Intelligence;
+import bgu.spl.mics.application.publishers.TimeService;
 import bgu.spl.mics.application.subscribers.M;
 import bgu.spl.mics.application.subscribers.Moneypenny;
 import bgu.spl.mics.application.subscribers.Q;
 
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.concurrent.CountDownLatch;
 
 
 /**
@@ -31,67 +30,129 @@ import java.util.List;
  */
 public class MI6Runner {
 
-    @SuppressWarnings("unchecked")
+    private static CountDownLatch startSignal;
+    private static Subscriber[] subscribers;
+    private static Publisher[] publishers;
+    private static String[] outputFilesName;
+    private static LinkedList<M> MInstances;
+
     public static void main(String[] args) {
 
-        if (args.length != 1) {
+        if (args.length != 3) {
             System.out.println("Wrong arguments");
+            return;
         }
 
-        JSONParser parser = new JSONParser();
+        startSignal = new CountDownLatch(1);
+        LinkedList<Thread> threadsList = new LinkedList<>();
+        MInstances = new LinkedList<>();
+        outputFilesName = new String[2];
+        outputFilesName[0] = args[1];
+        outputFilesName[1] = args[2];
+        JsonParser parser = new JsonParser();
 
         try {
-            JSONObject JsonObj = (JSONObject) parser.parse(new FileReader(args[0]));
+            JsonObject JsonObj = (JsonObject) parser.parse(new FileReader(args[0]));
             initInventory(JsonObj);
             initSquad(JsonObj);
-            Publisher[] intelligences = initServices(JsonObj);
-            System.out.println(intelligences);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            subscribers = initSubscribers(JsonObj);
+            publishers = initPublishers(JsonObj);
         } catch (IOException e) {
-            e.printStackTrace();
-        } catch (ParseException e) {
-            e.printStackTrace();
-        } catch (Exception e) {
             e.printStackTrace();
         }
 
 
+        for (Subscriber subscriber : subscribers) {
+            Thread thread = new Thread(subscriber);
+            thread.start();
+            threadsList.add(thread);
+        }
+        for (Publisher publisher : publishers) {
+            Thread thread = new Thread(publisher);
+            thread.start();
+            threadsList.add(thread);
+        }
+
+        startSignal.countDown(); //Starts all the thread
+
+        for (Thread thread : threadsList) {
+            try {
+                thread.join();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+
+        /**
+         * When the program reaches this line the program is over !
+         */
+        printInventory();
+        printDiary();
+
     }
 
-    private static Publisher[] initServices(JSONObject jsonObj) {
-        JSONObject services = (JSONObject) jsonObj.get("services");
-        initM(services);
-        initMonneyPenny(services);
-        return initIntelligence(services);
+
+    private static Subscriber[] initSubscribers(JsonObject jsonObj) {
+        JsonObject services = jsonObj.get("services").getAsJsonObject();
+
+        int m = services.get("M").getAsInt();
+        int mp = services.get("Moneypenny").getAsInt();
+        int q = 1;
+        int i = services.get("intelligence").getAsJsonArray().size();
+        Subscriber[] subscribers = new Subscriber[m + mp + q + i];
+
+        System.arraycopy(initM(m), 0, subscribers, 0, m);
+        System.arraycopy(initMonneyPenny(mp), 0, subscribers, m, mp);
+        System.arraycopy((new Subscriber[]{Q.getInstance()}), 0, subscribers, m + mp, q);
+        System.arraycopy(initIntelligence(services), 0, subscribers, m + mp + q, i);
+
+        return subscribers;
     }
 
-    private static void initM(JSONObject services) {
-        M m1 = new M(String.valueOf(services.get("M")));
+    private static Publisher[] initPublishers(JsonObject jsonObj) {
+        JsonObject services = jsonObj.get("services").getAsJsonObject();
+
+        return (new Publisher[]{new TimeService(services.get("time").getAsInt(), 100)});
     }
 
-    private static void initMonneyPenny(JSONObject services) {
-        Moneypenny mp1 = new Moneypenny(String.valueOf(services.get("Moneypenny")));
+    private static Subscriber[] initM(int size) {
+        Subscriber[] array = new M[size];
+
+        for (int i = 0; i < size; i++) {
+            M m = new M(Integer.toString(i + 1), startSignal);
+            array[i] = m;
+            MInstances.add(m);
+        }
+        return array;
+    }
+
+    private static Subscriber[] initMonneyPenny(int size) {
+        Subscriber[] array = new Moneypenny[size];
+
+        for (int i = 0; i < size; i++) {
+            array[i] = new Moneypenny(Integer.toString(i + 1), startSignal);
+        }
+        return array;
     }
 
     /**
      * @param services is the section in the json of the service (publisher, subscribers)
      */
-    private static Publisher[] initIntelligence(JSONObject services) {
-        JSONArray intelligenceJSON = (JSONArray) services.get("intelligence"); //Array of all intelligences
-        Iterator<JSONObject> iterator = intelligenceJSON.iterator();
-        Publisher[] intelligences = new Intelligence[intelligenceJSON.size()];
+    private static Subscriber[] initIntelligence(JsonObject services) {
+        JsonArray intelligenceJSON = (JsonArray) services.get("intelligence"); //Array of all intelligences
+        Iterator<JsonElement> iterator = intelligenceJSON.iterator();
+        Subscriber[] intelligences = new Intelligence[intelligenceJSON.size()];
         int i = 0;
         while (iterator.hasNext()) {
-            JSONObject IntelligenceObject = iterator.next(); //Intelligence
-            JSONArray missionObject = (JSONArray) IntelligenceObject.get("missions");
-            Intelligence intelligence = new Intelligence(String.valueOf(i+1));
+            JsonObject IntelligenceObject = iterator.next().getAsJsonObject(); //Intelligence
+            JsonArray missionObject = (JsonArray) IntelligenceObject.get("missions");
+            Intelligence intelligence = new Intelligence(String.valueOf(i + 1), startSignal);
             MissionInfo[] missions = new MissionInfo[missionObject.size()];
             int j = 0;
 
-            Iterator<JSONObject> iterator1 = missionObject.iterator();
-            while(iterator1.hasNext()) {
-                MissionInfo mission = initMission(iterator1.next());
+            Iterator<JsonElement> iterator1 = missionObject.iterator();
+            while (iterator1.hasNext()) {
+                MissionInfo mission = initMission(iterator1.next().getAsJsonObject());
                 missions[j++] = mission;
             }
 
@@ -108,16 +169,16 @@ public class MI6Runner {
      * @param missionObject
      * @return the new mission initialized
      */
-    private static MissionInfo initMission(JSONObject missionObject) {
+    private static MissionInfo initMission(JsonObject missionObject) {
         MissionInfo mission = new MissionInfo();
 
         List<String> serialAgentsNumbers = extractSerialNumber(missionObject);
         mission.setSerialAgentsNumbers(serialAgentsNumbers);
-        mission.setMissionName((String) missionObject.get("missionName"));
-        mission.setGadget((String) missionObject.get("gadget"));
-        mission.setDuration(((Long) missionObject.get("duration")).intValue());
-        mission.setTimeIssued(((Long) missionObject.get("timeIssued")).intValue());
-        mission.setTimeExpired(((Long) missionObject.get("timeExpired")).intValue());
+        mission.setMissionName(missionObject.get("missionName").getAsString());
+        mission.setGadget(missionObject.get("gadget").getAsString());
+        mission.setDuration(missionObject.get("duration").getAsInt());
+        mission.setTimeIssued(missionObject.get("timeIssued").getAsInt());
+        mission.setTimeExpired(missionObject.get("timeExpired").getAsInt());
         return mission;
     }
 
@@ -127,12 +188,12 @@ public class MI6Runner {
      * @param missionObject
      * @return the list of agent's serial numbers required for the mission
      */
-    private static List<String> extractSerialNumber(JSONObject missionObject) {
-        JSONArray serialNumbers = (JSONArray) missionObject.get("serialAgentsNumbers");
-        Iterator<String> iterator1 = serialNumbers.iterator();
+    private static List<String> extractSerialNumber(JsonObject missionObject) {
+        JsonArray serialNumbers = (JsonArray) missionObject.get("serialAgentsNumbers");
+        Iterator<JsonElement> iterator1 = serialNumbers.iterator();
         List<String> serialAgentsNumbers = new LinkedList<>();
         while (iterator1.hasNext()) {
-            serialAgentsNumbers.add((String) iterator1.next());
+            serialAgentsNumbers.add(iterator1.next().getAsString());
         }
         return serialAgentsNumbers;
     }
@@ -143,16 +204,16 @@ public class MI6Runner {
      *
      * @param jsonObj
      */
-    private static void initSquad(JSONObject jsonObj) {
-        JSONArray squad = (JSONArray) jsonObj.get("squad");
-        Iterator<JSONObject> iterator = squad.iterator();
+    private static void initSquad(JsonObject jsonObj) {
+        JsonArray squad = (JsonArray) jsonObj.get("squad");
+        Iterator<JsonElement> iterator = squad.iterator();
         Agent[] agents = new Agent[squad.size()];
         int i = 0;
         while (iterator.hasNext()) {
-            JSONObject agentObject = iterator.next();
+            JsonObject agentObject = iterator.next().getAsJsonObject();
             Agent agent = new Agent();
-            agent.setName((String) agentObject.get("name"));
-            agent.setSerialNumber((String) agentObject.get("serialNumber"));
+            agent.setName(agentObject.get("name").getAsString());
+            agent.setSerialNumber(agentObject.get("serialNumber").getAsString());
             agents[i++] = agent;
         }
         Squad.getInstance().load(agents);
@@ -164,16 +225,32 @@ public class MI6Runner {
      *
      * @param jsonObj - Json file
      */
-    private static void initInventory(JSONObject jsonObj) throws IOException {
-        JSONArray inventory = (JSONArray) jsonObj.get("inventory");
-        Iterator<String> iterator = inventory.iterator();
+    private static void initInventory(JsonObject jsonObj) throws IOException {
+        JsonArray inventory = (JsonArray) jsonObj.get("inventory");
+        Iterator<JsonElement> iterator = inventory.iterator();
         String[] gadgets = new String[inventory.size()];
         int i = 0;
         while (iterator.hasNext()) {
-            gadgets[i++] = iterator.next();
+            gadgets[i++] = iterator.next().getAsString();
         }
         Inventory.getInstance().load(gadgets);
         Inventory.getInstance().printToFile("/home/rubenf/IdeaProjects/SPL_Assignment2/output.txt");
+    }
+
+    private static void printInventory() {
+        try{
+            Inventory.getInstance().printToFile(outputFilesName[0]);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static void printDiary(){
+        try {
+            Diary.getInstance().printToFile(outputFilesName[1]);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 }
