@@ -4,7 +4,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Arrays;
-import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -18,9 +17,9 @@ import java.util.List;
 public class Inventory {
     private List<String> gadgets;
 
-    private Inventory() {
-        this.gadgets = new LinkedList<>();
-    }
+//    private Inventory() {
+//        this.gadgets = new LinkedList<>();
+//    }
 
     /**
      * Static inner class (Bill Push singleton method)
@@ -33,7 +32,7 @@ public class Inventory {
     /**
      * Retrieves the single instance of this class.
      */
-    public static Inventory getInstance() {
+    private static Inventory getInstance() {
         return InventoryHolder.instance;
     }
 
@@ -46,11 +45,11 @@ public class Inventory {
      *                  of the inventory.
      */
     public void load(String[] inventory) {
-        gadgets.addAll(Arrays.asList(inventory));
+        this.gadgets.addAll(Arrays.asList(inventory));// Changed from array to list and added to gadgets
     }
 
     public List<String> getGadgets() {
-        return gadgets;
+        return this.gadgets;
     }
 
     /**
@@ -61,7 +60,14 @@ public class Inventory {
      * @return ‘false’ if the gadget is missing, and ‘true’ otherwise
      */
     public boolean getItem(String gadget) {
-        return gadgets.contains(gadget);
+        if (this.gadgets.contains(gadget)){// Means that we have the gadget
+            synchronized (this) {// In order that no two threads would try to access the same gadget
+                this.gadgets.remove(gadget);
+            }
+            return true;
+        }
+        else
+            return false;
     }
 
     /**

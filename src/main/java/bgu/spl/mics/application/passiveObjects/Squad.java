@@ -1,10 +1,10 @@
 package bgu.spl.mics.application.passiveObjects;
 
 
-import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Passive data-object representing a information about an agent in MI6.
@@ -26,8 +26,9 @@ public class Squad {
 
     /**
      * Retrieves the single instance of this class.
+     * Can't be public - need to be checked
      */
-    public static Squad getInstance() {
+    private static Squad getInstance() {
         return SquadHolder.instance;
     }
 
@@ -40,7 +41,7 @@ public class Squad {
      */
     public void load(Agent[] agents) {
         for (Agent agent : agents) {
-            this.agents.putIfAbsent(agent.getSerialNumber(), agent);
+            this.agents.putIfAbsent(agent.getSerialNumber(), agent);// To ensure that we don't add agents with the same serial number
         }
     }
 
@@ -49,7 +50,7 @@ public class Squad {
      */
     public void releaseAgents(List<String> serials) {
         for (String serial : serials) {
-            agents.get(serial).release();
+            this.agents.get(serial).release();
         }
     }
 
@@ -59,7 +60,19 @@ public class Squad {
      * @param time milliseconds to sleep
      */
     public void sendAgents(List<String> serials, int time) {
-        // TODO Implement this
+        LinkedList<Agent> missionAgents = new LinkedList<>();
+        for(String serial : serials){
+            missionAgents.addLast(this.agents.get(serial));
+        }
+        // Now we build a list with the gents for that specific mission
+        try {
+            TimeUnit.MILLISECONDS.sleep(time * 100);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        // Simulates mission in progress
+        // Now we will release those agents after the mission was finished
+        this.releaseAgents(serials);
     }
 
     /**
@@ -70,12 +83,13 @@ public class Squad {
      */
     public boolean getAgents(List<String> serials) throws InterruptedException {
         for (String serial : serials) {
-            Agent agent = agents.get(serial);
-            if (agent == null) return false;
+            Agent agent = this.agents.get(serial);
+            if (agent == null) return false;// Means that we didn't find an agent with that serial number
             else {
-                while (!agent.isAvailable()) wait();
-                agent.acquire();
-
+                synchronized (this) {// In order to prevent event that we take the same agent at the same time to several missions - NEED TO BE CHECKED!!!!!
+                    while (!agent.isAvailable()) wait();// We will wait until the agent will be available to acquire
+                    agent.acquire();
+                }
             }
         }
         return true;
@@ -88,17 +102,14 @@ public class Squad {
      * @return a list of the names of the agents with the specified serials.
      */
     public List<String> getAgentsNames(List<String> serials) {
-        List<String> list = new LinkedList<>();
-        for (String serial : serials) {
-            if (agents.get(serial) != null)
-                list.add(agents.get(serial).getName());
-            else System.out.println(new NullPointerException("serial isn't an agent").toString());
+        LinkedList<String> agentsNames = new LinkedList<>();
+        for(String serial : serials){
+            if (this.agents.get(serial) != null)
+                agentsNames.addLast(this.agents.get(serial).getName());
+            else// Means that we don't have an agent with that serial number - ERROR
+                System.out.println(new NullPointerException("serial isn't an agent").toString());
         }
-        return list;
-    }
-
-    public Map<String, Agent> getAgents() {
-        return this.agents;
+        return agentsNames;
     }
 
 }

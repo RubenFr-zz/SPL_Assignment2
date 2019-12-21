@@ -2,19 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56f2e87f-baab-46b1-9bf7-8153c38bde80" name="Default Changelist" comment="started Squad and SquadTest">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SPL_Assignment2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SPL_Assignment2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/SPL_Assignment2/FutureTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/SPL_Assignment2/InventoryTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/SPL_Assignment2/MessageBrokerTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/SPL_Assignment2/SquadTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/SPL_Assignment2/test/java/bgu/spl/mics/FutureTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/SPL_Assignment2/test/java/bgu/spl/mics/InventoryTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/SPL_Assignment2/test/java/bgu/spl/mics/MessageBrokerTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/SPL_Assignment2/test/java/bgu/spl/mics/SquadTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/bgu/spl/mics/FutureTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/bgu/spl/mics/FutureTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/bgu/spl/mics/MessageBrokerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/bgu/spl/mics/MessageBrokerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/application/passiveObjects/Agent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/application/passiveObjects/Agent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/application/passiveObjects/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/application/passiveObjects/Inventory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/application/passiveObjects/Squad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/application/passiveObjects/Squad.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,10 +161,10 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2520" y="116" key="CommitChangelistDialog2/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1576428457523" />
-    <state x="-311" y="-10" width="1736" height="686" maximized="true" key="DiffContextDialog" timestamp="1576421560763">
+    <state x="-311" y="-10" width="1736" height="686" maximized="true" key="DiffContextDialog" timestamp="1576970130687">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="-311" y="-10" width="1736" height="686" maximized="true" key="DiffContextDialog/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1576421560763" />
+    <state x="-311" y="-10" width="1736" height="686" maximized="true" key="DiffContextDialog/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1576970130687" />
     <state width="1807" height="278" key="GridCell.Tab.0.bottom" timestamp="1576360880048" />
     <state width="1807" height="278" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1576360880048" />
     <state width="1807" height="278" key="GridCell.Tab.0.center" timestamp="1576360880048" />
@@ -201,10 +192,11 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2584" y="413" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1576421620408" />
-    <state x="2689" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1576428462824">
+    <state x="2689" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1576966643071">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2689" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1576428462824" />
+    <state x="513" y="285" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680/1920.0.1920.1040@0.0.1280.680" timestamp="1576933464093" />
+    <state x="2689" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1576966643071" />
     <state x="513" y="285" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1576418045620" />
     <state x="2650" y="232" key="git4idea.branch.GitSmartOperationDialog" timestamp="1576428493054">
       <screen x="1920" y="0" width="1920" height="1040" />
