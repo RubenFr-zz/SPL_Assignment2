@@ -1,0 +1,15 @@
+Mission Received: The World Is Not Enough, by: 1
+Agents requested
+Mission Received: Thunderball, by: 2
+Agents requested
+Gadget requested
+Sending Agents
+Time taken (in Milli): 301
+Gadget requested
+Sending Agents
+Time taken (in Milli): 300
+Mission Received: GoldFinger, by: 1
+Agents requested
+Mission Received: From Russia With Love, by: 2
+Agents requested
+Gadget requested
