@@ -2,12 +2,12 @@ package bgu.spl.mics.application.subscribers;
 
 import bgu.spl.mics.Subscriber;
 import bgu.spl.mics.application.messages.AgentsAvailableEvent;
+import bgu.spl.mics.application.messages.SendAgentsEvent;
 import bgu.spl.mics.application.messages.TerminationBroadcast;
 import bgu.spl.mics.application.messages.TickBroadcast;
 import bgu.spl.mics.application.passiveObjects.Squad;
 
 import java.util.HashMap;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
 
@@ -33,43 +33,48 @@ public class Moneypenny extends Subscriber {
     protected void initialize() {
         subscribeBroadcast(TickBroadcast.class, callback -> {
             currTick = callback.getTick();
-            System.out.println(currTick);
         });
 
-		subscribeBroadcast(TerminationBroadcast.class, callback -> {
-			this.terminate();
-		});
+        subscribeBroadcast(TerminationBroadcast.class, callback -> {
+            this.terminate();
+        });
 
         subscribeEvent(AgentsAvailableEvent.class, callback -> {
 
+            System.out.println("Agents requested");
             List<String> agents = callback.getSerialNumbers();
-            try {
-                boolean acquired = squad.getAgents(agents);
+            boolean acquired = false;
 
-                if (acquired && currTick <= (callback.getExpired() - callback.getDuration())) {
-                    long timeIn = System.currentTimeMillis();
-                    System.out.println("Tik in: " + currTick);
-                    squad.sendAgents(agents, callback.getDuration());
-                    System.out.println("Tick out: " + currTick);
-                    System.out.println("Time taken (in Milli): " + (System.currentTimeMillis() - timeIn));
+            if (currTick <= callback.getExpired()) {
+                try {
+                    acquired = squad.getAgents(agents);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
                 }
-                else {
-                    acquired = false;
-                }
-                HashMap<String, Object> toReturn = getResult(agents, acquired);
-                complete(callback, toReturn);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-                complete(callback, null);
             }
+            complete(callback, getResult(agents, acquired));
+
+        });
+
+        subscribeEvent(SendAgentsEvent.class, callback -> {
+            System.out.println("Sending Agents");
+
+            if (currTick <= (callback.getExpired() - callback.getDuration())) {
+                long timeIn = System.currentTimeMillis();
+                squad.sendAgents(callback.getSerialNumbers(), callback.getDuration());
+                System.out.println("Time taken (in Milli): " + (System.currentTimeMillis() - timeIn));
+                complete(callback, true);
+            } else complete(callback, false);
         });
     }
 
     private HashMap<String, Object> getResult(List<String> agents, boolean acquired) {
         HashMap<String, Object> result = new HashMap<>();
-        result.put("Done", acquired);
-        result.put("MonneyPenny", getName());
-        result.put("AgentsName", squad.getAgentsNames(agents));
+        result.put("Acquired", acquired);
+        if (acquired) {
+            result.put("MonneyPenny", getName());
+            result.put("AgentsName", squad.getAgentsNames(agents));
+        }
         return result;
     }
 }

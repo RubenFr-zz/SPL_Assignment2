@@ -1,9 +1,10 @@
 package bgu.spl.mics;
 
+import bgu.spl.mics.application.messages.TerminationBroadcast;
+
 import java.util.LinkedList;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.LinkedBlockingQueue;
 
 
@@ -20,10 +21,10 @@ public class MessageBrokerImpl implements MessageBroker {
      * @param BroadcastSubscriber holds the broadcasts with its subscribed subscribers
      * @param toBeSolved holds the events with its unsolved futures (futures to be solved)
      */
-    private ConcurrentMap<Subscriber, BlockingQueue<Message>> SubscribersQueue;
-    private ConcurrentMap<Class<? extends Message>, LinkedList<Subscriber>> EventSubscribers;
-    private ConcurrentMap<Class<? extends Message>, LinkedList<Subscriber>> BroadcastSubscribers;
-    private ConcurrentMap<Event<?>, Future<?>> toBeSolved;
+    private ConcurrentHashMap<Subscriber, BlockingQueue<Message>> SubscribersQueue;
+    private ConcurrentHashMap<Class<? extends Message>, LinkedList<Subscriber>> EventSubscribers;
+    private ConcurrentHashMap<Class<? extends Message>, LinkedList<Subscriber>> BroadcastSubscribers;
+    private ConcurrentHashMap<Event<?>, Future<?>> toBeSolved;
 
     public MessageBrokerImpl() {
         this.SubscribersQueue = new ConcurrentHashMap<>();
@@ -58,13 +59,13 @@ public class MessageBrokerImpl implements MessageBroker {
      */
     @Override
     public <T> void subscribeEvent(Class<? extends Event<T>> type, Subscriber m) {
-            if (EventSubscribers.containsKey(type) && !EventSubscribers.get(type).contains(m)) {
-                EventSubscribers.get(type).addLast(m);
-            } else {
-                LinkedList<Subscriber> subType = new LinkedList<>();
-                subType.addLast(m);
-                EventSubscribers.put(type, subType);
-            }
+        if (EventSubscribers.containsKey(type) && !EventSubscribers.get(type).contains(m)) {
+            EventSubscribers.get(type).addLast(m);
+        } else {
+            LinkedList<Subscriber> subType = new LinkedList<>();
+            subType.addLast(m);
+            EventSubscribers.put(type, subType);
+        }
     }
 
     /**
@@ -78,13 +79,13 @@ public class MessageBrokerImpl implements MessageBroker {
     @Override
     public void subscribeBroadcast(Class<? extends Broadcast> type, Subscriber m) {
 
-            if (BroadcastSubscribers.containsKey(type) && !BroadcastSubscribers.get(type).contains(m)) {
-                BroadcastSubscribers.get(type).addLast(m);
-            } else {
-                LinkedList<Subscriber> subType = new LinkedList<>();
-                subType.addLast(m);
-                BroadcastSubscribers.put(type, subType);
-            }
+        if (BroadcastSubscribers.containsKey(type) && !BroadcastSubscribers.get(type).contains(m)) {
+            BroadcastSubscribers.get(type).addLast(m);
+        } else {
+            LinkedList<Subscriber> subType = new LinkedList<>();
+            subType.addLast(m);
+            BroadcastSubscribers.put(type, subType);
+        }
 
     }
 
@@ -117,17 +118,20 @@ public class MessageBrokerImpl implements MessageBroker {
     public void sendBroadcast(Broadcast b) {
         if (!BroadcastSubscribers.containsKey(b.getClass()) || BroadcastSubscribers.get(b.getClass()) == null)
             return;
-        LinkedList<Subscriber> subscribers = BroadcastSubscribers.get(b.getClass());
-//        synchronized (BroadcastSubscribers.get(b.getClass())) {
-            for (Subscriber sub : subscribers) {
-                try {
-                    SubscribersQueue.get(sub).put(b);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-//        }
 
+        LinkedList<Subscriber> subscribers = BroadcastSubscribers.get(b.getClass());
+        if (subscribers == null){
+            System.out.println("NO SUBSCRIBERS FOR:" + b.getClass().getName());
+            return;
+        }
+
+        for (int i = 0; i < subscribers.size(); i++) {
+            try {
+                SubscribersQueue.get(subscribers.get(i)).put(b);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     /**
@@ -141,24 +145,23 @@ public class MessageBrokerImpl implements MessageBroker {
     @Override
     public <T> Future<T> sendEvent(Event<T> e) {
 
-            /**
-             * Round-robin : take the first subscriber {@link LinkedList#pollFirst()}
-             * and put it last {@link LinkedList#addLast(@code firstSub)}
-             */
-            Subscriber firstSub = EventSubscribers.get(e.getClass()).pollFirst();
-            if (firstSub != null && SubscribersQueue.containsKey(firstSub)) {
-                Future<T> future = new Future<>();
-                toBeSolved.put(e, future);
-                EventSubscribers.get(e.getClass()).addLast(firstSub);
+        /**
+         * Round-robin : take the first subscriber {@link LinkedList#pollFirst()}
+         * and put it last {@link LinkedList#addLast(@code firstSub)}
+         */
+        Subscriber firstSub = EventSubscribers.get(e.getClass()).pollFirst();
+        if (firstSub != null && SubscribersQueue.containsKey(firstSub)) {
+            Future<T> future = new Future<>();
+            toBeSolved.put(e, future);
+            EventSubscribers.get(e.getClass()).addLast(firstSub);
 
-                try {
-                    SubscribersQueue.get(firstSub).put(e);
-                } catch (InterruptedException ex) {
-                    ex.printStackTrace();
-                }
-                return future;
+            try {
+                SubscribersQueue.get(firstSub).put(e);
+            } catch (InterruptedException ex) {
+                ex.printStackTrace();
             }
-            else return null;
+            return future;
+        } else return null;
 
     }
 

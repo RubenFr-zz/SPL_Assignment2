@@ -137,12 +137,10 @@ public abstract class Subscriber extends RunnableSubPub {
                     Callback<Message> c = (Callback<Message>) MessageCallMap.get(message.getClass());
                     c.call(message);
                 }
-
             }
             _MessageBroker.unregister(this);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
     }
-
 }

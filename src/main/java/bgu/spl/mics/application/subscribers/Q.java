@@ -56,6 +56,7 @@ public class Q extends Subscriber {
 		});
 
 		subscribeEvent(GadgetAvailableEvent.class, callback -> {
+			System.out.println("Gadget requested");
 			boolean found  = inventory.getItem(callback.getGadget());
 			complete(callback, found);
 		});

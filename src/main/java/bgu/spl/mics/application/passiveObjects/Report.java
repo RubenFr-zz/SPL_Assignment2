@@ -1,5 +1,10 @@
 package bgu.spl.mics.application.passiveObjects;
 
+import bgu.spl.mics.application.subscribers.Moneypenny;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+
 import java.util.LinkedList;
 import java.util.List;
 
@@ -68,14 +73,14 @@ public class Report {
 	 * <p>
 	 * @return The serial numbers of the agents.
 	 */
-	public List<String> getAgentsSerialNumbersNumber() {
+	public List<String> getAgentsSerialNumbers() {
 		return this.agentsSerialNumbers;
 	}
 
 	/**
 	 * Sets the serial numbers of the agents.
 	 */
-	public void setAgentsSerialNumbersNumber(List<String> agentsSerialNumbersNumber) {
+	public void setAgentsSerialNumbers(List<String> agentsSerialNumbersNumber) {
 		this.agentsSerialNumbers.addAll(agentsSerialNumbersNumber);
 	}
 
@@ -151,22 +156,5 @@ public class Report {
 	 */
 	public void setTimeCreated(int timeCreated) {
 		this.timeCreated = timeCreated;
-	}
-
-	/**
-	 * ToString method
-	 * @return string of the object
-	 */
-	public String toString() {
-		return  "{ \n\tmissionName = " + missionName +
-				", \n\tM = " + M +
-				", \n\tMoneyPenny = " + MoneyPenny +
-				", \n\tagentsSerialNumbers = " + agentsSerialNumbers +
-				", \n\tagentsName = " + agentsName +
-				", \n\tgadgetName = " + gadgetName +
-				", \n\ttimeIssued = " + timeIssued +
-				", \n\tQTime = " + QTime +
-				", \n\ttimeCreated = " + timeCreated +
-				"\n}\n";
 	}
 }

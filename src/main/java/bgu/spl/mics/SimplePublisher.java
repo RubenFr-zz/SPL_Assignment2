@@ -1,10 +1,5 @@
 package bgu.spl.mics;
 
-import bgu.spl.mics.Future;
-
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.ConcurrentMap;
-
 /**
  * The SimplePublisher is a class that any publisher in the system
  * stores. The SimplePublisher class is responsible to send

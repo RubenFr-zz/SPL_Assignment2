@@ -174,7 +174,7 @@ public class MI6Runner {
 
         List<String> serialAgentsNumbers = extractSerialNumber(missionObject);
         mission.setSerialAgentsNumbers(serialAgentsNumbers);
-        mission.setMissionName(missionObject.get("missionName").getAsString());
+        mission.setMissionName(missionObject.get("name").getAsString());
         mission.setGadget(missionObject.get("gadget").getAsString());
         mission.setDuration(missionObject.get("duration").getAsInt());
         mission.setTimeIssued(missionObject.get("timeIssued").getAsInt());
@@ -234,7 +234,7 @@ public class MI6Runner {
             gadgets[i++] = iterator.next().getAsString();
         }
         Inventory.getInstance().load(gadgets);
-        Inventory.getInstance().printToFile("/home/rubenf/IdeaProjects/SPL_Assignment2/output.txt");
+//        Inventory.getInstance().printToFile("/home/rubenf/IdeaProjects/SPL_Assignment2/output.txt");
     }
 
     private static void printInventory() {

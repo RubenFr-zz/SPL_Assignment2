@@ -1,6 +1,5 @@
 package bgu.spl.mics.application.passiveObjects;
 
-
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -14,7 +13,8 @@ import java.util.concurrent.TimeUnit;
  */
 public class Squad {
 
-    private HashMap<String, Agent> agents;
+    private final HashMap<String, Agent> agents;
+    private final Object lock = new Object();
 
     private Squad() {
         this.agents = new HashMap<>();
@@ -52,8 +52,11 @@ public class Squad {
      * Releases agents.
      */
     public void releaseAgents(List<String> serials) {
-        for (String serial : serials) {
-            agents.get(serial).release();
+        synchronized (lock) {
+            for (String serial : serials) {
+                agents.get(serial).release();
+            }
+            lock.notifyAll();
         }
     }
 
@@ -63,17 +66,17 @@ public class Squad {
      * @param time milliseconds to sleep
      */
     public void sendAgents(List<String> serials, int time) {
-        LinkedList<Agent> agents = new LinkedList<>();
-        for (String serial : serials) {
-            agents.addLast(this.agents.get(serial));
-        }
+
+        for (String serial : serials)
+            if (agents.get(serial).isAvailable())
+                throw new AgentNotAcquiredException();
+
         try {
             TimeUnit.MILLISECONDS.sleep(time * 100);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        for (Agent agent : agents)
-            agent.release();
+        releaseAgents(serials);
     }
 
     /**
@@ -83,12 +86,14 @@ public class Squad {
      * @return ‘false’ if an agent of serialNumber ‘serial’ is missing, and ‘true’ otherwise
      */
     public boolean getAgents(List<String> serials) throws InterruptedException {
-        for (String serial : serials) {
-            Agent agent = agents.get(serial);
-            if (agent == null) return false;
-            else {
-                synchronized (this) {
-                    while (!agent.isAvailable()) wait();
+        synchronized (lock) {
+            for (String serial : serials) {
+                Agent agent = agents.get(serial);
+                if (agent == null) return false;
+                else {
+                    while (!agent.isAvailable()) {
+                        lock.wait();
+                    }
                     agent.acquire();
                 }
             }
@@ -107,7 +112,7 @@ public class Squad {
         for (String serial : serials) {
             if (agents.get(serial) != null)
                 list.add(agents.get(serial).getName());
-            else System.out.println(new NullPointerException("serial isn't an agent").toString());
+            else System.out.println(new NullPointerException(serial + " isn't an agent").toString());
         }
         return list;
     }

@@ -1,8 +1,6 @@
 package bgu.spl.mics.application.publishers;
 
-import bgu.spl.mics.Event;
 import bgu.spl.mics.Future;
-import bgu.spl.mics.Publisher;
 import bgu.spl.mics.Subscriber;
 import bgu.spl.mics.application.messages.MissionReceivedEvent;
 import bgu.spl.mics.application.messages.TerminationBroadcast;
@@ -38,7 +36,7 @@ public class Intelligence extends Subscriber {
 			if (! this.missions.containsKey(time))
 			{
 				LinkedList<MissionInfo> list = new LinkedList<>();
-				list.add(mission);
+				list.addLast(mission);
 				this.missions.put(time, list);
 			}
 			else { this.missions.get(time).addLast(mission); }

@@ -72,16 +72,16 @@ public class Agent {
 		if (this.available)
 			this.available = false;
 		else
-			throw new IllegalStateException("Try to acquire a none available agent");
+			throw new AgentNotAvailableException();
 	}
 
 	/**
 	 * Releases an agent. (command)
 	 * @pre: this.available == false
 	 */
-	public synchronized void release(){
+	public void release(){
 		this.available = true;
-		notifyAll();
+//		notifyAll();
 	}
 
 	/**

@@ -1,11 +1,15 @@
 package bgu.spl.mics.application.passiveObjects;
 
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+
 import java.util.LinkedList;
 import java.util.List;
 
 import java.io.FileWriter;
-import java.io.PrintWriter;
 import java.io.IOException;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * Passive object representing the diary where all reports are stored.
@@ -18,14 +22,14 @@ import java.io.IOException;
 public class Diary {
 
 	private List<Report> reports;
-	private int total;
+	private AtomicInteger total;
 
 	/**
 	 * Initialize a Diary
 	 */
 	private Diary(){
 		this.reports = new LinkedList<>();
-		this.total = 0;
+		total = new AtomicInteger(0);
 	}
 
 	/**
@@ -63,12 +67,18 @@ public class Diary {
 	 * This method is called by the main method in order to generate the output.
 	 */
 	public void printToFile(String filename) throws IOException {
-		FileWriter write = new FileWriter(filename, false);
-		PrintWriter print_line = new PrintWriter(write);
-		for (Report report : reports) {
-			print_line.printf(report.toString());
-		}
-		print_line.close();
+
+		JsonArray reports = new JsonArray();
+		for ( Report report : this.reports)
+			reports.add(toJson(report));
+
+		JsonObject jsonObject = new JsonObject();
+		jsonObject.addProperty("total", total.get());
+		jsonObject.add("reports", reports);
+
+		FileWriter file = new FileWriter(filename);
+		file.write(new GsonBuilder().setPrettyPrinting().create().toJson(jsonObject));
+		file.close();
 	}
 
 	/**
@@ -76,10 +86,37 @@ public class Diary {
 	 * @return the total number of received missions (executed / aborted) be all the M-instances.
 	 */
 	public int getTotal(){
-		return this.total;
+		return total.get();
 	}
 
 	public void increment(){
-		total++;
+		total.incrementAndGet();
+	}
+
+	/**
+	 * Convert a report into a JsonObject with all the requiered fields
+	 * @return jsonObject of the report
+	 */
+	private JsonObject toJson(Report report) {
+
+		JsonArray serialsNumber = new JsonArray();
+		for ( String serial : report.getAgentsSerialNumbers())
+			serialsNumber.add(serial);
+
+		JsonArray names = new JsonArray();
+		for ( String name : report.getAgentsNames())
+			names.add(name);
+
+		JsonObject jsonReport = new JsonObject();
+		jsonReport.addProperty("missionName", report.getMissionName());
+		jsonReport.addProperty("M", report.getM());
+		jsonReport.addProperty("MoneyPenny", report.getMoneypenny());
+		jsonReport.add("agentsSerialNumbers", serialsNumber);
+		jsonReport.add("agentsName", names);
+		jsonReport.addProperty("timeIssued", report.getTimeIssued());
+		jsonReport.addProperty("QTime", report.getQTime());
+		jsonReport.addProperty("timeCreated", report.getTimeCreated());
+
+		return jsonReport;
 	}
 }
