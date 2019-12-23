@@ -1,4 +1,8 @@
-Sky Hook
-Geiger counter
-X-ray glasses
-Dagger shoe
+{
+  "Inventory": [
+    "car",
+    "gun",
+    "hammer",
+    "pistol"
+  ]
+}
