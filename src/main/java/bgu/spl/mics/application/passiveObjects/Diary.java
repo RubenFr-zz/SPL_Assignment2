@@ -1,11 +1,10 @@
 package bgu.spl.mics.application.passiveObjects;
 
-import java.util.LinkedList;
-import java.util.List;
-
 import java.io.FileWriter;
-import java.io.PrintWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.List;
+import java.util.LinkedList;
 
 /**
  * Passive object representing the diary where all reports are stored.
@@ -18,12 +17,12 @@ import java.io.IOException;
 public class Diary {
 
 	private List<Report> reports;
-	private int total;
+	private int total = 0;
 
 	/**
 	 * Initialize a Diary
 	 */
-	private Diary(){
+	private Diary(){// For the singleton
 		this.reports = new LinkedList<>();
 		this.total = 0;
 	}
@@ -44,7 +43,7 @@ public class Diary {
 	}
 
 	public List<Report> getReports() {
-		return reports;
+		return this.reports;
 	}
 
 	/**
@@ -52,8 +51,8 @@ public class Diary {
 	 * @param reportToAdd - the report to add
 	 */
 	public void addReport(Report reportToAdd){
-		reports.add(reportToAdd);
-		this.total++;
+		this.reports.add(reportToAdd);
+		this.total++;// Should we increment the number of reports here?
 	}
 
 	/**
@@ -66,7 +65,7 @@ public class Diary {
 	public void printToFile(String filename) throws IOException {
 		FileWriter write = new FileWriter(filename, false);
 		PrintWriter print_line = new PrintWriter(write);
-		for (Report report : reports) {
+		for (Report report : this.reports) {
 			print_line.printf(report.toString());
 		}
 		print_line.close();
@@ -78,5 +77,9 @@ public class Diary {
 	 */
 	public int getTotal(){
 		return this.total;
+	}
+
+	public void incrementTotal(){
+		this.total++;
 	}
 }

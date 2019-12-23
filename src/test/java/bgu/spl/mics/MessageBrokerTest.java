@@ -20,7 +20,7 @@ public class MessageBrokerTest {
     /*
         create new events from several types and check them
      */
-    messageBroker = new MessageBrokerImpl();
+    //messageBroker = new MessageBrokerImpl();
     agentEvent = new AgentsAvailableEvent("111111");
     gadgetEvent = new GadgetAvailableEvent("22222");
     receivedEvent = new MissionReceivedEvent("333333");

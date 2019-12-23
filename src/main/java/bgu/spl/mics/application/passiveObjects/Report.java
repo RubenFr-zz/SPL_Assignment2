@@ -1,7 +1,7 @@
 package bgu.spl.mics.application.passiveObjects;
 
+import java.util.LinkedList;
 import java.util.List;
-
 /**
  * Passive data-object representing a delivery vehicle of the store.
  * You must not alter any of the given public methods of this class.
@@ -13,8 +13,8 @@ public class Report {
 	private String missionName;
 	private int M;
 	private int MoneyPenny;
-	private List<String> agentsSerialNumbers;
-	private List<String> agentsName;
+	private List<String> agentsSerialNumbers = new LinkedList<>();
+	private List<String> agentsName = new LinkedList<>();
 	private String gadgetName;
 	private int timeIssued;
 	private int QTime;
@@ -100,7 +100,7 @@ public class Report {
 	 * @return the name of the gadget.
 	 */
 	public String getGadgetName() {
-		return gadgetName;
+		return this.gadgetName;
 	}
 
 	/**
@@ -157,6 +157,15 @@ public class Report {
 	 * @return string of the object
 	 */
 	public String ToString(){
-		return null;
+		return  "{ \n\t missionName = " + this.missionName +
+				", \n\t M = " + this.M +
+				", \n\t MoneyPenny = " + this.MoneyPenny +
+				", \n\t agentsSerialNumbers = " + this.agentsSerialNumbers +
+				", \n\t agentsName = " + this.agentsName +
+				", \n\t gadgetName = " + this.gadgetName +
+				", \n\t timeIssued = " + this.timeIssued +
+				", \n\t QTime = " + this.QTime +
+				", \n\t timeCreated = " + this.timeCreated +
+				"\n}\n";
 	}
 }

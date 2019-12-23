@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Arrays;
 import java.util.List;
+import java.util.LinkedList;
 
 /**
  * That's where Q holds his gadget (e.g. an explosive pen was used in GoldenEye, a geiger counter in Dr. No, etc).
@@ -17,9 +18,9 @@ import java.util.List;
 public class Inventory {
     private List<String> gadgets;
 
-//    private Inventory() {
-//        this.gadgets = new LinkedList<>();
-//    }
+    private Inventory() {// For the singleton
+        this.gadgets = new LinkedList<>();
+    }
 
     /**
      * Static inner class (Bill Push singleton method)
@@ -32,7 +33,7 @@ public class Inventory {
     /**
      * Retrieves the single instance of this class.
      */
-    private static Inventory getInstance() {
+    public static Inventory getInstance() {
         return InventoryHolder.instance;
     }
 
@@ -60,13 +61,12 @@ public class Inventory {
      * @return ‘false’ if the gadget is missing, and ‘true’ otherwise
      */
     public boolean getItem(String gadget) {
-        if (this.gadgets.contains(gadget)){// Means that we have the gadget
+        if (this.gadgets.contains(gadget)) {// Means that we have the gadget
             synchronized (this) {// In order that no two threads would try to access the same gadget
                 this.gadgets.remove(gadget);
             }
             return true;
-        }
-        else
+        } else
             return false;
     }
 
@@ -79,9 +79,9 @@ public class Inventory {
     public void printToFile(String filename) throws IOException {
         FileWriter fileWriter = new FileWriter(filename);
         PrintWriter printWriter = new PrintWriter(fileWriter);
-        for (String gadget : gadgets){
-        	printWriter.println(gadget);
-		}
+        for (String gadget : gadgets) {
+            printWriter.println(gadget);
+        }
         printWriter.close();
     }
 }

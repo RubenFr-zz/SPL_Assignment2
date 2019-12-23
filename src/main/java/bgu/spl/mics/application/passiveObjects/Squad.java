@@ -1,9 +1,9 @@
 package bgu.spl.mics.application.passiveObjects;
 
 
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -14,8 +14,11 @@ import java.util.concurrent.TimeUnit;
  */
 public class Squad {
 
-	private Map<String, Agent> agents;
+	private HashMap<String, Agent> agents;
 
+	private Squad(){// For the singleton
+	    this.agents = new HashMap<>();
+    }
     /**
      * Static inner class (Bill Push singleton method)
      * That way we are sure the class instance is only defined once !
@@ -28,7 +31,7 @@ public class Squad {
      * Retrieves the single instance of this class.
      * Can't be public - need to be checked
      */
-    private static Squad getInstance() {
+    public static Squad getInstance() {
         return SquadHolder.instance;
     }
 
@@ -64,7 +67,7 @@ public class Squad {
         for(String serial : serials){
             missionAgents.addLast(this.agents.get(serial));
         }
-        // Now we build a list with the gents for that specific mission
+        // Now we build a list with the agents for that specific mission
         try {
             TimeUnit.MILLISECONDS.sleep(time * 100);
         } catch (InterruptedException e) {
