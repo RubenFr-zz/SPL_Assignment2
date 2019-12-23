@@ -52,7 +52,7 @@ public class Diary {
 	 */
 	public void addReport(Report reportToAdd){
 		this.reports.add(reportToAdd);
-		this.total++;// Should we increment the number of reports here?
+		this.total++;
 	}
 
 	/**

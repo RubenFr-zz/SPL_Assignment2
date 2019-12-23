@@ -12,6 +12,6 @@ public class TickBroadcast implements Broadcast {
     }
 
     public String getSenderId() {
-        return senderId;
+        return this.senderId;
     }
 }

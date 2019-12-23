@@ -1,7 +1,6 @@
 package bgu.spl.mics.application.publishers;
 
 import bgu.spl.mics.Publisher;
-import bgu.spl.mics.Subscriber;
 import bgu.spl.mics.application.passiveObjects.MissionInfo;
 
 import java.util.Arrays;
@@ -22,7 +21,7 @@ public class Intelligence extends Publisher {
 
 	public Intelligence(String name) {
 		super(name);
-		missions = new LinkedList<>();
+		this.missions = new LinkedList<>();
 	}
 
 	public void loadMission(MissionInfo[] missions){
@@ -31,12 +30,12 @@ public class Intelligence extends Publisher {
 
 	@Override
 	protected void initialize() {
-		// TODO Implement this
+
 	}
 
 	@Override
 	public void run() {
-		// TODO Implement this
+		initialize();
 	}
 
 }

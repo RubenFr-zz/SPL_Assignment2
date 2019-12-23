@@ -10,6 +10,6 @@ public class GadgetAvailableEvent implements Event<Boolean> {
     }
 
     public String getSenderId() {
-        return senderId;
+        return this.senderId;
     }
 }

@@ -10,6 +10,6 @@ public class AgentsAvailableEvent implements Event<Boolean> {
     }
 
     public String getSenderId() {
-        return senderId;
+        return this.senderId;
     }
 }
