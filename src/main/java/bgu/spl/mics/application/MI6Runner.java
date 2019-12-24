@@ -4,7 +4,7 @@ import bgu.spl.mics.Publisher;
 import bgu.spl.mics.Subscriber;
 import bgu.spl.mics.application.passiveObjects.*;
 
-import bgu.spl.mics.application.publishers.Intelligence;
+import bgu.spl.mics.application.subscribers.Intelligence;
 import bgu.spl.mics.application.publishers.TimeService;
 import bgu.spl.mics.application.subscribers.M;
 import bgu.spl.mics.application.subscribers.Moneypenny;
@@ -112,7 +112,7 @@ public class MI6Runner {
     private static Publisher[] initPublishers(JsonObject jsonObj) {
         JsonObject services = jsonObj.get("services").getAsJsonObject();
 
-        return (new Publisher[]{new TimeService(services.get("time").getAsInt(), 100)});
+        return (new Publisher[]{new TimeService(services.get("time").getAsInt(), 100, startSignal)});
     }
 
     private static Subscriber[] initM(int size) {

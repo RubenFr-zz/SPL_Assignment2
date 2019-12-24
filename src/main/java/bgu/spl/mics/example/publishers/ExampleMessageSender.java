@@ -1,5 +1,6 @@
 package bgu.spl.mics.example.publishers;
 
+import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
 import bgu.spl.mics.Future;
@@ -12,7 +13,7 @@ public class ExampleMessageSender extends Subscriber {
     private boolean broadcast;
 
     public ExampleMessageSender(String name, String[] args) {
-        super(name);
+        super(name, new CountDownLatch(0));
 
         if (args.length != 1 || !args[0].matches("broadcast|event")) {
             throw new IllegalArgumentException("expecting a single argument: broadcast/event");

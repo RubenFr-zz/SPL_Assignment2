@@ -18,15 +18,15 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class SquadTest {
 
-    private Squad squad;
     private Map<String, Agent> agents;
-    private Squad s;
+    private Squad squad;
 
     /**
      * Set up for a test
      */
     @BeforeEach
     public void setUp(){
+        squad = Squad.getInstance();
         agents = createMap();
         Agent agent1 = new Agent();
         Agent agent2 = new Agent();
@@ -49,7 +49,7 @@ public class SquadTest {
         agents.put("000",agent3);
         agents.put("007",agent4);
         Agent[] temp = {agent1,agent2,agent3,agent4};
-        s.load(temp);
+        squad.load(temp);
     }
 
     /**
@@ -71,23 +71,23 @@ public class SquadTest {
         test1.add("002");
         test1.add("000");
         test1.add("005");
-        assertFalse(s.getAgents(test1));
+        assertFalse(squad.getAgents(test1));
         List<String> test2 = new LinkedList<>();
         test2.add("001");
         test2.add("002");
         test2.add("000");
         test2.add("007");
-        assertTrue(s.getAgents(test2));
+        assertTrue(squad.getAgents(test2));
     }
 
     @Test
     public void testGetInstance() {
-        assertTrue(s instanceof Squad);
+        assertTrue(Squad.class == squad.getClass());
     }
 
     @Test
     public void testLoad() {
-        assertTrue(s != null);
+        assertTrue(squad != null);
     }
 
     @Test
@@ -95,7 +95,7 @@ public class SquadTest {
         List<String> test1 = new LinkedList<>();
         test1.add("001");
         test1.add("002");
-        s.releaseAgents(test1);
+        squad.releaseAgents(test1);
         for(String serial : test1)
             assertTrue(agents.get(serial).isAvailable());
         assertFalse(!agents.get("001").isAvailable());
@@ -106,7 +106,7 @@ public class SquadTest {
         List<String> test1 = new LinkedList<>();
         test1.add("001");
         test1.add("002");
-        s.sendAgents(test1,1);
+        squad.sendAgents(test1,1);
         for(String serial : test1)
             assertTrue(agents.get(serial).isAvailable());
     }
@@ -116,7 +116,7 @@ public class SquadTest {
         List<String> test1 = new LinkedList<>();
         test1.add("007");
         test1.add("002");
-        List<String> temp = s.getAgentsNames(test1);
+        List<String> temp = squad.getAgentsNames(test1);
         assertTrue(temp.contains("Ruben"));
         assertTrue(temp.contains("James Bond"));
     }

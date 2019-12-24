@@ -51,19 +51,5 @@ public class InventoryTest {
         assertFalse(inventory.getItem(object));
     }
 
-    @Test
-    void printToFile() throws IOException {
-        String[] list = {"car", "gun", "hammer", "pistol"};
-        gadgets.addAll(Arrays.asList(list));
-        inventory.printToFile("output.txt");
 
-        File file = new File("output.txt");    //creates a new file instance
-        FileReader fr = new FileReader(file);   //reads the file
-        BufferedReader br = new BufferedReader(fr);  //creates a buffering character input stream
-        String line;
-        while((line=br.readLine())!=null){
-            assertTrue(gadgets.contains(line));
-        }
-        fr.close();    //closes the stream and release the resources
-    }
 }

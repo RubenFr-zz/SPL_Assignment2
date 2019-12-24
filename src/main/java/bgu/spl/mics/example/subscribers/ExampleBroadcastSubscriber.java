@@ -3,12 +3,14 @@ package bgu.spl.mics.example.subscribers;
 import bgu.spl.mics.Subscriber;
 import bgu.spl.mics.example.messages.ExampleBroadcast;
 
+import java.util.concurrent.CountDownLatch;
+
 public class ExampleBroadcastSubscriber extends Subscriber {
 
     private int mbt;
 
     public ExampleBroadcastSubscriber(String name, String[] args) {
-        super(name);
+        super(name, new CountDownLatch(0));
 
         if (args.length != 1) {
             throw new IllegalArgumentException("Listener expecting a single argument: mbt (the number of requests to answer before termination)");

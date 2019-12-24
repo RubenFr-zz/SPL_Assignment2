@@ -120,7 +120,7 @@ public class MessageBrokerImpl implements MessageBroker {
             return;
 
         LinkedList<Subscriber> subscribers = BroadcastSubscribers.get(b.getClass());
-        if (subscribers == null){
+        if (subscribers == null) {
             System.out.println("NO SUBSCRIBERS FOR:" + b.getClass().getName());
             return;
         }
@@ -161,7 +161,8 @@ public class MessageBrokerImpl implements MessageBroker {
                 ex.printStackTrace();
             }
             return future;
-        } else return null;
+        }
+        else return null;
 
     }
 
@@ -173,8 +174,7 @@ public class MessageBrokerImpl implements MessageBroker {
      */
     @Override
     public void register(Subscriber m) {
-        BlockingQueue<Message> queue = new LinkedBlockingQueue<>();
-        SubscribersQueue.putIfAbsent(m, queue);
+        SubscribersQueue.putIfAbsent(m, new LinkedBlockingQueue<>());
 
     }
 
@@ -186,26 +186,27 @@ public class MessageBrokerImpl implements MessageBroker {
     @Override
     public void unregister(Subscriber m) {
         //TODO check if need to delete it at other places !
-        //TODO check if need to {@code synchronized(m)}
+        //TODO check if need to {@code synchronized(m)}\
+
         for (Class<? extends Message> key : EventSubscribers.keySet()) {
             LinkedList<Subscriber> list = EventSubscribers.get(key);
-//            synchronized (m) {
-            if (list.contains(m)) {
-                synchronized (EventSubscribers.get(key)) {
-                    list.remove(m);
+            synchronized (m) {
+                if (list.contains(m)) {
+                    synchronized (EventSubscribers.get(key)) {
+                        list.remove(m);
+                    }
                 }
             }
-//            }
         }
         for (Class<? extends Message> key : BroadcastSubscribers.keySet()) {
             LinkedList<Subscriber> list = BroadcastSubscribers.get(key);
-//            synchronized (m) {
-            if (list.contains(m)) {
-                synchronized (BroadcastSubscribers.get(key)) {
-                    list.remove(m);
+            synchronized (m) {
+                if (list.contains(m)) {
+                    synchronized (BroadcastSubscribers.get(key)) {
+                        list.remove(m);
+                    }
                 }
             }
-//            }
         }
         SubscribersQueue.remove(m);
     }

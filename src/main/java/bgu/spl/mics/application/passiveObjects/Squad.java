@@ -116,4 +116,8 @@ public class Squad {
         }
         return list;
     }
+
+    public HashMap<String, Agent> getAgents() {
+        return agents;
+    }
 }

@@ -1,6 +1,7 @@
 package bgu.spl.mics.application.subscribers;
 
 import bgu.spl.mics.Future;
+import bgu.spl.mics.Message;
 import bgu.spl.mics.Subscriber;
 import bgu.spl.mics.application.messages.*;
 import bgu.spl.mics.application.passiveObjects.Diary;
@@ -8,7 +9,9 @@ import bgu.spl.mics.application.passiveObjects.MissionInfo;
 import bgu.spl.mics.application.passiveObjects.Report;
 
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.CountDownLatch;
 
 
@@ -23,10 +26,12 @@ public class M extends Subscriber {
     private Diary diary;
     private int currTick;
     private int QTime;
+    private HashMap<MissionInfo, LinkedList<Future>> futureHashMap;
 
     public M(String name, CountDownLatch latch) {
         super(name, latch);
         this.diary = Diary.getInstance();
+        futureHashMap = new HashMap<>();
 
     }
 
@@ -34,28 +39,41 @@ public class M extends Subscriber {
      * As said on the forum we chose to first request the GadgetAvailable and then the AgentsAvailable
      */
     @Override
+    @SuppressWarnings({"unchecked", "rawtypes"})
     protected void initialize() {
         subscribeBroadcast(TickBroadcast.class, callback -> currTick = callback.getTick());
 
-        subscribeBroadcast(TerminationBroadcast.class, callback -> this.terminate());
+        subscribeBroadcast(TerminationBroadcast.class, callback -> {
+            for (LinkedList<Future> list : futureHashMap.values())
+                for (Future fut : list)
+                    if (fut.isDone())
+                        fut.resolve(null);
+            this.terminate();
+        });
 
         subscribeEvent(MissionReceivedEvent.class, callback -> {
 
             MissionInfo mission = callback.getMission();
             System.out.println("Mission Received: " + mission.getMissionName() + ", by: " + getName());
             int timeExpired = mission.getTimeExpired();
+            futureHashMap.putIfAbsent(mission, new LinkedList<Future>());
 
             diary.increment();
 
             try {
                 if (currTick <= timeExpired) {
+                    long before = System.currentTimeMillis();
                     Future<HashMap<String, Object>> fut1 = askAgents(mission);
+                    futureHashMap.get(mission).add(fut1);
 
                     if (fut1 != null && (boolean) fut1.get().get("Acquired") && currTick <= timeExpired) {
+                        System.out.println("M " + getName() + ", waited " + (System.currentTimeMillis() - before) + " milli for agents");
                         Future<Boolean> fut2 = askGadget(mission);
+                        futureHashMap.get(mission).add(fut2);
 
                         if (fut2 != null && fut2.get() && currTick <= timeExpired) {
                             Future<Boolean> fut3 = sendAgents(mission);
+                            futureHashMap.get(mission).add(fut3);
 
                             if (fut3 != null && fut3.get() && currTick <= timeExpired)
                                 diary.addReport(fillReport(mission, fut1.get()));

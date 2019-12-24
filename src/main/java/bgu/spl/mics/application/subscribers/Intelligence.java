@@ -1,4 +1,4 @@
-package bgu.spl.mics.application.publishers;
+package bgu.spl.mics.application.subscribers;
 
 import bgu.spl.mics.Future;
 import bgu.spl.mics.Subscriber;
@@ -62,10 +62,6 @@ public class Intelligence extends Subscriber {
 		});
 	}
 
-//	@Override
-//	public void run() {
-//		initialize();
-//	}
 
 	@Override
 	public String toString() {

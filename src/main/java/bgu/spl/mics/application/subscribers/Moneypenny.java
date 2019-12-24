@@ -5,9 +5,11 @@ import bgu.spl.mics.application.messages.AgentsAvailableEvent;
 import bgu.spl.mics.application.messages.SendAgentsEvent;
 import bgu.spl.mics.application.messages.TerminationBroadcast;
 import bgu.spl.mics.application.messages.TickBroadcast;
+import bgu.spl.mics.application.passiveObjects.Agent;
 import bgu.spl.mics.application.passiveObjects.Squad;
 
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
 
@@ -21,7 +23,7 @@ import java.util.concurrent.CountDownLatch;
  */
 public class Moneypenny extends Subscriber {
 
-    private Squad squad;
+    private final Squad squad;
     private int currTick;
 
     public Moneypenny(String name, CountDownLatch latch) {
@@ -36,7 +38,14 @@ public class Moneypenny extends Subscriber {
         });
 
         subscribeBroadcast(TerminationBroadcast.class, callback -> {
-            this.terminate();
+            HashMap<String, Agent> agents = (squad.getAgents());
+            List<String> serials = new LinkedList<>();
+            for (Agent agent : agents.values())
+                serials.add(agent.getSerialNumber());
+            squad.releaseAgents(serials);
+
+            terminate();
+
         });
 
         subscribeEvent(AgentsAvailableEvent.class, callback -> {
