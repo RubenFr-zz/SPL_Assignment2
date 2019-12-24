@@ -19,9 +19,9 @@ public class MessageBrokerImpl implements MessageBroker {
      * @param BroadcastSubscriber holds the broadcasts with its subscribed subscribers
      * @param toBeSolved will hold the events with its unsolved futures (futures to be solved)
      */
-    private ConcurrentHashMap<Subscriber, BlockingQueue<Message>> hashMapSubscriber;// BlockingQueue has a blocking method
-    private ConcurrentHashMap<Class<? extends Message>, LinkedList<Subscriber>> EventSubscribers;// For Agents,Gadgets and MissionReceived events
-    private ConcurrentHashMap<Class<? extends Message>, LinkedList<Subscriber>> BroadcastSubscribers;// For Tick Broadcast
+    private ConcurrentHashMap<Subscriber, BlockingQueue<Message>> hashMapSubscriber;// Subscriber with a BlockingQueue (that has a blocking method) with all of his messages
+    private ConcurrentHashMap<Class<? extends Message>, LinkedList<Subscriber>> EventSubscribers;// For Agents, Gadgets and MissionReceived events types! with their subscriber
+    private ConcurrentHashMap<Class<? extends Message>, LinkedList<Subscriber>> BroadcastSubscribers;// For Tick Broadcast events with their subscriber
     private ConcurrentHashMap<Event<?>, Future<?>> toBeSolved;
 
     private MessageBrokerImpl() {// For the singleton
@@ -60,11 +60,10 @@ public class MessageBrokerImpl implements MessageBroker {
             if (this.EventSubscribers.containsKey(type) && !this.EventSubscribers.get(type).contains(m)) {// If we have that kind of event and that subscriber didn't subscribed more than once
                 this.EventSubscribers.get(type).addLast(m);// We now add m in the end of the "chain" of the subscribers of that kind of event
             } else {// Means its the first time someone subscribed that kind of event
-                LinkedList<Subscriber> subType = new LinkedList<>();
-                subType.addLast(m);// The new list of subscribers we make
-                this.EventSubscribers.put(type, subType);
+                LinkedList<Subscriber> newSubersList = new LinkedList<>();
+                newSubersList.addLast(m);// The new subscribers list (there is only one subscriber because it a new list)
+                this.EventSubscribers.put(type, newSubersList);
             }
-
     }
 
     /**
@@ -77,12 +76,12 @@ public class MessageBrokerImpl implements MessageBroker {
      */
     @Override
     public void subscribeBroadcast(Class<? extends Broadcast> type, Subscriber m) {
-            if (BroadcastSubscribers.containsKey(type) && !BroadcastSubscribers.get(type).contains(m)) {
-                BroadcastSubscribers.get(type).addLast(m);
-            } else {
-                LinkedList<Subscriber> subType = new LinkedList<>();
-                subType.addLast(m);
-                BroadcastSubscribers.put(type, subType);
+            if (this.BroadcastSubscribers.containsKey(type) && !this.BroadcastSubscribers.get(type).contains(m)) {// If we have that kind of broadcast and that subscriber didn't subscribed more than once
+                this.BroadcastSubscribers.get(type).addLast(m);// We now add m in the end of the "chain" of the subscribers of that kind of broadcast
+            } else {// Means its the first time someone subscribed that kind of event
+                LinkedList<Subscriber> newSubersList = new LinkedList<>();
+                newSubersList.addLast(m);// The new subscribers list (there is only one subscriber because it a new list)
+                this.BroadcastSubscribers.put(type, newSubersList);
             }
     }
 
@@ -97,11 +96,10 @@ public class MessageBrokerImpl implements MessageBroker {
      */
     @Override
     public <T> void complete(Event<T> e, T result) {
-        Future<T> future = (Future<T>) this.toBeSolved.get(e);
-        if (future != null)
+        Future<T> future = (Future<T>)this.toBeSolved.get(e);// Casting
+        if(future!=null)
             future.resolve(result);
-        this.toBeSolved.remove(e);
-
+        this.toBeSolved.remove(e);// Doesn't excised
     }
 
     /**
@@ -113,19 +111,20 @@ public class MessageBrokerImpl implements MessageBroker {
      */
     @Override
     public void sendBroadcast(Broadcast b) {
-        if (!BroadcastSubscribers.containsKey(b.getClass()) || BroadcastSubscribers.get(b.getClass()) == null)
-            return;
-        LinkedList<Subscriber> subscribers = BroadcastSubscribers.get(b.getClass());
-        synchronized (BroadcastSubscribers.get(b.getClass())) {
-            for (Subscriber sub : subscribers) {
-                try {
-                    hashMapSubscriber.get(sub).put(b);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
+        if(this.BroadcastSubscribers.containsKey(b.getClass()) && this.BroadcastSubscribers.get(b.getClass())!=null) {// Means that there is a subscriber with that type of broadcast
+            LinkedList<Subscriber> subers = this.BroadcastSubscribers.get(b.getClass());// The list of the subscribers of that broadcast
+            if(subers == null)// b doesn't broadcasting to any subscriber
+                System.out.println("There are no subscribers to: " + b.getClass().getName());
+            else {
+                for (Subscriber sub : subers) {
+                    try {// Try to put the broadcast in sub (one of the subers - need to send them that broadcast)
+                        this.hashMapSubscriber.get(sub).put(b);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                 }
             }
         }
-
     }
 
     /**
@@ -167,8 +166,8 @@ public class MessageBrokerImpl implements MessageBroker {
     @Override
     public void register(Subscriber m) {
         BlockingQueue<Message> block = new LinkedBlockingDeque<>();
-        if(!this.hashMapSubscriber.containsValue(m))// Means that m isn't already in the hash of the subscribers
-            this.hashMapSubscriber.put(m,block);
+        if(!this.hashMapSubscriber.containsValue(m))// Means that m isn't in the hash of the subscribers
+            this.hashMapSubscriber.put(m, block);
         else
             throw new IllegalArgumentException("This subscriber is already exists!");
     }
@@ -185,27 +184,22 @@ public class MessageBrokerImpl implements MessageBroker {
         else {
             // We need to delete all the events ad broadcasts subscribed by that subscriber
             // In order to do so, we will check if is available (by synchronized(m))
-            for (Class<? extends Message> key : this.EventSubscribers.keySet()) {
-                LinkedList<Subscriber> list = this.EventSubscribers.get(key);
-//            synchronized (m) {
-                if (list.contains(m)) {
-                    synchronized (this.EventSubscribers.get(key)) {
-                        list.remove(m);
+            for (Class<? extends Message> key : this.EventSubscribers.keySet()) {// In order to bring every subscriber that reported an event
+                LinkedList<Subscriber> checkedSubscriber = this.EventSubscribers.get(key);// We know it would be one subscriber at a time
+                if (checkedSubscriber.contains(m)) {// if checkedSubscriber == m
+                    synchronized (this.EventSubscribers.get(key)) {// Now no one can access m (thread safe)
+                        this.EventSubscribers.remove(checkedSubscriber);// Remove him
                     }
                 }
-//            }
             }
-            for (Class<? extends Message> key : this.BroadcastSubscribers.keySet()) {
-                LinkedList<Subscriber> list = this.BroadcastSubscribers.get(key);
-//            synchronized (m) {
-                if (list.contains(m)) {
-                    synchronized (this.BroadcastSubscribers.get(key)) {
-                        list.remove(m);
+            for (Class<? extends Message> key : this.BroadcastSubscribers.keySet()) {// In order to bring every subscriber that reported a broadcast
+                LinkedList<Subscriber> checkedSubscriber = this.BroadcastSubscribers.get(key);// We know it would be one subscriber at a time
+                if (checkedSubscriber.contains(m)) {// if checkedSubscriber == m
+                    synchronized (this.BroadcastSubscribers.get(key)) {// Now no one can access m (thread safe)
+                        this.BroadcastSubscribers.remove(checkedSubscriber);// Remove him
                     }
                 }
-//            }
             }
-            // Check if there is eed at sync!!!!!!!
             this.hashMapSubscriber.remove(m);// Final remove - from the "chain" of the subscribers
         }
     }
@@ -217,13 +211,14 @@ public class MessageBrokerImpl implements MessageBroker {
      */
     @Override
     public Message awaitMessage(Subscriber m) throws InterruptedException {
-        if (!hashMapSubscriber.containsKey(m))
+        if (!this.hashMapSubscriber.containsKey(m))// Means that m isn't in the hash of the subscribers
             throw new IllegalArgumentException("no such subscriber");
         /**
          * {@code take()}: Retrieves and removes the head of this queue,
          * waiting if necessary until an element becomes available.
          * @return the head of the queue
          */
-        return hashMapSubscriber.get(m).take();
+        while(this.hashMapSubscriber.get(m)==null) wait();// Wait until there is a message in the queue
+        return this.hashMapSubscriber.get(m).take();
     }
 }

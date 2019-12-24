@@ -4,13 +4,6 @@
     <list default="true" id="56f2e87f-baab-46b1-9bf7-8153c38bde80" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/MessageBrokerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/MessageBrokerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/application/messages/AgentsAvailableEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/application/messages/AgentsAvailableEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/application/messages/GadgetAvailableEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/application/messages/GadgetAvailableEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/application/messages/MissionReceivedEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/application/messages/MissionReceivedEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/application/messages/TickBroadcast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/application/messages/TickBroadcast.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/application/passiveObjects/Diary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/application/passiveObjects/Diary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/application/publishers/Intelligence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/application/publishers/Intelligence.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/application/publishers/TimeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/application/publishers/TimeService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +119,13 @@
       <option name="presentableId" value="LOCAL‎00004" />
       <updated>1577127711154</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL‎00005" summary="Working on MessageBroker">
+      <created>1577145256949</created>
+      <option name="number" value="LOCAL‎00005" />
+      <option name="presentableId" value="LOCAL‎00005" />
+      <updated>1577145256949</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -159,7 +158,8 @@
     <MESSAGE value="tests without messageBroker" />
     <MESSAGE value="Worked on Squad, Agent, Inventory" />
     <MESSAGE value="Finished work on passive Objects" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished work on passive Objects" />
+    <MESSAGE value="Working on MessageBroker" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working on MessageBroker" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2472" y="178" key="#Inspections" timestamp="1576421556405">
@@ -177,15 +177,15 @@
     </state>
     <state x="321" y="68" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1280.680/1920.0.1920.1040@0.0.1280.680" timestamp="1576360881964" />
     <state x="321" y="68" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1280.680@0.0.1280.680" timestamp="1577121231881" />
-    <state x="2520" y="116" key="CommitChangelistDialog2" timestamp="1577127708808">
+    <state x="2520" y="116" key="CommitChangelistDialog2" timestamp="1577187663209">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2520" y="116" key="CommitChangelistDialog2/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1577127708808" />
+    <state x="2520" y="116" key="CommitChangelistDialog2/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1577187663209" />
     <state x="400" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1577116535686" />
-    <state x="-281" y="53" width="1736" height="686" key="DiffContextDialog" timestamp="1577145032505">
+    <state x="209" y="14" width="917" height="686" key="DiffContextDialog" timestamp="1577186805036">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="-281" y="53" width="1736" height="686" key="DiffContextDialog/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1577145032505" />
+    <state x="209" y="14" width="917" height="686" key="DiffContextDialog/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1577186805036" />
     <state x="-76" y="-12" width="1297" height="686" maximized="true" key="DiffContextDialog/0.0.1280.680@0.0.1280.680" timestamp="1577122994495" />
     <state width="1237" height="163" key="GridCell.Tab.0.bottom" timestamp="1577116587159">
       <screen x="0" y="0" width="1280" height="680" />
@@ -216,10 +216,10 @@
     </state>
     <state x="2438" y="94" key="SettingsEditor/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1576421675970" />
     <state x="242" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1576416574564" />
-    <state x="2472" y="241" key="Vcs.Push.Dialog.v2" timestamp="1577127714907">
+    <state x="2472" y="241" key="Vcs.Push.Dialog.v2" timestamp="1577145258728">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2472" y="241" key="Vcs.Push.Dialog.v2/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1577127714907" />
+    <state x="2472" y="241" key="Vcs.Push.Dialog.v2/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1577145258728" />
     <state x="2012" y="92" width="1736" height="856" key="com.intellij.dvcs.ui.CompareBranchesDialog" timestamp="1576424109288">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
@@ -230,11 +230,11 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2584" y="413" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1576421620408" />
-    <state x="2689" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1577136751935">
+    <state x="2689" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1577187639491">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="513" y="285" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680/1920.0.1920.1040@0.0.1280.680" timestamp="1577127385842" />
-    <state x="2689" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1577136751935" />
+    <state x="2689" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1577187639491" />
     <state x="513" y="285" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1577120140999" />
     <state x="2644" y="239" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1577134854656">
       <screen x="1920" y="0" width="1920" height="1040" />
@@ -248,6 +248,10 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2622" y="149" key="refactoring.ChangeSignatureDialog/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1576427159047" />
+    <state x="2536" y="240" key="run.anything.popup" timestamp="1577180863607">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2536" y="240" key="run.anything.popup/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1577180863607" />
     <state x="656" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1576360880048" />
     <state x="656" y="257" width="672" height="678" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1576360880048" />
   </component>
