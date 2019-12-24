@@ -1,5 +1,6 @@
 package bgu.spl.mics;
 
+import bgu.spl.mics.application.messages.TerminationBroadcast;
 import bgu.spl.mics.application.subscribers.Moneypenny;
 
 import java.util.concurrent.ConcurrentHashMap;
@@ -128,21 +129,22 @@ public abstract class Subscriber extends RunnableSubPub {
     @Override
     public final void run() {
         try {
-            startSignal.await();
             _MessageBroker.register(this);
             initialize();
+            startSignal.await();
             while (!terminated) {
 
                 Message message = _MessageBroker.awaitMessage(this);
                 if (message != null) {
+                    if (message.getClass() == TerminationBroadcast.class)
+                        terminate();
                     @SuppressWarnings("unchecked")
                     Callback<Message> c = (Callback<Message>) MessageCallMap.get(message.getClass());
                     c.call(message);
                 }
             }
             _MessageBroker.unregister(this);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
         }
+        catch (InterruptedException ignored) {}
     }
 }

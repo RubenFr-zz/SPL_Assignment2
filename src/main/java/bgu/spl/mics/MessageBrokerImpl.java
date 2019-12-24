@@ -1,7 +1,5 @@
 package bgu.spl.mics;
 
-import bgu.spl.mics.application.messages.TerminationBroadcast;
-
 import java.util.LinkedList;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.ConcurrentHashMap;
@@ -26,20 +24,14 @@ public class MessageBrokerImpl implements MessageBroker {
     private ConcurrentHashMap<Class<? extends Message>, LinkedList<Subscriber>> BroadcastSubscribers;
     private ConcurrentHashMap<Event<?>, Future<?>> toBeSolved;
 
+    private Object lock;
+
     public MessageBrokerImpl() {
         this.SubscribersQueue = new ConcurrentHashMap<>();
         this.EventSubscribers = new ConcurrentHashMap<>();
         this.BroadcastSubscribers = new ConcurrentHashMap<>();
         this.toBeSolved = new ConcurrentHashMap<>();
-    }
-
-
-    /**
-     * Static inner class (Bill Push singleton method)
-     * That way we are sure the class instance is only defined once !
-     */
-    private static class MessageBrokerHolder {
-        private static MessageBrokerImpl instance = new MessageBrokerImpl();
+        lock = new Object();
     }
 
     /**
@@ -86,7 +78,6 @@ public class MessageBrokerImpl implements MessageBroker {
             subType.addLast(m);
             BroadcastSubscribers.put(type, subType);
         }
-
     }
 
     /**
@@ -124,13 +115,16 @@ public class MessageBrokerImpl implements MessageBroker {
             System.out.println("NO SUBSCRIBERS FOR:" + b.getClass().getName());
             return;
         }
-
-        for (int i = 0; i < subscribers.size(); i++) {
-            try {
-                SubscribersQueue.get(subscribers.get(i)).put(b);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+        try {
+            synchronized (BroadcastSubscribers.get(b.getClass())) {
+                for (int i = 0; i < subscribers.size(); i++) {
+                    SubscribersQueue.get(subscribers.get(i)).put(b);
+                }
             }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (NullPointerException e) {
+            System.out.println("UNEXPECTED ERROR");
         }
     }
 
@@ -141,29 +135,29 @@ public class MessageBrokerImpl implements MessageBroker {
      *
      * @param e NOT NULL
      * @return Future object to be solved
+     * <p>
+     * Round-robin : take the first subscriber {@link LinkedList#pollFirst()}
+     * and put it last
      */
     @Override
     public <T> Future<T> sendEvent(Event<T> e) {
+        Subscriber nextSubRoundRobin;
+        synchronized (EventSubscribers.get(e.getClass())) {
+            nextSubRoundRobin = EventSubscribers.get(e.getClass()).pollFirst();
+            EventSubscribers.get(e.getClass()).addLast(nextSubRoundRobin);
+        }
 
-        /**
-         * Round-robin : take the first subscriber {@link LinkedList#pollFirst()}
-         * and put it last {@link LinkedList#addLast(@code firstSub)}
-         */
-        Subscriber firstSub = EventSubscribers.get(e.getClass()).pollFirst();
-        if (firstSub != null && SubscribersQueue.containsKey(firstSub)) {
+        if (nextSubRoundRobin != null && SubscribersQueue.containsKey(nextSubRoundRobin)) {
             Future<T> future = new Future<>();
             toBeSolved.put(e, future);
-            EventSubscribers.get(e.getClass()).addLast(firstSub);
 
             try {
-                SubscribersQueue.get(firstSub).put(e);
+                SubscribersQueue.get(nextSubRoundRobin).put(e);
             } catch (InterruptedException ex) {
                 ex.printStackTrace();
             }
             return future;
-        }
-        else return null;
-
+        } else return null;
     }
 
     /**
@@ -226,5 +220,13 @@ public class MessageBrokerImpl implements MessageBroker {
          * @return the head of the queue
          */
         return SubscribersQueue.get(m).take();
+    }
+
+    /**
+     * Static inner class (Bill Push singleton method)
+     * That way we are sure the class instance is only defined once !
+     */
+    private static class MessageBrokerHolder {
+        private static MessageBrokerImpl instance = new MessageBrokerImpl();
     }
 }

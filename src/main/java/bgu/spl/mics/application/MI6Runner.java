@@ -61,7 +61,6 @@ public class MI6Runner {
             e.printStackTrace();
         }
 
-
         for (Subscriber subscriber : subscribers) {
             Thread thread = new Thread(subscriber);
             thread.start();
@@ -69,6 +68,7 @@ public class MI6Runner {
         }
         for (Publisher publisher : publishers) {
             Thread thread = new Thread(publisher);
+            thread.setName("Time Service");
             thread.start();
             threadsList.add(thread);
         }
@@ -234,7 +234,6 @@ public class MI6Runner {
             gadgets[i++] = iterator.next().getAsString();
         }
         Inventory.getInstance().load(gadgets);
-//        Inventory.getInstance().printToFile("/home/rubenf/IdeaProjects/SPL_Assignment2/output.txt");
     }
 
     private static void printInventory() {

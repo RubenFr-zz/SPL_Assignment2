@@ -1,7 +1,6 @@
 package bgu.spl.mics.application.subscribers;
 
 import bgu.spl.mics.Future;
-import bgu.spl.mics.Message;
 import bgu.spl.mics.Subscriber;
 import bgu.spl.mics.application.messages.*;
 import bgu.spl.mics.application.passiveObjects.Diary;
@@ -11,7 +10,6 @@ import bgu.spl.mics.application.passiveObjects.Report;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Map;
 import java.util.concurrent.CountDownLatch;
 
 
@@ -26,7 +24,7 @@ public class M extends Subscriber {
     private Diary diary;
     private int currTick;
     private int QTime;
-    private HashMap<MissionInfo, LinkedList<Future>> futureHashMap;
+    private final HashMap<MissionInfo, LinkedList<Future>> futureHashMap;
 
     public M(String name, CountDownLatch latch) {
         super(name, latch);
@@ -44,11 +42,13 @@ public class M extends Subscriber {
         subscribeBroadcast(TickBroadcast.class, callback -> currTick = callback.getTick());
 
         subscribeBroadcast(TerminationBroadcast.class, callback -> {
-            for (LinkedList<Future> list : futureHashMap.values())
-                for (Future fut : list)
-                    if (fut.isDone())
-                        fut.resolve(null);
-            this.terminate();
+            synchronized (futureHashMap) {
+                for (LinkedList<Future> list : futureHashMap.values())
+                    for (Future fut : list)
+                        if (fut != null && !fut.isDone())
+                            fut.resolve(null);
+                this.terminate();
+            }
         });
 
         subscribeEvent(MissionReceivedEvent.class, callback -> {
