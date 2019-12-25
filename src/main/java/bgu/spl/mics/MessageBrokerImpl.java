@@ -1,7 +1,5 @@
 package bgu.spl.mics;
 
-import bgu.spl.mics.application.messages.TerminationBroadcast;
-
 import java.util.LinkedList;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.ConcurrentHashMap;
@@ -26,11 +24,14 @@ public class MessageBrokerImpl implements MessageBroker {
     private ConcurrentHashMap<Class<? extends Message>, LinkedList<Subscriber>> BroadcastSubscribers;
     private ConcurrentHashMap<Event<?>, Future<?>> toBeSolved;
 
+    private Object lock;
+
     public MessageBrokerImpl() {
         this.SubscribersQueue = new ConcurrentHashMap<>();
         this.EventSubscribers = new ConcurrentHashMap<>();
         this.BroadcastSubscribers = new ConcurrentHashMap<>();
         this.toBeSolved = new ConcurrentHashMap<>();
+        lock = new Object();
     }
 
 
@@ -161,8 +162,7 @@ public class MessageBrokerImpl implements MessageBroker {
                 ex.printStackTrace();
             }
             return future;
-        }
-        else return null;
+        } else return null;
 
     }
 
@@ -184,31 +184,75 @@ public class MessageBrokerImpl implements MessageBroker {
      * references related to this MessageBroker.
      */
     @Override
+    @SuppressWarnings({"unchecked", "rawtypes"})
     public void unregister(Subscriber m) {
         //TODO check if need to delete it at other places !
         //TODO check if need to {@code synchronized(m)}\
 
-        for (Class<? extends Message> key : EventSubscribers.keySet()) {
-            LinkedList<Subscriber> list = EventSubscribers.get(key);
-            synchronized (m) {
-                if (list.contains(m)) {
-                    synchronized (EventSubscribers.get(key)) {
-                        list.remove(m);
-                    }
-                }
+        synchronized (lock) {
+            /* Remove the register from all its registrations */
+            if ( m != null ) {
+                    delete(m, EventSubscribers);
+                    delete(m, BroadcastSubscribers);
             }
-        }
-        for (Class<? extends Message> key : BroadcastSubscribers.keySet()) {
-            LinkedList<Subscriber> list = BroadcastSubscribers.get(key);
-            synchronized (m) {
-                if (list.contains(m)) {
-                    synchronized (BroadcastSubscribers.get(key)) {
-                        list.remove(m);
-                    }
-                }
+
+            /* If someone unregister it means the time to finish the program has come
+            * Then we resolve to null every non resolved futures */
+            for (Event events: toBeSolved.keySet()) {
+                complete(events,null);
             }
+            //TODO: CHECK IF REALLY NEEDED BUT NOT SURE AT ALL
+            for (Future futures  : toBeSolved.values()) {
+                futures.resolve(null);
+            }
+
+            if (SubscribersQueue.get(m) != null) {
+                for (Message message : SubscribersQueue.get(m)) {
+                    if (message instanceof Event)
+                        complete((Event) message, null);
+                }
+                SubscribersQueue.remove(m);
+            }
+
+
+//            for (Class<? extends Message> key : EventSubscribers.keySet()) {
+//                LinkedList<Subscriber> list = EventSubscribers.get(key);
+//                synchronized (m) {
+//                    if (list.contains(m)) {
+//                        synchronized (EventSubscribers.get(key)) {
+//                            list.remove(m);
+//                        }
+//                    }
+//                }
+//            }
+//            for (Class<? extends Message> key : BroadcastSubscribers.keySet()) {
+//                LinkedList<Subscriber> list = BroadcastSubscribers.get(key);
+//                synchronized (m) {
+//                    if (list.contains(m)) {
+//                        synchronized (BroadcastSubscribers.get(key)) {
+//                            list.remove(m);
+//                        }
+//                    }
+//                }
+//            }
+//            SubscribersQueue.remove(m);
         }
-        SubscribersQueue.remove(m);
+    }
+
+    /**
+     * Safely unregister the subscriber for every Event/Broadcast it registered
+     * @param m - subscriber to unregister
+     * @param SubHashMap - map from which we want to unregister the subscriber {@param m}
+     */
+    private void delete(Subscriber m, ConcurrentHashMap<Class<? extends Message>, LinkedList<Subscriber>> SubHashMap) {
+        for (Class<? extends Message> mess : SubHashMap.keySet()) {
+            LinkedList<Subscriber> list = SubHashMap.get(mess);
+            if (!list.isEmpty())
+                synchronized (list) {
+                    list.remove(m);
+                }
+            else SubHashMap.remove(mess);
+        }
     }
 
     /**
