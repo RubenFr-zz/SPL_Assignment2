@@ -66,18 +66,26 @@ public class M extends Subscriber {
                     Future<HashMap<String, Object>> fut1 = askAgents(mission);
                     futureHashMap.get(mission).add(fut1);
 
-                    if (fut1 != null && (boolean) fut1.get().get("Acquired") && currTick <= timeExpired) {
+                    if (fut1 != null &&  fut1.get() != null && (boolean) fut1.get().get("Acquired") && currTick <= timeExpired) {
                         System.out.println("M " + getName() + ", waited " + (System.currentTimeMillis() - before) + " milli for agents");
                         Future<Boolean> fut2 = askGadget(mission);
                         futureHashMap.get(mission).add(fut2);
 
-                        if (fut2 != null && fut2.get() && currTick <= timeExpired) {
+                        if (fut2 != null && fut2.get() != null && fut2.get() && currTick <= timeExpired) {
                             Future<Boolean> fut3 = sendAgents(mission);
                             futureHashMap.get(mission).add(fut3);
 
-                            if (fut3 != null && fut3.get() && currTick <= timeExpired)
+                            if (fut3 != null && fut3.get() != null && fut3.get() && currTick <= timeExpired) {
                                 diary.addReport(fillReport(mission, fut1.get()));
+                            }
+
+                        } else {
+                            Future<Boolean> fut4 = releaseAgents(mission);
+                            futureHashMap.get(mission).add(fut4);
                         }
+                    } else {
+                        Future<Boolean> fut4 = releaseAgents(mission);
+                        futureHashMap.get(mission).add(fut4);
                     }
                 }
             } catch (InterruptedException e) {
@@ -101,6 +109,12 @@ public class M extends Subscriber {
     private Future<Boolean> sendAgents(MissionInfo mission) {
         return getSimplePublisher().sendEvent(
                 new SendAgentsEvent(mission.getSerialAgentsNumbers(), mission.getDuration(), mission.getTimeExpired())
+        );
+    }
+
+    private Future<Boolean> releaseAgents(MissionInfo mission){
+        return getSimplePublisher().sendEvent(
+                new ReleaseAgentsEvent(mission.getSerialAgentsNumbers())
         );
     }
 

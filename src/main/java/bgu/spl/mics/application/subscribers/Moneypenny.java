@@ -1,10 +1,7 @@
 package bgu.spl.mics.application.subscribers;
 
 import bgu.spl.mics.Subscriber;
-import bgu.spl.mics.application.messages.AgentsAvailableEvent;
-import bgu.spl.mics.application.messages.SendAgentsEvent;
-import bgu.spl.mics.application.messages.TerminationBroadcast;
-import bgu.spl.mics.application.messages.TickBroadcast;
+import bgu.spl.mics.application.messages.*;
 import bgu.spl.mics.application.passiveObjects.Agent;
 import bgu.spl.mics.application.passiveObjects.Squad;
 
@@ -74,6 +71,11 @@ public class Moneypenny extends Subscriber {
                 System.out.println("Time taken (in Milli): " + (System.currentTimeMillis() - timeIn));
                 complete(callback, true);
             } else complete(callback, false);
+        });
+
+        subscribeEvent(ReleaseAgentsEvent.class, callback -> {
+            squad.releaseAgents(callback.getSerialNumbers());
+            complete(callback, true);
         });
     }
 

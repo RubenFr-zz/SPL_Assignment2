@@ -34,6 +34,15 @@ public class MessageBrokerImpl implements MessageBroker {
         lock = new Object();
     }
 
+
+    /**
+     * Static inner class (Bill Push singleton method)
+     * That way we are sure the class instance is only defined once !
+     */
+    private static class MessageBrokerHolder {
+        private static MessageBrokerImpl instance = new MessageBrokerImpl();
+    }
+
     /**
      * Retrieves the single instance of this class.
      */
@@ -178,31 +187,75 @@ public class MessageBrokerImpl implements MessageBroker {
      * references related to this MessageBroker.
      */
     @Override
+    @SuppressWarnings({"unchecked", "rawtypes"})
     public void unregister(Subscriber m) {
         //TODO check if need to delete it at other places !
         //TODO check if need to {@code synchronized(m)}\
 
-        for (Class<? extends Message> key : EventSubscribers.keySet()) {
-            LinkedList<Subscriber> list = EventSubscribers.get(key);
-            synchronized (m) {
-                if (list.contains(m)) {
-                    synchronized (EventSubscribers.get(key)) {
-                        list.remove(m);
-                    }
-                }
+        synchronized (lock) {
+            /* Remove the register from all its registrations */
+            if ( m != null ) {
+                    delete(m, EventSubscribers);
+                    delete(m, BroadcastSubscribers);
             }
-        }
-        for (Class<? extends Message> key : BroadcastSubscribers.keySet()) {
-            LinkedList<Subscriber> list = BroadcastSubscribers.get(key);
-            synchronized (m) {
-                if (list.contains(m)) {
-                    synchronized (BroadcastSubscribers.get(key)) {
-                        list.remove(m);
-                    }
-                }
+
+            /* If someone unregister it means the time to finish the program has come
+            * Then we resolve to null every non resolved futures */
+            for (Event events: toBeSolved.keySet()) {
+                complete(events,null);
             }
+            //TODO: CHECK IF REALLY NEEDED BUT NOT SURE AT ALL
+            for (Future futures  : toBeSolved.values()) {
+                futures.resolve(null);
+            }
+
+            if (SubscribersQueue.get(m) != null) {
+                for (Message message : SubscribersQueue.get(m)) {
+                    if (message instanceof Event)
+                        complete((Event) message, null);
+                }
+                SubscribersQueue.remove(m);
+            }
+
+
+//            for (Class<? extends Message> key : EventSubscribers.keySet()) {
+//                LinkedList<Subscriber> list = EventSubscribers.get(key);
+//                synchronized (m) {
+//                    if (list.contains(m)) {
+//                        synchronized (EventSubscribers.get(key)) {
+//                            list.remove(m);
+//                        }
+//                    }
+//                }
+//            }
+//            for (Class<? extends Message> key : BroadcastSubscribers.keySet()) {
+//                LinkedList<Subscriber> list = BroadcastSubscribers.get(key);
+//                synchronized (m) {
+//                    if (list.contains(m)) {
+//                        synchronized (BroadcastSubscribers.get(key)) {
+//                            list.remove(m);
+//                        }
+//                    }
+//                }
+//            }
+//            SubscribersQueue.remove(m);
         }
-        SubscribersQueue.remove(m);
+    }
+
+    /**
+     * Safely unregister the subscriber for every Event/Broadcast it registered
+     * @param m - subscriber to unregister
+     * @param SubHashMap - map from which we want to unregister the subscriber {@param m}
+     */
+    private void delete(Subscriber m, ConcurrentHashMap<Class<? extends Message>, LinkedList<Subscriber>> SubHashMap) {
+        for (Class<? extends Message> mess : SubHashMap.keySet()) {
+            LinkedList<Subscriber> list = SubHashMap.get(mess);
+            if (!list.isEmpty())
+                synchronized (list) {
+                    list.remove(m);
+                }
+            else SubHashMap.remove(mess);
+        }
     }
 
     /**
@@ -220,13 +273,5 @@ public class MessageBrokerImpl implements MessageBroker {
          * @return the head of the queue
          */
         return SubscribersQueue.get(m).take();
-    }
-
-    /**
-     * Static inner class (Bill Push singleton method)
-     * That way we are sure the class instance is only defined once !
-     */
-    private static class MessageBrokerHolder {
-        private static MessageBrokerImpl instance = new MessageBrokerImpl();
     }
 }

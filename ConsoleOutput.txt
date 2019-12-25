@@ -1,15 +1,45 @@
-Mission Received: The World Is Not Enough, by: 1
+0
+100
+200
+Mission Received: Thunderball, by: 1
 Agents requested
-Mission Received: Thunderball, by: 2
+Mission Received: The World Is Not Enough, by: 2
 Agents requested
+M 1, waited 1 milli for agents
 Gadget requested
+300
+400
+500
+600
+700
+800
+900
+1000
+1101
+1202
+1302
+1402
+1502
+1602
+1702
+1802
+1902
+2002
+Agents released
+Agents released
 Sending Agents
+M 2, waited 1802 milli for agents
+Mission Received: GoldFinger, by: 2
+Agents released
+Mission Received: From Russia With Love, by: 1
+Agents released
+Exception in thread "Thread-1" java.lang.NullPointerException
+	at bgu.spl.mics.MessageBrokerImpl.sendEvent(MessageBrokerImpl.java:160)
+	at bgu.spl.mics.SimplePublisher.sendEvent(SimplePublisher.java:29)
+	at bgu.spl.mics.application.subscribers.M.releaseAgents(M.java:116)
+	at bgu.spl.mics.application.subscribers.M.lambda$initialize$2(M.java:87)
+	at bgu.spl.mics.Subscriber.run(Subscriber.java:140)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+Agents released
 Time taken (in Milli): 301
-Gadget requested
-Sending Agents
-Time taken (in Milli): 300
-Mission Received: GoldFinger, by: 1
-Agents requested
-Mission Received: From Russia With Love, by: 2
-Agents requested
-Gadget requested
+Agents released

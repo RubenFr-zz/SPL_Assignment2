@@ -54,10 +54,12 @@ public class Squad {
     public void releaseAgents(List<String> serials) {
         synchronized (lock) {
             for (String serial : serials) {
-                agents.get(serial).release();
+                if (agents.containsKey(serial))
+                    agents.get(serial).release();
             }
             lock.notifyAll();
         }
+        System.out.println("Agents released");
     }
 
     /**
@@ -88,13 +90,14 @@ public class Squad {
     public boolean getAgents(List<String> serials) throws InterruptedException {
         synchronized (lock) {
             for (String serial : serials) {
-                Agent agent = agents.get(serial);
-                if (agent == null) return false;
-                else {
-                    while (!agent.isAvailable()) {
+                if (agents.containsKey(serial)) {
+                    while (!agents.get(serial).isAvailable()) {
                         lock.wait();
                     }
-                    agent.acquire();
+                    agents.get(serial).acquire();
+                } else {
+                    releaseAgents(serials);
+                    return false;
                 }
             }
         }

@@ -1,5 +1,5 @@
 {
-  "total": 4,
+  "total": 3,
   "reports": [
     {
       "missionName": "The World Is Not Enough",
@@ -12,22 +12,6 @@
       "agentsName": [
         "James Bond",
         "Alec Trevelyan"
-      ],
-      "timeIssued": 3,
-      "QTime": 3,
-      "timeCreated": 3
-    },
-    {
-      "missionName": "Thunderball",
-      "M": 2,
-      "MoneyPenny": 1,
-      "agentsSerialNumbers": [
-        "006",
-        "007"
-      ],
-      "agentsName": [
-        "Alec Trevelyan",
-        "James Bond"
       ],
       "timeIssued": 3,
       "QTime": 3,
