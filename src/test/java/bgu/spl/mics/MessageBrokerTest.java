@@ -29,18 +29,10 @@ public class MessageBrokerTest {
         Future<Boolean> fut = messageBroker.sendEvent(event);
         assertFalse(fut.isDone());
         Thread t = new Thread(() -> {
-            try {
-                fut.get();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+            fut.get();
         });
         t.start();
         fut.resolve(true);
-        try {
-            assertTrue(fut.get());
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        assertTrue(fut.get());
     }
 }

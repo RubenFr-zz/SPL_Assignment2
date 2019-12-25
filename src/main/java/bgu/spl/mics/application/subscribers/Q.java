@@ -20,11 +20,12 @@ public class Q extends Subscriber {
 
 	private Inventory inventory;
 	private int currTick;
+	private CountDownLatch latch;
 
 
 
 	private Q(String name) {
-		super(name, new CountDownLatch(0));
+		super(name);
 		this.inventory = Inventory.getInstance();
 	}
 
@@ -41,6 +42,9 @@ public class Q extends Subscriber {
 	 */
 	public static Q getInstance() { return QHolder.instance; }
 
+	public void setLatch(CountDownLatch latch) {
+		this.latch = latch;
+	}
 
 	/**
 	 * Subscribe to {@link AgentsAvailableEvent} and {@link TickBroadcast}
@@ -56,10 +60,11 @@ public class Q extends Subscriber {
 		});
 
 		subscribeEvent(GadgetAvailableEvent.class, callback -> {
-			System.out.println("Gadget requested");
 			boolean found  = inventory.getItem(callback.getGadget());
 			complete(callback, found);
 		});
+
+		latch.countDown();
 	}
 
 }

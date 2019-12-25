@@ -23,11 +23,13 @@ public class Intelligence extends Subscriber {
 	private HashMap<Integer, LinkedList<MissionInfo>> missions;
 	private HashMap<MissionReceivedEvent,  Future<?>> futures;
 	int currTick;
+	CountDownLatch latch;
 
-	public Intelligence(String name, CountDownLatch latch) {
-		super(name, latch);
+	public Intelligence(String name, CountDownLatch startSignal) {
+		super(name);
 		missions = new HashMap<>();
 		futures = new HashMap<>();
+		this.latch = startSignal;
 	}
 
 	public void loadMission(MissionInfo[] missions){
@@ -60,6 +62,8 @@ public class Intelligence extends Subscriber {
 		subscribeBroadcast(TerminationBroadcast.class, callback -> {
 			this.terminate();
 		});
+
+		latch.countDown();
 	}
 
 

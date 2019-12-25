@@ -10,7 +10,7 @@ public class ExampleEventHandlerSubscriber extends Subscriber {
     private int mbt;
 
     public ExampleEventHandlerSubscriber(String name, String[] args) {
-        super(name, new CountDownLatch(0));
+        super(name);
 
         if (args.length != 1) {
             throw new IllegalArgumentException("Event Handler expecting a single argument: mbt (the number of events to answer before termination)");

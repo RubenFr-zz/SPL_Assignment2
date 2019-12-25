@@ -68,15 +68,16 @@ public class Inventory {
      * wish to get the same item only one get it
      */
     public boolean getItem(String gadget) {
-        if (gadgets.contains(gadget)) {
-            synchronized (gadgets) {
+        int index = gadgets.indexOf(gadget);
+        if (index != -1) {
+            synchronized (gadgets.get(index)) {
                 if (gadgets.contains(gadget)) {
                     gadgets.remove(gadget);
                     return true;
                 }
+                else return false;
             }
-        }
-        return false;
+        } else return false;
     }
 
     /**

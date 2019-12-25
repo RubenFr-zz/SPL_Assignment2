@@ -5,6 +5,7 @@ import bgu.spl.mics.Subscriber;
 import bgu.spl.mics.application.messages.*;
 import bgu.spl.mics.application.passiveObjects.Diary;
 import bgu.spl.mics.application.passiveObjects.MissionInfo;
+import bgu.spl.mics.application.passiveObjects.MpFlag;
 import bgu.spl.mics.application.passiveObjects.Report;
 
 import java.util.HashMap;
@@ -25,11 +26,13 @@ public class M extends Subscriber {
     private int currTick;
     private int QTime;
     private final HashMap<MissionInfo, LinkedList<Future>> futureHashMap;
+    private CountDownLatch latch;
 
-    public M(String name, CountDownLatch latch) {
-        super(name, latch);
+    public M(String name, CountDownLatch startSignal) {
+        super(name);
         this.diary = Diary.getInstance();
-        futureHashMap = new HashMap<>();
+        this.futureHashMap = new HashMap<>();
+        this.latch = startSignal;
 
     }
 
@@ -54,49 +57,50 @@ public class M extends Subscriber {
         subscribeEvent(MissionReceivedEvent.class, callback -> {
 
             MissionInfo mission = callback.getMission();
-            System.out.println("Mission Received: " + mission.getMissionName() + ", by: " + getName());
+            System.out.println("Mission Received: " + mission.getMissionName() + ", by: M" + getName());
             int timeExpired = mission.getTimeExpired();
             futureHashMap.putIfAbsent(mission, new LinkedList<Future>());
 
             diary.increment();
 
-            try {
-                if (currTick <= timeExpired) {
-                    long before = System.currentTimeMillis();
-                    Future<HashMap<String, Object>> fut1 = askAgents(mission);
-                    futureHashMap.get(mission).add(fut1);
+            if (currTick <= timeExpired) {
+                Future<HashMap<String, Object>> fut1 = askAgents(mission);
+                futureHashMap.get(mission).add(fut1);
 
-                    if (fut1 != null &&  fut1.get() != null && (boolean) fut1.get().get("Acquired") && currTick <= timeExpired) {
-                        System.out.println("M " + getName() + ", waited " + (System.currentTimeMillis() - before) + " milli for agents");
-                        Future<Boolean> fut2 = askGadget(mission);
-                        futureHashMap.get(mission).add(fut2);
+                if (fut1 != null && fut1.get() != null && (boolean) fut1.get().get("Acquired") && currTick <= timeExpired) {
+                    System.out.println("M" + getName() + ", agents acquired !");
+                    Future<Boolean> fut2 = askGadget(mission);
+                    futureHashMap.get(mission).add(fut2);
 
-                        if (fut2 != null && fut2.get() != null && fut2.get() && currTick <= timeExpired) {
-                            Future<Boolean> fut3 = sendAgents(mission);
-                            futureHashMap.get(mission).add(fut3);
+                    if (fut2 != null && fut2.get() != null && fut2.get() && currTick <= timeExpired) {
+                        System.out.println("M" + getName() + ", gadget acquired !");
+                        Future<Boolean> fut3 = sendAgents(mission);
+                        futureHashMap.get(mission).add(fut3);
 
-                            if (fut3 != null && fut3.get() != null && fut3.get() && currTick <= timeExpired) {
-                                diary.addReport(fillReport(mission, fut1.get()));
-                            }
-
-                        } else {
-                            Future<Boolean> fut4 = releaseAgents(mission);
-                            futureHashMap.get(mission).add(fut4);
+                        if (fut3 != null && fut3.get() != null && fut3.get() && currTick <= timeExpired) {
+                            System.out.println("M" + getName() + ", Mission succeeded !");
+                            diary.addReport(fillReport(mission, fut1.get()));
                         }
+
                     } else {
+                        System.out.println("M" + getName() + ", didn't found the gadget, mission aborted !");
                         Future<Boolean> fut4 = releaseAgents(mission);
                         futureHashMap.get(mission).add(fut4);
                     }
+                } else {
+                    System.out.println("M" + getName() + ", didn't acquired the agents, mission aborted !");
+//                    Future<Boolean> fut4 = releaseAgents(mission);
+//                    futureHashMap.get(mission).add(fut4);
                 }
-            } catch (InterruptedException e) {
-                e.printStackTrace();
             }
         });
+
+        latch.countDown();
     }
 
     private Future<HashMap<String, Object>> askAgents(MissionInfo mission) {
         return getSimplePublisher().sendEvent(
-                new AgentsAvailableEvent(mission.getSerialAgentsNumbers(), mission.getTimeExpired())
+                new AgentsAvailableEvent(getName(), mission.getSerialAgentsNumbers(), mission.getTimeExpired(), MpFlag.GETTING_AGENTS)
         );
     }
 
@@ -108,11 +112,11 @@ public class M extends Subscriber {
 
     private Future<Boolean> sendAgents(MissionInfo mission) {
         return getSimplePublisher().sendEvent(
-                new SendAgentsEvent(mission.getSerialAgentsNumbers(), mission.getDuration(), mission.getTimeExpired())
+                new SendAgentsEvent(getName(), mission.getSerialAgentsNumbers(), mission.getDuration(), mission.getTimeExpired(), MpFlag.SENDING_AGENTS)
         );
     }
 
-    private Future<Boolean> releaseAgents(MissionInfo mission){
+    private Future<Boolean> releaseAgents(MissionInfo mission) {
         return getSimplePublisher().sendEvent(
                 new ReleaseAgentsEvent(mission.getSerialAgentsNumbers())
         );
@@ -129,7 +133,7 @@ public class M extends Subscriber {
         report.setTimeCreated(currTick);
         report.setTimeIssued(mission.getTimeIssued());
         report.setAgentsNames((List<String>) fut.get("AgentsName"));
-        report.setMoneypenny(Integer.parseInt((String) fut.get("MonneyPenny")));
+        report.setMoneypenny(Integer.parseInt((String) fut.get("MoneyPenny")));
         report.setQTime(this.QTime);
 
         return report;

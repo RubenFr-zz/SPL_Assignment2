@@ -27,7 +27,6 @@ public class TimeService extends Publisher {
     private AtomicInteger currTick;
     private CountDownLatch latch;
     private TimerTask timerTask;
-    private long time;
 
 
     public TimeService(int projectTime, int speed, CountDownLatch latch) {
@@ -42,16 +41,11 @@ public class TimeService extends Publisher {
 
     @Override
     protected void initialize() {
-        try {
-            latch.await();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         this.timer = new Timer();
         this.timerTask = new TimerTask() {
             @Override
             public void run() {
-                System.out.println(System.currentTimeMillis() - time);
+                System.out.println("tick: " + currTick.get());
                 if (currTick.get() == projectTime) {
                     getSimplePublisher().sendBroadcast(new TerminationBroadcast());
                     timer.cancel();
@@ -61,7 +55,13 @@ public class TimeService extends Publisher {
                 }
             }
         };
-        time = System.currentTimeMillis();
+
+        try {
+            latch.await();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
         timer.schedule(timerTask, 0, speed);
     }
 

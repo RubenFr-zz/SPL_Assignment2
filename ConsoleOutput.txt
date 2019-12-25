@@ -1,45 +1,64 @@
-0
-100
-200
-Mission Received: Thunderball, by: 1
-Agents requested
-Mission Received: The World Is Not Enough, by: 2
-Agents requested
-M 1, waited 1 milli for agents
-Gadget requested
-300
-400
-500
-600
-700
-800
-900
-1000
-1101
-1202
-1302
-1402
-1502
-1602
-1702
-1802
-1902
-2002
+tick: 0
+tick: 1
+tick: 2
+Mission Received: Thunderball, by: M1
+MP2: M1, Agents requested !
+M1, agents acquired !
+M1, gadget acquired !
+Mission Received: Thunderball, by: M2
+MP1: M1, Sending Agents for: 700 Milli
+MP2: M2, Agents requested !
+tick: 3
+tick: 4
+tick: 5
+tick: 6
+tick: 7
+tick: 8
+tick: 9
+Agents released
+M2, agents acquired !
+M1, Mission succeeded !
+M2, didn't found the gadget, mission aborted !
+Agents released
+Mission Received: From Russia With Love, by: M1
+MP2: M1, Agents requested !
+M1, didn't acquired the agents, mission aborted !
+tick: 10
+tick: 11
+tick: 12
+tick: 13
+tick: 14
+Mission Received: From Russia With Love, by: M2
+MP2: M2, Agents requested !
+M2, agents acquired !
+M2, gadget acquired !
+MP1: M2, Sending Agents for: 200 Milli
+tick: 15
+Mission Received: The World Is Not Enough, by: M1
+MP2: M1, Agents requested !
+M1, agents acquired !
+M1, gadget acquired !
+tick: 16
+Agents released
+M2, Mission succeeded !
+MP1: M1, Sending Agents for: 200 Milli
+tick: 17
+tick: 18
+Agents released
+M1, Mission succeeded !
+tick: 19
+tick: 20
+tick: 21
+tick: 22
+tick: 23
+tick: 24
+tick: 25
 Agents released
 Agents released
-Sending Agents
-M 2, waited 1802 milli for agents
-Mission Received: GoldFinger, by: 2
-Agents released
-Mission Received: From Russia With Love, by: 1
-Agents released
-Exception in thread "Thread-1" java.lang.NullPointerException
-	at bgu.spl.mics.MessageBrokerImpl.sendEvent(MessageBrokerImpl.java:160)
-	at bgu.spl.mics.SimplePublisher.sendEvent(SimplePublisher.java:29)
-	at bgu.spl.mics.application.subscribers.M.releaseAgents(M.java:116)
-	at bgu.spl.mics.application.subscribers.M.lambda$initialize$2(M.java:87)
-	at bgu.spl.mics.Subscriber.run(Subscriber.java:140)
-	at java.base/java.lang.Thread.run(Thread.java:830)
-Agents released
-Time taken (in Milli): 301
-Agents released
+bgu.spl.mics.application.subscribers.Moneypenny2 UNREGISTERED
+bgu.spl.mics.application.subscribers.Intelligence2 UNREGISTERED
+bgu.spl.mics.application.subscribers.Intelligence1 UNREGISTERED
+bgu.spl.mics.application.subscribers.M2 UNREGISTERED
+bgu.spl.mics.application.subscribers.QQ UNREGISTERED
+bgu.spl.mics.application.subscribers.Moneypenny1 UNREGISTERED
+bgu.spl.mics.application.subscribers.M1 UNREGISTERED

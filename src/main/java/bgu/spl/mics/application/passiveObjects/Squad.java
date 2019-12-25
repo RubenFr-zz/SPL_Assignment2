@@ -1,5 +1,6 @@
 package bgu.spl.mics.application.passiveObjects;
 
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -70,8 +71,12 @@ public class Squad {
     public void sendAgents(List<String> serials, int time) {
 
         for (String serial : serials)
-            if (agents.get(serial).isAvailable())
-                throw new AgentNotAcquiredException();
+            if (agents.get(serial).isAvailable()) {
+                releaseAgents(serials);
+                System.out.println(new AgentNotAcquiredException().toString());
+                return;
+            }
+
 
         try {
             TimeUnit.MILLISECONDS.sleep(time * 100);

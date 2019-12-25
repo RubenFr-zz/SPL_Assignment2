@@ -1,7 +1,6 @@
 package bgu.spl.mics;
 
 import bgu.spl.mics.application.messages.TerminationBroadcast;
-import bgu.spl.mics.application.subscribers.Moneypenny;
 
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
@@ -32,18 +31,16 @@ public abstract class Subscriber extends RunnableSubPub {
     private boolean terminated;
     private MessageBrokerImpl _MessageBroker;
     private ConcurrentMap<Class<? extends Message>, Callback<?>> MessageCallMap;
-    private CountDownLatch startSignal;
 
     /**
      * @param name the Subscriber name (used mainly for debugging purposes -
      *             does not have to be unique)
      */
-    public Subscriber(String name, CountDownLatch latch) {
+    public Subscriber(String name) {
         super(name);
         this.terminated = false;
         this.MessageCallMap = new ConcurrentHashMap<>();
         this._MessageBroker = MessageBrokerImpl.getInstance();
-        this.startSignal = latch;
     }
 
     /**
@@ -131,7 +128,6 @@ public abstract class Subscriber extends RunnableSubPub {
         try {
             _MessageBroker.register(this);
             initialize();
-            startSignal.await();
             while (!terminated) {
 
                 Message message = _MessageBroker.awaitMessage(this);
@@ -141,6 +137,10 @@ public abstract class Subscriber extends RunnableSubPub {
                     @SuppressWarnings("unchecked")
                     Callback<Message> c = (Callback<Message>) MessageCallMap.get(message.getClass());
                     c.call(message);
+                }
+                else {
+                    System.out.println("MESSAGE NULL: TimeOut -> Force Termination");
+                    terminate();
                 }
             }
             _MessageBroker.unregister(this);

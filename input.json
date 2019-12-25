@@ -1,12 +1,13 @@
 {
     "inventory": [
         "Sky Hook",
+        "Geiger counter",
         "X-ray glasses",
         "Dagger shoe"
     ],
     "services": {
         "M": 2,
-        "Moneypenny": 5,
+        "Moneypenny": 2,
         "intelligence": [
             {
                 "missions": [
@@ -15,19 +16,35 @@
                             "006",
                             "007"
                         ],
-                        "duration": 3,
+                        "duration": 7,
                         "gadget": "Sky Hook",
                         "name": "Thunderball",
                         "timeExpired": 15,
                         "timeIssued": 3
                     },
                     {
-                        "serialAgentsNumbers": ["008"],
+                        "serialAgentsNumbers": ["007"],
                         "duration": 2,
                         "gadget": "Dagger shoe",
-                        "name": "GoldFinger",
-                        "timeExpired": 18,
-                        "timeIssued": 10
+                        "name": "From Russia With Love",
+                        "timeExpired": 8,
+                        "timeIssued": 6
+                    },
+                    {
+                        "serialAgentsNumbers": ["007"],
+                        "duration": 2,
+                        "gadget": "Dagger shoe",
+                        "name": "From Russia With Love",
+                        "timeExpired": 100,
+                        "timeIssued": 15
+                    },
+                    {
+                        "serialAgentsNumbers": ["006"],
+                        "duration": 2,
+                        "gadget": "X-ray glasses",
+                        "name": "The World Is Not Enough",
+                        "timeExpired": 100,
+                        "timeIssued": 16
                     }
                 ]
             },
@@ -38,24 +55,16 @@
                             "007",
                             "006"
                         ],
-                        "duration": 3,
-                        "gadget": "X-ray glasses",
-                        "name": "The World Is Not Enough",
+                        "duration": 7,
+                        "gadget": "Sky Hook",
+                        "name": "Thunderball",
                         "timeExpired": 15,
                         "timeIssued": 3
-                    },
-                    {
-                        "serialAgentsNumbers": ["007"],
-                        "duration": 2,
-                        "gadget": "X-ray glasses",
-                        "name": "From Russia With Love",
-                        "timeExpired": 100,
-                        "timeIssued": 10
                     }
                 ]
             }
         ],
-        "time": 20
+        "time": 25
     },
     "squad": [
         {
