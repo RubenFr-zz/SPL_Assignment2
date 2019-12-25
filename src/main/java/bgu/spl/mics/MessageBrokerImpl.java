@@ -1,9 +1,12 @@
 package bgu.spl.mics;
 
+import bgu.spl.mics.application.messages.TerminationBroadcast;
+
 import java.util.LinkedList;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.TimeUnit;
 
 
 /**
@@ -24,14 +27,16 @@ public class MessageBrokerImpl implements MessageBroker {
     private ConcurrentHashMap<Class<? extends Message>, LinkedList<Subscriber>> BroadcastSubscribers;
     private ConcurrentHashMap<Event<?>, Future<?>> toBeSolved;
 
-    private Object lock;
+    private final Object lock1;
+    private final Object lock2;
 
     public MessageBrokerImpl() {
         this.SubscribersQueue = new ConcurrentHashMap<>();
         this.EventSubscribers = new ConcurrentHashMap<>();
         this.BroadcastSubscribers = new ConcurrentHashMap<>();
         this.toBeSolved = new ConcurrentHashMap<>();
-        lock = new Object();
+        lock1 = new Object();
+        lock2 = new Object();
     }
 
 
@@ -60,12 +65,14 @@ public class MessageBrokerImpl implements MessageBroker {
      */
     @Override
     public <T> void subscribeEvent(Class<? extends Event<T>> type, Subscriber m) {
-        if (EventSubscribers.containsKey(type) && !EventSubscribers.get(type).contains(m)) {
-            EventSubscribers.get(type).addLast(m);
-        } else {
-            LinkedList<Subscriber> subType = new LinkedList<>();
-            subType.addLast(m);
-            EventSubscribers.put(type, subType);
+        synchronized (lock1) {
+            if (EventSubscribers.containsKey(type) && !EventSubscribers.get(type).contains(m)) {
+                EventSubscribers.get(type).addLast(m);
+            } else {
+                LinkedList<Subscriber> subType = new LinkedList<>();
+                subType.addLast(m);
+                EventSubscribers.put(type, subType);
+            }
         }
     }
 
@@ -79,13 +86,14 @@ public class MessageBrokerImpl implements MessageBroker {
      */
     @Override
     public void subscribeBroadcast(Class<? extends Broadcast> type, Subscriber m) {
-
-        if (BroadcastSubscribers.containsKey(type) && !BroadcastSubscribers.get(type).contains(m)) {
-            BroadcastSubscribers.get(type).addLast(m);
-        } else {
-            LinkedList<Subscriber> subType = new LinkedList<>();
-            subType.addLast(m);
-            BroadcastSubscribers.put(type, subType);
+        synchronized (lock1) {
+            if (!(BroadcastSubscribers.containsKey(type) && !BroadcastSubscribers.get(type).contains(m))) {
+                LinkedList<Subscriber> subType = new LinkedList<>();
+                BroadcastSubscribers.put(type, subType);
+            }
+            synchronized (BroadcastSubscribers.get(type)) {
+                BroadcastSubscribers.get(type).addLast(m);
+            }
         }
     }
 
@@ -99,6 +107,7 @@ public class MessageBrokerImpl implements MessageBroker {
      * @param result NOT NULL
      */
     @Override
+    @SuppressWarnings("unchecked")
     public <T> void complete(Event<T> e, T result) {
         Future<T> future = (Future<T>) toBeSolved.get(e);
         if (future != null)
@@ -120,6 +129,7 @@ public class MessageBrokerImpl implements MessageBroker {
             return;
 
         LinkedList<Subscriber> subscribers = BroadcastSubscribers.get(b.getClass());
+
         if (subscribers == null) {
             System.out.println("NO SUBSCRIBERS FOR:" + b.getClass().getName());
             return;
@@ -133,7 +143,7 @@ public class MessageBrokerImpl implements MessageBroker {
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (NullPointerException e) {
-            System.out.println("UNEXPECTED ERROR");
+            System.out.println("UNEXPECTED ERROR: Mission subscriber queue");
         }
     }
 
@@ -150,23 +160,29 @@ public class MessageBrokerImpl implements MessageBroker {
      */
     @Override
     public <T> Future<T> sendEvent(Event<T> e) {
+        synchronized (lock1) {
+            Subscriber nextSubRoundRobin = getNextSub(e);
+            if (nextSubRoundRobin != null && SubscribersQueue.containsKey(nextSubRoundRobin)) {
+                Future<T> future = new Future<>();
+                toBeSolved.put(e, future);
+
+                try {
+                    SubscribersQueue.get(nextSubRoundRobin).put(e);
+                } catch (InterruptedException ex) {
+                    ex.printStackTrace();
+                }
+                return future;
+            } else return null;
+        }
+    }
+
+    private <T> Subscriber getNextSub(Event<T> e) {
         Subscriber nextSubRoundRobin;
         synchronized (EventSubscribers.get(e.getClass())) {
             nextSubRoundRobin = EventSubscribers.get(e.getClass()).pollFirst();
             EventSubscribers.get(e.getClass()).addLast(nextSubRoundRobin);
         }
-
-        if (nextSubRoundRobin != null && SubscribersQueue.containsKey(nextSubRoundRobin)) {
-            Future<T> future = new Future<>();
-            toBeSolved.put(e, future);
-
-            try {
-                SubscribersQueue.get(nextSubRoundRobin).put(e);
-            } catch (InterruptedException ex) {
-                ex.printStackTrace();
-            }
-            return future;
-        } else return null;
+        return nextSubRoundRobin;
     }
 
     /**
@@ -178,7 +194,6 @@ public class MessageBrokerImpl implements MessageBroker {
     @Override
     public void register(Subscriber m) {
         SubscribersQueue.putIfAbsent(m, new LinkedBlockingQueue<>());
-
     }
 
     /**
@@ -189,24 +204,17 @@ public class MessageBrokerImpl implements MessageBroker {
     @Override
     @SuppressWarnings({"unchecked", "rawtypes"})
     public void unregister(Subscriber m) {
-        //TODO check if need to delete it at other places !
-        //TODO check if need to {@code synchronized(m)}\
-
-        synchronized (lock) {
+        synchronized (lock2) {
             /* Remove the register from all its registrations */
-            if ( m != null ) {
-                    delete(m, EventSubscribers);
-                    delete(m, BroadcastSubscribers);
+            if (m != null) {
+                delete(m, EventSubscribers);
+                delete(m, BroadcastSubscribers);
             }
 
             /* If someone unregister it means the time to finish the program has come
-            * Then we resolve to null every non resolved futures */
-            for (Event events: toBeSolved.keySet()) {
-                complete(events,null);
-            }
-            //TODO: CHECK IF REALLY NEEDED BUT NOT SURE AT ALL
-            for (Future futures  : toBeSolved.values()) {
-                futures.resolve(null);
+             * Then we resolve to null every non resolved futures */
+            for (Event events : toBeSolved.keySet()) {
+                complete(events, null);
             }
 
             if (SubscribersQueue.get(m) != null) {
@@ -217,34 +225,14 @@ public class MessageBrokerImpl implements MessageBroker {
                 SubscribersQueue.remove(m);
             }
 
-
-//            for (Class<? extends Message> key : EventSubscribers.keySet()) {
-//                LinkedList<Subscriber> list = EventSubscribers.get(key);
-//                synchronized (m) {
-//                    if (list.contains(m)) {
-//                        synchronized (EventSubscribers.get(key)) {
-//                            list.remove(m);
-//                        }
-//                    }
-//                }
-//            }
-//            for (Class<? extends Message> key : BroadcastSubscribers.keySet()) {
-//                LinkedList<Subscriber> list = BroadcastSubscribers.get(key);
-//                synchronized (m) {
-//                    if (list.contains(m)) {
-//                        synchronized (BroadcastSubscribers.get(key)) {
-//                            list.remove(m);
-//                        }
-//                    }
-//                }
-//            }
-//            SubscribersQueue.remove(m);
+            System.out.println(m.getClass().getName() + m.getName() + " UNREGISTERED");
         }
     }
 
     /**
      * Safely unregister the subscriber for every Event/Broadcast it registered
-     * @param m - subscriber to unregister
+     *
+     * @param m          - subscriber to unregister
      * @param SubHashMap - map from which we want to unregister the subscriber {@param m}
      */
     private void delete(Subscriber m, ConcurrentHashMap<Class<? extends Message>, LinkedList<Subscriber>> SubHashMap) {
@@ -272,6 +260,6 @@ public class MessageBrokerImpl implements MessageBroker {
          * waiting if necessary until an element becomes available.
          * @return the head of the queue
          */
-        return SubscribersQueue.get(m).take();
+        return SubscribersQueue.get(m).poll(2, TimeUnit.SECONDS);
     }
 }

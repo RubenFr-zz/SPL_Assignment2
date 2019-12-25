@@ -31,18 +31,28 @@ public class Future<T> {
      *
      * @return return the result of type T if it is available, if not wait until it is available.
      */
-    public synchronized T get() throws InterruptedException {
-        while (!isDone()) this.wait();
+    public T get(){
+        synchronized (this) {
+            while (!isDone()) {
+                try {
+                    this.wait();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
         return result;
     }
 
     /**
      * Resolves the result of this Future object.
      */
-    public synchronized void resolve(T result) {
+    public void resolve(T result) {
         this.result = result;
         this.done = true;
-        this.notifyAll();
+        synchronized (this) {
+            this.notifyAll();
+        }
     }
 
     /**
@@ -69,11 +79,11 @@ public class Future<T> {
 
         long startTime = System.currentTimeMillis();
 
-        while (System.currentTimeMillis() - startTime > timeout) {
+        while (System.currentTimeMillis() - startTime < timeout) {
         	try{
-        		unit.sleep(timeout - (System.currentTimeMillis() - startTime));
+        		unit.sleep(timeout);
 				if (isDone()) return result;
-			}catch (InterruptedException e) { e.printStackTrace(); }
+			}catch (InterruptedException ignored) {}
 		}
         return null;
     }

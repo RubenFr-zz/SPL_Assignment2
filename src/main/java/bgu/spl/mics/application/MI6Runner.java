@@ -43,7 +43,6 @@ public class MI6Runner {
             return;
         }
 
-        startSignal = new CountDownLatch(1);
         LinkedList<Thread> threadsList = new LinkedList<>();
         MInstances = new LinkedList<>();
         outputFilesName = new String[2];
@@ -73,8 +72,6 @@ public class MI6Runner {
             threadsList.add(thread);
         }
 
-        startSignal.countDown(); //Starts all the thread
-
         for (Thread thread : threadsList) {
             try {
                 thread.join();
@@ -100,9 +97,11 @@ public class MI6Runner {
         int q = 1;
         int i = services.get("intelligence").getAsJsonArray().size();
         Subscriber[] subscribers = new Subscriber[m + mp + q + i];
+        startSignal = new CountDownLatch(m + mp + q + i);
+        Q.getInstance().setLatch(startSignal);
 
         System.arraycopy(initM(m), 0, subscribers, 0, m);
-        System.arraycopy(initMonneyPenny(mp), 0, subscribers, m, mp);
+        System.arraycopy(initMoneyPenny(mp), 0, subscribers, m, mp);
         System.arraycopy((new Subscriber[]{Q.getInstance()}), 0, subscribers, m + mp, q);
         System.arraycopy(initIntelligence(services), 0, subscribers, m + mp + q, i);
 
@@ -126,7 +125,7 @@ public class MI6Runner {
         return array;
     }
 
-    private static Subscriber[] initMonneyPenny(int size) {
+    private static Subscriber[] initMoneyPenny(int size) {
         Subscriber[] array = new Moneypenny[size];
 
         for (int i = 0; i < size; i++) {

@@ -34,5 +34,6 @@
 /home/rubenf/IdeaProjects/SPL_Assignment2/src/main/java/bgu/spl/mics/application/publishers/TimeService.java
 /home/rubenf/IdeaProjects/SPL_Assignment2/src/main/java/bgu/spl/mics/Callback.java
 /home/rubenf/IdeaProjects/SPL_Assignment2/src/main/java/bgu/spl/mics/application/messages/SendAgentsEvent.java
+/home/rubenf/IdeaProjects/SPL_Assignment2/src/main/java/bgu/spl/mics/application/messages/ReleaseAgentsEvent.java
 /home/rubenf/IdeaProjects/SPL_Assignment2/src/main/java/bgu/spl/mics/application/messages/MissionReceivedEvent.java
 /home/rubenf/IdeaProjects/SPL_Assignment2/src/main/java/bgu/spl/mics/example/messages/ExampleBroadcast.java

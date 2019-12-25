@@ -22,10 +22,12 @@ public class Moneypenny extends Subscriber {
 
     private final Squad squad;
     private int currTick;
+    private CountDownLatch latch;
 
-    public Moneypenny(String name, CountDownLatch latch) {
-        super(name, latch);
+    public Moneypenny(String name, CountDownLatch startSignal) {
+        super(name);
         this.squad = Squad.getInstance();
+        this.latch = startSignal;
     }
 
     @Override
@@ -45,45 +47,46 @@ public class Moneypenny extends Subscriber {
 
         });
 
-        subscribeEvent(AgentsAvailableEvent.class, callback -> {
+        if (Integer.parseInt(getName()) % 2 == 0) {
+            subscribeEvent(AgentsAvailableEvent.class, callback -> {
 
-            System.out.println("Agents requested");
-            List<String> agents = callback.getSerialNumbers();
-            boolean acquired = false;
+                System.out.println("MP" + getName() + ": M" + callback.getSendID() + ", Agents requested !");
+                List<String> agents = callback.getSerialNumbers();
+                boolean acquired = false;
 
-            if (currTick <= callback.getExpired()) {
-                try {
-                    acquired = squad.getAgents(agents);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
+                if (currTick <= callback.getExpired()) {
+                    try {
+                        acquired = squad.getAgents(agents);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                 }
-            }
-            complete(callback, getResult(agents, acquired));
+                complete(callback, getResult(agents, acquired));
 
-        });
+            });
+        } else {
+            subscribeEvent(SendAgentsEvent.class, callback -> {
+                System.out.println("MP" + getName() + ": M" + callback.getSendID() + ", Sending Agents for: " + (callback.getDuration() * 100) + " Milli");
 
-        subscribeEvent(SendAgentsEvent.class, callback -> {
-            System.out.println("Sending Agents");
+                if (currTick <= (callback.getExpired() - callback.getDuration())) {
+                    squad.sendAgents(callback.getSerialNumbers(), callback.getDuration());
+                    complete(callback, true);
+                } else complete(callback, false);
+            });
 
-            if (currTick <= (callback.getExpired() - callback.getDuration())) {
-                long timeIn = System.currentTimeMillis();
-                squad.sendAgents(callback.getSerialNumbers(), callback.getDuration());
-                System.out.println("Time taken (in Milli): " + (System.currentTimeMillis() - timeIn));
+            subscribeEvent(ReleaseAgentsEvent.class, callback -> {
+                squad.releaseAgents(callback.getSerialNumbers());
                 complete(callback, true);
-            } else complete(callback, false);
-        });
-
-        subscribeEvent(ReleaseAgentsEvent.class, callback -> {
-            squad.releaseAgents(callback.getSerialNumbers());
-            complete(callback, true);
-        });
+            });
+        }
+        latch.countDown();
     }
 
     private HashMap<String, Object> getResult(List<String> agents, boolean acquired) {
         HashMap<String, Object> result = new HashMap<>();
         result.put("Acquired", acquired);
         if (acquired) {
-            result.put("MonneyPenny", getName());
+            result.put("MoneyPenny", getName());
             result.put("AgentsName", squad.getAgentsNames(agents));
         }
         return result;
