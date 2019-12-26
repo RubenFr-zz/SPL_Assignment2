@@ -1,8 +1,0 @@
-{
-  "Inventory": [
-    "car",
-    "gun",
-    "hammer",
-    "pistol"
-  ]
-}
