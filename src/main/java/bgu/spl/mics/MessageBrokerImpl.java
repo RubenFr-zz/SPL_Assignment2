@@ -237,7 +237,7 @@ public class MessageBrokerImpl implements MessageBroker {
                 SubscribersQueue.remove(m);
             }
 
-            System.out.println(m.getClass().getName() + m.getName() + " UNREGISTERED");
+            System.out.println(m.getClass().getName() + " " + m.getName() + " UNREGISTERED");
         }
     }
 

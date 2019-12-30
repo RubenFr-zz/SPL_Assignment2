@@ -125,12 +125,10 @@ public class MI6Runner {
         Subscriber[] array = new Moneypenny[size];
 
         for (int i = 0; i < size; i++)
-            if (size > 2 && i == 0)
-                array[i] = new Moneypenny(Integer.toString(i + 1), startSignal, MpFlag.RELEASING_AGENTS);
-            else if (i % 2 == 0)
+            if (i % 2 == 0)
                 array[i] = new Moneypenny(Integer.toString(i + 1), startSignal, MpFlag.GETTING_AGENTS);
             else
-                array[i] = new Moneypenny(Integer.toString(i + 1), startSignal, MpFlag.SENDING_AGENTS);
+                array[i] = new Moneypenny(Integer.toString(i + 1), startSignal, MpFlag.SENDING_RELEASE_AGENTS);
 
         return array;
     }
@@ -171,7 +169,7 @@ public class MI6Runner {
 
         List<String> serialAgentsNumbers = extractSerialNumber(missionObject);
         mission.setSerialAgentsNumbers(serialAgentsNumbers);
-        mission.setMissionName(missionObject.get("name").getAsString());
+        mission.setname(missionObject.get("name").getAsString());
         mission.setGadget(missionObject.get("gadget").getAsString());
         mission.setDuration(missionObject.get("duration").getAsInt());
         mission.setTimeIssued(missionObject.get("timeIssued").getAsInt());

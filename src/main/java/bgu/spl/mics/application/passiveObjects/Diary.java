@@ -109,7 +109,7 @@ public class Diary {
 			names.add(name);
 
 		JsonObject jsonReport = new JsonObject();
-		jsonReport.addProperty("missionName", report.getMissionName());
+		jsonReport.addProperty("name", report.getname());
 		jsonReport.addProperty("M", report.getM());
 		jsonReport.addProperty("MoneyPenny", report.getMoneypenny());
 		jsonReport.add("agentsSerialNumbers", serialsNumber);

@@ -12,7 +12,7 @@ import java.util.List;
  */
 public class MissionInfo {
 
-	private String missionName;
+	private String name;
 	private List<String> serialAgentsNumbers = new LinkedList<>();
 	private String gadget;
 	private int timeIssued;
@@ -22,15 +22,15 @@ public class MissionInfo {
     /**
      * Sets the name of the mission.
      */
-    public void setMissionName(String missionName) {
-        this.missionName = missionName;
+    public void setname(String name) {
+        this.name = name;
     }
 
 	/**
      * Retrieves the name of the mission.
      */
-	public String getMissionName() {
-		return this.missionName;
+	public String getname() {
+		return this.name;
 	}
 
     /**
@@ -105,7 +105,7 @@ public class MissionInfo {
 
 	@Override
 	public String toString() {
-		return  "{ missionName='" + missionName + '\'' +
+		return  "{ name='" + name + '\'' +
 				", serialAgentsNumbers=" + serialAgentsNumbers +
 				", gadget='" + gadget + '\'' +
 				", timeIssued=" + timeIssued +

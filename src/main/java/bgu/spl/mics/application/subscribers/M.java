@@ -59,7 +59,7 @@ public class M extends Subscriber {
 
             diary.increment();
             MissionInfo mission = callback.getMission();
-            System.out.println("M" + getName() + ": Mission Received: " + mission.getMissionName());
+            System.out.println("M" + getName() + ": Mission Received: [" + mission.getname() + "]");
             futureHashMap.putIfAbsent(mission, new LinkedList<>());
 
             if (currTick <= callback.getMission().getTimeExpired()) {
@@ -67,12 +67,12 @@ public class M extends Subscriber {
                 futureHashMap.get(mission).add(fut1);
 
                 if (fut1 != null && fut1.get() != null && (boolean) fut1.get().get("Acquired") && currTick <= callback.getMission().getTimeExpired()) {
-                    System.out.println("M" + getName() + ", agents acquired !");
+                    System.out.println("M" + getName() + ", agents acquired : " + mission.getSerialAgentsNumbers());
                     Future<Map.Entry<Boolean, Integer>> fut2 = askGadget(mission);
                     futureHashMap.get(mission).add(fut2);
 
                     if (fut2 != null && fut2.get() != null && fut2.get().getKey() && currTick <= callback.getMission().getTimeExpired()) {
-                        System.out.println("M" + getName() + ", gadget acquired !");
+                        System.out.println("M" + getName() + ", gadget acquired : [" + mission.getGadget() + "]");
                         QTime = fut2.get().getValue();
                         Future<Boolean> fut3 = sendAgents(mission);
                         futureHashMap.get(mission).add(fut3);
@@ -92,7 +92,7 @@ public class M extends Subscriber {
                     System.out.println("M" + getName() + ", didn't acquired the agents, mission aborted !");
                 }
             } else {
-                System.out.println("M" + getName() + ": Mission: " + mission.getMissionName() + " TimeOut mission aborted !");
+                System.out.println("M" + getName() + ": Mission: [" + mission.getname() + "] -> TIMEOUT -> mission aborted !");
             }
         });
 
@@ -129,7 +129,7 @@ public class M extends Subscriber {
         report.setAgentsSerialNumbers(mission.getSerialAgentsNumbers());
         report.setGadgetName(mission.getGadget());
         report.setM(Integer.parseInt(this.getName()));
-        report.setMissionName(mission.getMissionName());
+        report.setname(mission.getname());
         report.setTimeCreated(QTime + mission.getDuration());
         report.setTimeIssued(mission.getTimeIssued());
         report.setAgentsNames((List<String>) fut.get("AgentsName"));

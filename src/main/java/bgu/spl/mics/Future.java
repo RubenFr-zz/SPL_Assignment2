@@ -14,6 +14,7 @@ public class Future<T> {
 
     private boolean done;
     private T result;
+    private final Object lock;
 
     /**
      * This should be the the only public constructor in this class.
@@ -21,6 +22,7 @@ public class Future<T> {
     public Future() {
         this.done = false;
         this.result = null;
+        this.lock = new Object();
     }
 
     /**
@@ -32,10 +34,10 @@ public class Future<T> {
      * @return return the result of type T if it is available, if not wait until it is available.
      */
     public T get(){
-        synchronized (this) {
+        synchronized (lock) {
             while (!isDone()) {
                 try {
-                    this.wait();
+                    lock.wait();
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -50,8 +52,8 @@ public class Future<T> {
     public void resolve(T result) {
         this.result = result;
         this.done = true;
-        synchronized (this) {
-            this.notifyAll();
+        synchronized (lock) {
+            lock.notifyAll();
         }
     }
 
@@ -78,13 +80,14 @@ public class Future<T> {
         if (isDone()) return result;
 
         long startTime = System.currentTimeMillis();
-
-        while (System.currentTimeMillis() - startTime < timeout) {
-        	try{
-        		unit.sleep(timeout);
-				if (isDone()) return result;
-			}catch (InterruptedException ignored) {}
-		}
+        synchronized (lock) {
+            while (System.currentTimeMillis() - startTime < timeout) {
+                try {
+                    lock.wait(TimeUnit.MILLISECONDS.convert(timeout, unit));
+                    if (isDone()) return result;
+                } catch (InterruptedException ignored) {}
+            }
+        }
         return null;
     }
 

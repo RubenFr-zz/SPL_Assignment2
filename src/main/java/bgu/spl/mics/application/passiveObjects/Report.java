@@ -16,7 +16,7 @@ import java.util.List;
  */
 public class Report {
 
-	private String missionName = "";
+	private String name = "";
 	private int M;
 	private int MoneyPenny;
 	private List<String> agentsSerialNumbers = new LinkedList<>();
@@ -29,15 +29,15 @@ public class Report {
 	/**
      * Retrieves the mission name.
      */
-	public String getMissionName() {
-		return this.missionName;
+	public String getname() {
+		return this.name;
 	}
 
 	/**
 	 * Sets the mission name.
 	 */
-	public void setMissionName(String missionName) {
-		this.missionName = missionName;
+	public void setname(String name) {
+		this.name = name;
 	}
 
 	/**

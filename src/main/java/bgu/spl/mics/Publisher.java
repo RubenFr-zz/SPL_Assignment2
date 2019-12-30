@@ -15,14 +15,11 @@ import bgu.spl.mics.RunnableSubPub;
  */
 public abstract class Publisher extends RunnableSubPub {
 
-    private MessageBrokerImpl _MessageBrocker;
-
     /**
      * @param name the Publisher name (used mainly for debugging purposes -
      *             does not have to be unique)
      */
     public Publisher(String name) {
         super(name);
-        _MessageBrocker = MessageBrokerImpl.getInstance();
     }
 }

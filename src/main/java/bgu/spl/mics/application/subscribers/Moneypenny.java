@@ -54,20 +54,13 @@ public class Moneypenny extends Subscriber {
                 }
             });
 
-        } else if (type == MpFlag.SENDING_AGENTS){
+        } else if (type == MpFlag.SENDING_RELEASE_AGENTS){
 
             subscribeEvent(SendAgentsEvent.class, callback -> {
                 System.out.println("MP" + getName() + ": M" + callback.getSendID() + ", Sending Agents " + callback.getSerialNumbers()+ " for: " + (callback.getDuration() * 100) + " Milli");
                 squad.sendAgents(callback.getSerialNumbers(), callback.getDuration());
                 complete(callback, true);
             });
-
-            subscribeEvent(ReleaseAgentsEvent.class, callback -> {
-                squad.releaseAgents(callback.getSerialNumbers());
-                complete(callback, true);
-            });
-
-        } else if (type == MpFlag.RELEASING_AGENTS) {
 
             subscribeEvent(ReleaseAgentsEvent.class, callback -> {
                 squad.releaseAgents(callback.getSerialNumbers());
