@@ -21,7 +21,6 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.TimeUnit;
 
 
 /**
@@ -35,11 +34,8 @@ public class MI6Runner {
     private static Subscriber[] subscribers;
     private static Publisher[] publishers;
     private static String[] outputFilesName;
-    private static long startTime;
 
     public static void main(String[] args) {
-
-        startTime = System.currentTimeMillis();
 
         if (args.length != 3) {
             System.out.println("Wrong arguments");
@@ -85,12 +81,6 @@ public class MI6Runner {
         /* When the program reaches this line all the threads have terminated ! */
         printInventory();
         printDiary();
-
-//        long endTime = System.currentTimeMillis();
-//        long sec = TimeUnit.SECONDS.convert(endTime - startTime, TimeUnit.MILLISECONDS);
-//        long milli = endTime - startTime - (sec * 1000);
-//        System.out.println("Time taken: " + sec + "." + milli + " seconds");
-
     }
 
 
@@ -130,21 +120,15 @@ public class MI6Runner {
     }
 
     private static Subscriber[] initMoneyPenny(int size) {
-        Subscriber[] array;
-        if (size > 2)
-            array = new Moneypenny[size];
-        else {
-            array = new Moneypenny[3];
-            array[2] = new Moneypenny(Integer.toString(3), startSignal, MpFlag.RELEASING_AGENTS);
-        }
+        Subscriber[] array = new Moneypenny[size];
 
         for (int i = 0; i < size; i++)
             if (size > 2 && i == 0)
-                array[i] = new Moneypenny(Integer.toString(i + 1), startSignal, MpFlag.RELEASING_AGENTS);
+                array[i] = new Moneypenny(Integer.toString(i), startSignal, MpFlag.RELEASING_AGENTS);
             else if (i % 2 == 0)
-                array[i] = new Moneypenny(Integer.toString(i + 1), startSignal, MpFlag.GETTING_AGENTS);
+                array[i] = new Moneypenny(Integer.toString(i), startSignal, MpFlag.GETTING_AGENTS);
             else
-                array[i] = new Moneypenny(Integer.toString(i + 1), startSignal, MpFlag.SENDING_AGENTS);
+                array[i] = new Moneypenny(Integer.toString(i), startSignal, MpFlag.SENDING_AGENTS);
 
         return array;
     }

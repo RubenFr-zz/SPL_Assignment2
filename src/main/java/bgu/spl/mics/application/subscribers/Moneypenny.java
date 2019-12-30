@@ -61,6 +61,11 @@ public class Moneypenny extends Subscriber {
 
             });
 
+            subscribeEvent(ReleaseAgentsEvent.class, callback -> {
+                squad.releaseAgents(callback.getSerialNumbers());
+                complete(callback, true);
+            });
+
         } else if (type == MpFlag.RELEASING_AGENTS) {
 
             subscribeEvent(ReleaseAgentsEvent.class, callback -> {
