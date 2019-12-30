@@ -179,7 +179,7 @@ public class MI6Runner {
 
         List<String> serialAgentsNumbers = extractSerialNumber(missionObject);
         mission.setSerialAgentsNumbers(serialAgentsNumbers);
-        mission.setMissionName(missionObject.get("missionName").getAsString());
+        mission.setMissionName(missionObject.get("name").getAsString());
         mission.setGadget(missionObject.get("gadget").getAsString());
         mission.setDuration(missionObject.get("duration").getAsInt());
         mission.setTimeIssued(missionObject.get("timeIssued").getAsInt());
