@@ -86,10 +86,10 @@ public class MI6Runner {
         printInventory();
         printDiary();
 
-        long endTime = System.currentTimeMillis();
-        long sec = TimeUnit.SECONDS.convert(endTime - startTime, TimeUnit.MILLISECONDS);
-        long milli = endTime - startTime - (sec * 1000);
-        System.out.println("Time taken: " + sec + "." + milli + " seconds");
+//        long endTime = System.currentTimeMillis();
+//        long sec = TimeUnit.SECONDS.convert(endTime - startTime, TimeUnit.MILLISECONDS);
+//        long milli = endTime - startTime - (sec * 1000);
+//        System.out.println("Time taken: " + sec + "." + milli + " seconds");
 
     }
 
@@ -130,12 +130,18 @@ public class MI6Runner {
     }
 
     private static Subscriber[] initMoneyPenny(int size) {
-        Subscriber[] array = new Moneypenny[size];
+        Subscriber[] array;
+        if (size > 2)
+            array = new Moneypenny[size];
+        else {
+            array = new Moneypenny[3];
+            array[2] = new Moneypenny(Integer.toString(3), startSignal, MpFlag.RELEASING_AGENTS);
+        }
 
         for (int i = 0; i < size; i++)
-            if ( i == 0 )
+            if (size > 2 && i == 0)
                 array[i] = new Moneypenny(Integer.toString(i + 1), startSignal, MpFlag.RELEASING_AGENTS);
-            else if ( i % 2 == 0)
+            else if (i % 2 == 0)
                 array[i] = new Moneypenny(Integer.toString(i + 1), startSignal, MpFlag.GETTING_AGENTS);
             else
                 array[i] = new Moneypenny(Integer.toString(i + 1), startSignal, MpFlag.SENDING_AGENTS);
@@ -242,14 +248,14 @@ public class MI6Runner {
     }
 
     private static void printInventory() {
-        try{
+        try {
             Inventory.getInstance().printToFile(outputFilesName[0]);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    private static void printDiary(){
+    private static void printDiary() {
         try {
             Diary.getInstance().printToFile(outputFilesName[1]);
         } catch (IOException e) {
