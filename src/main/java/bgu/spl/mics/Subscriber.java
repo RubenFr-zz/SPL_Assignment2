@@ -146,7 +146,7 @@ public abstract class Subscriber extends RunnableSubPub {
                     c.call(message);
                 }
                 else {
-                    System.out.println("MESSAGE NULL: TimeOut -> Force Termination");
+                    System.out.println("UNEXPECTED ERROR: Force Termination");
                     terminate();
                 }
             }

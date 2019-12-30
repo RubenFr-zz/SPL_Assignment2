@@ -121,10 +121,4 @@ public class Diary {
 
 		return jsonReport;
 	}
-
-	//todo delete this!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-	public void clear() {
-		reports.clear();
-		total.set(0);
-	}
 }

@@ -64,7 +64,6 @@ public class Squad {
                     agents.get(serial).release();
             }
             lock.notifyAll();
-            System.out.println("Agents released: " + serials);
         }
     }
 
@@ -78,7 +77,6 @@ public class Squad {
         for (String serial : serials)
             if (agents.get(serial).isAvailable()) {
                 releaseAgents(serials);
-                System.out.println(new AgentNotAcquiredException().toString());
                 return;
             }
 
@@ -125,7 +123,6 @@ public class Squad {
         for (String serial : serials) {
             if (agents.get(serial) != null)
                 list.add(agents.get(serial).getName());
-            else System.out.println(new NullPointerException(serial + " isn't an agent").toString());
         }
         return list;
     }
@@ -143,11 +140,5 @@ public class Squad {
         synchronized (lock){
             lock.notifyAll();
         }
-    }
-
-    public void clear() {
-        agents.clear();
-        serialNumbers.clear();
-        terminated = false;
     }
 }

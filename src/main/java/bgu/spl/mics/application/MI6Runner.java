@@ -21,6 +21,7 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.TimeUnit;
 
 
 /**
@@ -34,8 +35,11 @@ public class MI6Runner {
     private static Subscriber[] subscribers;
     private static Publisher[] publishers;
     private static String[] outputFilesName;
+    private static long startTime;
 
     public static void main(String[] args) {
+
+        startTime = System.currentTimeMillis();
 
         if (args.length != 3) {
             System.out.println("Wrong arguments");
@@ -81,6 +85,11 @@ public class MI6Runner {
         /* When the program reaches this line all the threads have terminated ! */
         printInventory();
         printDiary();
+
+        long endTime = System.currentTimeMillis();
+        long sec = TimeUnit.SECONDS.convert(endTime - startTime, TimeUnit.MILLISECONDS);
+        long milli = endTime - startTime - (sec * 1000);
+        System.out.println("Time taken: " + sec + "." + milli + " seconds");
 
     }
 

@@ -97,8 +97,4 @@ public class Inventory {
         file.write(new GsonBuilder().setPrettyPrinting().create().toJson(jsonObject));
         file.close();
     }
-
-    public void clear(){
-        gadgets.clear();
-    }
 }

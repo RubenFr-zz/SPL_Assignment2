@@ -45,7 +45,6 @@ public class TimeService extends Publisher {
         this.timerTask = new TimerTask() {
             @Override
             public void run() {
-                System.out.println("tick: " + currTick.get());
                 if (currTick.get() == projectTime) {
                     getSimplePublisher().sendBroadcast(new TerminationBroadcast());
                     timer.cancel();

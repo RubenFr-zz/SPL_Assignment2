@@ -59,7 +59,6 @@ public class M extends Subscriber {
 
             diary.increment();
             MissionInfo mission = callback.getMission();
-            System.out.println("M" + getName() + ": Mission Received: " + mission.getMissionName());
             futureHashMap.putIfAbsent(mission, new LinkedList<>());
 
             if (currTick <= callback.getMission().getTimeExpired()) {
@@ -67,32 +66,22 @@ public class M extends Subscriber {
                 futureHashMap.get(mission).add(fut1);
 
                 if (fut1 != null && fut1.get() != null && (boolean) fut1.get().get("Acquired") && currTick <= callback.getMission().getTimeExpired()) {
-                    System.out.println("M" + getName() + ", agents acquired !");
                     Future<Map.Entry<Boolean, Integer>> fut2 = askGadget(mission);
                     futureHashMap.get(mission).add(fut2);
 
                     if (fut2 != null && fut2.get() != null && fut2.get().getKey() && currTick <= callback.getMission().getTimeExpired()) {
-                        System.out.println("M" + getName() + ", gadget acquired !");
                         QTime = fut2.get().getValue();
                         Future<Boolean> fut3 = sendAgents(mission);
                         futureHashMap.get(mission).add(fut3);
 
-                        if (fut3 != null && fut3.get() != null && fut3.get()) {
-                            System.out.println("M" + getName() + ", Mission succeeded !");
+                        if (fut3 != null && fut3.get() != null && fut3.get())
                             diary.addReport(fillReport(mission, fut1.get()));
 
-                        } else System.out.println("Didn't pass the sending ...?");
-
                     } else {
-                        System.out.println("M" + getName() + ", didn't found the gadget, mission aborted !");
                         Future<Boolean> fut4 = releaseAgents(mission);
                         futureHashMap.get(mission).add(fut4);
                     }
-                } else {
-                    System.out.println("M" + getName() + ", didn't acquired the agents, mission aborted !");
                 }
-            } else {
-                System.out.println("M" + getName() + ": Mission: " + mission.getMissionName() + " TimeOut mission aborted !");
             }
         });
 

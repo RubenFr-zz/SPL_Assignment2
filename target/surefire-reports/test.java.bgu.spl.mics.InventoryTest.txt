@@ -1,8 +1,0 @@
--------------------------------------------------------------------------------
-Test set: test.java.bgu.spl.mics.InventoryTest
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.005 s <<< FAILURE! - in test.java.bgu.spl.mics.InventoryTest
-test.java.bgu.spl.mics.InventoryTest  Time elapsed: 0.005 s  <<< ERROR!
-java.lang.NoClassDefFoundError: Lmain/java/bgu/spl/mics/application/passiveObjects/Inventory;
-Caused by: java.lang.ClassNotFoundException: main.java.bgu.spl.mics.application.passiveObjects.Inventory
-

@@ -236,8 +236,6 @@ public class MessageBrokerImpl implements MessageBroker {
                 }
                 SubscribersQueue.remove(m);
             }
-
-            System.out.println(m.getClass().getName() + m.getName() + " UNREGISTERED");
         }
     }
 
@@ -275,12 +273,4 @@ public class MessageBrokerImpl implements MessageBroker {
         return SubscribersQueue.get(m).take();
     }
 
-
-    //TODO DELETE THIS !!!!!!!!!!!
-    public void clear() {
-        EventSubscribers.clear();
-        BroadcastSubscribers.clear();
-        SubscribersQueue.clear();
-        toBeSolved.clear();
-    }
 }

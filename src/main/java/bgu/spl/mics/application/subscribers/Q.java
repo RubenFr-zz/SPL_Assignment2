@@ -68,9 +68,4 @@ public class Q extends Subscriber {
 		latch.countDown();
 	}
 
-	public void clear(){
-		currTick = 0;
-		setTerminated(false);
-		getMessageCallMap().clear();
-	}
 }

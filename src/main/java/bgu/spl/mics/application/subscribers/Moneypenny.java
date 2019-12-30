@@ -43,7 +43,6 @@ public class Moneypenny extends Subscriber {
 
             subscribeEvent(AgentsAvailableEvent.class, callback -> {
 
-                System.out.println("MP" + getName() + ": M" + callback.getSendID() + ", Agents requested ! " + callback.getSerialNumbers());
                 List<String> agents = callback.getSerialNumbers();
                 java.util.Collections.sort(agents);
 
@@ -57,7 +56,6 @@ public class Moneypenny extends Subscriber {
         } else if (type == MpFlag.SENDING_AGENTS){
 
             subscribeEvent(SendAgentsEvent.class, callback -> {
-                System.out.println("MP" + getName() + ": M" + callback.getSendID() + ", Sending Agents " + callback.getSerialNumbers()+ " for: " + (callback.getDuration() * 100) + " Milli");
                 squad.sendAgents(callback.getSerialNumbers(), callback.getDuration());
                 complete(callback, true);
 
@@ -69,8 +67,7 @@ public class Moneypenny extends Subscriber {
                 squad.releaseAgents(callback.getSerialNumbers());
                 complete(callback, true);
             });
-
-        } else System.out.println("ERROR: Moneypenny don't have any type...");
+        }
 
         latch.countDown();
     }

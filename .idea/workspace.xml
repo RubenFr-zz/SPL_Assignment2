@@ -1,26 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="19a61722-e5de-463b-ba63-2632f7fa0e3e" name="Default Changelist" comment="">
+    <list default="true" id="19a61722-e5de-463b-ba63-2632f7fa0e3e" name="Default Changelist" comment="Multiple changes:&#10;&#10;GadgetAvailableEvent - now return the current tick &#10;MpFlag - differentiate different types of Moneypenny (who handles what)&#10;Squad - Added the terminated flag that once set(true) will notify every one waiting for an agent that it can stop waiting because the termination has come !&#10;Moneypenny - added the differentiation (MpFlag) and once one Moneypenny receives a termination it sets the Squad Flag (terminated) to true to tell to everyone to stop waiting&#10;MI6Runner - differentiate the Moneypenny !&#10;MessageBrokerImpl -">
+      <change afterPath="$PROJECT_DIR$/test/java/bgu/spl/mics/FutureTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/java/bgu/spl/mics/InventoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/java/bgu/spl/mics/MessageBrokerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/java/bgu/spl/mics/SquadTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleOutput.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleOutput.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiaryOutput.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/InventoryOutput.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/input.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/SPL_Assignment2/FutureTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/SPL_Assignment2/InventoryTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/SPL_Assignment2/MessageBrokerTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/SPL_Assignment2/SquadTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/SPL_Assignment2/test/java/bgu/spl/mics/FutureTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/SPL_Assignment2/test/java/bgu/spl/mics/InventoryTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/SPL_Assignment2/test/java/bgu/spl/mics/MessageBrokerTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/SPL_Assignment2/test/java/bgu/spl/mics/SquadTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/bgu/spl/mics/MessageBroker.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bgu/spl/mics/MessageBroker.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/bgu/spl/mics/application/MI6Runner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bgu/spl/mics/application/MI6Runner.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/bgu/spl/mics/application/passiveObjects/Squad.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bgu/spl/mics/application/passiveObjects/Squad.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diaryOutputFile.json" beforeDir="false" afterPath="$PROJECT_DIR$/diaryOutputFile.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inputFile.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventoryOutputFile.json" beforeDir="false" afterPath="$PROJECT_DIR$/inventoryOutputFile.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/MessageBrokerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/MessageBrokerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/Subscriber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/Subscriber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/application/MI6Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/application/MI6Runner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/application/MI6tests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/application/passiveObjects/Diary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/application/passiveObjects/Diary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/application/passiveObjects/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/application/passiveObjects/Inventory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/application/passiveObjects/Squad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/application/passiveObjects/Squad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/application/publishers/TimeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/application/publishers/TimeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/application/subscribers/M.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/application/subscribers/M.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/application/subscribers/Moneypenny.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/application/subscribers/Moneypenny.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/application/subscribers/Q.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/application/subscribers/Q.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/example/Creator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/example/ExampleManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/example/messages/ExampleBroadcast.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/example/messages/ExampleEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/example/publishers/ExampleMessageSender.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/example/subscribers/ExampleBroadcastSubscriber.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/mics/example/subscribers/ExampleEventHandlerSubscriber.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/bgu/spl/mics/FutureTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/bgu/spl/mics/InventoryTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/bgu/spl/mics/MessageBrokerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/bgu/spl/mics/SquadTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/SPL_Assignment2.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bgu/spl/mics/Broadcast.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bgu/spl/mics/Callback.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bgu/spl/mics/Event.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bgu/spl/mics/Future.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bgu/spl/mics/Message.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bgu/spl/mics/MessageBroker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bgu/spl/mics/MessageBrokerImpl$MessageBrokerHolder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bgu/spl/mics/MessageBrokerImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bgu/spl/mics/Publisher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bgu/spl/mics/RunnableSubPub.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bgu/spl/mics/SimplePublisher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bgu/spl/mics/Subscriber.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bgu/spl/mics/application/MI6Runner.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bgu/spl/mics/application/passiveObjects/Agent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bgu/spl/mics/application/passiveObjects/Diary$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bgu/spl/mics/application/passiveObjects/Diary$DiaryHolder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bgu/spl/mics/application/passiveObjects/Diary.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bgu/spl/mics/application/passiveObjects/Inventory$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bgu/spl/mics/application/passiveObjects/Inventory$InventoryHolder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bgu/spl/mics/application/passiveObjects/Inventory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bgu/spl/mics/application/passiveObjects/MissionInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bgu/spl/mics/application/passiveObjects/Report.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bgu/spl/mics/application/passiveObjects/Squad$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bgu/spl/mics/application/passiveObjects/Squad$SquadHolder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bgu/spl/mics/application/passiveObjects/Squad.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bgu/spl/mics/application/publishers/TimeService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bgu/spl/mics/application/subscribers/M.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bgu/spl/mics/application/subscribers/Moneypenny.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bgu/spl/mics/application/subscribers/Q$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bgu/spl/mics/application/subscribers/Q$QHolder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bgu/spl/mics/application/subscribers/Q.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleOutput.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-bgu.spl.mics.InventoryTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-bgu.spl.mics.MessageBrokerTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-bgu.spl.mics.SquadTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-test.java.bgu.spl.mics.InventoryTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-test.java.bgu.spl.mics.MessageBrokerTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-test.java.bgu.spl.mics.SquadTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/bgu.spl.mics.InventoryTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/bgu.spl.mics.MessageBrokerTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/bgu.spl.mics.SquadTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/test.java.bgu.spl.mics.InventoryTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/test.java.bgu.spl.mics.MessageBrokerTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/test.java.bgu.spl.mics.SquadTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/bgu/spl/mics/FutureTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/bgu/spl/mics/InventoryTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/bgu/spl/mics/MessageBrokerTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/bgu/spl/mics/SquadTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/test/java/bgu/spl/mics/FutureTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/test/java/bgu/spl/mics/InventoryTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/test/java/bgu/spl/mics/MessageBrokerTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/test/java/bgu/spl/mics/SquadTest.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +143,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="true" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main.java" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../test" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/TEST" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -86,6 +153,9 @@
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
       <recent name="bgu.spl.mics" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/bgu/spl/mics/application" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
@@ -106,15 +176,23 @@
       </method>
     </configuration>
     <configuration name="SPL2" type="Application" factoryName="Application">
-      <output_file path="ConsoleOutput.txt" is_save="true" />
+      <output_file path="ConsoleOutput.txt" />
       <option name="MAIN_CLASS_NAME" value="bgu.spl.mics.application.MI6Runner" />
       <module name="SPL_Assignment2" />
-      <option name="PROGRAM_PARAMETERS" value="$PROJECT_DIR$/inputFile.json $PROJECT_DIR$/inventoryOutputFile.json $PROJECT_DIR$/diaryOutputFile.json" />
+      <option name="PROGRAM_PARAMETERS" value="$PROJECT_DIR$/TEST/jsons/input97.json $PROJECT_DIR$/inventoryOutputFile.json $PROJECT_DIR$/diaryOutputFile.json" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="All in SPL_Assignment2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Test100" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="bgu.spl.mics.application.MI6tests" />
+      <module name="SPL_Assignment2" />
+      <option name="PROGRAM_PARAMETERS" value="$PROJECT_DIR$/TEST" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in SPL_Assignment2" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="SPL_Assignment2" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
@@ -169,6 +247,7 @@
     </configuration>
     <list>
       <item itemvalue="Application.SPL2" />
+      <item itemvalue="Application.Test100" />
       <item itemvalue="Application.Example" />
       <item itemvalue="JUnit.All in SPL_Assignment2" />
       <item itemvalue="JUnit.bgu.spl.mics in SPL_Assignment2" />
@@ -177,7 +256,6 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in SPL_Assignment2" />
         <item itemvalue="JUnit.bgu.spl.mics in SPL_Assignment2" />
         <item itemvalue="JUnit.InventoryTest.Load" />
         <item itemvalue="JUnit.InventoryTest (1)" />
@@ -427,7 +505,21 @@
       <option name="project" value="LOCAL" />
       <updated>1577318419560</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="changed to required file name">
+      <created>1577320222294</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1577320222294</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Multiple changes:&#10;&#10;GadgetAvailableEvent - now return the current tick &#10;MpFlag - differentiate different types of Moneypenny (who handles what)&#10;Squad - Added the terminated flag that once set(true) will notify every one waiting for an agent that it can stop waiting because the termination has come !&#10;Moneypenny - added the differentiation (MpFlag) and once one Moneypenny receives a termination it sets the Squad Flag (terminated) to true to tell to everyone to stop waiting&#10;MI6Runner - differentiate the Moneypenny !&#10;MessageBrokerImpl - If termination broadcast received -&gt; set every missions' TimeExpired received until now to -1 to be sure they won't be executed !&#10;TEST - repository with 100 Json to test ! &#10;MI6tests - main that tests the 100 tests in a row">
+      <created>1577704258178</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1577704258178</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -478,8 +570,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="main - read json and initialize the classes" />
-    <MESSAGE value="Agent - removed the singleton&#10;MissionInfo - initialized&#10;Squad - Added PUBLIC method to access the agents&#10;SquadTest - started a bit" />
     <MESSAGE value="initialized" />
     <MESSAGE value="finished future -&gt; TO TEST" />
     <MESSAGE value="finished future -&gt; TO TEST&#10;finished MessageBroker -&gt; TO TEST" />
@@ -503,7 +593,9 @@
     <MESSAGE value="Multiple changes:&#10;&#10;Inventory - modified getItem to be more safe&#10;MpFlag - Enum to differentiate getter and sender MP (maybe not needed)&#10;Squad - Only print the exception SendAgents&#10;ALL SUBSCRIBERS - modified how the" />
     <MESSAGE value="Multiple changes:&#10;&#10;Inventory - modified getItem to be more safe&#10;MpFlag - Enum to differentiate getter and sender MP (maybe not needed)&#10;Squad - Only print the exception SendAgents&#10;ALL SUBSCRIBERS - use of the class CountDownLatch to only start the TimeService once every Subscribers finished their initialization !&#10;M - restructured the whole if system to print every step&#10;MP - now a MP over two is a senderAgent and the other one a GetterAgent&#10;TimeService - doesn't start till every Subscribers finished their init (latch.await())&#10;Future - try catch the exception so that the other classes don't have to&#10;MessageBrokerImpl - BIGGEST CHANGE !! added locks to make the methods safer. Completely redone the unregister method to make it safe (sync). If a method is stuck in the awaitMessage() it's getting terminated after 2 seconds with a print warning&#10;ConsoleOutput - How a working version is supposed to look like !&#10;input.json - back to the original one" />
     <MESSAGE value="workspace.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="workspace.xml" />
+    <MESSAGE value="changed to required file name" />
+    <MESSAGE value="Multiple changes:&#10;&#10;GadgetAvailableEvent - now return the current tick &#10;MpFlag - differentiate different types of Moneypenny (who handles what)&#10;Squad - Added the terminated flag that once set(true) will notify every one waiting for an agent that it can stop waiting because the termination has come !&#10;Moneypenny - added the differentiation (MpFlag) and once one Moneypenny receives a termination it sets the Squad Flag (terminated) to true to tell to everyone to stop waiting&#10;MI6Runner - differentiate the Moneypenny !&#10;MessageBrokerImpl - If termination broadcast received -&gt; set every missions' TimeExpired received until now to -1 to be sure they won't be executed !&#10;TEST - repository with 100 Json to test ! &#10;MI6tests - main that tests the 100 tests in a row" />
+    <option name="LAST_COMMIT_MESSAGE" value="Multiple changes:&#10;&#10;GadgetAvailableEvent - now return the current tick &#10;MpFlag - differentiate different types of Moneypenny (who handles what)&#10;Squad - Added the terminated flag that once set(true) will notify every one waiting for an agent that it can stop waiting because the termination has come !&#10;Moneypenny - added the differentiation (MpFlag) and once one Moneypenny receives a termination it sets the Squad Flag (terminated) to true to tell to everyone to stop waiting&#10;MI6Runner - differentiate the Moneypenny !&#10;MessageBrokerImpl - If termination broadcast received -&gt; set every missions' TimeExpired received until now to -1 to be sure they won't be executed !&#10;TEST - repository with 100 Json to test ! &#10;MI6tests - main that tests the 100 tests in a row" />
   </component>
   <component name="WindowStateProjectService">
     <state x="588" y="214" width="800" height="677" key="#Inspections" timestamp="1576438966584">
@@ -514,14 +606,14 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="588" y="214" width="800" height="677" key="#Project_Structure/67.27.1853.1053@67.27.1853.1053" timestamp="1575925504599" />
-    <state x="451" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1577319803599">
+    <state x="451" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1577704703746">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="451" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1577319803599" />
-    <state x="705" y="357" width="566" height="390" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1577271297083">
+    <state x="451" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1577704703746" />
+    <state x="705" y="357" width="662" height="390" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1577459693717">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="705" y="357" width="566" height="390" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1577271297083" />
+    <state x="705" y="357" width="662" height="390" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1577459693717" />
     <state x="602" y="242" width="772" height="621" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog" timestamp="1575928784450">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -530,18 +622,18 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="776" y="260" width="424" height="584" key="#com.intellij.ide.macro.MacrosDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1576328456103" />
-    <state x="716" y="256" width="544" height="592" key="#com.intellij.ide.util.MemberChooser" timestamp="1577288282725">
+    <state x="716" y="256" width="544" height="592" key="#com.intellij.ide.util.MemberChooser" timestamp="1577465465452">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="716" y="256" width="544" height="592" key="#com.intellij.ide.util.MemberChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1577288282725" />
+    <state x="716" y="256" width="544" height="592" key="#com.intellij.ide.util.MemberChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1577465465452" />
     <state x="726" y="331" width="524" height="444" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1576343436975">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="726" y="331" width="524" height="444" key="#com.intellij.ide.util.PackageChooserDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1576343436975" />
-    <state x="725" y="338" width="525" height="428" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1576854455080">
+    <state x="725" y="338" width="525" height="428" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1577481479281">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="725" y="338" width="525" height="428" key="#com.intellij.ide.util.TreeClassChooserDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1576854455080" />
+    <state x="725" y="338" width="525" height="428" key="#com.intellij.ide.util.TreeClassChooserDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1577481479281" />
     <state x="746" y="413" width="541" height="290" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1577201594416">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -550,62 +642,62 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="746" y="425" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/67.27.1853.1053@67.27.1853.1053" timestamp="1575926707638" />
-    <state x="506" y="27" width="1126" height="990" key="CommitChangelistDialog2" timestamp="1577320155860">
+    <state x="506" y="27" width="1126" height="990" key="CommitChangelistDialog2" timestamp="1577705269943">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="506" y="27" width="1126" height="990" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1577320155860" />
+    <state x="506" y="27" width="1126" height="990" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1577705269943" />
     <state x="167" y="125" width="1653" height="855" key="DiffContextDialog" timestamp="1576504023059">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="167" y="125" width="1653" height="855" key="DiffContextDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1576504023059" />
-    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1576668832672">
+    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1577481494974">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1576668832672" />
-    <state width="1807" height="309" key="GridCell.Tab.0.bottom" timestamp="1577320000899">
+    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1577481494974" />
+    <state width="1807" height="271" key="GridCell.Tab.0.bottom" timestamp="1577705269992">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state width="1807" height="375" key="GridCell.Tab.0.bottom/1.27.1919.1053@1.27.1919.1053" timestamp="1577208708633" />
-    <state width="1807" height="309" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1577320000899" />
-    <state width="1807" height="309" key="GridCell.Tab.0.center" timestamp="1577320000898">
+    <state width="1807" height="271" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1577705269992" />
+    <state width="1807" height="271" key="GridCell.Tab.0.center" timestamp="1577705269991">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state width="1807" height="375" key="GridCell.Tab.0.center/1.27.1919.1053@1.27.1919.1053" timestamp="1577208708630" />
-    <state width="1807" height="309" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1577320000898" />
-    <state width="1807" height="309" key="GridCell.Tab.0.left" timestamp="1577320000897">
+    <state width="1807" height="271" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1577705269991" />
+    <state width="1807" height="271" key="GridCell.Tab.0.left" timestamp="1577705269991">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state width="1807" height="375" key="GridCell.Tab.0.left/1.27.1919.1053@1.27.1919.1053" timestamp="1577208708629" />
-    <state width="1807" height="309" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1577320000897" />
-    <state width="1807" height="309" key="GridCell.Tab.0.right" timestamp="1577320000899">
+    <state width="1807" height="271" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1577705269991" />
+    <state width="1807" height="271" key="GridCell.Tab.0.right" timestamp="1577705269991">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state width="1807" height="375" key="GridCell.Tab.0.right/1.27.1919.1053@1.27.1919.1053" timestamp="1577208708632" />
-    <state width="1807" height="309" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1577320000899" />
-    <state width="1807" height="309" key="GridCell.Tab.1.bottom" timestamp="1577320000684">
+    <state width="1807" height="271" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1577705269991" />
+    <state width="1807" height="290" key="GridCell.Tab.1.bottom" timestamp="1577704262025">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state width="1807" height="375" key="GridCell.Tab.1.bottom/1.27.1919.1053@1.27.1919.1053" timestamp="1577208708636" />
-    <state width="1807" height="309" key="GridCell.Tab.1.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1577320000684" />
-    <state width="1807" height="309" key="GridCell.Tab.1.center" timestamp="1577320000682">
+    <state width="1807" height="290" key="GridCell.Tab.1.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1577704262025" />
+    <state width="1807" height="290" key="GridCell.Tab.1.center" timestamp="1577704262024">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state width="1807" height="375" key="GridCell.Tab.1.center/1.27.1919.1053@1.27.1919.1053" timestamp="1577208708635" />
-    <state width="1807" height="309" key="GridCell.Tab.1.center/67.27.1853.1053@67.27.1853.1053" timestamp="1577320000682" />
-    <state width="1807" height="309" key="GridCell.Tab.1.left" timestamp="1577320000682">
+    <state width="1807" height="290" key="GridCell.Tab.1.center/67.27.1853.1053@67.27.1853.1053" timestamp="1577704262024" />
+    <state width="1807" height="290" key="GridCell.Tab.1.left" timestamp="1577704262023">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state width="1807" height="375" key="GridCell.Tab.1.left/1.27.1919.1053@1.27.1919.1053" timestamp="1577208708634" />
-    <state width="1807" height="309" key="GridCell.Tab.1.left/67.27.1853.1053@67.27.1853.1053" timestamp="1577320000682" />
-    <state width="1807" height="309" key="GridCell.Tab.1.right" timestamp="1577320000683">
+    <state width="1807" height="290" key="GridCell.Tab.1.left/67.27.1853.1053@67.27.1853.1053" timestamp="1577704262023" />
+    <state width="1807" height="290" key="GridCell.Tab.1.right" timestamp="1577704262024">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state width="1807" height="375" key="GridCell.Tab.1.right/1.27.1919.1053@1.27.1919.1053" timestamp="1577208708636" />
-    <state width="1807" height="309" key="GridCell.Tab.1.right/67.27.1853.1053@67.27.1853.1053" timestamp="1577320000683" />
-    <state x="526" y="210" width="924" height="684" key="Maven.ArtifactSearchDialog" timestamp="1576321933131">
+    <state width="1807" height="290" key="GridCell.Tab.1.right/67.27.1853.1053@67.27.1853.1053" timestamp="1577704262024" />
+    <state x="526" y="210" width="924" height="684" key="Maven.ArtifactSearchDialog" timestamp="1577466597495">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="526" y="210" width="924" height="684" key="Maven.ArtifactSearchDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1576321933131" />
+    <state x="526" y="210" width="924" height="684" key="Maven.ArtifactSearchDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1577466597495" />
     <state x="242" y="116" width="1482" height="872" key="MergeDialog" timestamp="1577284570705">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -646,10 +738,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="1130" y="528" width="524" height="491" key="extract.method.dialog/67.27.1853.1053@67.27.1853.1053" timestamp="1577314261979" />
-    <state x="638" y="156" width="869" height="792" key="find.popup" timestamp="1577317594549">
+    <state x="638" y="156" width="869" height="792" key="find.popup" timestamp="1577704669140">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="638" y="156" width="869" height="792" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1577317594549" />
+    <state x="638" y="156" width="869" height="792" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1577704669140" />
     <state x="647" y="346" width="682" height="413" key="git4idea.merge.GitPullDialog" timestamp="1575930351592">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -666,21 +758,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="583" y="214" width="800" height="677" key="scopes/67.27.1853.1053@67.27.1853.1053" timestamp="1576353266652" />
-    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1577288613606">
+    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1577462868777">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1577288613606" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/bgu/spl/mics/application/subscribers/M.java</url>
-          <line>140</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1577462868777" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/SPL_Assignment2$SPL2.ic" NAME="SPL2 Coverage Results" MODIFIED="1577193615258" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
