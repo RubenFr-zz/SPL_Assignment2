@@ -92,9 +92,10 @@ public class MI6Runner {
         int mp = services.get("Moneypenny").getAsInt();
         int q = 1;
         int i = services.get("intelligence").getAsJsonArray().size();
-        Subscriber[] subscribers = new Subscriber[m + mp + q + i];
         startSignal = new CountDownLatch(m + mp + q + i);
         Q.getInstance().setLatch(startSignal);
+
+        Subscriber[] subscribers = new Subscriber[m + mp + q + i];
 
         System.arraycopy(initM(m), 0, subscribers, 0, m);
         System.arraycopy(initMoneyPenny(mp), 0, subscribers, m, mp);
@@ -121,13 +122,7 @@ public class MI6Runner {
     }
 
     private static Subscriber[] initMoneyPenny(int size) {
-        Subscriber[] array;
-        if (size > 2)
-            array = new Moneypenny[size];
-        else {
-            array = new Moneypenny[3];
-            array[2] = new Moneypenny(Integer.toString(3), startSignal, MpFlag.RELEASING_AGENTS);
-        }
+        Subscriber[] array = new Moneypenny[size];
 
         for (int i = 0; i < size; i++)
             if (size > 2 && i == 0)

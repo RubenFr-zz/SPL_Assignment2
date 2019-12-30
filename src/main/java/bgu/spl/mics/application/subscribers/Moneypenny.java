@@ -43,9 +43,9 @@ public class Moneypenny extends Subscriber {
 
             subscribeEvent(AgentsAvailableEvent.class, callback -> {
 
-                System.out.println("MP" + getName() + ": M" + callback.getSendID() + ", Agents requested ! " + callback.getSerialNumbers());
                 List<String> agents = callback.getSerialNumbers();
                 java.util.Collections.sort(agents);
+                System.out.println("MP" + getName() + ": M" + callback.getSendID() + ", Agents requested ! " + agents);
 
                 try {
                     complete(callback, getResult(agents, squad.getAgents(agents)));
@@ -60,7 +60,11 @@ public class Moneypenny extends Subscriber {
                 System.out.println("MP" + getName() + ": M" + callback.getSendID() + ", Sending Agents " + callback.getSerialNumbers()+ " for: " + (callback.getDuration() * 100) + " Milli");
                 squad.sendAgents(callback.getSerialNumbers(), callback.getDuration());
                 complete(callback, true);
+            });
 
+            subscribeEvent(ReleaseAgentsEvent.class, callback -> {
+                squad.releaseAgents(callback.getSerialNumbers());
+                complete(callback, true);
             });
 
         } else if (type == MpFlag.RELEASING_AGENTS) {
