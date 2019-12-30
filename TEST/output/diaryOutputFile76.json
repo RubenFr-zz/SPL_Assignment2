@@ -1,0 +1,52 @@
+{
+  "total": 14,
+  "reports": [
+    {
+      "missionName": "Don’t even trip dawg.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "000",
+        "001"
+      ],
+      "agentsName": [
+        "Morty Jr.",
+        "Eyeholes Man"
+      ],
+      "gadget": "Laser Gun",
+      "timeIssued": 1,
+      "QTime": 1,
+      "timeCreated": 8
+    },
+    {
+      "missionName": "Great, now I have to take over an entire planet because of your stupid boobs.",
+      "M": 3,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "000"
+      ],
+      "agentsName": [
+        "Morty Jr."
+      ],
+      "gadget": "Futuristic guns",
+      "timeIssued": 4,
+      "QTime": 8,
+      "timeCreated": 20
+    },
+    {
+      "missionName": "I\u0027m more than just a hammer.",
+      "M": 4,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "000"
+      ],
+      "agentsName": [
+        "Morty Jr."
+      ],
+      "gadget": "Grappling Shoes",
+      "timeIssued": 6,
+      "QTime": 19,
+      "timeCreated": 20
+    }
+  ]
+}

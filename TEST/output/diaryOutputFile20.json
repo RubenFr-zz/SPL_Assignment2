@@ -1,0 +1,233 @@
+{
+  "total": 25,
+  "reports": [
+    {
+      "missionName": "This isn\u0027t Game of Thrones, Morty.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "002"
+      ],
+      "agentsName": [
+        "Mr. Meeseeks"
+      ],
+      "gadget": "Particle Beam Wrist Watch \u0026 Snake Holster",
+      "timeIssued": 1,
+      "QTime": 1,
+      "timeCreated": 12
+    },
+    {
+      "missionName": "This isn\u0027t Game of Thrones, Morty.",
+      "M": 2,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "003",
+        "002"
+      ],
+      "agentsName": [
+        "Morty Smith",
+        "Mr. Meeseeks"
+      ],
+      "gadget": "Love Potion",
+      "timeIssued": 1,
+      "QTime": 12,
+      "timeCreated": 13
+    },
+    {
+      "missionName": "Uncertainty is inherently unsustainable. Eventually, everything either is or isn\u0027t.",
+      "M": 5,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "001",
+        "000"
+      ],
+      "agentsName": [
+        "Krombopulos Michael",
+        "Tammy Gueterman"
+      ],
+      "gadget": "Purge Suit",
+      "timeIssued": 9,
+      "QTime": 12,
+      "timeCreated": 22
+    },
+    {
+      "missionName": "Can somebody just let me out of here? If I die in a cage I lose a bet.",
+      "M": 7,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "000",
+        "001"
+      ],
+      "agentsName": [
+        "Tammy Gueterman",
+        "Krombopulos Michael"
+      ],
+      "gadget": "Cognition amplifier2",
+      "timeIssued": 17,
+      "QTime": 22,
+      "timeCreated": 25
+    },
+    {
+      "missionName": "Oh, I\u0027m sorry Morty, are you the scientist or are you the kid who wanted to get laid?",
+      "M": 4,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "003",
+        "002"
+      ],
+      "agentsName": [
+        "Morty Smith",
+        "Mr. Meeseeks"
+      ],
+      "gadget": "Particle Beam Wrist Watch \u0026 Snake Holster3",
+      "timeIssued": 3,
+      "QTime": 13,
+      "timeCreated": 28
+    },
+    {
+      "missionName": "Uncertainty is inherently unsustainable. Eventually, everything either is or isn\u0027t.",
+      "M": 3,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "003",
+        "000"
+      ],
+      "agentsName": [
+        "Morty Smith",
+        "Tammy Gueterman"
+      ],
+      "gadget": "Space cruiser",
+      "timeIssued": 2,
+      "QTime": 28,
+      "timeCreated": 35
+    },
+    {
+      "missionName": "Nobody exists on purpose. Nobody belongs anywhere. Everybody is going to die.",
+      "M": 1,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "002"
+      ],
+      "agentsName": [
+        "Mr. Meeseeks"
+      ],
+      "gadget": "Demonic Alien Containment Box",
+      "timeIssued": 22,
+      "QTime": 28,
+      "timeCreated": 42
+    },
+    {
+      "missionName": "Great, now I have to take over an entire planet because of your stupid boobs.",
+      "M": 4,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "003",
+        "002"
+      ],
+      "agentsName": [
+        "Morty Smith",
+        "Mr. Meeseeks"
+      ],
+      "gadget": "Neutrino bomb2",
+      "timeIssued": 35,
+      "QTime": 42,
+      "timeCreated": 56
+    },
+    {
+      "missionName": "Little tip, Morty. Never clean DNA vials with your spit.",
+      "M": 2,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "000",
+        "003"
+      ],
+      "agentsName": [
+        "Tammy Gueterman",
+        "Morty Smith"
+      ],
+      "gadget": "Dream inceptor2",
+      "timeIssued": 23,
+      "QTime": 56,
+      "timeCreated": 61
+    },
+    {
+      "missionName": "I want that Mulan McNugget sauce, Morty!",
+      "M": 7,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "003"
+      ],
+      "agentsName": [
+        "Morty Smith"
+      ],
+      "gadget": "Dark matter2",
+      "timeIssued": 45,
+      "QTime": 61,
+      "timeCreated": 63
+    },
+    {
+      "missionName": "Go home and drink, grandpa.",
+      "M": 5,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "001",
+        "000"
+      ],
+      "agentsName": [
+        "Krombopulos Michael",
+        "Tammy Gueterman"
+      ],
+      "gadget": "Ionic Defibulizer",
+      "timeIssued": 43,
+      "QTime": 61,
+      "timeCreated": 66
+    },
+    {
+      "missionName": "Well then get your shit together. Get it all together and put it in a backpack, all your shit, so it\u0027s together. ...and if you gotta take it somewhere, take it somewhere ya know? Take it to the shit store and sell it, or put it in a shit museum. I don\u0027t care what you do, you just gotta get it together... Get your shit together.",
+      "M": 6,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "002",
+        "001"
+      ],
+      "agentsName": [
+        "Mr. Meeseeks",
+        "Krombopulos Michael"
+      ],
+      "gadget": "Dream inceptor",
+      "timeIssued": 44,
+      "QTime": 66,
+      "timeCreated": 78
+    },
+    {
+      "missionName": "Uncertainty is inherently unsustainable. Eventually, everything either is or isn\u0027t.",
+      "M": 2,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "001"
+      ],
+      "agentsName": [
+        "Krombopulos Michael"
+      ],
+      "gadget": "Portal gun",
+      "timeIssued": 75,
+      "QTime": 78,
+      "timeCreated": 86
+    },
+    {
+      "missionName": "Listen, I\u0027m not the nicest guy in the universe, because I\u0027m the smartest, and being nice is something stupid people do to hedge their bets.",
+      "M": 4,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "002"
+      ],
+      "agentsName": [
+        "Mr. Meeseeks"
+      ],
+      "gadget": "Curse Remover",
+      "timeIssued": 65,
+      "QTime": 78,
+      "timeCreated": 92
+    }
+  ]
+}

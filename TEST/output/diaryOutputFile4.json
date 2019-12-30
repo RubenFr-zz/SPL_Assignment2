@@ -1,0 +1,84 @@
+{
+  "total": 13,
+  "reports": [
+    {
+      "missionName": "Weddings are basically funerals with cake.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "000"
+      ],
+      "agentsName": [
+        "Jerry Smith"
+      ],
+      "gadget": "Neutrino bomb",
+      "timeIssued": 11,
+      "QTime": 11,
+      "timeCreated": 18
+    },
+    {
+      "missionName": "I don\u0027t get it and I don\u0027t need to.",
+      "M": 2,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "000",
+        "001"
+      ],
+      "agentsName": [
+        "Jerry Smith",
+        "Fart"
+      ],
+      "gadget": "Morty\u0027s Mind Blowers",
+      "timeIssued": 14,
+      "QTime": 18,
+      "timeCreated": 29
+    },
+    {
+      "missionName": "Go home and drink, grandpa.",
+      "M": 3,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "000"
+      ],
+      "agentsName": [
+        "Jerry Smith"
+      ],
+      "gadget": "Cognition amplifier",
+      "timeIssued": 17,
+      "QTime": 29,
+      "timeCreated": 32
+    },
+    {
+      "missionName": "You\u0027re like Hitler, except...Hitler cared about Germany, or something.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "000"
+      ],
+      "agentsName": [
+        "Jerry Smith"
+      ],
+      "gadget": "Meeseeks Box",
+      "timeIssued": 26,
+      "QTime": 32,
+      "timeCreated": 40
+    },
+    {
+      "missionName": "Get off the high road Summer. We all got pink eye because you wouldn\u0027t stop texting on the toilet.",
+      "M": 2,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "000",
+        "001"
+      ],
+      "agentsName": [
+        "Jerry Smith",
+        "Fart"
+      ],
+      "gadget": "Space cruiser2",
+      "timeIssued": 33,
+      "QTime": 40,
+      "timeCreated": 54
+    }
+  ]
+}

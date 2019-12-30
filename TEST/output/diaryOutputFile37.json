@@ -1,0 +1,225 @@
+{
+  "total": 56,
+  "reports": [
+    {
+      "missionName": "Oh yeah, If you think my Rick is Dead, then he is alive. If you think you\u0027re safe, then he\u0027s coming for you.",
+      "M": 2,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "008",
+        "002",
+        "000",
+        "004"
+      ],
+      "agentsName": [
+        "Arthricia",
+        "Birdperson",
+        "Lighthouse Chief",
+        "Mr. Goldenfold"
+      ],
+      "gadget": "Interdimensional Goggles4",
+      "timeIssued": 3,
+      "QTime": 3,
+      "timeCreated": 4
+    },
+    {
+      "missionName": "Uncertainty is inherently unsustainable. Eventually, everything either is or isn\u0027t.",
+      "M": 3,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "006"
+      ],
+      "agentsName": [
+        "Dr. Glip-Glop"
+      ],
+      "gadget": "Space cruiser",
+      "timeIssued": 3,
+      "QTime": 3,
+      "timeCreated": 9
+    },
+    {
+      "missionName": "Ohh yea, you gotta get schwifty.",
+      "M": 4,
+      "MoneyPenny": 8,
+      "agentsSerialNumbers": [
+        "001",
+        "009",
+        "003",
+        "002"
+      ],
+      "agentsName": [
+        "Loggins",
+        "Rick Sanchez",
+        "Squanchy",
+        "Birdperson"
+      ],
+      "gadget": "Dark matter",
+      "timeIssued": 3,
+      "QTime": 4,
+      "timeCreated": 11
+    },
+    {
+      "missionName": "Well then get your shit together. Get it all together and put it in a backpack, all your shit, so it\u0027s together. ...and if you gotta take it somewhere, take it somewhere ya know? Take it to the shit store and sell it, or put it in a shit museum. I don\u0027t care what you do, you just gotta get it together... Get your shit together.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "007"
+      ],
+      "agentsName": [
+        "Jan Michael Vincent"
+      ],
+      "gadget": "Timeline viewer2",
+      "timeIssued": 2,
+      "QTime": 2,
+      "timeCreated": 14
+    },
+    {
+      "missionName": "What is my purpose. You pass butter. Oh My God. Yeah, Welcome to the club pal.",
+      "M": 7,
+      "MoneyPenny": 16,
+      "agentsSerialNumbers": [
+        "000",
+        "006"
+      ],
+      "agentsName": [
+        "Lighthouse Chief",
+        "Dr. Glip-Glop"
+      ],
+      "gadget": "Futuristic guns2",
+      "timeIssued": 12,
+      "QTime": 12,
+      "timeCreated": 18
+    },
+    {
+      "missionName": "There is no god, Summer; gotta rip that band-aid off now you\u0027ll thank me later.",
+      "M": 5,
+      "MoneyPenny": 10,
+      "agentsSerialNumbers": [
+        "002",
+        "009",
+        "001"
+      ],
+      "agentsName": [
+        "Birdperson",
+        "Rick Sanchez",
+        "Loggins"
+      ],
+      "gadget": "Portal gun",
+      "timeIssued": 7,
+      "QTime": 11,
+      "timeCreated": 23
+    },
+    {
+      "missionName": "I don\u0027t get it and I don\u0027t need to.",
+      "M": 6,
+      "MoneyPenny": 12,
+      "agentsSerialNumbers": [
+        "004",
+        "001"
+      ],
+      "agentsName": [
+        "Mr. Goldenfold",
+        "Loggins"
+      ],
+      "gadget": "Microverse battery5",
+      "timeIssued": 12,
+      "QTime": 23,
+      "timeCreated": 28
+    },
+    {
+      "missionName": "Get off the high road Summer. We all got pink eye because you wouldn\u0027t stop texting on the toilet.",
+      "M": 10,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "007",
+        "008",
+        "002"
+      ],
+      "agentsName": [
+        "Jan Michael Vincent",
+        "Arthricia",
+        "Birdperson"
+      ],
+      "gadget": "Cognition amplifier",
+      "timeIssued": 14,
+      "QTime": 23,
+      "timeCreated": 30
+    },
+    {
+      "missionName": "You\u0027re our boy dog, don\u0027t even trip.",
+      "M": 8,
+      "MoneyPenny": 14,
+      "agentsSerialNumbers": [
+        "005",
+        "004"
+      ],
+      "agentsName": [
+        "Jerry Smith",
+        "Mr. Goldenfold"
+      ],
+      "gadget": "Froopyland Chalk2",
+      "timeIssued": 12,
+      "QTime": 28,
+      "timeCreated": 33
+    },
+    {
+      "missionName": "Where are my testicles, Summer?",
+      "M": 19,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "007"
+      ],
+      "agentsName": [
+        "Jan Michael Vincent"
+      ],
+      "gadget": "Microverse battery2",
+      "timeIssued": 29,
+      "QTime": 33,
+      "timeCreated": 36
+    },
+    {
+      "missionName": "What is my purpose. You pass butter. Oh My God. Yeah, Welcome to the club pal.",
+      "M": 13,
+      "MoneyPenny": 8,
+      "agentsSerialNumbers": [
+        "005",
+        "003",
+        "004",
+        "009"
+      ],
+      "agentsName": [
+        "Jerry Smith",
+        "Squanchy",
+        "Mr. Goldenfold",
+        "Rick Sanchez"
+      ],
+      "gadget": "Interdimensional cable TV box2",
+      "timeIssued": 17,
+      "QTime": 33,
+      "timeCreated": 45
+    },
+    {
+      "missionName": "I like what you got.",
+      "M": 14,
+      "MoneyPenny": 10,
+      "agentsSerialNumbers": [
+        "006",
+        "008",
+        "007",
+        "005",
+        "000"
+      ],
+      "agentsName": [
+        "Dr. Glip-Glop",
+        "Arthricia",
+        "Jan Michael Vincent",
+        "Jerry Smith",
+        "Lighthouse Chief"
+      ],
+      "gadget": "Demonic Alien Containment Box4",
+      "timeIssued": 19,
+      "QTime": 45,
+      "timeCreated": 59
+    }
+  ]
+}

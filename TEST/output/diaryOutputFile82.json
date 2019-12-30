@@ -1,0 +1,146 @@
+{
+  "total": 23,
+  "reports": [
+    {
+      "missionName": "Little tip, Morty. Never clean DNA vials with your spit.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "002"
+      ],
+      "agentsName": [
+        "Revolio \u0027Gearhead\u0027 Clockberg, Jr."
+      ],
+      "gadget": "Futuristic guns",
+      "timeIssued": 5,
+      "QTime": 5,
+      "timeCreated": 10
+    },
+    {
+      "missionName": "Aww, gee, you got me there Rick.",
+      "M": 2,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "001"
+      ],
+      "agentsName": [
+        "Morty Jr."
+      ],
+      "gadget": "Dark matter",
+      "timeIssued": 5,
+      "QTime": 5,
+      "timeCreated": 16
+    },
+    {
+      "missionName": "Listen, I\u0027m not the nicest guy in the universe, because I\u0027m the smartest, and being nice is something stupid people do to hedge their bets.",
+      "M": 3,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "000",
+        "001"
+      ],
+      "agentsName": [
+        "Eyeholes Man",
+        "Morty Jr."
+      ],
+      "gadget": "Shrink ray",
+      "timeIssued": 6,
+      "QTime": 16,
+      "timeCreated": 19
+    },
+    {
+      "missionName": "Traditionally, science fairs are a father/son thing. Well, scientifically, traditions are an idiot thing.",
+      "M": 5,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "002"
+      ],
+      "agentsName": [
+        "Revolio \u0027Gearhead\u0027 Clockberg, Jr."
+      ],
+      "gadget": "Morty\u0027s Mind Blowers",
+      "timeIssued": 8,
+      "QTime": 10,
+      "timeCreated": 23
+    },
+    {
+      "missionName": "No no, If I wanted to be sober, I wouldn’t have gotten drunk.",
+      "M": 7,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "003"
+      ],
+      "agentsName": [
+        "Tinkles"
+      ],
+      "gadget": "Microverse battery",
+      "timeIssued": 14,
+      "QTime": 22,
+      "timeCreated": 26
+    },
+    {
+      "missionName": "Ohh yea, you gotta get schwifty.",
+      "M": 4,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "001",
+        "002"
+      ],
+      "agentsName": [
+        "Morty Jr.",
+        "Revolio \u0027Gearhead\u0027 Clockberg, Jr."
+      ],
+      "gadget": "Interdimensional Goggles",
+      "timeIssued": 6,
+      "QTime": 22,
+      "timeCreated": 28
+    },
+    {
+      "missionName": "Traditionally, science fairs are a father/son thing. Well, scientifically, traditions are an idiot thing.",
+      "M": 2,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "001"
+      ],
+      "agentsName": [
+        "Morty Jr."
+      ],
+      "gadget": "Grappling Shoes",
+      "timeIssued": 18,
+      "QTime": 28,
+      "timeCreated": 41
+    },
+    {
+      "missionName": "It\u0027s fine, everything is fine. Theres an infinite number of realities Morty and in a few dozen of those I got lucky and turned everything back to normal.",
+      "M": 6,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "002",
+        "000"
+      ],
+      "agentsName": [
+        "Revolio \u0027Gearhead\u0027 Clockberg, Jr.",
+        "Eyeholes Man"
+      ],
+      "gadget": "Cognition amplifier",
+      "timeIssued": 13,
+      "QTime": 28,
+      "timeCreated": 43
+    },
+    {
+      "missionName": "No no, If I wanted to be sober, I wouldn’t have gotten drunk.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "000"
+      ],
+      "agentsName": [
+        "Eyeholes Man"
+      ],
+      "gadget": "Neutrino bomb",
+      "timeIssued": 39,
+      "QTime": 43,
+      "timeCreated": 58
+    }
+  ]
+}

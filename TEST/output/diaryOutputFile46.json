@@ -1,0 +1,88 @@
+{
+  "total": 45,
+  "reports": [
+    {
+      "missionName": "You\u0027re like Hitler, except...Hitler cared about Germany, or something.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "000",
+        "004"
+      ],
+      "agentsName": [
+        "Beth Smith",
+        "Loggins"
+      ],
+      "gadget": "Futuristic guns",
+      "timeIssued": 4,
+      "QTime": 4,
+      "timeCreated": 13
+    },
+    {
+      "missionName": "I\u0027m more than just a hammer.",
+      "M": 8,
+      "MoneyPenny": 16,
+      "agentsSerialNumbers": [
+        "002"
+      ],
+      "agentsName": [
+        "Snowball"
+      ],
+      "gadget": "Curse Remover3",
+      "timeIssued": 14,
+      "QTime": 14,
+      "timeCreated": 24
+    },
+    {
+      "missionName": "So what if the most meaningful day in your life was a simulation operating at minimum complexity.",
+      "M": 2,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "004",
+        "007"
+      ],
+      "agentsName": [
+        "Loggins",
+        "Arthricia"
+      ],
+      "gadget": "Grappling Shoes2",
+      "timeIssued": 7,
+      "QTime": 13,
+      "timeCreated": 26
+    },
+    {
+      "missionName": "Well then get your shit together. Get it all together and put it in a backpack, all your shit, so it\u0027s together. ...and if you gotta take it somewhere, take it somewhere ya know? Take it to the shit store and sell it, or put it in a shit museum. I don\u0027t care what you do, you just gotta get it together... Get your shit together.",
+      "M": 7,
+      "MoneyPenny": 14,
+      "agentsSerialNumbers": [
+        "001",
+        "004"
+      ],
+      "agentsName": [
+        "Mr. Poopybutthole",
+        "Loggins"
+      ],
+      "gadget": "Grappling Shoes",
+      "timeIssued": 13,
+      "QTime": 25,
+      "timeCreated": 27
+    },
+    {
+      "missionName": "I\u0027m the devil. What should I do when I fail? Give myself an ice cream?",
+      "M": 6,
+      "MoneyPenny": 12,
+      "agentsSerialNumbers": [
+        "003",
+        "004"
+      ],
+      "agentsName": [
+        "Shrimply Pibbles",
+        "Loggins"
+      ],
+      "gadget": "Love Potion",
+      "timeIssued": 12,
+      "QTime": 28,
+      "timeCreated": 37
+    }
+  ]
+}

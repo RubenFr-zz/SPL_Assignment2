@@ -1,0 +1,143 @@
+{
+  "total": 37,
+  "reports": [
+    {
+      "missionName": "Go home and drink, grandpa.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "004",
+        "000",
+        "001",
+        "003"
+      ],
+      "agentsName": [
+        "Summer Smith",
+        "Revolio \u0027Gearhead\u0027 Clockberg, Jr.",
+        "Stealy",
+        "King Jellybean"
+      ],
+      "gadget": "Microverse battery2",
+      "timeIssued": 4,
+      "QTime": 4,
+      "timeCreated": 7
+    },
+    {
+      "missionName": "Snuffles was my slave name, you can call me snowball because my fur is pretty and white.",
+      "M": 2,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "002"
+      ],
+      "agentsName": [
+        "Shrimply Pibbles"
+      ],
+      "gadget": "Purge Suit2",
+      "timeIssued": 8,
+      "QTime": 8,
+      "timeCreated": 11
+    },
+    {
+      "missionName": "Pluto\u0027s a planet.",
+      "M": 3,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "004",
+        "000",
+        "001"
+      ],
+      "agentsName": [
+        "Summer Smith",
+        "Revolio \u0027Gearhead\u0027 Clockberg, Jr.",
+        "Stealy"
+      ],
+      "gadget": "Time freezer2",
+      "timeIssued": 15,
+      "QTime": 15,
+      "timeCreated": 26
+    },
+    {
+      "missionName": "He\u0027s not a hot girl. He can\u0027t just bail on his life and set up shop in someone else\u0027s.",
+      "M": 6,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "006"
+      ],
+      "agentsName": [
+        "Tinkles"
+      ],
+      "gadget": "Butter-passing robot2",
+      "timeIssued": 23,
+      "QTime": 23,
+      "timeCreated": 29
+    },
+    {
+      "missionName": "Great, now I have to take over an entire planet because of your stupid boobs.",
+      "M": 4,
+      "MoneyPenny": 8,
+      "agentsSerialNumbers": [
+        "003",
+        "002",
+        "005"
+      ],
+      "agentsName": [
+        "King Jellybean",
+        "Shrimply Pibbles",
+        "Arthricia"
+      ],
+      "gadget": "Microverse battery",
+      "timeIssued": 16,
+      "QTime": 16,
+      "timeCreated": 30
+    },
+    {
+      "missionName": "Keep Summer safe.",
+      "M": 5,
+      "MoneyPenny": 10,
+      "agentsSerialNumbers": [
+        "004",
+        "006"
+      ],
+      "agentsName": [
+        "Summer Smith",
+        "Tinkles"
+      ],
+      "gadget": "Space cruiser4",
+      "timeIssued": 17,
+      "QTime": 29,
+      "timeCreated": 40
+    },
+    {
+      "missionName": "Go home and drink, grandpa.",
+      "M": 7,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "003"
+      ],
+      "agentsName": [
+        "King Jellybean"
+      ],
+      "gadget": "Interdimensional cable TV box",
+      "timeIssued": 34,
+      "QTime": 34,
+      "timeCreated": 43
+    },
+    {
+      "missionName": "I hate to break it to you, but what people call \u0027love\u0027 is just a chemical reaction that compels animals to breed. It hits hard Morty then it slowly fades leaving you stranded in a failing marriage. I did it. Your parents are going to do it. Break the cycle Morty, rise above, focus on science.",
+      "M": 8,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "003",
+        "005"
+      ],
+      "agentsName": [
+        "King Jellybean",
+        "Arthricia"
+      ],
+      "gadget": "Space cruiser2",
+      "timeIssued": 36,
+      "QTime": 42,
+      "timeCreated": 46
+    }
+  ]
+}

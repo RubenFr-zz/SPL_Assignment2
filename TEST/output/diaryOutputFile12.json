@@ -1,0 +1,160 @@
+{
+  "total": 34,
+  "reports": [
+    {
+      "missionName": "WUBBA LUBBA DUB DUBS!!!",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "003",
+        "004"
+      ],
+      "agentsName": [
+        "Jessica",
+        "Tammy Gueterman"
+      ],
+      "gadget": "Purge Suit",
+      "timeIssued": 1,
+      "QTime": 1,
+      "timeCreated": 6
+    },
+    {
+      "missionName": "Listen, I\u0027m not the nicest guy in the universe, because I\u0027m the smartest, and being nice is something stupid people do to hedge their bets.",
+      "M": 3,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "005",
+        "001",
+        "003"
+      ],
+      "agentsName": [
+        "Unity",
+        "Eyeholes Man",
+        "Jessica"
+      ],
+      "gadget": "Shrink ray2",
+      "timeIssued": 8,
+      "QTime": 8,
+      "timeCreated": 11
+    },
+    {
+      "missionName": "I\u0027m the devil. What should I do when I fail? Give myself an ice cream?",
+      "M": 2,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "004"
+      ],
+      "agentsName": [
+        "Tammy Gueterman"
+      ],
+      "gadget": "Cognition amplifier",
+      "timeIssued": 2,
+      "QTime": 5,
+      "timeCreated": 20
+    },
+    {
+      "missionName": "This isn\u0027t Game of Thrones, Morty.",
+      "M": 7,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "005",
+        "000"
+      ],
+      "agentsName": [
+        "Unity",
+        "Krombopulos Michael"
+      ],
+      "gadget": "Butter-passing robot",
+      "timeIssued": 15,
+      "QTime": 15,
+      "timeCreated": 21
+    },
+    {
+      "missionName": "What is my purpose. You pass butter. Oh My God. Yeah, Welcome to the club pal.",
+      "M": 5,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "003",
+        "001",
+        "002"
+      ],
+      "agentsName": [
+        "Jessica",
+        "Eyeholes Man",
+        "Morty Smith"
+      ],
+      "gadget": "Combat suit",
+      "timeIssued": 11,
+      "QTime": 11,
+      "timeCreated": 25
+    },
+    {
+      "missionName": "Meeseeks are not born into this world fumbling for meaning, Jerry! We are created to serve a single purpose, for which we go to any lengths to fulfill.",
+      "M": 4,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "004"
+      ],
+      "agentsName": [
+        "Tammy Gueterman"
+      ],
+      "gadget": "Laser Gun",
+      "timeIssued": 7,
+      "QTime": 21,
+      "timeCreated": 31
+    },
+    {
+      "missionName": "Little tip, Morty. Never clean DNA vials with your spit.",
+      "M": 8,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "000",
+        "004",
+        "003"
+      ],
+      "agentsName": [
+        "Krombopulos Michael",
+        "Tammy Gueterman",
+        "Jessica"
+      ],
+      "gadget": "Morty\u0027s Mind Blowers",
+      "timeIssued": 15,
+      "QTime": 31,
+      "timeCreated": 46
+    },
+    {
+      "missionName": "It\u0027s a figure of speech, Morty! They\u0027re bureaucrats! I don\u0027t respect them. Just keep shooting, Morty! You have no idea what prison is like here!",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "002",
+        "000",
+        "006"
+      ],
+      "agentsName": [
+        "Morty Smith",
+        "Krombopulos Michael",
+        "Squanchy"
+      ],
+      "gadget": "Grappling Shoes3",
+      "timeIssued": 16,
+      "QTime": 45,
+      "timeCreated": 55
+    },
+    {
+      "missionName": "Aww, gee, you got me there Rick.",
+      "M": 2,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "004"
+      ],
+      "agentsName": [
+        "Tammy Gueterman"
+      ],
+      "gadget": "Grappling Shoes5",
+      "timeIssued": 29,
+      "QTime": 45,
+      "timeCreated": 59
+    }
+  ]
+}

@@ -1,64 +1,167 @@
 tick: 0
+M6: Mission Received: Nobody exists on purpose. Nobody belongs anywhere. Everybody is going to die.
+MP3: M6, Agents requested ! [002, 005]
+M6, agents acquired !
+M6, gadget acquired !
+MP2: M6, Sending Agents [002, 005] for: 800 Milli
 tick: 1
+M3: Mission Received: No no, If I wanted to be sober, I wouldn’t have gotten drunk.
+MP5: M3, Agents requested ! [002, 003]
 tick: 2
-Mission Received: Thunderball, by: M1
-MP2: M1, Agents requested !
-M1, agents acquired !
-M1, gadget acquired !
-Mission Received: Thunderball, by: M2
-MP1: M1, Sending Agents for: 700 Milli
-MP2: M2, Agents requested !
+M5: Mission Received: This isn't Game of Thrones, Morty.
+MP3: M5, Agents requested ! [000, 003, 002]
 tick: 3
+M2: Mission Received: There is no god, Summer; gotta rip that band-aid off now you'll thank me later.
 tick: 4
 tick: 5
+M4: Mission Received: Oh, I'm sorry Morty, are you the scientist or are you the kid who wanted to get laid?
 tick: 6
 tick: 7
 tick: 8
-tick: 9
-Agents released
+M1: Mission Received: Get off the high road Summer. We all got pink eye because you wouldn't stop texting on the toilet.
+Agents released: [002, 005]
+M6, Mission succeeded !
+M3, agents acquired !
+MP5: M2, Agents requested ! [004]
 M2, agents acquired !
-M1, Mission succeeded !
+MP5: M1, Agents requested ! [003, 004]
+M3, gadget acquired !
 M2, didn't found the gadget, mission aborted !
-Agents released
-Mission Received: From Russia With Love, by: M1
-MP2: M1, Agents requested !
-M1, didn't acquired the agents, mission aborted !
+MP6: M3, Sending Agents [002, 003] for: 700 Milli
+Agents released: [004]
+tick: 9
 tick: 10
+M7: Mission Received: Traditionally, science fairs are a father/son thing. Well, scientifically, traditions are an idiot thing.
 tick: 11
 tick: 12
+M6: Mission Received: So what if the most meaningful day in your life was a simulation operating at minimum complexity.
 tick: 13
 tick: 14
-Mission Received: From Russia With Love, by: M2
-MP2: M2, Agents requested !
-M2, agents acquired !
-M2, gadget acquired !
-MP1: M2, Sending Agents for: 200 Milli
 tick: 15
-Mission Received: The World Is Not Enough, by: M1
-MP2: M1, Agents requested !
-M1, agents acquired !
-M1, gadget acquired !
+Agents released: [002, 003]
+M3, Mission succeeded !
+M5, agents acquired !
+M5, gadget acquired !
+MP3: M4, Agents requested ! [004]
+MP4: M5, Sending Agents [000, 002, 003] for: 800 Milli
+M3: Mission Received: What about the reality where Hitler cured cancer, Morty? The answer is: Don't think about it.
+MP3: M7, Agents requested ! [003]
+M4, agents acquired !
+M4, gadget acquired !
+MP2: M4, Sending Agents [004] for: 1000 Milli
 tick: 16
-Agents released
-M2, Mission succeeded !
-MP1: M1, Sending Agents for: 200 Milli
+M2: Mission Received: Meeseeks are not born into this world fumbling for meaning, Jerry! We are created to serve a single purpose, for which we go to any lengths to fulfill.
 tick: 17
 tick: 18
-Agents released
-M1, Mission succeeded !
 tick: 19
 tick: 20
 tick: 21
 tick: 22
 tick: 23
+Agents released: [000, 002, 003]
+M5, Mission succeeded !
+M5: Mission Received: Uncertainty is inherently unsustainable. Eventually, everything either is or isn't.
 tick: 24
 tick: 25
-Agents released
-Agents released
-bgu.spl.mics.application.subscribers.Moneypenny2 UNREGISTERED
+Agents released: [004]
+M4, Mission succeeded !
+MP5: M6, Agents requested ! [000, 003, 001]
+M4: Mission Received: Pluto's a planet.
+M1, agents acquired !
+M1, gadget acquired !
+MP6: M1, Sending Agents [003, 004] for: 300 Milli
+tick: 26
+tick: 27
+tick: 28
+Agents released: [003, 004]
+M1, Mission succeeded !
+MP3: M3, Agents requested ! [001, 000, 003]
+M7, agents acquired !
+M7, gadget acquired !
+MP4: M7, Sending Agents [003] for: 1500 Milli
+M1: Mission Received: I'm the devil. What should I do when I fail? Give myself an ice cream?
+tick: 29
+tick: 30
+tick: 31
+tick: 32
+tick: 33
+tick: 34
+tick: 35
+tick: 36
+tick: 37
+tick: 38
+tick: 39
+tick: 40
+tick: 41
+tick: 42
+tick: 43
+Agents released: [003]
+M7, Mission succeeded !
+MP5: M2, Agents requested ! [002, 003]
+M7: Mission Received: Keep Summer safe.
+M6, agents acquired !
+M6, gadget acquired !
+MP2: M6, Sending Agents [000, 001, 003] for: 500 Milli
+tick: 44
+tick: 45
+tick: 46
+tick: 47
+tick: 48
+Agents released: [000, 001, 003]
+M2, agents acquired !
+M2, gadget acquired !
+MP6: M2, Sending Agents [002, 003] for: 900 Milli
+M6, Mission succeeded !
+MP3: M5, Agents requested ! [001, 004]
+M6: Mission Received: I'm more than just a hammer.
+MP3: M1, Agents requested ! [003, 004]
+M5, didn't acquired the agents, mission aborted !
+M5: Mission Received: That just sounds like slavery with extra steps.
+M6: Mission: I'm more than just a hammer. TimeOut mission aborted !
+M6: Mission Received: Well then get your shit together. Get it all together and put it in a backpack, all your shit, so it's together. ...and if you gotta take it somewhere, take it somewhere ya know? Take it to the shit store and sell it, or put it in a shit museum. I don't care what you do, you just gotta get it together... Get your shit together.
+MP5: M4, Agents requested ! [003]
+M5: Mission: That just sounds like slavery with extra steps. TimeOut mission aborted !
+MP5: M7, Agents requested ! [002, 004]
+M1, didn't acquired the agents, mission aborted !
+M1: Mission Received: Don’t even trip dawg.
 bgu.spl.mics.application.subscribers.Intelligence2 UNREGISTERED
-bgu.spl.mics.application.subscribers.Intelligence1 UNREGISTERED
-bgu.spl.mics.application.subscribers.M2 UNREGISTERED
+M1: Mission: Don’t even trip dawg. TimeOut mission aborted !
+M1: Mission Received: You're like Hitler, except...Hitler cared about Germany, or something.
+M1: Mission: You're like Hitler, except...Hitler cared about Germany, or something. TimeOut mission aborted !
 bgu.spl.mics.application.subscribers.QQ UNREGISTERED
-bgu.spl.mics.application.subscribers.Moneypenny1 UNREGISTERED
+M5: Mission Received: Aw, c'mon Rick. That doesn't seem so bad.
+M7, didn't acquired the agents, mission aborted !
+M4, didn't acquired the agents, mission aborted !
+M7: Mission Received: Oh Summer, haha first race war, huh?
+M7: Mission: Oh Summer, haha first race war, huh? TimeOut mission aborted !
+M7: Mission Received: I'm more than just a hammer.
+M7: Mission: I'm more than just a hammer. TimeOut mission aborted !
 bgu.spl.mics.application.subscribers.M1 UNREGISTERED
+M3, didn't acquired the agents, mission aborted !
+M6: Mission: Well then get your shit together. Get it all together and put it in a backpack, all your shit, so it's together. ...and if you gotta take it somewhere, take it somewhere ya know? Take it to the shit store and sell it, or put it in a shit museum. I don't care what you do, you just gotta get it together... Get your shit together. TimeOut mission aborted !
+M6: Mission Received: This sounds like something The One True Morty might say.
+bgu.spl.mics.application.subscribers.Intelligence4 UNREGISTERED
+M3: Mission Received: This isn't Game of Thrones, Morty.
+M4: Mission Received: I like what you got.
+bgu.spl.mics.application.subscribers.Moneypenny4 UNREGISTERED
+M5: Mission: Aw, c'mon Rick. That doesn't seem so bad. TimeOut mission aborted !
+bgu.spl.mics.application.subscribers.Intelligence3 UNREGISTERED
+M4: Mission: I like what you got. TimeOut mission aborted !
+M3: Mission: This isn't Game of Thrones, Morty. TimeOut mission aborted !
+M4: Mission Received: You're our boy dog, don't even trip.
+M6: Mission: This sounds like something The One True Morty might say. TimeOut mission aborted !
+M4: Mission: You're our boy dog, don't even trip. TimeOut mission aborted !
+bgu.spl.mics.application.subscribers.Intelligence1 UNREGISTERED
+M3: Mission Received: Oh, I'm sorry Morty, are you the scientist or are you the kid who wanted to get laid?
+M3: Mission: Oh, I'm sorry Morty, are you the scientist or are you the kid who wanted to get laid? TimeOut mission aborted !
+M3: Mission Received: Can somebody just let me out of here? If I die in a cage I lose a bet.
+M3: Mission: Can somebody just let me out of here? If I die in a cage I lose a bet. TimeOut mission aborted !
+bgu.spl.mics.application.subscribers.M4 UNREGISTERED
+bgu.spl.mics.application.subscribers.M6 UNREGISTERED
+bgu.spl.mics.application.subscribers.M5 UNREGISTERED
+bgu.spl.mics.application.subscribers.M7 UNREGISTERED
+bgu.spl.mics.application.subscribers.Moneypenny5 UNREGISTERED
+bgu.spl.mics.application.subscribers.Moneypenny1 UNREGISTERED
+bgu.spl.mics.application.subscribers.Moneypenny3 UNREGISTERED
+bgu.spl.mics.application.subscribers.Moneypenny2 UNREGISTERED
+bgu.spl.mics.application.subscribers.M3 UNREGISTERED

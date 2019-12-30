@@ -1,0 +1,54 @@
+{
+  "total": 50,
+  "reports": [
+    {
+      "missionName": "This isn\u0027t Game of Thrones, Morty.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "006",
+        "001"
+      ],
+      "agentsName": [
+        "Jerry Smith",
+        "Jessica"
+      ],
+      "gadget": "Demonic Alien Containment Box2",
+      "timeIssued": 7,
+      "QTime": 7,
+      "timeCreated": 17
+    },
+    {
+      "missionName": "Existence is pain to a meeseeks Jerry, and we will do anything to alleviate that pain.",
+      "M": 3,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "004",
+        "009"
+      ],
+      "agentsName": [
+        "Squanchy",
+        "Evil Morty"
+      ],
+      "gadget": "Purge Suit2",
+      "timeIssued": 13,
+      "QTime": 13,
+      "timeCreated": 22
+    },
+    {
+      "missionName": "Don’t even trip dawg.",
+      "M": 4,
+      "MoneyPenny": 8,
+      "agentsSerialNumbers": [
+        "002"
+      ],
+      "agentsName": [
+        "Summer Smith"
+      ],
+      "gadget": "Interdimensional Goggles",
+      "timeIssued": 13,
+      "QTime": 13,
+      "timeCreated": 24
+    }
+  ]
+}

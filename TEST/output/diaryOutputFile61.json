@@ -1,0 +1,148 @@
+{
+  "total": 24,
+  "reports": [
+    {
+      "missionName": "Meeseeks are not born into this world fumbling for meaning, Jerry! We are created to serve a single purpose, for which we go to any lengths to fulfill.",
+      "M": 2,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "001"
+      ],
+      "agentsName": [
+        "Scary Terry"
+      ],
+      "gadget": "Combat suit",
+      "timeIssued": 4,
+      "QTime": 4,
+      "timeCreated": 6
+    },
+    {
+      "missionName": "Keep Summer safe.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "003"
+      ],
+      "agentsName": [
+        "Tiny Rick"
+      ],
+      "gadget": "Purge Suit2",
+      "timeIssued": 3,
+      "QTime": 3,
+      "timeCreated": 6
+    },
+    {
+      "missionName": "Ohh yea, you gotta get schwifty.",
+      "M": 3,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "002"
+      ],
+      "agentsName": [
+        "Jerry\u0027s Mytholog"
+      ],
+      "gadget": "Portal gun",
+      "timeIssued": 9,
+      "QTime": 9,
+      "timeCreated": 11
+    },
+    {
+      "missionName": "I hate to break it to you, but what people call \u0027love\u0027 is just a chemical reaction that compels animals to breed. It hits hard Morty then it slowly fades leaving you stranded in a failing marriage. I did it. Your parents are going to do it. Break the cycle Morty, rise above, focus on science.",
+      "M": 4,
+      "MoneyPenny": 8,
+      "agentsSerialNumbers": [
+        "002",
+        "003"
+      ],
+      "agentsName": [
+        "Jerry\u0027s Mytholog",
+        "Tiny Rick"
+      ],
+      "gadget": "Ionic Defibulizer2",
+      "timeIssued": 13,
+      "QTime": 13,
+      "timeCreated": 17
+    },
+    {
+      "missionName": "I\u0027m the devil. What should I do when I fail? Give myself an ice cream?",
+      "M": 6,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "000"
+      ],
+      "agentsName": [
+        "Krombopulos Michael"
+      ],
+      "gadget": "Morty\u0027s Mind Blowers",
+      "timeIssued": 17,
+      "QTime": 17,
+      "timeCreated": 21
+    },
+    {
+      "missionName": "Where are my testicles, Summer?",
+      "M": 5,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "001",
+        "002"
+      ],
+      "agentsName": [
+        "Scary Terry",
+        "Jerry\u0027s Mytholog"
+      ],
+      "gadget": "Emergency Bionic Arm2",
+      "timeIssued": 14,
+      "QTime": 17,
+      "timeCreated": 24
+    },
+    {
+      "missionName": "So what if the most meaningful day in your life was a simulation operating at minimum complexity.",
+      "M": 8,
+      "MoneyPenny": 8,
+      "agentsSerialNumbers": [
+        "001",
+        "003"
+      ],
+      "agentsName": [
+        "Scary Terry",
+        "Tiny Rick"
+      ],
+      "gadget": "Time freezer",
+      "timeIssued": 32,
+      "QTime": 32,
+      "timeCreated": 34
+    },
+    {
+      "missionName": "Aww, gee, you got me there Rick.",
+      "M": 1,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "001"
+      ],
+      "agentsName": [
+        "Scary Terry"
+      ],
+      "gadget": "Futuristic guns",
+      "timeIssued": 35,
+      "QTime": 35,
+      "timeCreated": 48
+    },
+    {
+      "missionName": "This sounds like something The One True Morty might say.",
+      "M": 4,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "003",
+        "002"
+      ],
+      "agentsName": [
+        "Tiny Rick",
+        "Jerry\u0027s Mytholog"
+      ],
+      "gadget": "Neutrino bomb",
+      "timeIssued": 36,
+      "QTime": 48,
+      "timeCreated": 54
+    }
+  ]
+}

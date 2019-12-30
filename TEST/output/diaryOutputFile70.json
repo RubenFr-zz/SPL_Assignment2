@@ -1,0 +1,22 @@
+{
+  "total": 12,
+  "reports": [
+    {
+      "missionName": "Oh, I\u0027m sorry Morty, are you the scientist or are you the kid who wanted to get laid?",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "000",
+        "001"
+      ],
+      "agentsName": [
+        "Arthricia",
+        "Mr. Goldenfold"
+      ],
+      "gadget": "Timeline viewer",
+      "timeIssued": 1,
+      "QTime": 1,
+      "timeCreated": 12
+    }
+  ]
+}

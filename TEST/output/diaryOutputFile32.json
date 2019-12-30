@@ -1,0 +1,43 @@
+{
+  "total": 48,
+  "reports": [
+    {
+      "missionName": "Traditionally, science fairs are a father/son thing. Well, scientifically, traditions are an idiot thing.",
+      "M": 2,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "005",
+        "003"
+      ],
+      "agentsName": [
+        "Stealy",
+        "Evil Morty"
+      ],
+      "gadget": "Time freezer3",
+      "timeIssued": 2,
+      "QTime": 2,
+      "timeCreated": 11
+    },
+    {
+      "missionName": "Keep Summer safe.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "001",
+        "007",
+        "004",
+        "006"
+      ],
+      "agentsName": [
+        "Baby Legs",
+        "Eyeholes Man",
+        "Jerry\u0027s Mytholog",
+        "Summer Smith"
+      ],
+      "gadget": "Interdimensional Goggles",
+      "timeIssued": 2,
+      "QTime": 2,
+      "timeCreated": 14
+    }
+  ]
+}

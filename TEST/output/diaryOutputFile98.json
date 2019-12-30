@@ -1,0 +1,132 @@
+{
+  "total": 40,
+  "reports": [
+    {
+      "missionName": "What is my purpose. You pass butter. Oh My God. Yeah, Welcome to the club pal.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "001",
+        "002",
+        "006",
+        "004"
+      ],
+      "agentsName": [
+        "Mr. Needful",
+        "Arthricia",
+        "Tiny Rick",
+        "Mr. Meeseeks"
+      ],
+      "gadget": "Dark matter2",
+      "timeIssued": 2,
+      "QTime": 2,
+      "timeCreated": 8
+    },
+    {
+      "missionName": "What is my purpose. You pass butter. Oh My God. Yeah, Welcome to the club pal.",
+      "M": 2,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "006",
+        "000",
+        "007"
+      ],
+      "agentsName": [
+        "Tiny Rick",
+        "Tinkles",
+        "Cousin Nicky"
+      ],
+      "gadget": "Froopyland Chalk2",
+      "timeIssued": 7,
+      "QTime": 8,
+      "timeCreated": 20
+    },
+    {
+      "missionName": "Get off the high road Summer. We all got pink eye because you wouldn\u0027t stop texting on the toilet.",
+      "M": 5,
+      "MoneyPenny": 10,
+      "agentsSerialNumbers": [
+        "002",
+        "001",
+        "006",
+        "000"
+      ],
+      "agentsName": [
+        "Arthricia",
+        "Mr. Needful",
+        "Tiny Rick",
+        "Tinkles"
+      ],
+      "gadget": "Morty\u0027s Mind Blowers3",
+      "timeIssued": 20,
+      "QTime": 20,
+      "timeCreated": 24
+    },
+    {
+      "missionName": "Can somebody just let me out of here? If I die in a cage I lose a bet.",
+      "M": 6,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "003",
+        "001"
+      ],
+      "agentsName": [
+        "Tophat Jones",
+        "Mr. Needful"
+      ],
+      "gadget": "Particle Beam Wrist Watch \u0026 Snake Holster",
+      "timeIssued": 20,
+      "QTime": 24,
+      "timeCreated": 28
+    },
+    {
+      "missionName": "Listen, I\u0027m not the nicest guy in the universe, because I\u0027m the smartest, and being nice is something stupid people do to hedge their bets.",
+      "M": 8,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "006"
+      ],
+      "agentsName": [
+        "Tiny Rick"
+      ],
+      "gadget": "Portal gun",
+      "timeIssued": 23,
+      "QTime": 24,
+      "timeCreated": 39
+    },
+    {
+      "missionName": "What is my purpose. You pass butter. Oh My God. Yeah, Welcome to the club pal.",
+      "M": 7,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "002",
+        "004",
+        "001"
+      ],
+      "agentsName": [
+        "Arthricia",
+        "Mr. Meeseeks",
+        "Mr. Needful"
+      ],
+      "gadget": "Cognition amplifier",
+      "timeIssued": 22,
+      "QTime": 28,
+      "timeCreated": 39
+    },
+    {
+      "missionName": "That just sounds like slavery with extra steps.",
+      "M": 2,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "006"
+      ],
+      "agentsName": [
+        "Tiny Rick"
+      ],
+      "gadget": "Shrink ray",
+      "timeIssued": 34,
+      "QTime": 38,
+      "timeCreated": 42
+    }
+  ]
+}

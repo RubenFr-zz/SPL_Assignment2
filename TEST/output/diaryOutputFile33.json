@@ -1,0 +1,52 @@
+{
+  "total": 19,
+  "reports": [
+    {
+      "missionName": "You\u0027re like Hitler, except...Hitler cared about Germany, or something.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "001"
+      ],
+      "agentsName": [
+        "Mr. Goldenfold"
+      ],
+      "gadget": "Interdimensional Goggles",
+      "timeIssued": 1,
+      "QTime": 1,
+      "timeCreated": 13
+    },
+    {
+      "missionName": "Yo! What up my glip glops!",
+      "M": 2,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "001",
+        "000"
+      ],
+      "agentsName": [
+        "Mr. Goldenfold",
+        "Tiny Rick"
+      ],
+      "gadget": "Cognition amplifier",
+      "timeIssued": 2,
+      "QTime": 12,
+      "timeCreated": 19
+    },
+    {
+      "missionName": "That just sounds like slavery with extra steps.",
+      "M": 3,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "001"
+      ],
+      "agentsName": [
+        "Mr. Goldenfold"
+      ],
+      "gadget": "Time freezer",
+      "timeIssued": 3,
+      "QTime": 19,
+      "timeCreated": 20
+    }
+  ]
+}

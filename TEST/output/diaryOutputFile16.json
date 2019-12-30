@@ -1,0 +1,133 @@
+{
+  "total": 18,
+  "reports": [
+    {
+      "missionName": "HI! I\u0027M MR MEESEEKS! LOOK AT ME!",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "001",
+        "000"
+      ],
+      "agentsName": [
+        "Lighthouse Chief",
+        "Arthricia"
+      ],
+      "gadget": "Meeseeks Box",
+      "timeIssued": 1,
+      "QTime": 1,
+      "timeCreated": 11
+    },
+    {
+      "missionName": "Uncertainty is inherently unsustainable. Eventually, everything either is or isn\u0027t.",
+      "M": 2,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "000",
+        "002"
+      ],
+      "agentsName": [
+        "Arthricia",
+        "Mr. Goldenfold"
+      ],
+      "gadget": "Dark matter2",
+      "timeIssued": 7,
+      "QTime": 10,
+      "timeCreated": 17
+    },
+    {
+      "missionName": "That\u0027s the difference between you and me, Morty. I never go back to the carpet store.",
+      "M": 4,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "001"
+      ],
+      "agentsName": [
+        "Lighthouse Chief"
+      ],
+      "gadget": "Time freezer",
+      "timeIssued": 17,
+      "QTime": 17,
+      "timeCreated": 19
+    },
+    {
+      "missionName": "Weddings are basically funerals with cake.",
+      "M": 3,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "001"
+      ],
+      "agentsName": [
+        "Lighthouse Chief"
+      ],
+      "gadget": "Grappling Shoes2",
+      "timeIssued": 25,
+      "QTime": 25,
+      "timeCreated": 37
+    },
+    {
+      "missionName": "Nobody exists on purpose. Nobody belongs anywhere. Everybody is going to die.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "000"
+      ],
+      "agentsName": [
+        "Arthricia"
+      ],
+      "gadget": "Time freezer3",
+      "timeIssued": 28,
+      "QTime": 28,
+      "timeCreated": 38
+    },
+    {
+      "missionName": "I\u0027m more than just a hammer.",
+      "M": 4,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "000",
+        "001"
+      ],
+      "agentsName": [
+        "Arthricia",
+        "Lighthouse Chief"
+      ],
+      "gadget": "Time freezer2",
+      "timeIssued": 34,
+      "QTime": 47,
+      "timeCreated": 59
+    },
+    {
+      "missionName": "Snuffles was my slave name, you can call me snowball because my fur is pretty and white.",
+      "M": 3,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "001",
+        "000"
+      ],
+      "agentsName": [
+        "Lighthouse Chief",
+        "Arthricia"
+      ],
+      "gadget": "Particle Beam Wrist Watch \u0026 Snake Holster",
+      "timeIssued": 40,
+      "QTime": 58,
+      "timeCreated": 69
+    },
+    {
+      "missionName": "Sometimes science is a lot more art, than science. A lot of people don\u0027t get that.",
+      "M": 2,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "001"
+      ],
+      "agentsName": [
+        "Lighthouse Chief"
+      ],
+      "gadget": "Purge Suit",
+      "timeIssued": 48,
+      "QTime": 69,
+      "timeCreated": 80
+    }
+  ]
+}

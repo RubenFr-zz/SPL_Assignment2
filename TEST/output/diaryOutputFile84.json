@@ -1,0 +1,39 @@
+{
+  "total": 15,
+  "reports": [
+    {
+      "missionName": "Snuffles was my slave name, you can call me snowball because my fur is pretty and white.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "001",
+        "002"
+      ],
+      "agentsName": [
+        "Dr. Glip-Glop",
+        "Revolio \u0027Gearhead\u0027 Clockberg, Jr."
+      ],
+      "gadget": "Interdimensional Goggles",
+      "timeIssued": 1,
+      "QTime": 1,
+      "timeCreated": 5
+    },
+    {
+      "missionName": "I\u0027m the devil. What should I do when I fail? Give myself an ice cream?",
+      "M": 2,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "001",
+        "000"
+      ],
+      "agentsName": [
+        "Dr. Glip-Glop",
+        "Jerry\u0027s Mytholog"
+      ],
+      "gadget": "Futuristic guns2",
+      "timeIssued": 2,
+      "QTime": 4,
+      "timeCreated": 12
+    }
+  ]
+}

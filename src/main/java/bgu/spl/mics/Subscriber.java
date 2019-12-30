@@ -4,7 +4,6 @@ import bgu.spl.mics.application.messages.TerminationBroadcast;
 
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
-import java.util.concurrent.CountDownLatch;
 
 /**
  * The Subscriber is an abstract class that any subscriber in the system
@@ -117,6 +116,14 @@ public abstract class Subscriber extends RunnableSubPub {
      */
     protected final void terminate() {
         this.terminated = true;
+    }
+
+    public final void setTerminated(boolean terminated){
+        this.terminated = terminated;
+    }
+
+    public final ConcurrentMap<Class<? extends Message>, Callback<?>> getMessageCallMap(){
+        return MessageCallMap;
     }
 
     /**

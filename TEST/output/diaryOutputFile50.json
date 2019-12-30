@@ -1,0 +1,153 @@
+{
+  "total": 50,
+  "reports": [
+    {
+      "missionName": "Let me out, what you see is not the same person as me. My life\u0027s a lie. I\u0027m not who you\u0027re looking. Let me out. Set me free. I\u0027m really old. This isn\u0027t me. My real body is slowly dieing in a vat. Is anybody listening? Can anyone understand? Stop looking at me like that and actually help me. Help me. Help me I\u0027m gunna die.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "003",
+        "005",
+        "000",
+        "004",
+        "006"
+      ],
+      "agentsName": [
+        "Beth\u0027s Mytholog",
+        "Jan Michael Vincent",
+        "Shrimply Pibbles",
+        "Tiny Rick",
+        "Scary Terry"
+      ],
+      "gadget": "Microverse battery2",
+      "timeIssued": 1,
+      "QTime": 1,
+      "timeCreated": 3
+    },
+    {
+      "missionName": "I\u0027m more than just a hammer.",
+      "M": 3,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "004",
+        "002"
+      ],
+      "agentsName": [
+        "Tiny Rick",
+        "Morty Smith"
+      ],
+      "gadget": "Froopyland Chalk2",
+      "timeIssued": 3,
+      "QTime": 3,
+      "timeCreated": 4
+    },
+    {
+      "missionName": "Let me out, what you see is not the same person as me. My life\u0027s a lie. I\u0027m not who you\u0027re looking. Let me out. Set me free. I\u0027m really old. This isn\u0027t me. My real body is slowly dieing in a vat. Is anybody listening? Can anyone understand? Stop looking at me like that and actually help me. Help me. Help me I\u0027m gunna die.",
+      "M": 2,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "000",
+        "003",
+        "006"
+      ],
+      "agentsName": [
+        "Shrimply Pibbles",
+        "Beth\u0027s Mytholog",
+        "Scary Terry"
+      ],
+      "gadget": "Laser Gun",
+      "timeIssued": 1,
+      "QTime": 3,
+      "timeCreated": 10
+    },
+    {
+      "missionName": "I hate to break it to you, but what people call \u0027love\u0027 is just a chemical reaction that compels animals to breed. It hits hard Morty then it slowly fades leaving you stranded in a failing marriage. I did it. Your parents are going to do it. Break the cycle Morty, rise above, focus on science.",
+      "M": 6,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "005"
+      ],
+      "agentsName": [
+        "Jan Michael Vincent"
+      ],
+      "gadget": "Grappling Shoes2",
+      "timeIssued": 4,
+      "QTime": 4,
+      "timeCreated": 14
+    },
+    {
+      "missionName": "Listen, I\u0027m not the nicest guy in the universe, because I\u0027m the smartest, and being nice is something stupid people do to hedge their bets.",
+      "M": 10,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "005",
+        "007"
+      ],
+      "agentsName": [
+        "Jan Michael Vincent",
+        "Morty Jr."
+      ],
+      "gadget": "Curse Remover",
+      "timeIssued": 15,
+      "QTime": 15,
+      "timeCreated": 22
+    },
+    {
+      "missionName": "Yo! What up my glip glops!",
+      "M": 5,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "006",
+        "004",
+        "000"
+      ],
+      "agentsName": [
+        "Scary Terry",
+        "Tiny Rick",
+        "Shrimply Pibbles"
+      ],
+      "gadget": "Meeseeks Box",
+      "timeIssued": 3,
+      "QTime": 9,
+      "timeCreated": 22
+    },
+    {
+      "missionName": "This isn\u0027t Game of Thrones, Morty.",
+      "M": 3,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "007",
+        "003"
+      ],
+      "agentsName": [
+        "Morty Jr.",
+        "Beth\u0027s Mytholog"
+      ],
+      "gadget": "Froopyland Chalk",
+      "timeIssued": 21,
+      "QTime": 22,
+      "timeCreated": 28
+    },
+    {
+      "missionName": "Weddings are basically funerals with cake.",
+      "M": 9,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "000",
+        "005",
+        "007",
+        "009"
+      ],
+      "agentsName": [
+        "Shrimply Pibbles",
+        "Jan Michael Vincent",
+        "Morty Jr.",
+        "Eyeholes Man"
+      ],
+      "gadget": "Purge Suit",
+      "timeIssued": 8,
+      "QTime": 28,
+      "timeCreated": 39
+    }
+  ]
+}

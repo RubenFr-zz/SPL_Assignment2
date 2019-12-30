@@ -1,0 +1,208 @@
+{
+  "total": 54,
+  "reports": [
+    {
+      "missionName": "Existence is pain to a meeseeks Jerry, and we will do anything to alleviate that pain.",
+      "M": 2,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "002",
+        "008",
+        "009",
+        "0010"
+      ],
+      "agentsName": [
+        "Eyeholes Man",
+        "Birdperson",
+        "Summer Smith",
+        "Tophat Jones"
+      ],
+      "gadget": "Time freezer",
+      "timeIssued": 3,
+      "QTime": 3,
+      "timeCreated": 9
+    },
+    {
+      "missionName": "I hate to break it to you, but what people call \u0027love\u0027 is just a chemical reaction that compels animals to breed. It hits hard Morty then it slowly fades leaving you stranded in a failing marriage. I did it. Your parents are going to do it. Break the cycle Morty, rise above, focus on science.",
+      "M": 3,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "006",
+        "003"
+      ],
+      "agentsName": [
+        "Krombopulos Michael",
+        "Cousin Nicky"
+      ],
+      "gadget": "Dream inceptor3",
+      "timeIssued": 3,
+      "QTime": 3,
+      "timeCreated": 10
+    },
+    {
+      "missionName": "I like what you got.",
+      "M": 4,
+      "MoneyPenny": 8,
+      "agentsSerialNumbers": [
+        "007"
+      ],
+      "agentsName": [
+        "Morty Jr."
+      ],
+      "gadget": "Butter-passing robot3",
+      "timeIssued": 5,
+      "QTime": 5,
+      "timeCreated": 13
+    },
+    {
+      "missionName": "Where are my testicles, Summer?",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "001"
+      ],
+      "agentsName": [
+        "Snowball"
+      ],
+      "gadget": "Morty\u0027s Mind Blowers2",
+      "timeIssued": 1,
+      "QTime": 1,
+      "timeCreated": 16
+    },
+    {
+      "missionName": "There is no god, Summer; gotta rip that band-aid off now you\u0027ll thank me later.",
+      "M": 5,
+      "MoneyPenny": 10,
+      "agentsSerialNumbers": [
+        "009",
+        "005",
+        "007",
+        "000",
+        "006"
+      ],
+      "agentsName": [
+        "Summer Smith",
+        "Loggins",
+        "Morty Jr.",
+        "Rick Sanchez",
+        "Krombopulos Michael"
+      ],
+      "gadget": "Portal gun2",
+      "timeIssued": 5,
+      "QTime": 13,
+      "timeCreated": 27
+    },
+    {
+      "missionName": "This sounds like something The One True Morty might say.",
+      "M": 12,
+      "MoneyPenny": 10,
+      "agentsSerialNumbers": [
+        "009"
+      ],
+      "agentsName": [
+        "Summer Smith"
+      ],
+      "gadget": "Particle Beam Wrist Watch \u0026 Snake Holster2",
+      "timeIssued": 18,
+      "QTime": 26,
+      "timeCreated": 27
+    },
+    {
+      "missionName": "Aww, gee, you got me there Rick.",
+      "M": 9,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "004",
+        "007",
+        "006",
+        "005"
+      ],
+      "agentsName": [
+        "Shrimply Pibbles",
+        "Morty Jr.",
+        "Krombopulos Michael",
+        "Loggins"
+      ],
+      "gadget": "Futuristic guns2",
+      "timeIssued": 8,
+      "QTime": 26,
+      "timeCreated": 28
+    },
+    {
+      "missionName": "Little tip, Morty. Never clean DNA vials with your spit.",
+      "M": 7,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "007",
+        "002"
+      ],
+      "agentsName": [
+        "Morty Jr.",
+        "Eyeholes Man"
+      ],
+      "gadget": "Butter-passing robot2",
+      "timeIssued": 7,
+      "QTime": 29,
+      "timeCreated": 39
+    },
+    {
+      "missionName": "The first rule of space travel kids is always check out distress beacons. Nine out of ten times it\u0027s a ship full of dead aliens and a bunch of free shit! One out of ten times it\u0027s a deadly trap, but... I\u0027m ready to roll those dice!",
+      "M": 11,
+      "MoneyPenny": 8,
+      "agentsSerialNumbers": [
+        "003",
+        "008",
+        "005",
+        "004",
+        "000"
+      ],
+      "agentsName": [
+        "Cousin Nicky",
+        "Birdperson",
+        "Loggins",
+        "Shrimply Pibbles",
+        "Rick Sanchez"
+      ],
+      "gadget": "Futuristic guns",
+      "timeIssued": 16,
+      "QTime": 29,
+      "timeCreated": 40
+    },
+    {
+      "missionName": "This isn\u0027t Game of Thrones, Morty.",
+      "M": 1,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "006",
+        "003",
+        "008"
+      ],
+      "agentsName": [
+        "Krombopulos Michael",
+        "Cousin Nicky",
+        "Birdperson"
+      ],
+      "gadget": "Curse Remover",
+      "timeIssued": 25,
+      "QTime": 39,
+      "timeCreated": 53
+    },
+    {
+      "missionName": "He\u0027s not a hot girl. He can\u0027t just bail on his life and set up shop in someone else\u0027s.",
+      "M": 10,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "009",
+        "003"
+      ],
+      "agentsName": [
+        "Summer Smith",
+        "Cousin Nicky"
+      ],
+      "gadget": "Dream inceptor5",
+      "timeIssued": 10,
+      "QTime": 53,
+      "timeCreated": 60
+    }
+  ]
+}

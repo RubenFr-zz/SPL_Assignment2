@@ -1,0 +1,202 @@
+{
+  "total": 41,
+  "reports": [
+    {
+      "missionName": "Listen, I\u0027m not the nicest guy in the universe, because I\u0027m the smartest, and being nice is something stupid people do to hedge their bets.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "005",
+        "002",
+        "007",
+        "003"
+      ],
+      "agentsName": [
+        "Unity",
+        "Beta VII",
+        "Mr. Meeseeks",
+        "Cousin Nicky"
+      ],
+      "gadget": "Neutrino bomb5",
+      "timeIssued": 1,
+      "QTime": 1,
+      "timeCreated": 14
+    },
+    {
+      "missionName": "Go home and drink, grandpa.",
+      "M": 5,
+      "MoneyPenny": 10,
+      "agentsSerialNumbers": [
+        "005",
+        "001"
+      ],
+      "agentsName": [
+        "Unity",
+        "Eyeholes Man"
+      ],
+      "gadget": "Purge Suit2",
+      "timeIssued": 13,
+      "QTime": 13,
+      "timeCreated": 20
+    },
+    {
+      "missionName": "Where are my testicles, Summer?",
+      "M": 2,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "004",
+        "003"
+      ],
+      "agentsName": [
+        "Revolio \u0027Gearhead\u0027 Clockberg, Jr.",
+        "Cousin Nicky"
+      ],
+      "gadget": "Shrink ray3",
+      "timeIssued": 2,
+      "QTime": 13,
+      "timeCreated": 25
+    },
+    {
+      "missionName": "That\u0027s the difference between you and me, Morty. I never go back to the carpet store.",
+      "M": 6,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "007"
+      ],
+      "agentsName": [
+        "Mr. Meeseeks"
+      ],
+      "gadget": "Time freezer",
+      "timeIssued": 17,
+      "QTime": 17,
+      "timeCreated": 29
+    },
+    {
+      "missionName": "Yo! What up my glip glops!",
+      "M": 7,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "005",
+        "001",
+        "000"
+      ],
+      "agentsName": [
+        "Unity",
+        "Eyeholes Man",
+        "Arthricia"
+      ],
+      "gadget": "Morty\u0027s Mind Blowers5",
+      "timeIssued": 17,
+      "QTime": 20,
+      "timeCreated": 29
+    },
+    {
+      "missionName": "I\u0027m the devil. What should I do when I fail? Give myself an ice cream?",
+      "M": 4,
+      "MoneyPenny": 8,
+      "agentsSerialNumbers": [
+        "003",
+        "000",
+        "002"
+      ],
+      "agentsName": [
+        "Cousin Nicky",
+        "Arthricia",
+        "Beta VII"
+      ],
+      "gadget": "Morty\u0027s Mind Blowers3",
+      "timeIssued": 11,
+      "QTime": 30,
+      "timeCreated": 40
+    },
+    {
+      "missionName": "Well then get your shit together. Get it all together and put it in a backpack, all your shit, so it\u0027s together. ...and if you gotta take it somewhere, take it somewhere ya know? Take it to the shit store and sell it, or put it in a shit museum. I don\u0027t care what you do, you just gotta get it together... Get your shit together.",
+      "M": 7,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "005"
+      ],
+      "agentsName": [
+        "Unity"
+      ],
+      "gadget": "Butter-passing robot",
+      "timeIssued": 34,
+      "QTime": 40,
+      "timeCreated": 44
+    },
+    {
+      "missionName": "WUBBA LUBBA DUB DUBS!!!",
+      "M": 12,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "000",
+        "002",
+        "001",
+        "006"
+      ],
+      "agentsName": [
+        "Arthricia",
+        "Beta VII",
+        "Eyeholes Man",
+        "Tophat Jones"
+      ],
+      "gadget": "Particle Beam Wrist Watch \u0026 Snake Holster2",
+      "timeIssued": 26,
+      "QTime": 40,
+      "timeCreated": 53
+    },
+    {
+      "missionName": "Little tip, Morty. Never clean DNA vials with your spit.",
+      "M": 3,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "004",
+        "003"
+      ],
+      "agentsName": [
+        "Revolio \u0027Gearhead\u0027 Clockberg, Jr.",
+        "Cousin Nicky"
+      ],
+      "gadget": "Futuristic guns",
+      "timeIssued": 9,
+      "QTime": 40,
+      "timeCreated": 55
+    },
+    {
+      "missionName": "Traditionally, science fairs are a father/son thing. Well, scientifically, traditions are an idiot thing.",
+      "M": 8,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "005",
+        "003"
+      ],
+      "agentsName": [
+        "Unity",
+        "Cousin Nicky"
+      ],
+      "gadget": "Interdimensional Goggles6",
+      "timeIssued": 24,
+      "QTime": 54,
+      "timeCreated": 65
+    },
+    {
+      "missionName": "I don\u0027t get it and I don\u0027t need to.",
+      "M": 9,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "000",
+        "002",
+        "005"
+      ],
+      "agentsName": [
+        "Arthricia",
+        "Beta VII",
+        "Unity"
+      ],
+      "gadget": "Demonic Alien Containment Box2",
+      "timeIssued": 26,
+      "QTime": 65,
+      "timeCreated": 75
+    }
+  ]
+}

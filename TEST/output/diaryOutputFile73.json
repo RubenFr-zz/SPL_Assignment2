@@ -1,0 +1,52 @@
+{
+  "total": 15,
+  "reports": [
+    {
+      "missionName": "Oh yeah, If you think my Rick is Dead, then he is alive. If you think you\u0027re safe, then he\u0027s coming for you.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "001"
+      ],
+      "agentsName": [
+        "Mr. Needful"
+      ],
+      "gadget": "Cognition amplifier",
+      "timeIssued": 1,
+      "QTime": 1,
+      "timeCreated": 6
+    },
+    {
+      "missionName": "Snuffles was my slave name, you can call me snowball because my fur is pretty and white.",
+      "M": 2,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "001"
+      ],
+      "agentsName": [
+        "Mr. Needful"
+      ],
+      "gadget": "Emergency Bionic Arm2",
+      "timeIssued": 2,
+      "QTime": 6,
+      "timeCreated": 11
+    },
+    {
+      "missionName": "That just sounds like slavery with extra steps.",
+      "M": 6,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "001",
+        "000"
+      ],
+      "agentsName": [
+        "Mr. Needful",
+        "Morty Jr."
+      ],
+      "gadget": "Grappling Shoes",
+      "timeIssued": 6,
+      "QTime": 11,
+      "timeCreated": 21
+    }
+  ]
+}

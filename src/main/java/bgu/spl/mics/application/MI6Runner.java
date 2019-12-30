@@ -34,7 +34,6 @@ public class MI6Runner {
     private static Subscriber[] subscribers;
     private static Publisher[] publishers;
     private static String[] outputFilesName;
-    private static LinkedList<M> MInstances;
 
     public static void main(String[] args) {
 
@@ -44,7 +43,6 @@ public class MI6Runner {
         }
 
         LinkedList<Thread> threadsList = new LinkedList<>();
-        MInstances = new LinkedList<>();
         outputFilesName = new String[2];
         outputFilesName[0] = args[1];
         outputFilesName[1] = args[2];
@@ -80,9 +78,7 @@ public class MI6Runner {
             }
         }
 
-        /**
-         * When the program reaches this line the program is over !
-         */
+        /* When the program reaches this line all the threads have terminated ! */
         printInventory();
         printDiary();
 
@@ -120,7 +116,6 @@ public class MI6Runner {
         for (int i = 0; i < size; i++) {
             M m = new M(Integer.toString(i + 1), startSignal);
             array[i] = m;
-            MInstances.add(m);
         }
         return array;
     }
@@ -128,9 +123,14 @@ public class MI6Runner {
     private static Subscriber[] initMoneyPenny(int size) {
         Subscriber[] array = new Moneypenny[size];
 
-        for (int i = 0; i < size; i++) {
-            array[i] = new Moneypenny(Integer.toString(i + 1), startSignal);
-        }
+        for (int i = 0; i < size; i++)
+            if ( i == 0 )
+                array[i] = new Moneypenny(Integer.toString(i + 1), startSignal, MpFlag.RELEASING_AGENTS);
+            else if ( i % 2 == 0)
+                array[i] = new Moneypenny(Integer.toString(i + 1), startSignal, MpFlag.GETTING_AGENTS);
+            else
+                array[i] = new Moneypenny(Integer.toString(i + 1), startSignal, MpFlag.SENDING_AGENTS);
+
         return array;
     }
 
@@ -138,22 +138,19 @@ public class MI6Runner {
      * @param services is the section in the json of the service (publisher, subscribers)
      */
     private static Subscriber[] initIntelligence(JsonObject services) {
-        JsonArray intelligenceJSON = (JsonArray) services.get("intelligence"); //Array of all intelligences
+        JsonArray intelligenceJSON = (JsonArray) services.get("intelligence");
         Iterator<JsonElement> iterator = intelligenceJSON.iterator();
         Subscriber[] intelligences = new Intelligence[intelligenceJSON.size()];
         int i = 0;
         while (iterator.hasNext()) {
-            JsonObject IntelligenceObject = iterator.next().getAsJsonObject(); //Intelligence
+            JsonObject IntelligenceObject = iterator.next().getAsJsonObject();
             JsonArray missionObject = (JsonArray) IntelligenceObject.get("missions");
             Intelligence intelligence = new Intelligence(String.valueOf(i + 1), startSignal);
             MissionInfo[] missions = new MissionInfo[missionObject.size()];
             int j = 0;
 
-            Iterator<JsonElement> iterator1 = missionObject.iterator();
-            while (iterator1.hasNext()) {
-                MissionInfo mission = initMission(iterator1.next().getAsJsonObject());
-                missions[j++] = mission;
-            }
+            for (JsonElement jsonElement : missionObject)
+                missions[j++] = initMission(jsonElement.getAsJsonObject());
 
             intelligence.loadMission(missions);
             intelligences[i++] = intelligence;
@@ -165,7 +162,7 @@ public class MI6Runner {
     /**
      * Create and initialize every field of a  {@link MissionInfo}
      *
-     * @param missionObject
+     * @param missionObject Json object containing the mission's info
      * @return the new mission initialized
      */
     private static MissionInfo initMission(JsonObject missionObject) {
@@ -173,7 +170,7 @@ public class MI6Runner {
 
         List<String> serialAgentsNumbers = extractSerialNumber(missionObject);
         mission.setSerialAgentsNumbers(serialAgentsNumbers);
-        mission.setMissionName(missionObject.get("name").getAsString());
+        mission.setMissionName(missionObject.get("missionName").getAsString());
         mission.setGadget(missionObject.get("gadget").getAsString());
         mission.setDuration(missionObject.get("duration").getAsInt());
         mission.setTimeIssued(missionObject.get("timeIssued").getAsInt());
@@ -184,7 +181,7 @@ public class MI6Runner {
     /**
      * Read the agent's serial numbers in Json
      *
-     * @param missionObject
+     * @param missionObject Json object containing the mission's info
      * @return the list of agent's serial numbers required for the mission
      */
     private static List<String> extractSerialNumber(JsonObject missionObject) {
@@ -201,7 +198,7 @@ public class MI6Runner {
     /**
      * Extract the agents' list in the Json file and add it to the Squad (singleton)
      *
-     * @param jsonObj
+     * @param jsonObj THE Json onbject containing all of the assignment
      */
     private static void initSquad(JsonObject jsonObj) {
         JsonArray squad = (JsonArray) jsonObj.get("squad");

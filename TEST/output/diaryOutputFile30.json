@@ -1,0 +1,177 @@
+{
+  "total": 26,
+  "reports": [
+    {
+      "missionName": "That\u0027s the difference between you and me, Morty. I never go back to the carpet store.",
+      "M": 3,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "004"
+      ],
+      "agentsName": [
+        "Jessica"
+      ],
+      "gadget": "Combat suit",
+      "timeIssued": 11,
+      "QTime": 11,
+      "timeCreated": 15
+    },
+    {
+      "missionName": "I\u0027m more than just a hammer.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "001",
+        "002",
+        "003"
+      ],
+      "agentsName": [
+        "Lighthouse Chief",
+        "Gazorpazorpfield",
+        "Morty Jr."
+      ],
+      "gadget": "Portal gun2",
+      "timeIssued": 6,
+      "QTime": 6,
+      "timeCreated": 17
+    },
+    {
+      "missionName": "I hate to break it to you, but what people call \u0027love\u0027 is just a chemical reaction that compels animals to breed. It hits hard Morty then it slowly fades leaving you stranded in a failing marriage. I did it. Your parents are going to do it. Break the cycle Morty, rise above, focus on science.",
+      "M": 2,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "003",
+        "004",
+        "000"
+      ],
+      "agentsName": [
+        "Morty Jr.",
+        "Jessica",
+        "Jerry Smith"
+      ],
+      "gadget": "Time freezer",
+      "timeIssued": 10,
+      "QTime": 17,
+      "timeCreated": 24
+    },
+    {
+      "missionName": "This sounds like something The One True Morty might say.",
+      "M": 4,
+      "MoneyPenny": 8,
+      "agentsSerialNumbers": [
+        "002",
+        "000",
+        "004"
+      ],
+      "agentsName": [
+        "Gazorpazorpfield",
+        "Jerry Smith",
+        "Jessica"
+      ],
+      "gadget": "Futuristic guns",
+      "timeIssued": 13,
+      "QTime": 24,
+      "timeCreated": 34
+    },
+    {
+      "missionName": "I want that Mulan McNugget sauce, Morty!",
+      "M": 7,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "004"
+      ],
+      "agentsName": [
+        "Jessica"
+      ],
+      "gadget": "Cognition amplifier2",
+      "timeIssued": 20,
+      "QTime": 34,
+      "timeCreated": 49
+    },
+    {
+      "missionName": "WUBBA LUBBA DUB DUBS!!!",
+      "M": 3,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "002",
+        "004",
+        "000"
+      ],
+      "agentsName": [
+        "Gazorpazorpfield",
+        "Jessica",
+        "Jerry Smith"
+      ],
+      "gadget": "Love Potion",
+      "timeIssued": 31,
+      "QTime": 48,
+      "timeCreated": 58
+    },
+    {
+      "missionName": "Go home and drink, grandpa.",
+      "M": 6,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "003",
+        "002"
+      ],
+      "agentsName": [
+        "Morty Jr.",
+        "Gazorpazorpfield"
+      ],
+      "gadget": "Emergency Bionic Arm2",
+      "timeIssued": 18,
+      "QTime": 58,
+      "timeCreated": 64
+    },
+    {
+      "missionName": "I\u0027m more than just a hammer.",
+      "M": 5,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "002"
+      ],
+      "agentsName": [
+        "Gazorpazorpfield"
+      ],
+      "gadget": "Laser Gun2",
+      "timeIssued": 14,
+      "QTime": 64,
+      "timeCreated": 73
+    },
+    {
+      "missionName": "Aw, c\u0027mon Rick. That doesn\u0027t seem so bad.",
+      "M": 4,
+      "MoneyPenny": 8,
+      "agentsSerialNumbers": [
+        "004",
+        "001"
+      ],
+      "agentsName": [
+        "Jessica",
+        "Lighthouse Chief"
+      ],
+      "gadget": "Particle Beam Wrist Watch \u0026 Snake Holster",
+      "timeIssued": 48,
+      "QTime": 64,
+      "timeCreated": 74
+    },
+    {
+      "missionName": "Where are my testicles, Summer?",
+      "M": 8,
+      "MoneyPenny": 8,
+      "agentsSerialNumbers": [
+        "003",
+        "000"
+      ],
+      "agentsName": [
+        "Morty Jr.",
+        "Jerry Smith"
+      ],
+      "gadget": "Ionic Defibulizer4",
+      "timeIssued": 24,
+      "QTime": 64,
+      "timeCreated": 75
+    }
+  ]
+}

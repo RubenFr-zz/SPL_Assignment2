@@ -1,0 +1,73 @@
+{
+  "total": 52,
+  "reports": [
+    {
+      "missionName": "Listen, I\u0027m not the nicest guy in the universe, because I\u0027m the smartest, and being nice is something stupid people do to hedge their bets.",
+      "M": 3,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "007",
+        "000"
+      ],
+      "agentsName": [
+        "Summer Smith",
+        "Rick Sanchez"
+      ],
+      "gadget": "Interdimensional cable TV box",
+      "timeIssued": 4,
+      "QTime": 4,
+      "timeCreated": 10
+    },
+    {
+      "missionName": "Oh, I\u0027m sorry Morty, are you the scientist or are you the kid who wanted to get laid?",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "002",
+        "005",
+        "001"
+      ],
+      "agentsName": [
+        "Mr. Needful",
+        "Squanchy",
+        "Jerry\u0027s Mytholog"
+      ],
+      "gadget": "Space cruiser",
+      "timeIssued": 2,
+      "QTime": 2,
+      "timeCreated": 12
+    },
+    {
+      "missionName": "Sometimes science is a lot more art, than science. A lot of people don\u0027t get that.",
+      "M": 4,
+      "MoneyPenny": 8,
+      "agentsSerialNumbers": [
+        "008",
+        "004"
+      ],
+      "agentsName": [
+        "Gazorpazorpfield",
+        "Beta VII"
+      ],
+      "gadget": "Microverse battery",
+      "timeIssued": 6,
+      "QTime": 6,
+      "timeCreated": 14
+    },
+    {
+      "missionName": "It\u0027s a figure of speech, Morty! They\u0027re bureaucrats! I don\u0027t respect them. Just keep shooting, Morty! You have no idea what prison is like here!",
+      "M": 7,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "003"
+      ],
+      "agentsName": [
+        "Snuffles"
+      ],
+      "gadget": "Purge Suit",
+      "timeIssued": 7,
+      "QTime": 7,
+      "timeCreated": 20
+    }
+  ]
+}

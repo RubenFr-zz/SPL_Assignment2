@@ -1,0 +1,52 @@
+{
+  "total": 20,
+  "reports": [
+    {
+      "missionName": "The first rule of space travel kids is always check out distress beacons. Nine out of ten times it\u0027s a ship full of dead aliens and a bunch of free shit! One out of ten times it\u0027s a deadly trap, but... I\u0027m ready to roll those dice!",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "000",
+        "002"
+      ],
+      "agentsName": [
+        "Gazorpazorpfield",
+        "Mr. Needful"
+      ],
+      "gadget": "Time freezer",
+      "timeIssued": 1,
+      "QTime": 1,
+      "timeCreated": 2
+    },
+    {
+      "missionName": "Get off the high road Summer. We all got pink eye because you wouldn\u0027t stop texting on the toilet.",
+      "M": 2,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "001"
+      ],
+      "agentsName": [
+        "Loggins"
+      ],
+      "gadget": "Timeline viewer",
+      "timeIssued": 1,
+      "QTime": 1,
+      "timeCreated": 12
+    },
+    {
+      "missionName": "So what if the most meaningful day in your life was a simulation operating at minimum complexity.",
+      "M": 3,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "002"
+      ],
+      "agentsName": [
+        "Mr. Needful"
+      ],
+      "gadget": "Dream inceptor2",
+      "timeIssued": 2,
+      "QTime": 2,
+      "timeCreated": 14
+    }
+  ]
+}

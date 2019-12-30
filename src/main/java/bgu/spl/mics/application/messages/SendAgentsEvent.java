@@ -11,14 +11,12 @@ public class SendAgentsEvent implements Event<Boolean> {
     private List<String> serialNumbers;
     private int duration;
     private int expired;
-    private MpFlag flag;
 
-    public SendAgentsEvent(String sendID, List<String> serialNumbers, int duration, int expired, MpFlag flag) {
+    public SendAgentsEvent(String sendID, List<String> serialNumbers, int duration, int expired) {
         this.sendID = sendID;
         this.serialNumbers = serialNumbers;
         this.duration = duration;
         this.expired = expired;
-        this.flag = flag;
     }
 
     public String getSendID() {
@@ -37,7 +35,4 @@ public class SendAgentsEvent implements Event<Boolean> {
         return expired;
     }
 
-    public MpFlag getFlag() {
-        return flag;
-    }
 }

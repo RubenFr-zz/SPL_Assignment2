@@ -1,0 +1,26 @@
+{
+  "total": 35,
+  "reports": [
+    {
+      "missionName": "Pluto\u0027s a planet.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "002",
+        "006",
+        "001",
+        "000"
+      ],
+      "agentsName": [
+        "Baby Legs",
+        "Loggins",
+        "Snuffles",
+        "Fart"
+      ],
+      "gadget": "Laser Gun2",
+      "timeIssued": 4,
+      "QTime": 4,
+      "timeCreated": 15
+    }
+  ]
+}

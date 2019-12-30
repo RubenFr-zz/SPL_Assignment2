@@ -7,6 +7,7 @@ import bgu.spl.mics.application.messages.TerminationBroadcast;
 import bgu.spl.mics.application.messages.TickBroadcast;
 import bgu.spl.mics.application.passiveObjects.Inventory;
 
+import java.util.AbstractMap;
 import java.util.concurrent.CountDownLatch;
 
 
@@ -61,10 +62,15 @@ public class Q extends Subscriber {
 
 		subscribeEvent(GadgetAvailableEvent.class, callback -> {
 			boolean found  = inventory.getItem(callback.getGadget());
-			complete(callback, found);
+			complete(callback, new AbstractMap.SimpleEntry<>(found, currTick));
 		});
 
 		latch.countDown();
 	}
 
+	public void clear(){
+		currTick = 0;
+		setTerminated(false);
+		getMessageCallMap().clear();
+	}
 }

@@ -1,0 +1,58 @@
+{
+  "total": 43,
+  "reports": [
+    {
+      "missionName": "Go home and drink, grandpa.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "004"
+      ],
+      "agentsName": [
+        "Mr. Poopybutthole"
+      ],
+      "gadget": "Timeline viewer3",
+      "timeIssued": 1,
+      "QTime": 1,
+      "timeCreated": 2
+    },
+    {
+      "missionName": "I want that Mulan McNugget sauce, Morty!",
+      "M": 4,
+      "MoneyPenny": 8,
+      "agentsSerialNumbers": [
+        "001",
+        "006",
+        "005"
+      ],
+      "agentsName": [
+        "Summer Smith",
+        "Gazorpazorpfield",
+        "Evil Morty"
+      ],
+      "gadget": "Space cruiser3",
+      "timeIssued": 2,
+      "QTime": 2,
+      "timeCreated": 8
+    },
+    {
+      "missionName": "That just sounds like slavery with extra steps.",
+      "M": 9,
+      "MoneyPenny": 8,
+      "agentsSerialNumbers": [
+        "002",
+        "007",
+        "005"
+      ],
+      "agentsName": [
+        "Tophat Jones",
+        "Cousin Nicky",
+        "Evil Morty"
+      ],
+      "gadget": "Futuristic guns",
+      "timeIssued": 3,
+      "QTime": 8,
+      "timeCreated": 15
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "total": 32,
+  "reports": [
+    {
+      "missionName": "Great, now I have to take over an entire planet because of your stupid boobs.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "004"
+      ],
+      "agentsName": [
+        "Fart"
+      ],
+      "gadget": "Butter-passing robot4",
+      "timeIssued": 3,
+      "QTime": 3,
+      "timeCreated": 7
+    },
+    {
+      "missionName": "I want that Mulan McNugget sauce, Morty!",
+      "M": 3,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "003"
+      ],
+      "agentsName": [
+        "Scary Terry"
+      ],
+      "gadget": "Dream inceptor2",
+      "timeIssued": 5,
+      "QTime": 5,
+      "timeCreated": 19
+    },
+    {
+      "missionName": "I hate to break it to you, but what people call \u0027love\u0027 is just a chemical reaction that compels animals to breed. It hits hard Morty then it slowly fades leaving you stranded in a failing marriage. I did it. Your parents are going to do it. Break the cycle Morty, rise above, focus on science.",
+      "M": 2,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "004",
+        "001"
+      ],
+      "agentsName": [
+        "Fart",
+        "Squanchy"
+      ],
+      "gadget": "Timeline viewer2",
+      "timeIssued": 5,
+      "QTime": 7,
+      "timeCreated": 21
+    },
+    {
+      "missionName": "This sounds like something The One True Morty might say.",
+      "M": 4,
+      "MoneyPenny": 8,
+      "agentsSerialNumbers": [
+        "000",
+        "004"
+      ],
+      "agentsName": [
+        "Jessica",
+        "Fart"
+      ],
+      "gadget": "Portal gun",
+      "timeIssued": 6,
+      "QTime": 21,
+      "timeCreated": 35
+    }
+  ]
+}

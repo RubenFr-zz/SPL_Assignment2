@@ -1,0 +1,20 @@
+{
+  "total": 49,
+  "reports": [
+    {
+      "missionName": "I hate to break it to you, but what people call \u0027love\u0027 is just a chemical reaction that compels animals to breed. It hits hard Morty then it slowly fades leaving you stranded in a failing marriage. I did it. Your parents are going to do it. Break the cycle Morty, rise above, focus on science.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "003"
+      ],
+      "agentsName": [
+        "Gazorpazorpfield"
+      ],
+      "gadget": "Purge Suit2",
+      "timeIssued": 1,
+      "QTime": 1,
+      "timeCreated": 16
+    }
+  ]
+}

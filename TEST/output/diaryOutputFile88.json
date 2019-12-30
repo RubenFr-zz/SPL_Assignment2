@@ -1,0 +1,105 @@
+{
+  "total": 30,
+  "reports": [
+    {
+      "missionName": "Uncertainty is inherently unsustainable. Eventually, everything either is or isn\u0027t.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "000",
+        "001",
+        "004"
+      ],
+      "agentsName": [
+        "Cousin Nicky",
+        "Arthricia",
+        "Snowball"
+      ],
+      "gadget": "Space cruiser2",
+      "timeIssued": 1,
+      "QTime": 1,
+      "timeCreated": 15
+    },
+    {
+      "missionName": "I don\u0027t get it and I don\u0027t need to.",
+      "M": 2,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "003",
+        "004"
+      ],
+      "agentsName": [
+        "Beth\u0027s Mytholog",
+        "Snowball"
+      ],
+      "gadget": "Froopyland Chalk3",
+      "timeIssued": 3,
+      "QTime": 15,
+      "timeCreated": 22
+    },
+    {
+      "missionName": "Having a family doesn\u0027t mean that you stop being an individual.",
+      "M": 5,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "001",
+        "002"
+      ],
+      "agentsName": [
+        "Arthricia",
+        "Baby Legs"
+      ],
+      "gadget": "Purge Suit4",
+      "timeIssued": 10,
+      "QTime": 15,
+      "timeCreated": 26
+    },
+    {
+      "missionName": "WUBBA LUBBA DUB DUBS!!!",
+      "M": 4,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "003"
+      ],
+      "agentsName": [
+        "Beth\u0027s Mytholog"
+      ],
+      "gadget": "Shrink ray3",
+      "timeIssued": 6,
+      "QTime": 22,
+      "timeCreated": 34
+    },
+    {
+      "missionName": "Great, now I have to take over an entire planet because of your stupid boobs.",
+      "M": 3,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "001"
+      ],
+      "agentsName": [
+        "Arthricia"
+      ],
+      "gadget": "Dark matter4",
+      "timeIssued": 4,
+      "QTime": 26,
+      "timeCreated": 37
+    },
+    {
+      "missionName": "Aww, gee, you got me there Rick.",
+      "M": 8,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "000",
+        "004"
+      ],
+      "agentsName": [
+        "Cousin Nicky",
+        "Snowball"
+      ],
+      "gadget": "Purge Suit",
+      "timeIssued": 16,
+      "QTime": 22,
+      "timeCreated": 37
+    }
+  ]
+}

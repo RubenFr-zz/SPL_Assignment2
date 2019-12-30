@@ -2,7 +2,9 @@ package bgu.spl.mics.application.messages;
 
 import bgu.spl.mics.Event;
 
-public class GadgetAvailableEvent implements Event<Boolean> {
+import java.util.Map;
+
+public class GadgetAvailableEvent implements Event<Map.Entry<Boolean, Integer>> {
     private String senderId;
     private String gadget;
 

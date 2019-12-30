@@ -1,0 +1,116 @@
+{
+  "total": 16,
+  "reports": [
+    {
+      "missionName": "That\u0027s the difference between you and me, Morty. I never go back to the carpet store.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "000"
+      ],
+      "agentsName": [
+        "Mr. Meeseeks"
+      ],
+      "gadget": "Emergency Bionic Arm2",
+      "timeIssued": 2,
+      "QTime": 2,
+      "timeCreated": 5
+    },
+    {
+      "missionName": "WUBBA LUBBA DUB DUBS!!!",
+      "M": 2,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "000"
+      ],
+      "agentsName": [
+        "Mr. Meeseeks"
+      ],
+      "gadget": "Ionic Defibulizer",
+      "timeIssued": 6,
+      "QTime": 6,
+      "timeCreated": 16
+    },
+    {
+      "missionName": "I hate to break it to you, but what people call \u0027love\u0027 is just a chemical reaction that compels animals to breed. It hits hard Morty then it slowly fades leaving you stranded in a failing marriage. I did it. Your parents are going to do it. Break the cycle Morty, rise above, focus on science.",
+      "M": 3,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "001"
+      ],
+      "agentsName": [
+        "Mr. Poopybutthole"
+      ],
+      "gadget": "Combat suit",
+      "timeIssued": 7,
+      "QTime": 7,
+      "timeCreated": 18
+    },
+    {
+      "missionName": "Where are my testicles, Summer?",
+      "M": 5,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "001"
+      ],
+      "agentsName": [
+        "Mr. Poopybutthole"
+      ],
+      "gadget": "Dream inceptor",
+      "timeIssued": 16,
+      "QTime": 18,
+      "timeCreated": 24
+    },
+    {
+      "missionName": "I don\u0027t get it and I don\u0027t need to.",
+      "M": 6,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "001",
+        "000"
+      ],
+      "agentsName": [
+        "Mr. Poopybutthole",
+        "Mr. Meeseeks"
+      ],
+      "gadget": "Grappling Shoes",
+      "timeIssued": 18,
+      "QTime": 24,
+      "timeCreated": 34
+    },
+    {
+      "missionName": "Aw, c\u0027mon Rick. That doesn\u0027t seem so bad.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "000",
+        "001"
+      ],
+      "agentsName": [
+        "Mr. Meeseeks",
+        "Mr. Poopybutthole"
+      ],
+      "gadget": "Dark matter",
+      "timeIssued": 27,
+      "QTime": 33,
+      "timeCreated": 46
+    },
+    {
+      "missionName": "Hello Jerry, come to rub my face in urine again?",
+      "M": 3,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "000",
+        "001"
+      ],
+      "agentsName": [
+        "Mr. Meeseeks",
+        "Mr. Poopybutthole"
+      ],
+      "gadget": "Timeline viewer",
+      "timeIssued": 30,
+      "QTime": 46,
+      "timeCreated": 55
+    }
+  ]
+}

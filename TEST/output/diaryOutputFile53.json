@@ -1,0 +1,75 @@
+{
+  "total": 52,
+  "reports": [
+    {
+      "missionName": "Traditionally, science fairs are a father/son thing. Well, scientifically, traditions are an idiot thing.",
+      "M": 4,
+      "MoneyPenny": 8,
+      "agentsSerialNumbers": [
+        "001"
+      ],
+      "agentsName": [
+        "Mr. Needful"
+      ],
+      "gadget": "Dark matter4",
+      "timeIssued": 1,
+      "QTime": 1,
+      "timeCreated": 4
+    },
+    {
+      "missionName": "Traditionally, science fairs are a father/son thing. Well, scientifically, traditions are an idiot thing.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "002"
+      ],
+      "agentsName": [
+        "Snuffles"
+      ],
+      "gadget": "Curse Remover",
+      "timeIssued": 1,
+      "QTime": 1,
+      "timeCreated": 5
+    },
+    {
+      "missionName": "So what if the most meaningful day in your life was a simulation operating at minimum complexity.",
+      "M": 6,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "008",
+        "000",
+        "003",
+        "007",
+        "005"
+      ],
+      "agentsName": [
+        "Beta VII",
+        "Beth Smith",
+        "King Jellybean",
+        "Squanchy",
+        "Tammy Gueterman"
+      ],
+      "gadget": "Laser Gun4",
+      "timeIssued": 1,
+      "QTime": 1,
+      "timeCreated": 6
+    },
+    {
+      "missionName": "Where are my testicles, Summer?",
+      "M": 11,
+      "MoneyPenny": 18,
+      "agentsSerialNumbers": [
+        "001",
+        "002"
+      ],
+      "agentsName": [
+        "Mr. Needful",
+        "Snuffles"
+      ],
+      "gadget": "Futuristic guns3",
+      "timeIssued": 1,
+      "QTime": 5,
+      "timeCreated": 10
+    }
+  ]
+}

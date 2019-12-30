@@ -1,0 +1,69 @@
+{
+  "total": 19,
+  "reports": [
+    {
+      "missionName": "WUBBA LUBBA DUB DUBS!!!",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "002",
+        "000"
+      ],
+      "agentsName": [
+        "Cousin Nicky",
+        "Shrimply Pibbles"
+      ],
+      "gadget": "Demonic Alien Containment Box",
+      "timeIssued": 1,
+      "QTime": 1,
+      "timeCreated": 12
+    },
+    {
+      "missionName": "It\u0027s a figure of speech, Morty! They\u0027re bureaucrats! I don\u0027t respect them. Just keep shooting, Morty! You have no idea what prison is like here!",
+      "M": 2,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "002"
+      ],
+      "agentsName": [
+        "Cousin Nicky"
+      ],
+      "gadget": "Dream inceptor",
+      "timeIssued": 8,
+      "QTime": 11,
+      "timeCreated": 17
+    },
+    {
+      "missionName": "Aww, gee, you got me there Rick.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "000"
+      ],
+      "agentsName": [
+        "Shrimply Pibbles"
+      ],
+      "gadget": "Space cruiser",
+      "timeIssued": 12,
+      "QTime": 17,
+      "timeCreated": 20
+    },
+    {
+      "missionName": "Can somebody just let me out of here? If I die in a cage I lose a bet.",
+      "M": 4,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "001",
+        "002"
+      ],
+      "agentsName": [
+        "King Jellybean",
+        "Cousin Nicky"
+      ],
+      "gadget": "Shrink ray",
+      "timeIssued": 10,
+      "QTime": 17,
+      "timeCreated": 26
+    }
+  ]
+}

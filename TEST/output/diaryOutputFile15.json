@@ -1,0 +1,67 @@
+{
+  "total": 30,
+  "reports": [
+    {
+      "missionName": "Go home and drink, grandpa.",
+      "M": 3,
+      "MoneyPenny": 8,
+      "agentsSerialNumbers": [
+        "001"
+      ],
+      "agentsName": [
+        "Mr. Needful"
+      ],
+      "gadget": "Space cruiser",
+      "timeIssued": 3,
+      "QTime": 3,
+      "timeCreated": 5
+    },
+    {
+      "missionName": "The first rule of space travel kids is always check out distress beacons. Nine out of ten times it\u0027s a ship full of dead aliens and a bunch of free shit! One out of ten times it\u0027s a deadly trap, but... I\u0027m ready to roll those dice!",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "003"
+      ],
+      "agentsName": [
+        "Evil Morty"
+      ],
+      "gadget": "Combat suit",
+      "timeIssued": 1,
+      "QTime": 1,
+      "timeCreated": 10
+    },
+    {
+      "missionName": "Existence is pain to a meeseeks Jerry, and we will do anything to alleviate that pain.",
+      "M": 4,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "002"
+      ],
+      "agentsName": [
+        "Abradolf Lincler"
+      ],
+      "gadget": "Interdimensional Goggles",
+      "timeIssued": 3,
+      "QTime": 3,
+      "timeCreated": 13
+    },
+    {
+      "missionName": "This isn\u0027t Game of Thrones, Morty.",
+      "M": 2,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "000",
+        "003"
+      ],
+      "agentsName": [
+        "Jessica",
+        "Evil Morty"
+      ],
+      "gadget": "Butter-passing robot",
+      "timeIssued": 2,
+      "QTime": 10,
+      "timeCreated": 15
+    }
+  ]
+}

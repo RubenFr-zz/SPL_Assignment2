@@ -11,13 +11,11 @@ public class AgentsAvailableEvent implements Event<HashMap<String, Object>> {
     private String sendID;
     private List<String> serialNumbers;
     private int expired;
-    private MpFlag flag;
 
-    public AgentsAvailableEvent(String sendID, List<String> serialNumbers, int expired, MpFlag flag) {
+    public AgentsAvailableEvent(String sendID, List<String> serialNumbers, int expired) {
         this.sendID = sendID;
         this.serialNumbers = serialNumbers;
         this.expired = expired;
-        this.flag = flag;
     }
 
     public List<String> getSerialNumbers() {
@@ -28,9 +26,6 @@ public class AgentsAvailableEvent implements Event<HashMap<String, Object>> {
         return expired;
     }
 
-    public MpFlag getFlag() {
-        return flag;
-    }
 
     public String getSendID() {
         return sendID;

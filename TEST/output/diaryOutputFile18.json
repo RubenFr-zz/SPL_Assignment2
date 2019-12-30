@@ -1,0 +1,135 @@
+{
+  "total": 26,
+  "reports": [
+    {
+      "missionName": "Pluto\u0027s a planet.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "003"
+      ],
+      "agentsName": [
+        "King Jellybean"
+      ],
+      "gadget": "Neutrino bomb2",
+      "timeIssued": 2,
+      "QTime": 2,
+      "timeCreated": 4
+    },
+    {
+      "missionName": "Aw, c\u0027mon Rick. That doesn\u0027t seem so bad.",
+      "M": 3,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "001"
+      ],
+      "agentsName": [
+        "Mr. Goldenfold"
+      ],
+      "gadget": "Interdimensional cable TV box2",
+      "timeIssued": 3,
+      "QTime": 3,
+      "timeCreated": 9
+    },
+    {
+      "missionName": "So what if the most meaningful day in your life was a simulation operating at minimum complexity.",
+      "M": 2,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "001",
+        "002"
+      ],
+      "agentsName": [
+        "Mr. Goldenfold",
+        "Jerry Smith"
+      ],
+      "gadget": "Laser Gun",
+      "timeIssued": 3,
+      "QTime": 9,
+      "timeCreated": 20
+    },
+    {
+      "missionName": "Listen, I\u0027m not the nicest guy in the universe, because I\u0027m the smartest, and being nice is something stupid people do to hedge their bets.",
+      "M": 4,
+      "MoneyPenny": 8,
+      "agentsSerialNumbers": [
+        "003",
+        "001"
+      ],
+      "agentsName": [
+        "King Jellybean",
+        "Mr. Goldenfold"
+      ],
+      "gadget": "Emergency Bionic Arm2",
+      "timeIssued": 6,
+      "QTime": 19,
+      "timeCreated": 30
+    },
+    {
+      "missionName": "Aww, gee, you got me there Rick.",
+      "M": 7,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "002",
+        "003"
+      ],
+      "agentsName": [
+        "Jerry Smith",
+        "King Jellybean"
+      ],
+      "gadget": "Ionic Defibulizer",
+      "timeIssued": 14,
+      "QTime": 30,
+      "timeCreated": 37
+    },
+    {
+      "missionName": "He\u0027s not a hot girl. He can\u0027t just bail on his life and set up shop in someone else\u0027s.",
+      "M": 8,
+      "MoneyPenny": 8,
+      "agentsSerialNumbers": [
+        "002",
+        "003"
+      ],
+      "agentsName": [
+        "Jerry Smith",
+        "King Jellybean"
+      ],
+      "gadget": "Portal gun2",
+      "timeIssued": 14,
+      "QTime": 37,
+      "timeCreated": 39
+    },
+    {
+      "missionName": "Sometimes science is a lot more art, than science. A lot of people don\u0027t get that.",
+      "M": 3,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "003"
+      ],
+      "agentsName": [
+        "King Jellybean"
+      ],
+      "gadget": "Timeline viewer",
+      "timeIssued": 24,
+      "QTime": 39,
+      "timeCreated": 43
+    },
+    {
+      "missionName": "So what if the most meaningful day in your life was a simulation operating at minimum complexity.",
+      "M": 9,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "001",
+        "002"
+      ],
+      "agentsName": [
+        "Mr. Goldenfold",
+        "Jerry Smith"
+      ],
+      "gadget": "Microverse battery3",
+      "timeIssued": 15,
+      "QTime": 39,
+      "timeCreated": 53
+    }
+  ]
+}

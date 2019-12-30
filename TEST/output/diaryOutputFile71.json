@@ -1,0 +1,52 @@
+{
+  "total": 24,
+  "reports": [
+    {
+      "missionName": "There is no god, Summer; gotta rip that band-aid off now you\u0027ll thank me later.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "002"
+      ],
+      "agentsName": [
+        "Tinkles"
+      ],
+      "gadget": "Space cruiser",
+      "timeIssued": 2,
+      "QTime": 2,
+      "timeCreated": 14
+    },
+    {
+      "missionName": "That\u0027s the difference between you and me, Morty. I never go back to the carpet store.",
+      "M": 4,
+      "MoneyPenny": 8,
+      "agentsSerialNumbers": [
+        "001",
+        "005"
+      ],
+      "agentsName": [
+        "Snowball",
+        "Mr. Meeseeks"
+      ],
+      "gadget": "Microverse battery3",
+      "timeIssued": 4,
+      "QTime": 4,
+      "timeCreated": 14
+    },
+    {
+      "missionName": "What about the reality where Hitler cured cancer, Morty? The answer is: Don\u0027t think about it.",
+      "M": 3,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "003"
+      ],
+      "agentsName": [
+        "Jan Michael Vincent"
+      ],
+      "gadget": "Futuristic guns2",
+      "timeIssued": 3,
+      "QTime": 3,
+      "timeCreated": 16
+    }
+  ]
+}

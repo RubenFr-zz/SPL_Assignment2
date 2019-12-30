@@ -1,0 +1,85 @@
+{
+  "total": 52,
+  "reports": [
+    {
+      "missionName": "Well then get your shit together. Get it all together and put it in a backpack, all your shit, so it\u0027s together. ...and if you gotta take it somewhere, take it somewhere ya know? Take it to the shit store and sell it, or put it in a shit museum. I don\u0027t care what you do, you just gotta get it together... Get your shit together.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "007",
+        "002",
+        "009",
+        "003"
+      ],
+      "agentsName": [
+        "Mr. Goldenfold",
+        "Stealy",
+        "Snuffles",
+        "Squanchy"
+      ],
+      "gadget": "Space cruiser",
+      "timeIssued": 1,
+      "QTime": 1,
+      "timeCreated": 6
+    },
+    {
+      "missionName": "Uncertainty is inherently unsustainable. Eventually, everything either is or isn\u0027t.",
+      "M": 2,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "005",
+        "009",
+        "003"
+      ],
+      "agentsName": [
+        "Dr. Glip-Glop",
+        "Snuffles",
+        "Squanchy"
+      ],
+      "gadget": "Shrink ray8",
+      "timeIssued": 5,
+      "QTime": 6,
+      "timeCreated": 8
+    },
+    {
+      "missionName": "Ohh yea, you gotta get schwifty.",
+      "M": 3,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "005",
+        "001",
+        "000",
+        "003"
+      ],
+      "agentsName": [
+        "Dr. Glip-Glop",
+        "Mr. Meeseeks",
+        "Tophat Jones",
+        "Squanchy"
+      ],
+      "gadget": "Timeline viewer4",
+      "timeIssued": 5,
+      "QTime": 8,
+      "timeCreated": 21
+    },
+    {
+      "missionName": "Having a family doesn\u0027t mean that you stop being an individual.",
+      "M": 9,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "008",
+        "007",
+        "001"
+      ],
+      "agentsName": [
+        "Tiny Rick",
+        "Mr. Goldenfold",
+        "Mr. Meeseeks"
+      ],
+      "gadget": "Butter-passing robot2",
+      "timeIssued": 17,
+      "QTime": 21,
+      "timeCreated": 23
+    }
+  ]
+}

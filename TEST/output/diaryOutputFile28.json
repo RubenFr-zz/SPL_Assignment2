@@ -1,0 +1,50 @@
+{
+  "total": 36,
+  "reports": [
+    {
+      "missionName": "Meeseeks are not born into this world fumbling for meaning, Jerry! We are created to serve a single purpose, for which we go to any lengths to fulfill.",
+      "M": 3,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "004"
+      ],
+      "agentsName": [
+        "Mr. Meeseeks"
+      ],
+      "gadget": "Ionic Defibulizer",
+      "timeIssued": 2,
+      "QTime": 2,
+      "timeCreated": 4
+    },
+    {
+      "missionName": "Where are my testicles, Summer?",
+      "M": 5,
+      "MoneyPenny": 10,
+      "agentsSerialNumbers": [
+        "005"
+      ],
+      "agentsName": [
+        "Fart"
+      ],
+      "gadget": "Dark matter",
+      "timeIssued": 4,
+      "QTime": 4,
+      "timeCreated": 12
+    },
+    {
+      "missionName": "Hello Jerry, come to rub my face in urine again?",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "000"
+      ],
+      "agentsName": [
+        "Jessica"
+      ],
+      "gadget": "Timeline viewer",
+      "timeIssued": 1,
+      "QTime": 1,
+      "timeCreated": 16
+    }
+  ]
+}

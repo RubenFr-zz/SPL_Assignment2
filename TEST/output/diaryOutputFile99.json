@@ -1,0 +1,69 @@
+{
+  "total": 43,
+  "reports": [
+    {
+      "missionName": "Keep Summer safe.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "007",
+        "000"
+      ],
+      "agentsName": [
+        "Baby Legs",
+        "Mr. Poopybutthole"
+      ],
+      "gadget": "Interdimensional Goggles3",
+      "timeIssued": 3,
+      "QTime": 3,
+      "timeCreated": 5
+    },
+    {
+      "missionName": "Can somebody just let me out of here? If I die in a cage I lose a bet.",
+      "M": 6,
+      "MoneyPenny": 12,
+      "agentsSerialNumbers": [
+        "000"
+      ],
+      "agentsName": [
+        "Mr. Poopybutthole"
+      ],
+      "gadget": "Cognition amplifier2",
+      "timeIssued": 12,
+      "QTime": 12,
+      "timeCreated": 14
+    },
+    {
+      "missionName": "He\u0027s not a hot girl. He can\u0027t just bail on his life and set up shop in someone else\u0027s.",
+      "M": 2,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "001",
+        "002"
+      ],
+      "agentsName": [
+        "Shrimply Pibbles",
+        "Revolio \u0027Gearhead\u0027 Clockberg, Jr."
+      ],
+      "gadget": "Neutrino bomb",
+      "timeIssued": 8,
+      "QTime": 8,
+      "timeCreated": 19
+    },
+    {
+      "missionName": "I\u0027m the devil. What should I do when I fail? Give myself an ice cream?",
+      "M": 10,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "004"
+      ],
+      "agentsName": [
+        "Tinkles"
+      ],
+      "gadget": "Laser Gun",
+      "timeIssued": 24,
+      "QTime": 24,
+      "timeCreated": 28
+    }
+  ]
+}

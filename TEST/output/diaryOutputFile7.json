@@ -1,0 +1,113 @@
+{
+  "total": 46,
+  "reports": [
+    {
+      "missionName": "Where are my testicles, Summer?",
+      "M": 2,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "004",
+        "001",
+        "005",
+        "007"
+      ],
+      "agentsName": [
+        "Scary Terry",
+        "Loggins",
+        "Morty Smith",
+        "Mr. Meeseeks"
+      ],
+      "gadget": "Combat suit",
+      "timeIssued": 1,
+      "QTime": 1,
+      "timeCreated": 2
+    },
+    {
+      "missionName": "Go home and drink, grandpa.",
+      "M": 4,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "007",
+        "000",
+        "004"
+      ],
+      "agentsName": [
+        "Mr. Meeseeks",
+        "Tophat Jones",
+        "Scary Terry"
+      ],
+      "gadget": "Futuristic guns",
+      "timeIssued": 1,
+      "QTime": 2,
+      "timeCreated": 5
+    },
+    {
+      "missionName": "What about the reality where Hitler cured cancer, Morty? The answer is: Don\u0027t think about it.",
+      "M": 8,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "001"
+      ],
+      "agentsName": [
+        "Loggins"
+      ],
+      "gadget": "Froopyland Chalk3",
+      "timeIssued": 4,
+      "QTime": 4,
+      "timeCreated": 10
+    },
+    {
+      "missionName": "Little tip, Morty. Never clean DNA vials with your spit.",
+      "M": 3,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "005",
+        "003"
+      ],
+      "agentsName": [
+        "Morty Smith",
+        "Lighthouse Chief"
+      ],
+      "gadget": "Demonic Alien Containment Box",
+      "timeIssued": 1,
+      "QTime": 2,
+      "timeCreated": 10
+    },
+    {
+      "missionName": "So what if the most meaningful day in your life was a simulation operating at minimum complexity.",
+      "M": 16,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "000",
+        "001",
+        "008",
+        "002"
+      ],
+      "agentsName": [
+        "Tophat Jones",
+        "Loggins",
+        "Baby Legs",
+        "Arthricia"
+      ],
+      "gadget": "Purge Suit7",
+      "timeIssued": 8,
+      "QTime": 10,
+      "timeCreated": 14
+    },
+    {
+      "missionName": "Don’t even trip dawg.",
+      "M": 5,
+      "MoneyPenny": 12,
+      "agentsSerialNumbers": [
+        "003"
+      ],
+      "agentsName": [
+        "Lighthouse Chief"
+      ],
+      "gadget": "Futuristic guns3",
+      "timeIssued": 4,
+      "QTime": 10,
+      "timeCreated": 17
+    }
+  ]
+}

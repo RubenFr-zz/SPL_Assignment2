@@ -1,0 +1,160 @@
+{
+  "total": 43,
+  "reports": [
+    {
+      "missionName": "I don\u0027t get it and I don\u0027t need to.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "001",
+        "002",
+        "003",
+        "005"
+      ],
+      "agentsName": [
+        "Squanchy",
+        "Krombopulos Michael",
+        "Unity",
+        "Arthricia"
+      ],
+      "gadget": "Emergency Bionic Arm2",
+      "timeIssued": 2,
+      "QTime": 2,
+      "timeCreated": 7
+    },
+    {
+      "missionName": "Hello Jerry, come to rub my face in urine again?",
+      "M": 5,
+      "MoneyPenny": 8,
+      "agentsSerialNumbers": [
+        "007"
+      ],
+      "agentsName": [
+        "Abradolf Lincler"
+      ],
+      "gadget": "Butter-passing robot",
+      "timeIssued": 8,
+      "QTime": 8,
+      "timeCreated": 10
+    },
+    {
+      "missionName": "So what if the most meaningful day in your life was a simulation operating at minimum complexity.",
+      "M": 2,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "000",
+        "003"
+      ],
+      "agentsName": [
+        "Tammy Gueterman",
+        "Unity"
+      ],
+      "gadget": "Froopyland Chalk",
+      "timeIssued": 2,
+      "QTime": 7,
+      "timeCreated": 22
+    },
+    {
+      "missionName": "Sometimes science is a lot more art, than science. A lot of people don\u0027t get that.",
+      "M": 3,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "000"
+      ],
+      "agentsName": [
+        "Tammy Gueterman"
+      ],
+      "gadget": "Futuristic guns",
+      "timeIssued": 3,
+      "QTime": 21,
+      "timeCreated": 25
+    },
+    {
+      "missionName": "Having a family doesn\u0027t mean that you stop being an individual.",
+      "M": 4,
+      "MoneyPenny": 10,
+      "agentsSerialNumbers": [
+        "003"
+      ],
+      "agentsName": [
+        "Unity"
+      ],
+      "gadget": "Interdimensional cable TV box",
+      "timeIssued": 8,
+      "QTime": 21,
+      "timeCreated": 34
+    },
+    {
+      "missionName": "The first rule of space travel kids is always check out distress beacons. Nine out of ten times it\u0027s a ship full of dead aliens and a bunch of free shit! One out of ten times it\u0027s a deadly trap, but... I\u0027m ready to roll those dice!",
+      "M": 6,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "004",
+        "003",
+        "007"
+      ],
+      "agentsName": [
+        "Dr. Glip-Glop",
+        "Unity",
+        "Abradolf Lincler"
+      ],
+      "gadget": "Interdimensional Goggles2",
+      "timeIssued": 8,
+      "QTime": 34,
+      "timeCreated": 47
+    },
+    {
+      "missionName": "Listen, I\u0027m not the nicest guy in the universe, because I\u0027m the smartest, and being nice is something stupid people do to hedge their bets.",
+      "M": 2,
+      "MoneyPenny": 8,
+      "agentsSerialNumbers": [
+        "002",
+        "001",
+        "006"
+      ],
+      "agentsName": [
+        "Krombopulos Michael",
+        "Squanchy",
+        "Morty Jr."
+      ],
+      "gadget": "Neutrino bomb",
+      "timeIssued": 42,
+      "QTime": 47,
+      "timeCreated": 54
+    },
+    {
+      "missionName": "HI! I\u0027M MR MEESEEKS! LOOK AT ME!",
+      "M": 8,
+      "MoneyPenny": 8,
+      "agentsSerialNumbers": [
+        "004",
+        "003"
+      ],
+      "agentsName": [
+        "Dr. Glip-Glop",
+        "Unity"
+      ],
+      "gadget": "Timeline viewer2",
+      "timeIssued": 11,
+      "QTime": 47,
+      "timeCreated": 60
+    },
+    {
+      "missionName": "This sounds like something The One True Morty might say.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "003",
+        "006"
+      ],
+      "agentsName": [
+        "Unity",
+        "Morty Jr."
+      ],
+      "gadget": "Emergency Bionic Arm",
+      "timeIssued": 16,
+      "QTime": 60,
+      "timeCreated": 69
+    }
+  ]
+}

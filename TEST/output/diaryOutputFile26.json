@@ -1,0 +1,103 @@
+{
+  "total": 20,
+  "reports": [
+    {
+      "missionName": "Ohh yea, you gotta get schwifty.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "001",
+        "002"
+      ],
+      "agentsName": [
+        "Gazorpazorpfield",
+        "Unity"
+      ],
+      "gadget": "Grappling Shoes2",
+      "timeIssued": 3,
+      "QTime": 3,
+      "timeCreated": 13
+    },
+    {
+      "missionName": "No no, If I wanted to be sober, I wouldn’t have gotten drunk.",
+      "M": 3,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "000"
+      ],
+      "agentsName": [
+        "Jerry\u0027s Mytholog"
+      ],
+      "gadget": "Time freezer",
+      "timeIssued": 5,
+      "QTime": 13,
+      "timeCreated": 20
+    },
+    {
+      "missionName": "Great, now I have to take over an entire planet because of your stupid boobs.",
+      "M": 2,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "001",
+        "002"
+      ],
+      "agentsName": [
+        "Gazorpazorpfield",
+        "Unity"
+      ],
+      "gadget": "Grappling Shoes",
+      "timeIssued": 3,
+      "QTime": 13,
+      "timeCreated": 23
+    },
+    {
+      "missionName": "I\u0027m the devil. What should I do when I fail? Give myself an ice cream?",
+      "M": 4,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "002"
+      ],
+      "agentsName": [
+        "Unity"
+      ],
+      "gadget": "Portal gun",
+      "timeIssued": 6,
+      "QTime": 22,
+      "timeCreated": 25
+    },
+    {
+      "missionName": "Great, now I have to take over an entire planet because of your stupid boobs.",
+      "M": 5,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "000",
+        "001"
+      ],
+      "agentsName": [
+        "Jerry\u0027s Mytholog",
+        "Gazorpazorpfield"
+      ],
+      "gadget": "Portal gun2",
+      "timeIssued": 8,
+      "QTime": 22,
+      "timeCreated": 33
+    },
+    {
+      "missionName": "Pluto\u0027s a planet.",
+      "M": 3,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "002",
+        "003"
+      ],
+      "agentsName": [
+        "Unity",
+        "Snowball"
+      ],
+      "gadget": "Neutrino bomb",
+      "timeIssued": 22,
+      "QTime": 34,
+      "timeCreated": 42
+    }
+  ]
+}

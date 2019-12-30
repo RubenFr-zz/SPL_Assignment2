@@ -1,0 +1,109 @@
+{
+  "total": 31,
+  "reports": [
+    {
+      "missionName": "There is no god, Summer; gotta rip that band-aid off now you\u0027ll thank me later.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "004",
+        "000",
+        "001"
+      ],
+      "agentsName": [
+        "Tammy Gueterman",
+        "Beth Smith",
+        "Tinkles"
+      ],
+      "gadget": "Neutrino bomb3",
+      "timeIssued": 1,
+      "QTime": 1,
+      "timeCreated": 9
+    },
+    {
+      "missionName": "Go home and drink, grandpa.",
+      "M": 2,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "000",
+        "003"
+      ],
+      "agentsName": [
+        "Beth Smith",
+        "Dr. Glip-Glop"
+      ],
+      "gadget": "Space cruiser2",
+      "timeIssued": 4,
+      "QTime": 9,
+      "timeCreated": 12
+    },
+    {
+      "missionName": "Little tip, Morty. Never clean DNA vials with your spit.",
+      "M": 4,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "004",
+        "002"
+      ],
+      "agentsName": [
+        "Tammy Gueterman",
+        "Eyeholes Man"
+      ],
+      "gadget": "Purge Suit6",
+      "timeIssued": 8,
+      "QTime": 9,
+      "timeCreated": 13
+    },
+    {
+      "missionName": "Great, now I have to take over an entire planet because of your stupid boobs.",
+      "M": 5,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "000",
+        "002",
+        "001"
+      ],
+      "agentsName": [
+        "Beth Smith",
+        "Eyeholes Man",
+        "Tinkles"
+      ],
+      "gadget": "Grappling Shoes",
+      "timeIssued": 6,
+      "QTime": 13,
+      "timeCreated": 20
+    },
+    {
+      "missionName": "Don’t even trip dawg.",
+      "M": 3,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "003",
+        "000"
+      ],
+      "agentsName": [
+        "Dr. Glip-Glop",
+        "Beth Smith"
+      ],
+      "gadget": "Curse Remover2",
+      "timeIssued": 11,
+      "QTime": 20,
+      "timeCreated": 31
+    },
+    {
+      "missionName": "What about the reality where Hitler cured cancer, Morty? The answer is: Don\u0027t think about it.",
+      "M": 8,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "003"
+      ],
+      "agentsName": [
+        "Dr. Glip-Glop"
+      ],
+      "gadget": "Portal gun5",
+      "timeIssued": 20,
+      "QTime": 31,
+      "timeCreated": 44
+    }
+  ]
+}

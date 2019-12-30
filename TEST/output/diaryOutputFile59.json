@@ -1,0 +1,69 @@
+{
+  "total": 46,
+  "reports": [
+    {
+      "missionName": "Existence is pain to a meeseeks Jerry, and we will do anything to alleviate that pain.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "007",
+        "005"
+      ],
+      "agentsName": [
+        "Revolio \u0027Gearhead\u0027 Clockberg, Jr.",
+        "Jan Michael Vincent"
+      ],
+      "gadget": "Timeline viewer3",
+      "timeIssued": 1,
+      "QTime": 1,
+      "timeCreated": 13
+    },
+    {
+      "missionName": "Ohh yea, you gotta get schwifty.",
+      "M": 2,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "004",
+        "005"
+      ],
+      "agentsName": [
+        "Arthricia",
+        "Jan Michael Vincent"
+      ],
+      "gadget": "Ionic Defibulizer",
+      "timeIssued": 1,
+      "QTime": 12,
+      "timeCreated": 20
+    },
+    {
+      "missionName": "It\u0027s fine, everything is fine. Theres an infinite number of realities Morty and in a few dozen of those I got lucky and turned everything back to normal.",
+      "M": 15,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "007"
+      ],
+      "agentsName": [
+        "Revolio \u0027Gearhead\u0027 Clockberg, Jr."
+      ],
+      "gadget": "Timeline viewer",
+      "timeIssued": 19,
+      "QTime": 20,
+      "timeCreated": 28
+    },
+    {
+      "missionName": "It\u0027s a figure of speech, Morty! They\u0027re bureaucrats! I don\u0027t respect them. Just keep shooting, Morty! You have no idea what prison is like here!",
+      "M": 8,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "005"
+      ],
+      "agentsName": [
+        "Jan Michael Vincent"
+      ],
+      "gadget": "Combat suit2",
+      "timeIssued": 8,
+      "QTime": 20,
+      "timeCreated": 32
+    }
+  ]
+}

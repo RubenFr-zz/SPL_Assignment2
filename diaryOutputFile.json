@@ -1,4 +1,149 @@
 {
-  "total": 2,
-  "reports": []
+  "total": 30,
+  "total reported": 9,
+  "reports": [
+    {
+      "missionName": "Nobody exists on purpose. Nobody belongs anywhere. Everybody is going to die.",
+      "M": 1,
+      "MoneyPenny": 3,
+      "agentsSerialNumbers": [
+        "002",
+        "005"
+      ],
+      "agentsName": [
+        "Summer Smith",
+        "Beta VII"
+      ],
+      "gadget": "Purge Suit",
+      "timeIssued": 1,
+      "QTime": 1,
+      "timeCreated": 9
+    },
+    {
+      "missionName": "Oh, I\u0027m sorry Morty, are you the scientist or are you the kid who wanted to get laid?",
+      "M": 18,
+      "MoneyPenny": 11,
+      "agentsSerialNumbers": [
+        "004"
+      ],
+      "agentsName": [
+        "Abradolf Lincler"
+      ],
+      "gadget": "Curse Remover",
+      "timeIssued": 6,
+      "QTime": 6,
+      "timeCreated": 16
+    },
+    {
+      "missionName": "Uncertainty is inherently unsustainable. Eventually, everything either is or isn\u0027t.",
+      "M": 19,
+      "MoneyPenny": 23,
+      "agentsSerialNumbers": [
+        "001",
+        "004"
+      ],
+      "agentsName": [
+        "Morty Jr.",
+        "Abradolf Lincler"
+      ],
+      "gadget": "Love Potion3",
+      "timeIssued": 16,
+      "QTime": 16,
+      "timeCreated": 31
+    },
+    {
+      "missionName": "Don’t even trip dawg.",
+      "M": 7,
+      "MoneyPenny": 41,
+      "agentsSerialNumbers": [
+        "004"
+      ],
+      "agentsName": [
+        "Abradolf Lincler"
+      ],
+      "gadget": "Ionic Defibulizer3",
+      "timeIssued": 27,
+      "QTime": 31,
+      "timeCreated": 36
+    },
+    {
+      "missionName": "What about the reality where Hitler cured cancer, Morty? The answer is: Don\u0027t think about it.",
+      "M": 17,
+      "MoneyPenny": 51,
+      "agentsSerialNumbers": [
+        "001"
+      ],
+      "agentsName": [
+        "Morty Jr."
+      ],
+      "gadget": "Meeseeks Box",
+      "timeIssued": 31,
+      "QTime": 31,
+      "timeCreated": 36
+    },
+    {
+      "missionName": "Get off the high road Summer. We all got pink eye because you wouldn\u0027t stop texting on the toilet.",
+      "M": 27,
+      "MoneyPenny": 13,
+      "agentsSerialNumbers": [
+        "003",
+        "004"
+      ],
+      "agentsName": [
+        "Tinkles",
+        "Abradolf Lincler"
+      ],
+      "gadget": "Ionic Defibulizer",
+      "timeIssued": 9,
+      "QTime": 36,
+      "timeCreated": 39
+    },
+    {
+      "missionName": "This isn\u0027t Game of Thrones, Morty.",
+      "M": 11,
+      "MoneyPenny": 31,
+      "agentsSerialNumbers": [
+        "004"
+      ],
+      "agentsName": [
+        "Abradolf Lincler"
+      ],
+      "gadget": "Space cruiser",
+      "timeIssued": 21,
+      "QTime": 39,
+      "timeCreated": 46
+    },
+    {
+      "missionName": "No no, If I wanted to be sober, I wouldn’t have gotten drunk.",
+      "M": 5,
+      "MoneyPenny": 5,
+      "agentsSerialNumbers": [
+        "002",
+        "003"
+      ],
+      "agentsName": [
+        "Summer Smith",
+        "Tinkles"
+      ],
+      "gadget": "Timeline viewer2",
+      "timeIssued": 2,
+      "QTime": 39,
+      "timeCreated": 46
+    },
+    {
+      "missionName": "Traditionally, science fairs are a father/son thing. Well, scientifically, traditions are an idiot thing.",
+      "M": 22,
+      "MoneyPenny": 15,
+      "agentsSerialNumbers": [
+        "003"
+      ],
+      "agentsName": [
+        "Tinkles"
+      ],
+      "gadget": "Shrink ray",
+      "timeIssued": 11,
+      "QTime": 46,
+      "timeCreated": 61
+    }
+  ]
 }

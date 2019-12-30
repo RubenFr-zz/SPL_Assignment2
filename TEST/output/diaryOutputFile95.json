@@ -1,0 +1,188 @@
+{
+  "total": 29,
+  "reports": [
+    {
+      "missionName": "Oh Summer, haha first race war, huh?",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "004",
+        "000"
+      ],
+      "agentsName": [
+        "Lighthouse Chief",
+        "Evil Morty"
+      ],
+      "gadget": "Neutrino bomb",
+      "timeIssued": 1,
+      "QTime": 1,
+      "timeCreated": 2
+    },
+    {
+      "missionName": "Aww, gee, you got me there Rick.",
+      "M": 4,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "002"
+      ],
+      "agentsName": [
+        "Summer Smith"
+      ],
+      "gadget": "Space cruiser",
+      "timeIssued": 5,
+      "QTime": 5,
+      "timeCreated": 6
+    },
+    {
+      "missionName": "Traditionally, science fairs are a father/son thing. Well, scientifically, traditions are an idiot thing.",
+      "M": 2,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "004",
+        "000",
+        "001"
+      ],
+      "agentsName": [
+        "Lighthouse Chief",
+        "Evil Morty",
+        "Dr. Glip-Glop"
+      ],
+      "gadget": "Purge Suit3",
+      "timeIssued": 2,
+      "QTime": 2,
+      "timeCreated": 6
+    },
+    {
+      "missionName": "Get off the high road Summer. We all got pink eye because you wouldn\u0027t stop texting on the toilet.",
+      "M": 5,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "004",
+        "002"
+      ],
+      "agentsName": [
+        "Lighthouse Chief",
+        "Summer Smith"
+      ],
+      "gadget": "Futuristic guns2",
+      "timeIssued": 9,
+      "QTime": 9,
+      "timeCreated": 15
+    },
+    {
+      "missionName": "Hello Jerry, come to rub my face in urine again?",
+      "M": 3,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "000"
+      ],
+      "agentsName": [
+        "Evil Morty"
+      ],
+      "gadget": "Emergency Bionic Arm",
+      "timeIssued": 3,
+      "QTime": 6,
+      "timeCreated": 17
+    },
+    {
+      "missionName": "Weddings are basically funerals with cake.",
+      "M": 2,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "001"
+      ],
+      "agentsName": [
+        "Dr. Glip-Glop"
+      ],
+      "gadget": "Demonic Alien Containment Box3",
+      "timeIssued": 12,
+      "QTime": 12,
+      "timeCreated": 23
+    },
+    {
+      "missionName": "Yo! What up my glip glops!",
+      "M": 6,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "000"
+      ],
+      "agentsName": [
+        "Evil Morty"
+      ],
+      "gadget": "Froopyland Chalk",
+      "timeIssued": 9,
+      "QTime": 16,
+      "timeCreated": 24
+    },
+    {
+      "missionName": "Where are my testicles, Summer?",
+      "M": 7,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "003",
+        "000",
+        "002"
+      ],
+      "agentsName": [
+        "Tammy Gueterman",
+        "Evil Morty",
+        "Summer Smith"
+      ],
+      "gadget": "Purge Suit5",
+      "timeIssued": 11,
+      "QTime": 24,
+      "timeCreated": 32
+    },
+    {
+      "missionName": "HI! I\u0027M MR MEESEEKS! LOOK AT ME!",
+      "M": 3,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "001",
+        "000"
+      ],
+      "agentsName": [
+        "Dr. Glip-Glop",
+        "Evil Morty"
+      ],
+      "gadget": "Love Potion",
+      "timeIssued": 24,
+      "QTime": 32,
+      "timeCreated": 37
+    },
+    {
+      "missionName": "Existence is pain to a meeseeks Jerry, and we will do anything to alleviate that pain.",
+      "M": 1,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "000",
+        "003"
+      ],
+      "agentsName": [
+        "Evil Morty",
+        "Tammy Gueterman"
+      ],
+      "gadget": "Futuristic guns3",
+      "timeIssued": 12,
+      "QTime": 37,
+      "timeCreated": 45
+    },
+    {
+      "missionName": "Nobody exists on purpose. Nobody belongs anywhere. Everybody is going to die.",
+      "M": 7,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "004",
+        "003"
+      ],
+      "agentsName": [
+        "Lighthouse Chief",
+        "Tammy Gueterman"
+      ],
+      "gadget": "Morty\u0027s Mind Blowers2",
+      "timeIssued": 44,
+      "QTime": 45,
+      "timeCreated": 59
+    }
+  ]
+}

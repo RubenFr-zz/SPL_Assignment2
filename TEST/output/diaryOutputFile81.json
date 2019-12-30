@@ -1,0 +1,210 @@
+{
+  "total": 22,
+  "reports": [
+    {
+      "missionName": "The first rule of space travel kids is always check out distress beacons. Nine out of ten times it\u0027s a ship full of dead aliens and a bunch of free shit! One out of ten times it\u0027s a deadly trap, but... I\u0027m ready to roll those dice!",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "001"
+      ],
+      "agentsName": [
+        "Gazorpazorpfield"
+      ],
+      "gadget": "Laser Gun",
+      "timeIssued": 5,
+      "QTime": 5,
+      "timeCreated": 12
+    },
+    {
+      "missionName": "WUBBA LUBBA DUB DUBS!!!",
+      "M": 2,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "002",
+        "001"
+      ],
+      "agentsName": [
+        "Shrimply Pibbles",
+        "Gazorpazorpfield"
+      ],
+      "gadget": "Morty\u0027s Mind Blowers",
+      "timeIssued": 6,
+      "QTime": 12,
+      "timeCreated": 18
+    },
+    {
+      "missionName": "Nobody exists on purpose. Nobody belongs anywhere. Everybody is going to die.",
+      "M": 3,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "000"
+      ],
+      "agentsName": [
+        "Tiny Rick"
+      ],
+      "gadget": "Shrink ray",
+      "timeIssued": 8,
+      "QTime": 8,
+      "timeCreated": 22
+    },
+    {
+      "missionName": "I hate to break it to you, but what people call \u0027love\u0027 is just a chemical reaction that compels animals to breed. It hits hard Morty then it slowly fades leaving you stranded in a failing marriage. I did it. Your parents are going to do it. Break the cycle Morty, rise above, focus on science.",
+      "M": 6,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "001"
+      ],
+      "agentsName": [
+        "Gazorpazorpfield"
+      ],
+      "gadget": "Ionic Defibulizer",
+      "timeIssued": 15,
+      "QTime": 18,
+      "timeCreated": 22
+    },
+    {
+      "missionName": "Nobody exists on purpose. Nobody belongs anywhere. Everybody is going to die.",
+      "M": 5,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "002"
+      ],
+      "agentsName": [
+        "Shrimply Pibbles"
+      ],
+      "gadget": "Combat suit2",
+      "timeIssued": 10,
+      "QTime": 18,
+      "timeCreated": 31
+    },
+    {
+      "missionName": "Ohh yea, you gotta get schwifty.",
+      "M": 7,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "000"
+      ],
+      "agentsName": [
+        "Tiny Rick"
+      ],
+      "gadget": "Particle Beam Wrist Watch \u0026 Snake Holster2",
+      "timeIssued": 17,
+      "QTime": 21,
+      "timeCreated": 36
+    },
+    {
+      "missionName": "Existence is pain to a meeseeks Jerry, and we will do anything to alleviate that pain.",
+      "M": 3,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "001",
+        "002"
+      ],
+      "agentsName": [
+        "Gazorpazorpfield",
+        "Shrimply Pibbles"
+      ],
+      "gadget": "Froopyland Chalk",
+      "timeIssued": 25,
+      "QTime": 31,
+      "timeCreated": 37
+    },
+    {
+      "missionName": "Well then get your shit together. Get it all together and put it in a backpack, all your shit, so it\u0027s together. ...and if you gotta take it somewhere, take it somewhere ya know? Take it to the shit store and sell it, or put it in a shit museum. I don\u0027t care what you do, you just gotta get it together... Get your shit together.",
+      "M": 4,
+      "MoneyPenny": 8,
+      "agentsSerialNumbers": [
+        "002"
+      ],
+      "agentsName": [
+        "Shrimply Pibbles"
+      ],
+      "gadget": "Demonic Alien Containment Box",
+      "timeIssued": 9,
+      "QTime": 37,
+      "timeCreated": 38
+    },
+    {
+      "missionName": "I\u0027m more than just a hammer.",
+      "M": 8,
+      "MoneyPenny": 8,
+      "agentsSerialNumbers": [
+        "000",
+        "001"
+      ],
+      "agentsName": [
+        "Tiny Rick",
+        "Gazorpazorpfield"
+      ],
+      "gadget": "Emergency Bionic Arm",
+      "timeIssued": 18,
+      "QTime": 37,
+      "timeCreated": 49
+    },
+    {
+      "missionName": "Aw, c\u0027mon Rick. That doesn\u0027t seem so bad.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "000"
+      ],
+      "agentsName": [
+        "Tiny Rick"
+      ],
+      "gadget": "Combat suit",
+      "timeIssued": 38,
+      "QTime": 49,
+      "timeCreated": 54
+    },
+    {
+      "missionName": "Well then get your shit together. Get it all together and put it in a backpack, all your shit, so it\u0027s together. ...and if you gotta take it somewhere, take it somewhere ya know? Take it to the shit store and sell it, or put it in a shit museum. I don\u0027t care what you do, you just gotta get it together... Get your shit together.",
+      "M": 6,
+      "MoneyPenny": 8,
+      "agentsSerialNumbers": [
+        "002",
+        "001"
+      ],
+      "agentsName": [
+        "Shrimply Pibbles",
+        "Gazorpazorpfield"
+      ],
+      "gadget": "Laser Gun2",
+      "timeIssued": 28,
+      "QTime": 49,
+      "timeCreated": 60
+    },
+    {
+      "missionName": "Aw, c\u0027mon Rick. That doesn\u0027t seem so bad.",
+      "M": 3,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "001"
+      ],
+      "agentsName": [
+        "Gazorpazorpfield"
+      ],
+      "gadget": "Butter-passing robot",
+      "timeIssued": 49,
+      "QTime": 60,
+      "timeCreated": 61
+    },
+    {
+      "missionName": "Weddings are basically funerals with cake.",
+      "M": 2,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "002",
+        "001"
+      ],
+      "agentsName": [
+        "Shrimply Pibbles",
+        "Gazorpazorpfield"
+      ],
+      "gadget": "Portal gun",
+      "timeIssued": 42,
+      "QTime": 61,
+      "timeCreated": 66
+    }
+  ]
+}

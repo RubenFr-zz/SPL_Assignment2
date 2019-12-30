@@ -1,0 +1,127 @@
+{
+  "total": 49,
+  "reports": [
+    {
+      "missionName": "You\u0027re like Hitler, except...Hitler cared about Germany, or something.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "003",
+        "004",
+        "006",
+        "001",
+        "005"
+      ],
+      "agentsName": [
+        "Morty Jr.",
+        "Tinkles",
+        "Revolio \u0027Gearhead\u0027 Clockberg, Jr.",
+        "Tammy Gueterman",
+        "Abradolf Lincler"
+      ],
+      "gadget": "Ionic Defibulizer2",
+      "timeIssued": 1,
+      "QTime": 1,
+      "timeCreated": 9
+    },
+    {
+      "missionName": "I\u0027m more than just a hammer.",
+      "M": 2,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "004",
+        "005",
+        "003",
+        "006",
+        "000"
+      ],
+      "agentsName": [
+        "Tinkles",
+        "Abradolf Lincler",
+        "Morty Jr.",
+        "Revolio \u0027Gearhead\u0027 Clockberg, Jr.",
+        "Baby Legs"
+      ],
+      "gadget": "Interdimensional cable TV box",
+      "timeIssued": 1,
+      "QTime": 9,
+      "timeCreated": 23
+    },
+    {
+      "missionName": "WUBBA LUBBA DUB DUBS!!!",
+      "M": 6,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "003",
+        "002",
+        "004",
+        "000"
+      ],
+      "agentsName": [
+        "Morty Jr.",
+        "Fart",
+        "Tinkles",
+        "Baby Legs"
+      ],
+      "gadget": "Purge Suit3",
+      "timeIssued": 12,
+      "QTime": 23,
+      "timeCreated": 37
+    },
+    {
+      "missionName": "That\u0027s the difference between you and me, Morty. I never go back to the carpet store.",
+      "M": 4,
+      "MoneyPenny": 8,
+      "agentsSerialNumbers": [
+        "006",
+        "004",
+        "002",
+        "000"
+      ],
+      "agentsName": [
+        "Revolio \u0027Gearhead\u0027 Clockberg, Jr.",
+        "Tinkles",
+        "Fart",
+        "Baby Legs"
+      ],
+      "gadget": "Grappling Shoes",
+      "timeIssued": 8,
+      "QTime": 36,
+      "timeCreated": 47
+    },
+    {
+      "missionName": "I\u0027m more than just a hammer.",
+      "M": 3,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "007",
+        "001",
+        "000"
+      ],
+      "agentsName": [
+        "King Jellybean",
+        "Tammy Gueterman",
+        "Baby Legs"
+      ],
+      "gadget": "Cognition amplifier",
+      "timeIssued": 2,
+      "QTime": 47,
+      "timeCreated": 53
+    },
+    {
+      "missionName": "That just sounds like slavery with extra steps.",
+      "M": 10,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "006"
+      ],
+      "agentsName": [
+        "Revolio \u0027Gearhead\u0027 Clockberg, Jr."
+      ],
+      "gadget": "Ionic Defibulizer3",
+      "timeIssued": 15,
+      "QTime": 47,
+      "timeCreated": 57
+    }
+  ]
+}

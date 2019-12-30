@@ -1,0 +1,88 @@
+{
+  "total": 36,
+  "reports": [
+    {
+      "missionName": "Get off the high road Summer. We all got pink eye because you wouldn\u0027t stop texting on the toilet.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "004"
+      ],
+      "agentsName": [
+        "Abradolf Lincler"
+      ],
+      "gadget": "Combat suit3",
+      "timeIssued": 3,
+      "QTime": 3,
+      "timeCreated": 11
+    },
+    {
+      "missionName": "Pluto\u0027s a planet.",
+      "M": 2,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "001",
+        "004",
+        "006"
+      ],
+      "agentsName": [
+        "Beta VII",
+        "Abradolf Lincler",
+        "Tophat Jones"
+      ],
+      "gadget": "Interdimensional cable TV box",
+      "timeIssued": 6,
+      "QTime": 11,
+      "timeCreated": 13
+    },
+    {
+      "missionName": "So what if the most meaningful day in your life was a simulation operating at minimum complexity.",
+      "M": 4,
+      "MoneyPenny": 8,
+      "agentsSerialNumbers": [
+        "000",
+        "001",
+        "006"
+      ],
+      "agentsName": [
+        "Mr. Poopybutthole",
+        "Beta VII",
+        "Tophat Jones"
+      ],
+      "gadget": "Froopyland Chalk2",
+      "timeIssued": 8,
+      "QTime": 13,
+      "timeCreated": 15
+    },
+    {
+      "missionName": "So what if the most meaningful day in your life was a simulation operating at minimum complexity.",
+      "M": 9,
+      "MoneyPenny": 8,
+      "agentsSerialNumbers": [
+        "000"
+      ],
+      "agentsName": [
+        "Mr. Poopybutthole"
+      ],
+      "gadget": "Particle Beam Wrist Watch \u0026 Snake Holster",
+      "timeIssued": 22,
+      "QTime": 22,
+      "timeCreated": 32
+    },
+    {
+      "missionName": "Oh, I\u0027m sorry Morty, are you the scientist or are you the kid who wanted to get laid?",
+      "M": 1,
+      "MoneyPenny": 8,
+      "agentsSerialNumbers": [
+        "000"
+      ],
+      "agentsName": [
+        "Mr. Poopybutthole"
+      ],
+      "gadget": "Dream inceptor2",
+      "timeIssued": 36,
+      "QTime": 36,
+      "timeCreated": 44
+    }
+  ]
+}

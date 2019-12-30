@@ -1,0 +1,69 @@
+{
+  "total": 35,
+  "reports": [
+    {
+      "missionName": "Oh yeah, If you think my Rick is Dead, then he is alive. If you think you\u0027re safe, then he\u0027s coming for you.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "003"
+      ],
+      "agentsName": [
+        "Morty Smith"
+      ],
+      "gadget": "Grappling Shoes3",
+      "timeIssued": 1,
+      "QTime": 1,
+      "timeCreated": 16
+    },
+    {
+      "missionName": "There is no god, Summer; gotta rip that band-aid off now you\u0027ll thank me later.",
+      "M": 2,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "005",
+        "002",
+        "003"
+      ],
+      "agentsName": [
+        "King Jellybean",
+        "Evil Morty",
+        "Morty Smith"
+      ],
+      "gadget": "Shrink ray",
+      "timeIssued": 2,
+      "QTime": 15,
+      "timeCreated": 22
+    },
+    {
+      "missionName": "No no, If I wanted to be sober, I wouldn’t have gotten drunk.",
+      "M": 6,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "000"
+      ],
+      "agentsName": [
+        "Mr. Goldenfold"
+      ],
+      "gadget": "Time freezer2",
+      "timeIssued": 8,
+      "QTime": 15,
+      "timeCreated": 22
+    },
+    {
+      "missionName": "Ohh yea, you gotta get schwifty.",
+      "M": 3,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "005"
+      ],
+      "agentsName": [
+        "King Jellybean"
+      ],
+      "gadget": "Froopyland Chalk",
+      "timeIssued": 2,
+      "QTime": 23,
+      "timeCreated": 30
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "total": 34,
+  "reports": [
+    {
+      "missionName": "Ohh yea, you gotta get schwifty.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "003",
+        "001",
+        "002"
+      ],
+      "agentsName": [
+        "King Jellybean",
+        "Krombopulos Michael",
+        "Revolio \u0027Gearhead\u0027 Clockberg, Jr."
+      ],
+      "gadget": "Interdimensional Goggles2",
+      "timeIssued": 6,
+      "QTime": 6,
+      "timeCreated": 18
+    },
+    {
+      "missionName": "Weddings are basically funerals with cake.",
+      "M": 3,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "000",
+        "004",
+        "003"
+      ],
+      "agentsName": [
+        "Snowball",
+        "Tinkles",
+        "King Jellybean"
+      ],
+      "gadget": "Curse Remover",
+      "timeIssued": 7,
+      "QTime": 18,
+      "timeCreated": 27
+    },
+    {
+      "missionName": "That\u0027s the difference between you and me, Morty. I never go back to the carpet store.",
+      "M": 2,
+      "MoneyPenny": 8,
+      "agentsSerialNumbers": [
+        "005",
+        "001"
+      ],
+      "agentsName": [
+        "Jerry Smith",
+        "Krombopulos Michael"
+      ],
+      "gadget": "Interdimensional Goggles",
+      "timeIssued": 13,
+      "QTime": 18,
+      "timeCreated": 33
+    }
+  ]
+}

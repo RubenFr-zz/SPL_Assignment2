@@ -1,6 +1,5 @@
 package bgu.spl.mics.application.passiveObjects;
 
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -15,10 +14,15 @@ import java.util.concurrent.TimeUnit;
 public class Squad {
 
     private final HashMap<String, Agent> agents;
+    private final List<String> serialNumbers;
+    private boolean terminated;
+
     private final Object lock = new Object();
 
     private Squad() {
         this.agents = new HashMap<>();
+        this.serialNumbers = new LinkedList<>();
+        this.terminated = false;
     }
 
     /**
@@ -46,6 +50,7 @@ public class Squad {
     public void load(Agent[] agents) {
         for (Agent agent : agents) {
             this.agents.putIfAbsent(agent.getSerialNumber(), agent);
+            this.serialNumbers.add(agent.getSerialNumber());
         }
     }
 
@@ -59,8 +64,8 @@ public class Squad {
                     agents.get(serial).release();
             }
             lock.notifyAll();
+            System.out.println("Agents released: " + serials);
         }
-        System.out.println("Agents released");
     }
 
     /**
@@ -76,7 +81,6 @@ public class Squad {
                 System.out.println(new AgentNotAcquiredException().toString());
                 return;
             }
-
 
         try {
             TimeUnit.MILLISECONDS.sleep(time * 100);
@@ -96,9 +100,10 @@ public class Squad {
         synchronized (lock) {
             for (String serial : serials) {
                 if (agents.containsKey(serial)) {
-                    while (!agents.get(serial).isAvailable()) {
+                    while (!terminated && !agents.get(serial).isAvailable()) {
                         lock.wait();
                     }
+                    if(terminated) return false;
                     agents.get(serial).acquire();
                 } else {
                     releaseAgents(serials);
@@ -125,7 +130,24 @@ public class Squad {
         return list;
     }
 
-    public HashMap<String, Agent> getAgents() {
-        return agents;
+    public List<String> getSerialNumbers() {
+        return serialNumbers;
+    }
+
+    public boolean isTerminated() {
+        return terminated;
+    }
+
+    public void setTerminated(boolean terminated) {
+        this.terminated = terminated;
+        synchronized (lock){
+            lock.notifyAll();
+        }
+    }
+
+    public void clear() {
+        agents.clear();
+        serialNumbers.clear();
+        terminated = false;
     }
 }

@@ -1,0 +1,99 @@
+{
+  "total": 24,
+  "reports": [
+    {
+      "missionName": "Get off the high road Summer. We all got pink eye because you wouldn\u0027t stop texting on the toilet.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "003",
+        "002"
+      ],
+      "agentsName": [
+        "Jerry\u0027s Mytholog",
+        "Cousin Nicky"
+      ],
+      "gadget": "Space cruiser",
+      "timeIssued": 5,
+      "QTime": 5,
+      "timeCreated": 19
+    },
+    {
+      "missionName": "Having a family doesn\u0027t mean that you stop being an individual.",
+      "M": 4,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "000"
+      ],
+      "agentsName": [
+        "Beth\u0027s Mytholog"
+      ],
+      "gadget": "Curse Remover",
+      "timeIssued": 10,
+      "QTime": 10,
+      "timeCreated": 24
+    },
+    {
+      "missionName": "Yo! What up my glip glops!",
+      "M": 3,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "002",
+        "001"
+      ],
+      "agentsName": [
+        "Cousin Nicky",
+        "Baby Legs"
+      ],
+      "gadget": "Shrink ray",
+      "timeIssued": 8,
+      "QTime": 18,
+      "timeCreated": 26
+    },
+    {
+      "missionName": "Nobody exists on purpose. Nobody belongs anywhere. Everybody is going to die.",
+      "M": 2,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "003"
+      ],
+      "agentsName": [
+        "Jerry\u0027s Mytholog"
+      ],
+      "gadget": "Neutrino bomb2",
+      "timeIssued": 8,
+      "QTime": 18,
+      "timeCreated": 29
+    },
+    {
+      "missionName": "Little tip, Morty. Never clean DNA vials with your spit.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "001"
+      ],
+      "agentsName": [
+        "Baby Legs"
+      ],
+      "gadget": "Portal gun2",
+      "timeIssued": 22,
+      "QTime": 26,
+      "timeCreated": 40
+    },
+    {
+      "missionName": "Don’t even trip dawg.",
+      "M": 5,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "003"
+      ],
+      "agentsName": [
+        "Jerry\u0027s Mytholog"
+      ],
+      "gadget": "Cognition amplifier4",
+      "timeIssued": 11,
+      "QTime": 29,
+      "timeCreated": 44
+    }
+  ]
+}

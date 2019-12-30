@@ -1,0 +1,99 @@
+{
+  "total": 15,
+  "reports": [
+    {
+      "missionName": "He\u0027s not a hot girl. He can\u0027t just bail on his life and set up shop in someone else\u0027s.",
+      "M": 3,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "001",
+        "002"
+      ],
+      "agentsName": [
+        "Jerry Smith",
+        "Tinkles"
+      ],
+      "gadget": "Purge Suit",
+      "timeIssued": 6,
+      "QTime": 6,
+      "timeCreated": 9
+    },
+    {
+      "missionName": "Aw, c\u0027mon Rick. That doesn\u0027t seem so bad.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "000"
+      ],
+      "agentsName": [
+        "Evil Morty"
+      ],
+      "gadget": "Interdimensional Goggles2",
+      "timeIssued": 4,
+      "QTime": 4,
+      "timeCreated": 18
+    },
+    {
+      "missionName": "It\u0027s a figure of speech, Morty! They\u0027re bureaucrats! I don\u0027t respect them. Just keep shooting, Morty! You have no idea what prison is like here!",
+      "M": 5,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "001"
+      ],
+      "agentsName": [
+        "Jerry Smith"
+      ],
+      "gadget": "Emergency Bionic Arm",
+      "timeIssued": 13,
+      "QTime": 13,
+      "timeCreated": 25
+    },
+    {
+      "missionName": "Aw, c\u0027mon Rick. That doesn\u0027t seem so bad.",
+      "M": 2,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "000",
+        "001"
+      ],
+      "agentsName": [
+        "Evil Morty",
+        "Jerry Smith"
+      ],
+      "gadget": "Particle Beam Wrist Watch \u0026 Snake Holster",
+      "timeIssued": 4,
+      "QTime": 25,
+      "timeCreated": 36
+    },
+    {
+      "missionName": "Oh yeah, If you think my Rick is Dead, then he is alive. If you think you\u0027re safe, then he\u0027s coming for you.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "001"
+      ],
+      "agentsName": [
+        "Jerry Smith"
+      ],
+      "gadget": "Demonic Alien Containment Box",
+      "timeIssued": 29,
+      "QTime": 35,
+      "timeCreated": 40
+    },
+    {
+      "missionName": "Ohh yea, you gotta get schwifty.",
+      "M": 4,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "000"
+      ],
+      "agentsName": [
+        "Evil Morty"
+      ],
+      "gadget": "Dark matter",
+      "timeIssued": 10,
+      "QTime": 35,
+      "timeCreated": 43
+    }
+  ]
+}

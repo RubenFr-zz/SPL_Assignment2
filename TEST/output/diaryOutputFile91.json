@@ -1,0 +1,54 @@
+{
+  "total": 24,
+  "reports": [
+    {
+      "missionName": "Oh, I\u0027m sorry Morty, are you the scientist or are you the kid who wanted to get laid?",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "001",
+        "002"
+      ],
+      "agentsName": [
+        "Stealy",
+        "Beth Smith"
+      ],
+      "gadget": "Combat suit2",
+      "timeIssued": 1,
+      "QTime": 1,
+      "timeCreated": 4
+    },
+    {
+      "missionName": "I don\u0027t get it and I don\u0027t need to.",
+      "M": 3,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "000",
+        "001"
+      ],
+      "agentsName": [
+        "Rick Sanchez",
+        "Stealy"
+      ],
+      "gadget": "Emergency Bionic Arm",
+      "timeIssued": 1,
+      "QTime": 4,
+      "timeCreated": 6
+    },
+    {
+      "missionName": "Sometimes science is a lot more art, than science. A lot of people don\u0027t get that.",
+      "M": 2,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "002"
+      ],
+      "agentsName": [
+        "Beth Smith"
+      ],
+      "gadget": "Microverse battery",
+      "timeIssued": 1,
+      "QTime": 4,
+      "timeCreated": 15
+    }
+  ]
+}

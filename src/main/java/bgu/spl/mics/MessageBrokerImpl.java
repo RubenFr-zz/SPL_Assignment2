@@ -1,12 +1,14 @@
 package bgu.spl.mics;
 
+import bgu.spl.mics.application.messages.MissionReceivedEvent;
+import bgu.spl.mics.application.messages.SendAgentsEvent;
 import bgu.spl.mics.application.messages.TerminationBroadcast;
+import bgu.spl.mics.application.subscribers.M;
 
 import java.util.LinkedList;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.LinkedBlockingQueue;
-import java.util.concurrent.TimeUnit;
 
 
 /**
@@ -134,6 +136,15 @@ public class MessageBrokerImpl implements MessageBroker {
             System.out.println("NO SUBSCRIBERS FOR:" + b.getClass().getName());
             return;
         }
+
+        if (b.getClass() == TerminationBroadcast.class)
+            for (Subscriber subscriber : subscribers)
+                if (subscriber instanceof M)
+                    for (Message mess : SubscribersQueue.get(subscriber))
+                        if (mess instanceof MissionReceivedEvent)
+                            ((MissionReceivedEvent) mess).getMission().setTimeExpired(-1);
+
+
         try {
             synchronized (BroadcastSubscribers.get(b.getClass())) {
                 for (int i = 0; i < subscribers.size(); i++) {
@@ -178,6 +189,7 @@ public class MessageBrokerImpl implements MessageBroker {
 
     private <T> Subscriber getNextSub(Event<T> e) {
         Subscriber nextSubRoundRobin;
+        if (EventSubscribers.get(e.getClass()) == null) return null;
         synchronized (EventSubscribers.get(e.getClass())) {
             nextSubRoundRobin = EventSubscribers.get(e.getClass()).pollFirst();
             EventSubscribers.get(e.getClass()).addLast(nextSubRoundRobin);
@@ -205,16 +217,16 @@ public class MessageBrokerImpl implements MessageBroker {
     @SuppressWarnings({"unchecked", "rawtypes"})
     public void unregister(Subscriber m) {
         synchronized (lock2) {
+            /* If someone unregister it means the time to finish the program has come
+             * Then we resolve to null every non resolved futures */
+            for (Event event : toBeSolved.keySet())
+                if (!(event instanceof SendAgentsEvent) && EventSubscribers.containsKey(event.getClass()) && EventSubscribers.get(event.getClass()).contains(m))
+                    complete(event, null);
+
             /* Remove the register from all its registrations */
             if (m != null) {
                 delete(m, EventSubscribers);
                 delete(m, BroadcastSubscribers);
-            }
-
-            /* If someone unregister it means the time to finish the program has come
-             * Then we resolve to null every non resolved futures */
-            for (Event events : toBeSolved.keySet()) {
-                complete(events, null);
             }
 
             if (SubscribersQueue.get(m) != null) {
@@ -260,6 +272,15 @@ public class MessageBrokerImpl implements MessageBroker {
          * waiting if necessary until an element becomes available.
          * @return the head of the queue
          */
-        return SubscribersQueue.get(m).poll(2, TimeUnit.SECONDS);
+        return SubscribersQueue.get(m).take();
+    }
+
+
+    //TODO DELETE THIS !!!!!!!!!!!
+    public void clear() {
+        EventSubscribers.clear();
+        BroadcastSubscribers.clear();
+        SubscribersQueue.clear();
+        toBeSolved.clear();
     }
 }

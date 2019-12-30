@@ -1,0 +1,129 @@
+{
+  "total": 15,
+  "reports": [
+    {
+      "missionName": "Keep Summer safe.",
+      "M": 3,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "000"
+      ],
+      "agentsName": [
+        "Summer Smith"
+      ],
+      "gadget": "Time freezer",
+      "timeIssued": 18,
+      "QTime": 18,
+      "timeCreated": 21
+    },
+    {
+      "missionName": "I like what you got.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "001"
+      ],
+      "agentsName": [
+        "Beth\u0027s Mytholog"
+      ],
+      "gadget": "Cognition amplifier",
+      "timeIssued": 15,
+      "QTime": 15,
+      "timeCreated": 26
+    },
+    {
+      "missionName": "Keep Summer safe.",
+      "M": 2,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "001",
+        "000"
+      ],
+      "agentsName": [
+        "Beth\u0027s Mytholog",
+        "Summer Smith"
+      ],
+      "gadget": "Laser Gun",
+      "timeIssued": 16,
+      "QTime": 25,
+      "timeCreated": 37
+    },
+    {
+      "missionName": "I want that Mulan McNugget sauce, Morty!",
+      "M": 4,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "001"
+      ],
+      "agentsName": [
+        "Beth\u0027s Mytholog"
+      ],
+      "gadget": "Grappling Shoes",
+      "timeIssued": 20,
+      "QTime": 37,
+      "timeCreated": 50
+    },
+    {
+      "missionName": "Keep Summer safe.",
+      "M": 1,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "000"
+      ],
+      "agentsName": [
+        "Summer Smith"
+      ],
+      "gadget": "Love Potion",
+      "timeIssued": 47,
+      "QTime": 47,
+      "timeCreated": 54
+    },
+    {
+      "missionName": "Ohh yea, you gotta get schwifty.",
+      "M": 2,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "001"
+      ],
+      "agentsName": [
+        "Beth\u0027s Mytholog"
+      ],
+      "gadget": "Curse Remover",
+      "timeIssued": 52,
+      "QTime": 54,
+      "timeCreated": 62
+    },
+    {
+      "missionName": "So what if the most meaningful day in your life was a simulation operating at minimum complexity.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "000",
+        "002"
+      ],
+      "agentsName": [
+        "Summer Smith",
+        "Jan Michael Vincent"
+      ],
+      "gadget": "Emergency Bionic Arm",
+      "timeIssued": 60,
+      "QTime": 60,
+      "timeCreated": 63
+    },
+    {
+      "missionName": "It\u0027s fine, everything is fine. Theres an infinite number of realities Morty and in a few dozen of those I got lucky and turned everything back to normal.",
+      "M": 3,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "001"
+      ],
+      "agentsName": [
+        "Beth\u0027s Mytholog"
+      ],
+      "gadget": "Dream inceptor",
+      "timeIssued": 64,
+      "QTime": 64,
+      "timeCreated": 76
+    }
+  ]
+}

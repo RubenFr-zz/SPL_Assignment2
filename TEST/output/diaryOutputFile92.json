@@ -1,0 +1,113 @@
+{
+  "total": 30,
+  "reports": [
+    {
+      "missionName": "Nobody exists on purpose. Nobody belongs anywhere. Everybody is going to die.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "000",
+        "002"
+      ],
+      "agentsName": [
+        "Dr. Glip-Glop",
+        "Beth\u0027s Mytholog"
+      ],
+      "gadget": "Dark matter",
+      "timeIssued": 4,
+      "QTime": 4,
+      "timeCreated": 6
+    },
+    {
+      "missionName": "That just sounds like slavery with extra steps.",
+      "M": 2,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "004",
+        "002",
+        "005"
+      ],
+      "agentsName": [
+        "Mr. Meeseeks",
+        "Beth\u0027s Mytholog",
+        "Loggins"
+      ],
+      "gadget": "Butter-passing robot2",
+      "timeIssued": 6,
+      "QTime": 6,
+      "timeCreated": 13
+    },
+    {
+      "missionName": "Meeseeks are not born into this world fumbling for meaning, Jerry! We are created to serve a single purpose, for which we go to any lengths to fulfill.",
+      "M": 4,
+      "MoneyPenny": 8,
+      "agentsSerialNumbers": [
+        "000",
+        "003",
+        "005"
+      ],
+      "agentsName": [
+        "Dr. Glip-Glop",
+        "Shrimply Pibbles",
+        "Loggins"
+      ],
+      "gadget": "Purge Suit",
+      "timeIssued": 11,
+      "QTime": 13,
+      "timeCreated": 15
+    },
+    {
+      "missionName": "Listen, I\u0027m not the nicest guy in the universe, because I\u0027m the smartest, and being nice is something stupid people do to hedge their bets.",
+      "M": 3,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "004",
+        "003"
+      ],
+      "agentsName": [
+        "Mr. Meeseeks",
+        "Shrimply Pibbles"
+      ],
+      "gadget": "Dream inceptor",
+      "timeIssued": 10,
+      "QTime": 15,
+      "timeCreated": 20
+    },
+    {
+      "missionName": "Nobody exists on purpose. Nobody belongs anywhere. Everybody is going to die.",
+      "M": 5,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "002",
+        "003",
+        "001"
+      ],
+      "agentsName": [
+        "Beth\u0027s Mytholog",
+        "Shrimply Pibbles",
+        "Jan Michael Vincent"
+      ],
+      "gadget": "Interdimensional Goggles",
+      "timeIssued": 19,
+      "QTime": 20,
+      "timeCreated": 32
+    },
+    {
+      "missionName": "This sounds like something The One True Morty might say.",
+      "M": 7,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "003",
+        "004"
+      ],
+      "agentsName": [
+        "Shrimply Pibbles",
+        "Mr. Meeseeks"
+      ],
+      "gadget": "Futuristic guns",
+      "timeIssued": 30,
+      "QTime": 32,
+      "timeCreated": 42
+    }
+  ]
+}

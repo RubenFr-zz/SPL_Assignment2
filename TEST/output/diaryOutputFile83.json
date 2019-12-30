@@ -1,0 +1,103 @@
+{
+  "total": 48,
+  "reports": [
+    {
+      "missionName": "This isn\u0027t Game of Thrones, Morty.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "007",
+        "006"
+      ],
+      "agentsName": [
+        "Revolio \u0027Gearhead\u0027 Clockberg, Jr.",
+        "Tammy Gueterman"
+      ],
+      "gadget": "Shrink ray",
+      "timeIssued": 8,
+      "QTime": 8,
+      "timeCreated": 12
+    },
+    {
+      "missionName": "Oh Summer, haha first race war, huh?",
+      "M": 2,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "003"
+      ],
+      "agentsName": [
+        "Krombopulos Michael"
+      ],
+      "gadget": "Cognition amplifier",
+      "timeIssued": 8,
+      "QTime": 8,
+      "timeCreated": 16
+    },
+    {
+      "missionName": "HI! I\u0027M MR MEESEEKS! LOOK AT ME!",
+      "M": 4,
+      "MoneyPenny": 8,
+      "agentsSerialNumbers": [
+        "006",
+        "007"
+      ],
+      "agentsName": [
+        "Tammy Gueterman",
+        "Revolio \u0027Gearhead\u0027 Clockberg, Jr."
+      ],
+      "gadget": "Interdimensional cable TV box",
+      "timeIssued": 16,
+      "QTime": 16,
+      "timeCreated": 20
+    },
+    {
+      "missionName": "I\u0027m more than just a hammer.",
+      "M": 5,
+      "MoneyPenny": 10,
+      "agentsSerialNumbers": [
+        "004",
+        "007"
+      ],
+      "agentsName": [
+        "Scary Terry",
+        "Revolio \u0027Gearhead\u0027 Clockberg, Jr."
+      ],
+      "gadget": "Cognition amplifier4",
+      "timeIssued": 19,
+      "QTime": 20,
+      "timeCreated": 31
+    },
+    {
+      "missionName": "You\u0027re like Hitler, except...Hitler cared about Germany, or something.",
+      "M": 8,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "006",
+        "002"
+      ],
+      "agentsName": [
+        "Tammy Gueterman",
+        "Mr. Poopybutthole"
+      ],
+      "gadget": "Cognition amplifier2",
+      "timeIssued": 27,
+      "QTime": 27,
+      "timeCreated": 38
+    },
+    {
+      "missionName": "Ohh yea, you gotta get schwifty.",
+      "M": 10,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "007"
+      ],
+      "agentsName": [
+        "Revolio \u0027Gearhead\u0027 Clockberg, Jr."
+      ],
+      "gadget": "Futuristic guns2",
+      "timeIssued": 32,
+      "QTime": 32,
+      "timeCreated": 44
+    }
+  ]
+}

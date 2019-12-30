@@ -1,0 +1,81 @@
+{
+  "total": 51,
+  "reports": [
+    {
+      "missionName": "Nobody exists on purpose. Nobody belongs anywhere. Everybody is going to die.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "007",
+        "0010",
+        "008",
+        "001"
+      ],
+      "agentsName": [
+        "Mr. Poopybutthole",
+        "Scary Terry",
+        "Evil Morty",
+        "Cousin Nicky"
+      ],
+      "gadget": "Dark matter",
+      "timeIssued": 1,
+      "QTime": 1,
+      "timeCreated": 6
+    },
+    {
+      "missionName": "WUBBA LUBBA DUB DUBS!!!",
+      "M": 3,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "002"
+      ],
+      "agentsName": [
+        "Rick Sanchez"
+      ],
+      "gadget": "Purge Suit2",
+      "timeIssued": 7,
+      "QTime": 7,
+      "timeCreated": 13
+    },
+    {
+      "missionName": "Yo! What up my glip glops!",
+      "M": 2,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "003",
+        "007",
+        "000",
+        "004",
+        "006"
+      ],
+      "agentsName": [
+        "Snuffles",
+        "Mr. Poopybutthole",
+        "Squanchy",
+        "Baby Legs",
+        "King Jellybean"
+      ],
+      "gadget": "Time freezer2",
+      "timeIssued": 1,
+      "QTime": 5,
+      "timeCreated": 14
+    },
+    {
+      "missionName": "Oh Summer, haha first race war, huh?",
+      "M": 7,
+      "MoneyPenny": 10,
+      "agentsSerialNumbers": [
+        "007",
+        "003"
+      ],
+      "agentsName": [
+        "Mr. Poopybutthole",
+        "Snuffles"
+      ],
+      "gadget": "Time freezer3",
+      "timeIssued": 9,
+      "QTime": 14,
+      "timeCreated": 19
+    }
+  ]
+}

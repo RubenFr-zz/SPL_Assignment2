@@ -1,0 +1,77 @@
+{
+  "total": 51,
+  "reports": [
+    {
+      "missionName": "Little tip, Morty. Never clean DNA vials with your spit.",
+      "M": 2,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "003",
+        "009",
+        "001",
+        "002",
+        "0010"
+      ],
+      "agentsName": [
+        "King Jellybean",
+        "Beth Smith",
+        "Baby Legs",
+        "Abradolf Lincler",
+        "Scary Terry"
+      ],
+      "gadget": "Love Potion",
+      "timeIssued": 1,
+      "QTime": 1,
+      "timeCreated": 16
+    },
+    {
+      "missionName": "Yo! What up my glip glops!",
+      "M": 4,
+      "MoneyPenny": 8,
+      "agentsSerialNumbers": [
+        "007",
+        "001",
+        "006"
+      ],
+      "agentsName": [
+        "Beta VII",
+        "Baby Legs",
+        "Mr. Needful"
+      ],
+      "gadget": "Combat suit3",
+      "timeIssued": 11,
+      "QTime": 15,
+      "timeCreated": 22
+    },
+    {
+      "missionName": "Can somebody just let me out of here? If I die in a cage I lose a bet.",
+      "M": 6,
+      "MoneyPenny": 10,
+      "agentsSerialNumbers": [
+        "006"
+      ],
+      "agentsName": [
+        "Mr. Needful"
+      ],
+      "gadget": "Butter-passing robot3",
+      "timeIssued": 16,
+      "QTime": 22,
+      "timeCreated": 24
+    },
+    {
+      "missionName": "Oh yeah, If you think my Rick is Dead, then he is alive. If you think you\u0027re safe, then he\u0027s coming for you.",
+      "M": 5,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "004"
+      ],
+      "agentsName": [
+        "Revolio \u0027Gearhead\u0027 Clockberg, Jr."
+      ],
+      "gadget": "Love Potion2",
+      "timeIssued": 16,
+      "QTime": 16,
+      "timeCreated": 26
+    }
+  ]
+}

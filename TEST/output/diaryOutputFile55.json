@@ -1,0 +1,54 @@
+{
+  "total": 13,
+  "reports": [
+    {
+      "missionName": "I\u0027m the devil. What should I do when I fail? Give myself an ice cream?",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "000"
+      ],
+      "agentsName": [
+        "Squanchy"
+      ],
+      "gadget": "Ionic Defibulizer2",
+      "timeIssued": 1,
+      "QTime": 1,
+      "timeCreated": 9
+    },
+    {
+      "missionName": "Hello Jerry, come to rub my face in urine again?",
+      "M": 2,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "000",
+        "001"
+      ],
+      "agentsName": [
+        "Squanchy",
+        "Beth\u0027s Mytholog"
+      ],
+      "gadget": "Grappling Shoes",
+      "timeIssued": 1,
+      "QTime": 8,
+      "timeCreated": 20
+    },
+    {
+      "missionName": "Nobody exists on purpose. Nobody belongs anywhere. Everybody is going to die.",
+      "M": 3,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "000",
+        "001"
+      ],
+      "agentsName": [
+        "Squanchy",
+        "Beth\u0027s Mytholog"
+      ],
+      "gadget": "Curse Remover",
+      "timeIssued": 3,
+      "QTime": 21,
+      "timeCreated": 25
+    }
+  ]
+}

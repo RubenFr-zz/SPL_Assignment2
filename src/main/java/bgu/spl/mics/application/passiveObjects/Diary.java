@@ -74,6 +74,7 @@ public class Diary {
 
 		JsonObject jsonObject = new JsonObject();
 		jsonObject.addProperty("total", total.get());
+		jsonObject.addProperty("total reported", reports.size());
 		jsonObject.add("reports", reports);
 
 		FileWriter file = new FileWriter(filename);
@@ -113,10 +114,17 @@ public class Diary {
 		jsonReport.addProperty("MoneyPenny", report.getMoneypenny());
 		jsonReport.add("agentsSerialNumbers", serialsNumber);
 		jsonReport.add("agentsName", names);
+		jsonReport.addProperty("gadget", report.getGadgetName());
 		jsonReport.addProperty("timeIssued", report.getTimeIssued());
 		jsonReport.addProperty("QTime", report.getQTime());
 		jsonReport.addProperty("timeCreated", report.getTimeCreated());
 
 		return jsonReport;
+	}
+
+	//todo delete this!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	public void clear() {
+		reports.clear();
+		total.set(0);
 	}
 }

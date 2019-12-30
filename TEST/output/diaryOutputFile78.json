@@ -1,0 +1,37 @@
+{
+  "total": 51,
+  "reports": [
+    {
+      "missionName": "Go home and drink, grandpa.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "007"
+      ],
+      "agentsName": [
+        "Jessica"
+      ],
+      "gadget": "Ionic Defibulizer3",
+      "timeIssued": 2,
+      "QTime": 2,
+      "timeCreated": 13
+    },
+    {
+      "missionName": "HI! I\u0027M MR MEESEEKS! LOOK AT ME!",
+      "M": 3,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "001",
+        "004"
+      ],
+      "agentsName": [
+        "Loggins",
+        "Gazorpazorpfield"
+      ],
+      "gadget": "Shrink ray",
+      "timeIssued": 16,
+      "QTime": 16,
+      "timeCreated": 22
+    }
+  ]
+}

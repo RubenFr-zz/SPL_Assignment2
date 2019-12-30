@@ -1,0 +1,152 @@
+{
+  "total": 21,
+  "reports": [
+    {
+      "missionName": "Oh Summer, haha first race war, huh?",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "001"
+      ],
+      "agentsName": [
+        "Morty Jr."
+      ],
+      "gadget": "Neutrino bomb",
+      "timeIssued": 2,
+      "QTime": 2,
+      "timeCreated": 15
+    },
+    {
+      "missionName": "I like what you got.",
+      "M": 2,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "001",
+        "002"
+      ],
+      "agentsName": [
+        "Morty Jr.",
+        "Summer Smith"
+      ],
+      "gadget": "Love Potion",
+      "timeIssued": 7,
+      "QTime": 15,
+      "timeCreated": 16
+    },
+    {
+      "missionName": "No no, If I wanted to be sober, I wouldn’t have gotten drunk.",
+      "M": 4,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "002",
+        "000"
+      ],
+      "agentsName": [
+        "Summer Smith",
+        "King Jellybean"
+      ],
+      "gadget": "Dream inceptor",
+      "timeIssued": 15,
+      "QTime": 16,
+      "timeCreated": 20
+    },
+    {
+      "missionName": "Traditionally, science fairs are a father/son thing. Well, scientifically, traditions are an idiot thing.",
+      "M": 3,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "001",
+        "002"
+      ],
+      "agentsName": [
+        "Morty Jr.",
+        "Summer Smith"
+      ],
+      "gadget": "Cognition amplifier2",
+      "timeIssued": 7,
+      "QTime": 20,
+      "timeCreated": 32
+    },
+    {
+      "missionName": "What is my purpose. You pass butter. Oh My God. Yeah, Welcome to the club pal.",
+      "M": 5,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "000",
+        "001"
+      ],
+      "agentsName": [
+        "King Jellybean",
+        "Morty Jr."
+      ],
+      "gadget": "Demonic Alien Containment Box2",
+      "timeIssued": 30,
+      "QTime": 32,
+      "timeCreated": 37
+    },
+    {
+      "missionName": "This isn\u0027t Game of Thrones, Morty.",
+      "M": 4,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "001",
+        "002"
+      ],
+      "agentsName": [
+        "Morty Jr.",
+        "Summer Smith"
+      ],
+      "gadget": "Portal gun",
+      "timeIssued": 40,
+      "QTime": 40,
+      "timeCreated": 43
+    },
+    {
+      "missionName": "I\u0027m more than just a hammer.",
+      "M": 2,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "001"
+      ],
+      "agentsName": [
+        "Morty Jr."
+      ],
+      "gadget": "Timeline viewer",
+      "timeIssued": 40,
+      "QTime": 43,
+      "timeCreated": 55
+    },
+    {
+      "missionName": "You\u0027re like Hitler, except...Hitler cared about Germany, or something.",
+      "M": 3,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "002",
+        "000"
+      ],
+      "agentsName": [
+        "Summer Smith",
+        "King Jellybean"
+      ],
+      "gadget": "Demonic Alien Containment Box",
+      "timeIssued": 40,
+      "QTime": 43,
+      "timeCreated": 58
+    },
+    {
+      "missionName": "WUBBA LUBBA DUB DUBS!!!",
+      "M": 5,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "002"
+      ],
+      "agentsName": [
+        "Summer Smith"
+      ],
+      "gadget": "Grappling Shoes",
+      "timeIssued": 42,
+      "QTime": 58,
+      "timeCreated": 71
+    }
+  ]
+}

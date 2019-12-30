@@ -1,0 +1,116 @@
+{
+  "total": 28,
+  "reports": [
+    {
+      "missionName": "Uncertainty is inherently unsustainable. Eventually, everything either is or isn\u0027t.",
+      "M": 2,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "002"
+      ],
+      "agentsName": [
+        "Revolio \u0027Gearhead\u0027 Clockberg, Jr."
+      ],
+      "gadget": "Morty\u0027s Mind Blowers2",
+      "timeIssued": 3,
+      "QTime": 3,
+      "timeCreated": 14
+    },
+    {
+      "missionName": "Listen, I\u0027m not the nicest guy in the universe, because I\u0027m the smartest, and being nice is something stupid people do to hedge their bets.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "000",
+        "003"
+      ],
+      "agentsName": [
+        "Rick Sanchez",
+        "Jessica"
+      ],
+      "gadget": "Dark matter4",
+      "timeIssued": 2,
+      "QTime": 2,
+      "timeCreated": 16
+    },
+    {
+      "missionName": "Having a family doesn\u0027t mean that you stop being an individual.",
+      "M": 5,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "003"
+      ],
+      "agentsName": [
+        "Jessica"
+      ],
+      "gadget": "Shrink ray2",
+      "timeIssued": 15,
+      "QTime": 15,
+      "timeCreated": 22
+    },
+    {
+      "missionName": "You\u0027re our boy dog, don\u0027t even trip.",
+      "M": 4,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "000",
+        "001"
+      ],
+      "agentsName": [
+        "Rick Sanchez",
+        "Beth Smith"
+      ],
+      "gadget": "Morty\u0027s Mind Blowers",
+      "timeIssued": 13,
+      "QTime": 15,
+      "timeCreated": 27
+    },
+    {
+      "missionName": "Traditionally, science fairs are a father/son thing. Well, scientifically, traditions are an idiot thing.",
+      "M": 7,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "002"
+      ],
+      "agentsName": [
+        "Revolio \u0027Gearhead\u0027 Clockberg, Jr."
+      ],
+      "gadget": "Microverse battery",
+      "timeIssued": 16,
+      "QTime": 27,
+      "timeCreated": 29
+    },
+    {
+      "missionName": "Keep Summer safe.",
+      "M": 3,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "000"
+      ],
+      "agentsName": [
+        "Rick Sanchez"
+      ],
+      "gadget": "Grappling Shoes",
+      "timeIssued": 13,
+      "QTime": 27,
+      "timeCreated": 33
+    },
+    {
+      "missionName": "That\u0027s the difference between you and me, Morty. I never go back to the carpet store.",
+      "M": 8,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "003",
+        "000"
+      ],
+      "agentsName": [
+        "Jessica",
+        "Rick Sanchez"
+      ],
+      "gadget": "Dark matter",
+      "timeIssued": 16,
+      "QTime": 33,
+      "timeCreated": 34
+    }
+  ]
+}

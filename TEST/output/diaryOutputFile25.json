@@ -1,0 +1,90 @@
+{
+  "total": 44,
+  "reports": [
+    {
+      "missionName": "I don\u0027t get it and I don\u0027t need to.",
+      "M": 2,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "003",
+        "007",
+        "000"
+      ],
+      "agentsName": [
+        "Morty Jr.",
+        "Mr. Goldenfold",
+        "Tinkles"
+      ],
+      "gadget": "Butter-passing robot3",
+      "timeIssued": 2,
+      "QTime": 2,
+      "timeCreated": 3
+    },
+    {
+      "missionName": "Aw, c\u0027mon Rick. That doesn\u0027t seem so bad.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "001"
+      ],
+      "agentsName": [
+        "Tiny Rick"
+      ],
+      "gadget": "Cognition amplifier",
+      "timeIssued": 1,
+      "QTime": 1,
+      "timeCreated": 6
+    },
+    {
+      "missionName": "That just sounds like slavery with extra steps.",
+      "M": 6,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "001",
+        "000"
+      ],
+      "agentsName": [
+        "Tiny Rick",
+        "Tinkles"
+      ],
+      "gadget": "Interdimensional Goggles",
+      "timeIssued": 6,
+      "QTime": 6,
+      "timeCreated": 7
+    },
+    {
+      "missionName": "Hello Jerry, come to rub my face in urine again?",
+      "M": 3,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "005",
+        "003"
+      ],
+      "agentsName": [
+        "Eyeholes Man",
+        "Morty Jr."
+      ],
+      "gadget": "Love Potion",
+      "timeIssued": 3,
+      "QTime": 3,
+      "timeCreated": 9
+    },
+    {
+      "missionName": "Can somebody just let me out of here? If I die in a cage I lose a bet.",
+      "M": 5,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "006",
+        "002"
+      ],
+      "agentsName": [
+        "Jan Michael Vincent",
+        "Shrimply Pibbles"
+      ],
+      "gadget": "Space cruiser",
+      "timeIssued": 4,
+      "QTime": 4,
+      "timeCreated": 11
+    }
+  ]
+}

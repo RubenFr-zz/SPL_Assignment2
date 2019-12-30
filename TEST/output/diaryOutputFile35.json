@@ -1,0 +1,84 @@
+{
+  "total": 17,
+  "reports": [
+    {
+      "missionName": "That just sounds like slavery with extra steps.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "001",
+        "000"
+      ],
+      "agentsName": [
+        "Morty Jr.",
+        "Mr. Poopybutthole"
+      ],
+      "gadget": "Emergency Bionic Arm",
+      "timeIssued": 3,
+      "QTime": 3,
+      "timeCreated": 17
+    },
+    {
+      "missionName": "Snuffles was my slave name, you can call me snowball because my fur is pretty and white.",
+      "M": 2,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "001"
+      ],
+      "agentsName": [
+        "Morty Jr."
+      ],
+      "gadget": "Interdimensional Goggles2",
+      "timeIssued": 7,
+      "QTime": 17,
+      "timeCreated": 28
+    },
+    {
+      "missionName": "It\u0027s a figure of speech, Morty! They\u0027re bureaucrats! I don\u0027t respect them. Just keep shooting, Morty! You have no idea what prison is like here!",
+      "M": 4,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "000"
+      ],
+      "agentsName": [
+        "Mr. Poopybutthole"
+      ],
+      "gadget": "Meeseeks Box",
+      "timeIssued": 14,
+      "QTime": 17,
+      "timeCreated": 28
+    },
+    {
+      "missionName": "You\u0027re like Hitler, except...Hitler cared about Germany, or something.",
+      "M": 3,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "001"
+      ],
+      "agentsName": [
+        "Morty Jr."
+      ],
+      "gadget": "Neutrino bomb",
+      "timeIssued": 8,
+      "QTime": 27,
+      "timeCreated": 38
+    },
+    {
+      "missionName": "You\u0027re our boy dog, don\u0027t even trip.",
+      "M": 5,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "001",
+        "000"
+      ],
+      "agentsName": [
+        "Morty Jr.",
+        "Mr. Poopybutthole"
+      ],
+      "gadget": "Dream inceptor",
+      "timeIssued": 14,
+      "QTime": 38,
+      "timeCreated": 51
+    }
+  ]
+}

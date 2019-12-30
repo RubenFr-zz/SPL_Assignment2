@@ -1,0 +1,135 @@
+{
+  "total": 15,
+  "reports": [
+    {
+      "missionName": "You\u0027re like Hitler, except...Hitler cared about Germany, or something.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "000",
+        "001"
+      ],
+      "agentsName": [
+        "Loggins",
+        "Stealy"
+      ],
+      "gadget": "Interdimensional Goggles",
+      "timeIssued": 2,
+      "QTime": 2,
+      "timeCreated": 5
+    },
+    {
+      "missionName": "You\u0027re our boy dog, don\u0027t even trip.",
+      "M": 2,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "000",
+        "002"
+      ],
+      "agentsName": [
+        "Loggins",
+        "Beta VII"
+      ],
+      "gadget": "Particle Beam Wrist Watch \u0026 Snake Holster2",
+      "timeIssued": 6,
+      "QTime": 6,
+      "timeCreated": 8
+    },
+    {
+      "missionName": "The first rule of space travel kids is always check out distress beacons. Nine out of ten times it\u0027s a ship full of dead aliens and a bunch of free shit! One out of ten times it\u0027s a deadly trap, but... I\u0027m ready to roll those dice!",
+      "M": 4,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "000"
+      ],
+      "agentsName": [
+        "Loggins"
+      ],
+      "gadget": "Curse Remover",
+      "timeIssued": 7,
+      "QTime": 8,
+      "timeCreated": 13
+    },
+    {
+      "missionName": "This isn\u0027t Game of Thrones, Morty.",
+      "M": 5,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "000"
+      ],
+      "agentsName": [
+        "Loggins"
+      ],
+      "gadget": "Ionic Defibulizer",
+      "timeIssued": 11,
+      "QTime": 13,
+      "timeCreated": 14
+    },
+    {
+      "missionName": "You\u0027re our boy dog, don\u0027t even trip.",
+      "M": 3,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "000",
+        "002"
+      ],
+      "agentsName": [
+        "Loggins",
+        "Beta VII"
+      ],
+      "gadget": "Butter-passing robot",
+      "timeIssued": 34,
+      "QTime": 34,
+      "timeCreated": 35
+    },
+    {
+      "missionName": "So what if the most meaningful day in your life was a simulation operating at minimum complexity.",
+      "M": 2,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "001"
+      ],
+      "agentsName": [
+        "Stealy"
+      ],
+      "gadget": "Meeseeks Box",
+      "timeIssued": 32,
+      "QTime": 32,
+      "timeCreated": 36
+    },
+    {
+      "missionName": "I don\u0027t get it and I don\u0027t need to.",
+      "M": 4,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "001",
+        "000"
+      ],
+      "agentsName": [
+        "Stealy",
+        "Loggins"
+      ],
+      "gadget": "Dream inceptor",
+      "timeIssued": 35,
+      "QTime": 36,
+      "timeCreated": 51
+    },
+    {
+      "missionName": "Keep Summer safe.",
+      "M": 5,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "001",
+        "000"
+      ],
+      "agentsName": [
+        "Stealy",
+        "Loggins"
+      ],
+      "gadget": "Time freezer",
+      "timeIssued": 35,
+      "QTime": 51,
+      "timeCreated": 59
+    }
+  ]
+}

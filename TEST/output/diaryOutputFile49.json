@@ -1,0 +1,68 @@
+{
+  "total": 55,
+  "reports": [
+    {
+      "missionName": "Yo! What up my glip glops!",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "007",
+        "003",
+        "002",
+        "009",
+        "004"
+      ],
+      "agentsName": [
+        "Eyeholes Man",
+        "Revolio \u0027Gearhead\u0027 Clockberg, Jr.",
+        "Arthricia",
+        "Snuffles",
+        "Tinkles"
+      ],
+      "gadget": "Butter-passing robot2",
+      "timeIssued": 3,
+      "QTime": 3,
+      "timeCreated": 13
+    },
+    {
+      "missionName": "Keep Summer safe.",
+      "M": 2,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "005",
+        "008",
+        "007",
+        "004"
+      ],
+      "agentsName": [
+        "Mr. Poopybutthole",
+        "Summer Smith",
+        "Eyeholes Man",
+        "Tinkles"
+      ],
+      "gadget": "Cognition amplifier5",
+      "timeIssued": 3,
+      "QTime": 13,
+      "timeCreated": 23
+    },
+    {
+      "missionName": "What about the reality where Hitler cured cancer, Morty? The answer is: Don\u0027t think about it.",
+      "M": 9,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "003",
+        "002",
+        "009"
+      ],
+      "agentsName": [
+        "Revolio \u0027Gearhead\u0027 Clockberg, Jr.",
+        "Arthricia",
+        "Snuffles"
+      ],
+      "gadget": "Futuristic guns2",
+      "timeIssued": 13,
+      "QTime": 13,
+      "timeCreated": 26
+    }
+  ]
+}

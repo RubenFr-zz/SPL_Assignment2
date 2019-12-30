@@ -1,0 +1,135 @@
+{
+  "total": 15,
+  "reports": [
+    {
+      "missionName": "I want that Mulan McNugget sauce, Morty!",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "001"
+      ],
+      "agentsName": [
+        "King Jellybean"
+      ],
+      "gadget": "Froopyland Chalk",
+      "timeIssued": 5,
+      "QTime": 5,
+      "timeCreated": 6
+    },
+    {
+      "missionName": "There is no god, Summer; gotta rip that band-aid off now you\u0027ll thank me later.",
+      "M": 3,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "001"
+      ],
+      "agentsName": [
+        "King Jellybean"
+      ],
+      "gadget": "Cognition amplifier",
+      "timeIssued": 13,
+      "QTime": 13,
+      "timeCreated": 14
+    },
+    {
+      "missionName": "No no, If I wanted to be sober, I wouldn’t have gotten drunk.",
+      "M": 2,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "000",
+        "001"
+      ],
+      "agentsName": [
+        "Mr. Meeseeks",
+        "King Jellybean"
+      ],
+      "gadget": "Butter-passing robot",
+      "timeIssued": 13,
+      "QTime": 14,
+      "timeCreated": 22
+    },
+    {
+      "missionName": "Oh Summer, haha first race war, huh?",
+      "M": 4,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "001",
+        "000"
+      ],
+      "agentsName": [
+        "King Jellybean",
+        "Mr. Meeseeks"
+      ],
+      "gadget": "Froopyland Chalk2",
+      "timeIssued": 34,
+      "QTime": 34,
+      "timeCreated": 38
+    },
+    {
+      "missionName": "Go home and drink, grandpa.",
+      "M": 5,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "000"
+      ],
+      "agentsName": [
+        "Mr. Meeseeks"
+      ],
+      "gadget": "Interdimensional Goggles",
+      "timeIssued": 42,
+      "QTime": 42,
+      "timeCreated": 46
+    },
+    {
+      "missionName": "This sounds like something The One True Morty might say.",
+      "M": 2,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "001",
+        "000"
+      ],
+      "agentsName": [
+        "King Jellybean",
+        "Mr. Meeseeks"
+      ],
+      "gadget": "Space cruiser",
+      "timeIssued": 55,
+      "QTime": 55,
+      "timeCreated": 58
+    },
+    {
+      "missionName": "Great, now I have to take over an entire planet because of your stupid boobs.",
+      "M": 3,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "001",
+        "000"
+      ],
+      "agentsName": [
+        "King Jellybean",
+        "Mr. Meeseeks"
+      ],
+      "gadget": "Love Potion",
+      "timeIssued": 59,
+      "QTime": 59,
+      "timeCreated": 61
+    },
+    {
+      "missionName": "HI! I\u0027M MR MEESEEKS! LOOK AT ME!",
+      "M": 4,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "001",
+        "000"
+      ],
+      "agentsName": [
+        "King Jellybean",
+        "Mr. Meeseeks"
+      ],
+      "gadget": "Purge Suit",
+      "timeIssued": 60,
+      "QTime": 61,
+      "timeCreated": 69
+    }
+  ]
+}

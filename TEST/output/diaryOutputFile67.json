@@ -1,0 +1,84 @@
+{
+  "total": 52,
+  "reports": [
+    {
+      "missionName": "Weddings are basically funerals with cake.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "002"
+      ],
+      "agentsName": [
+        "Rick Sanchez"
+      ],
+      "gadget": "Froopyland Chalk",
+      "timeIssued": 4,
+      "QTime": 4,
+      "timeCreated": 11
+    },
+    {
+      "missionName": "WUBBA LUBBA DUB DUBS!!!",
+      "M": 4,
+      "MoneyPenny": 8,
+      "agentsSerialNumbers": [
+        "005",
+        "009"
+      ],
+      "agentsName": [
+        "Krombopulos Michael",
+        "Dr. Glip-Glop"
+      ],
+      "gadget": "Cognition amplifier",
+      "timeIssued": 9,
+      "QTime": 9,
+      "timeCreated": 11
+    },
+    {
+      "missionName": "Oh Summer, haha first race war, huh?",
+      "M": 2,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "000"
+      ],
+      "agentsName": [
+        "Morty Jr."
+      ],
+      "gadget": "Butter-passing robot4",
+      "timeIssued": 4,
+      "QTime": 4,
+      "timeCreated": 17
+    },
+    {
+      "missionName": "Oh Summer, haha first race war, huh?",
+      "M": 3,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "000"
+      ],
+      "agentsName": [
+        "Morty Jr."
+      ],
+      "gadget": "Meeseeks Box4",
+      "timeIssued": 7,
+      "QTime": 16,
+      "timeCreated": 19
+    },
+    {
+      "missionName": "Sometimes science is a lot more art, than science. A lot of people don\u0027t get that.",
+      "M": 5,
+      "MoneyPenny": 10,
+      "agentsSerialNumbers": [
+        "002",
+        "006"
+      ],
+      "agentsName": [
+        "Rick Sanchez",
+        "Snuffles"
+      ],
+      "gadget": "Curse Remover",
+      "timeIssued": 10,
+      "QTime": 10,
+      "timeCreated": 19
+    }
+  ]
+}

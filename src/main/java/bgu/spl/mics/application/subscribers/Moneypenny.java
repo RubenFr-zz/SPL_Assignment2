@@ -2,11 +2,11 @@ package bgu.spl.mics.application.subscribers;
 
 import bgu.spl.mics.Subscriber;
 import bgu.spl.mics.application.messages.*;
-import bgu.spl.mics.application.passiveObjects.Agent;
+import bgu.spl.mics.application.passiveObjects.MpFlag;
 import bgu.spl.mics.application.passiveObjects.Squad;
 
+import java.util.Arrays;
 import java.util.HashMap;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
 
@@ -21,64 +21,57 @@ import java.util.concurrent.CountDownLatch;
 public class Moneypenny extends Subscriber {
 
     private final Squad squad;
-    private int currTick;
+    private final MpFlag type;
     private CountDownLatch latch;
 
-    public Moneypenny(String name, CountDownLatch startSignal) {
+    public Moneypenny(String name, CountDownLatch startSignal, MpFlag mpFlag) {
         super(name);
         this.squad = Squad.getInstance();
         this.latch = startSignal;
+        this.type = mpFlag;
     }
 
     @Override
     protected void initialize() {
-        subscribeBroadcast(TickBroadcast.class, callback -> {
-            currTick = callback.getTick();
-        });
 
         subscribeBroadcast(TerminationBroadcast.class, callback -> {
-            HashMap<String, Agent> agents = (squad.getAgents());
-            List<String> serials = new LinkedList<>();
-            for (Agent agent : agents.values())
-                serials.add(agent.getSerialNumber());
-            squad.releaseAgents(serials);
-
+            squad.setTerminated(true);
             terminate();
-
         });
 
-        if (Integer.parseInt(getName()) % 2 == 0) {
+        if (type == MpFlag.GETTING_AGENTS) {
+
             subscribeEvent(AgentsAvailableEvent.class, callback -> {
 
-                System.out.println("MP" + getName() + ": M" + callback.getSendID() + ", Agents requested !");
+                System.out.println("MP" + getName() + ": M" + callback.getSendID() + ", Agents requested ! " + callback.getSerialNumbers());
                 List<String> agents = callback.getSerialNumbers();
-                boolean acquired = false;
+                java.util.Collections.sort(agents);
 
-                if (currTick <= callback.getExpired()) {
-                    try {
-                        acquired = squad.getAgents(agents);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
+                try {
+                    complete(callback, getResult(agents, squad.getAgents(agents)));
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
                 }
-                complete(callback, getResult(agents, acquired));
-
             });
-        } else {
+
+        } else if (type == MpFlag.SENDING_AGENTS){
+
             subscribeEvent(SendAgentsEvent.class, callback -> {
-                System.out.println("MP" + getName() + ": M" + callback.getSendID() + ", Sending Agents for: " + (callback.getDuration() * 100) + " Milli");
+                System.out.println("MP" + getName() + ": M" + callback.getSendID() + ", Sending Agents " + callback.getSerialNumbers()+ " for: " + (callback.getDuration() * 100) + " Milli");
+                squad.sendAgents(callback.getSerialNumbers(), callback.getDuration());
+                complete(callback, true);
 
-                if (currTick <= (callback.getExpired() - callback.getDuration())) {
-                    squad.sendAgents(callback.getSerialNumbers(), callback.getDuration());
-                    complete(callback, true);
-                } else complete(callback, false);
             });
+
+        } else if (type == MpFlag.RELEASING_AGENTS) {
 
             subscribeEvent(ReleaseAgentsEvent.class, callback -> {
                 squad.releaseAgents(callback.getSerialNumbers());
                 complete(callback, true);
             });
-        }
+
+        } else System.out.println("ERROR: Moneypenny don't have any type...");
+
         latch.countDown();
     }
 

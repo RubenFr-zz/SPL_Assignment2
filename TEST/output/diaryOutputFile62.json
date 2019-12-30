@@ -1,0 +1,97 @@
+{
+  "total": 30,
+  "reports": [
+    {
+      "missionName": "You\u0027re like Hitler, except...Hitler cared about Germany, or something.",
+      "M": 3,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "002",
+        "003"
+      ],
+      "agentsName": [
+        "Rick Sanchez",
+        "Krombopulos Michael"
+      ],
+      "gadget": "Neutrino bomb2",
+      "timeIssued": 1,
+      "QTime": 1,
+      "timeCreated": 5
+    },
+    {
+      "missionName": "HI! I\u0027M MR MEESEEKS! LOOK AT ME!",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "001"
+      ],
+      "agentsName": [
+        "Mr. Goldenfold"
+      ],
+      "gadget": "Demonic Alien Containment Box2",
+      "timeIssued": 1,
+      "QTime": 1,
+      "timeCreated": 7
+    },
+    {
+      "missionName": "Hello Jerry, come to rub my face in urine again?",
+      "M": 2,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "004"
+      ],
+      "agentsName": [
+        "Evil Morty"
+      ],
+      "gadget": "Laser Gun",
+      "timeIssued": 1,
+      "QTime": 1,
+      "timeCreated": 11
+    },
+    {
+      "missionName": "Oh Summer, haha first race war, huh?",
+      "M": 8,
+      "MoneyPenny": 8,
+      "agentsSerialNumbers": [
+        "000"
+      ],
+      "agentsName": [
+        "Arthricia"
+      ],
+      "gadget": "Interdimensional Goggles2",
+      "timeIssued": 3,
+      "QTime": 7,
+      "timeCreated": 11
+    },
+    {
+      "missionName": "Having a family doesn\u0027t mean that you stop being an individual.",
+      "M": 6,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "004"
+      ],
+      "agentsName": [
+        "Evil Morty"
+      ],
+      "gadget": "Purge Suit",
+      "timeIssued": 2,
+      "QTime": 10,
+      "timeCreated": 14
+    },
+    {
+      "missionName": "This sounds like something The One True Morty might say.",
+      "M": 4,
+      "MoneyPenny": 8,
+      "agentsSerialNumbers": [
+        "001"
+      ],
+      "agentsName": [
+        "Mr. Goldenfold"
+      ],
+      "gadget": "Dark matter2",
+      "timeIssued": 2,
+      "QTime": 6,
+      "timeCreated": 18
+    }
+  ]
+}

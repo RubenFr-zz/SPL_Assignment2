@@ -1,0 +1,99 @@
+{
+  "total": 26,
+  "reports": [
+    {
+      "missionName": "I hate to break it to you, but what people call \u0027love\u0027 is just a chemical reaction that compels animals to breed. It hits hard Morty then it slowly fades leaving you stranded in a failing marriage. I did it. Your parents are going to do it. Break the cycle Morty, rise above, focus on science.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "001",
+        "003"
+      ],
+      "agentsName": [
+        "Unity",
+        "Fart"
+      ],
+      "gadget": "Combat suit",
+      "timeIssued": 2,
+      "QTime": 2,
+      "timeCreated": 6
+    },
+    {
+      "missionName": "Sometimes science is a lot more art, than science. A lot of people don\u0027t get that.",
+      "M": 2,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "000"
+      ],
+      "agentsName": [
+        "Abradolf Lincler"
+      ],
+      "gadget": "Shrink ray",
+      "timeIssued": 4,
+      "QTime": 4,
+      "timeCreated": 17
+    },
+    {
+      "missionName": "There is no god, Summer; gotta rip that band-aid off now you\u0027ll thank me later.",
+      "M": 4,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "001",
+        "003"
+      ],
+      "agentsName": [
+        "Unity",
+        "Fart"
+      ],
+      "gadget": "Microverse battery",
+      "timeIssued": 5,
+      "QTime": 6,
+      "timeCreated": 18
+    },
+    {
+      "missionName": "Yo! What up my glip glops!",
+      "M": 9,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "002"
+      ],
+      "agentsName": [
+        "Revolio \u0027Gearhead\u0027 Clockberg, Jr."
+      ],
+      "gadget": "Interdimensional cable TV box",
+      "timeIssued": 9,
+      "QTime": 18,
+      "timeCreated": 22
+    },
+    {
+      "missionName": "Can somebody just let me out of here? If I die in a cage I lose a bet.",
+      "M": 3,
+      "MoneyPenny": 8,
+      "agentsSerialNumbers": [
+        "001"
+      ],
+      "agentsName": [
+        "Unity"
+      ],
+      "gadget": "Grappling Shoes",
+      "timeIssued": 5,
+      "QTime": 18,
+      "timeCreated": 33
+    },
+    {
+      "missionName": "Can somebody just let me out of here? If I die in a cage I lose a bet.",
+      "M": 4,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "000"
+      ],
+      "agentsName": [
+        "Abradolf Lincler"
+      ],
+      "gadget": "Time freezer",
+      "timeIssued": 23,
+      "QTime": 23,
+      "timeCreated": 38
+    }
+  ]
+}

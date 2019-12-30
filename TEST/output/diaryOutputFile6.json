@@ -1,0 +1,43 @@
+{
+  "total": 56,
+  "reports": [
+    {
+      "missionName": "Don’t even trip dawg.",
+      "M": 2,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "005"
+      ],
+      "agentsName": [
+        "King Jellybean"
+      ],
+      "gadget": "Portal gun3",
+      "timeIssued": 1,
+      "QTime": 1,
+      "timeCreated": 5
+    },
+    {
+      "missionName": "Little tip, Morty. Never clean DNA vials with your spit.",
+      "M": 4,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "007",
+        "008",
+        "000",
+        "004",
+        "002"
+      ],
+      "agentsName": [
+        "Scary Terry",
+        "Abradolf Lincler",
+        "Cousin Nicky",
+        "Morty Smith",
+        "Mr. Needful"
+      ],
+      "gadget": "Love Potion4",
+      "timeIssued": 1,
+      "QTime": 1,
+      "timeCreated": 11
+    }
+  ]
+}

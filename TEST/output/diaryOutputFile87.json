@@ -1,0 +1,112 @@
+{
+  "total": 23,
+  "reports": [
+    {
+      "missionName": "Weddings are basically funerals with cake.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "001"
+      ],
+      "agentsName": [
+        "Loggins"
+      ],
+      "gadget": "Portal gun",
+      "timeIssued": 3,
+      "QTime": 3,
+      "timeCreated": 12
+    },
+    {
+      "missionName": "The first rule of space travel kids is always check out distress beacons. Nine out of ten times it\u0027s a ship full of dead aliens and a bunch of free shit! One out of ten times it\u0027s a deadly trap, but... I\u0027m ready to roll those dice!",
+      "M": 3,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "002"
+      ],
+      "agentsName": [
+        "Tophat Jones"
+      ],
+      "gadget": "Dark matter2",
+      "timeIssued": 7,
+      "QTime": 7,
+      "timeCreated": 22
+    },
+    {
+      "missionName": "Having a family doesn\u0027t mean that you stop being an individual.",
+      "M": 2,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "000",
+        "001"
+      ],
+      "agentsName": [
+        "Shrimply Pibbles",
+        "Loggins"
+      ],
+      "gadget": "Purge Suit2",
+      "timeIssued": 4,
+      "QTime": 12,
+      "timeCreated": 25
+    },
+    {
+      "missionName": "There is no god, Summer; gotta rip that band-aid off now you\u0027ll thank me later.",
+      "M": 6,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "002"
+      ],
+      "agentsName": [
+        "Tophat Jones"
+      ],
+      "gadget": "Timeline viewer2",
+      "timeIssued": 23,
+      "QTime": 23,
+      "timeCreated": 34
+    },
+    {
+      "missionName": "HI! I\u0027M MR MEESEEKS! LOOK AT ME!",
+      "M": 4,
+      "MoneyPenny": 8,
+      "agentsSerialNumbers": [
+        "000"
+      ],
+      "agentsName": [
+        "Shrimply Pibbles"
+      ],
+      "gadget": "Timeline viewer",
+      "timeIssued": 11,
+      "QTime": 25,
+      "timeCreated": 36
+    },
+    {
+      "missionName": "Aww, gee, you got me there Rick.",
+      "M": 7,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "000"
+      ],
+      "agentsName": [
+        "Shrimply Pibbles"
+      ],
+      "gadget": "Ionic Defibulizer",
+      "timeIssued": 24,
+      "QTime": 36,
+      "timeCreated": 39
+    },
+    {
+      "missionName": "Great, now I have to take over an entire planet because of your stupid boobs.",
+      "M": 8,
+      "MoneyPenny": 8,
+      "agentsSerialNumbers": [
+        "002"
+      ],
+      "agentsName": [
+        "Tophat Jones"
+      ],
+      "gadget": "Shrink ray",
+      "timeIssued": 25,
+      "QTime": 34,
+      "timeCreated": 45
+    }
+  ]
+}

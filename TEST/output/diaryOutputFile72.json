@@ -1,0 +1,86 @@
+{
+  "total": 25,
+  "reports": [
+    {
+      "missionName": "What is my purpose. You pass butter. Oh My God. Yeah, Welcome to the club pal.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "001"
+      ],
+      "agentsName": [
+        "Unity"
+      ],
+      "gadget": "Cognition amplifier",
+      "timeIssued": 1,
+      "QTime": 1,
+      "timeCreated": 3
+    },
+    {
+      "missionName": "Having a family doesn\u0027t mean that you stop being an individual.",
+      "M": 4,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "000"
+      ],
+      "agentsName": [
+        "Mr. Needful"
+      ],
+      "gadget": "Ionic Defibulizer",
+      "timeIssued": 2,
+      "QTime": 2,
+      "timeCreated": 6
+    },
+    {
+      "missionName": "Having a family doesn\u0027t mean that you stop being an individual.",
+      "M": 2,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "003",
+        "002"
+      ],
+      "agentsName": [
+        "Eyeholes Man",
+        "Stealy"
+      ],
+      "gadget": "Curse Remover",
+      "timeIssued": 1,
+      "QTime": 1,
+      "timeCreated": 8
+    },
+    {
+      "missionName": "The first rule of space travel kids is always check out distress beacons. Nine out of ten times it\u0027s a ship full of dead aliens and a bunch of free shit! One out of ten times it\u0027s a deadly trap, but... I\u0027m ready to roll those dice!",
+      "M": 3,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "002",
+        "003"
+      ],
+      "agentsName": [
+        "Stealy",
+        "Eyeholes Man"
+      ],
+      "gadget": "Demonic Alien Containment Box",
+      "timeIssued": 1,
+      "QTime": 8,
+      "timeCreated": 9
+    },
+    {
+      "missionName": "He\u0027s not a hot girl. He can\u0027t just bail on his life and set up shop in someone else\u0027s.",
+      "M": 5,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "003",
+        "002"
+      ],
+      "agentsName": [
+        "Eyeholes Man",
+        "Stealy"
+      ],
+      "gadget": "Timeline viewer",
+      "timeIssued": 3,
+      "QTime": 9,
+      "timeCreated": 23
+    }
+  ]
+}

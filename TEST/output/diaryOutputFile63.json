@@ -1,0 +1,69 @@
+{
+  "total": 22,
+  "reports": [
+    {
+      "missionName": "Nobody exists on purpose. Nobody belongs anywhere. Everybody is going to die.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "000"
+      ],
+      "agentsName": [
+        "Mr. Needful"
+      ],
+      "gadget": "Portal gun",
+      "timeIssued": 1,
+      "QTime": 1,
+      "timeCreated": 15
+    },
+    {
+      "missionName": "Yo! What up my glip glops!",
+      "M": 2,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "001"
+      ],
+      "agentsName": [
+        "Beth Smith"
+      ],
+      "gadget": "Grappling Shoes2",
+      "timeIssued": 3,
+      "QTime": 3,
+      "timeCreated": 16
+    },
+    {
+      "missionName": "You\u0027re like Hitler, except...Hitler cared about Germany, or something.",
+      "M": 3,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "001",
+        "003"
+      ],
+      "agentsName": [
+        "Beth Smith",
+        "King Jellybean"
+      ],
+      "gadget": "Dream inceptor",
+      "timeIssued": 4,
+      "QTime": 15,
+      "timeCreated": 23
+    },
+    {
+      "missionName": "What is my purpose. You pass butter. Oh My God. Yeah, Welcome to the club pal.",
+      "M": 4,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "002",
+        "001"
+      ],
+      "agentsName": [
+        "Revolio \u0027Gearhead\u0027 Clockberg, Jr.",
+        "Beth Smith"
+      ],
+      "gadget": "Combat suit4",
+      "timeIssued": 6,
+      "QTime": 23,
+      "timeCreated": 34
+    }
+  ]
+}

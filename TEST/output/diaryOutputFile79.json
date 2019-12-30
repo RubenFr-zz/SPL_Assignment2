@@ -1,0 +1,37 @@
+{
+  "total": 21,
+  "reports": [
+    {
+      "missionName": "Don’t even trip dawg.",
+      "M": 3,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "001"
+      ],
+      "agentsName": [
+        "Tiny Rick"
+      ],
+      "gadget": "Grappling Shoes2",
+      "timeIssued": 1,
+      "QTime": 1,
+      "timeCreated": 9
+    },
+    {
+      "missionName": "Little tip, Morty. Never clean DNA vials with your spit.",
+      "M": 2,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "001",
+        "000"
+      ],
+      "agentsName": [
+        "Tiny Rick",
+        "Tinkles"
+      ],
+      "gadget": "Particle Beam Wrist Watch \u0026 Snake Holster",
+      "timeIssued": 1,
+      "QTime": 8,
+      "timeCreated": 20
+    }
+  ]
+}

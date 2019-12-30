@@ -1,0 +1,58 @@
+{
+  "total": 46,
+  "reports": [
+    {
+      "missionName": "Great, now I have to take over an entire planet because of your stupid boobs.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "002"
+      ],
+      "agentsName": [
+        "Birdperson"
+      ],
+      "gadget": "Space cruiser",
+      "timeIssued": 1,
+      "QTime": 1,
+      "timeCreated": 6
+    },
+    {
+      "missionName": "Yo! What up my glip glops!",
+      "M": 2,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "009",
+        "007"
+      ],
+      "agentsName": [
+        "Mr. Meeseeks",
+        "Beth\u0027s Mytholog"
+      ],
+      "gadget": "Dream inceptor",
+      "timeIssued": 8,
+      "QTime": 8,
+      "timeCreated": 21
+    },
+    {
+      "missionName": "Meeseeks are not born into this world fumbling for meaning, Jerry! We are created to serve a single purpose, for which we go to any lengths to fulfill.",
+      "M": 3,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "001",
+        "008",
+        "007",
+        "005"
+      ],
+      "agentsName": [
+        "Beth Smith",
+        "Tophat Jones",
+        "Beth\u0027s Mytholog",
+        "Snuffles"
+      ],
+      "gadget": "Microverse battery5",
+      "timeIssued": 8,
+      "QTime": 20,
+      "timeCreated": 27
+    }
+  ]
+}

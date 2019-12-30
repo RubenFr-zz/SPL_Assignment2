@@ -1,0 +1,101 @@
+{
+  "total": 17,
+  "reports": [
+    {
+      "missionName": "WUBBA LUBBA DUB DUBS!!!",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "001"
+      ],
+      "agentsName": [
+        "King Jellybean"
+      ],
+      "gadget": "Interdimensional Goggles",
+      "timeIssued": 4,
+      "QTime": 4,
+      "timeCreated": 8
+    },
+    {
+      "missionName": "Aww, gee, you got me there Rick.",
+      "M": 2,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "000"
+      ],
+      "agentsName": [
+        "Krombopulos Michael"
+      ],
+      "gadget": "Futuristic guns2",
+      "timeIssued": 8,
+      "QTime": 8,
+      "timeCreated": 15
+    },
+    {
+      "missionName": "That\u0027s the difference between you and me, Morty. I never go back to the carpet store.",
+      "M": 3,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "000",
+        "001"
+      ],
+      "agentsName": [
+        "Krombopulos Michael",
+        "King Jellybean"
+      ],
+      "gadget": "Portal gun",
+      "timeIssued": 9,
+      "QTime": 15,
+      "timeCreated": 17
+    },
+    {
+      "missionName": "Keep Summer safe.",
+      "M": 4,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "000"
+      ],
+      "agentsName": [
+        "Krombopulos Michael"
+      ],
+      "gadget": "Morty\u0027s Mind Blowers",
+      "timeIssued": 10,
+      "QTime": 17,
+      "timeCreated": 18
+    },
+    {
+      "missionName": "He\u0027s not a hot girl. He can\u0027t just bail on his life and set up shop in someone else\u0027s.",
+      "M": 2,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "001",
+        "000"
+      ],
+      "agentsName": [
+        "King Jellybean",
+        "Krombopulos Michael"
+      ],
+      "gadget": "Froopyland Chalk2",
+      "timeIssued": 15,
+      "QTime": 18,
+      "timeCreated": 23
+    },
+    {
+      "missionName": "WUBBA LUBBA DUB DUBS!!!",
+      "M": 3,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "001",
+        "000"
+      ],
+      "agentsName": [
+        "King Jellybean",
+        "Krombopulos Michael"
+      ],
+      "gadget": "Space cruiser",
+      "timeIssued": 19,
+      "QTime": 23,
+      "timeCreated": 24
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "total": 22,
+  "reports": [
+    {
+      "missionName": "This sounds like something The One True Morty might say.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "002",
+        "001"
+      ],
+      "agentsName": [
+        "Mr. Poopybutthole",
+        "Beth\u0027s Mytholog"
+      ],
+      "gadget": "Portal gun",
+      "timeIssued": 6,
+      "QTime": 6,
+      "timeCreated": 15
+    },
+    {
+      "missionName": "Aww, gee, you got me there Rick.",
+      "M": 2,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "001"
+      ],
+      "agentsName": [
+        "Beth\u0027s Mytholog"
+      ],
+      "gadget": "Dream inceptor",
+      "timeIssued": 8,
+      "QTime": 15,
+      "timeCreated": 25
+    },
+    {
+      "missionName": "This sounds like something The One True Morty might say.",
+      "M": 3,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "002"
+      ],
+      "agentsName": [
+        "Mr. Poopybutthole"
+      ],
+      "gadget": "Portal gun3",
+      "timeIssued": 9,
+      "QTime": 15,
+      "timeCreated": 29
+    },
+    {
+      "missionName": "This isn\u0027t Game of Thrones, Morty.",
+      "M": 4,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "002",
+        "001"
+      ],
+      "agentsName": [
+        "Mr. Poopybutthole",
+        "Beth\u0027s Mytholog"
+      ],
+      "gadget": "Emergency Bionic Arm",
+      "timeIssued": 11,
+      "QTime": 29,
+      "timeCreated": 39
+    },
+    {
+      "missionName": "There is no god, Summer; gotta rip that band-aid off now you\u0027ll thank me later.",
+      "M": 5,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "000",
+        "002"
+      ],
+      "agentsName": [
+        "Unity",
+        "Mr. Poopybutthole"
+      ],
+      "gadget": "Love Potion",
+      "timeIssued": 12,
+      "QTime": 38,
+      "timeCreated": 43
+    },
+    {
+      "missionName": "Yo! What up my glip glops!",
+      "M": 6,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "000",
+        "002"
+      ],
+      "agentsName": [
+        "Unity",
+        "Mr. Poopybutthole"
+      ],
+      "gadget": "Interdimensional Goggles",
+      "timeIssued": 12,
+      "QTime": 43,
+      "timeCreated": 49
+    }
+  ]
+}

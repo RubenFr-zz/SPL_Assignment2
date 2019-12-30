@@ -1,0 +1,56 @@
+{
+  "total": 57,
+  "reports": [
+    {
+      "missionName": "This sounds like something The One True Morty might say.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "004",
+        "007",
+        "002",
+        "003"
+      ],
+      "agentsName": [
+        "Shrimply Pibbles",
+        "Unity",
+        "Gazorpazorpfield",
+        "King Jellybean"
+      ],
+      "gadget": "Interdimensional Goggles4",
+      "timeIssued": 1,
+      "QTime": 1,
+      "timeCreated": 4
+    },
+    {
+      "missionName": "That just sounds like slavery with extra steps.",
+      "M": 3,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "008"
+      ],
+      "agentsName": [
+        "Jerry Smith"
+      ],
+      "gadget": "Curse Remover",
+      "timeIssued": 1,
+      "QTime": 1,
+      "timeCreated": 11
+    },
+    {
+      "missionName": "Where are my testicles, Summer?",
+      "M": 11,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "009"
+      ],
+      "agentsName": [
+        "Mr. Meeseeks"
+      ],
+      "gadget": "Dream inceptor2",
+      "timeIssued": 1,
+      "QTime": 1,
+      "timeCreated": 12
+    }
+  ]
+}

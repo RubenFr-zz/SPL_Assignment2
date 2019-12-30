@@ -1,0 +1,50 @@
+{
+  "total": 17,
+  "reports": [
+    {
+      "missionName": "Snuffles was my slave name, you can call me snowball because my fur is pretty and white.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "001"
+      ],
+      "agentsName": [
+        "Baby Legs"
+      ],
+      "gadget": "Interdimensional Goggles",
+      "timeIssued": 1,
+      "QTime": 1,
+      "timeCreated": 15
+    },
+    {
+      "missionName": "Well then get your shit together. Get it all together and put it in a backpack, all your shit, so it\u0027s together. ...and if you gotta take it somewhere, take it somewhere ya know? Take it to the shit store and sell it, or put it in a shit museum. I don\u0027t care what you do, you just gotta get it together... Get your shit together.",
+      "M": 2,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "001"
+      ],
+      "agentsName": [
+        "Baby Legs"
+      ],
+      "gadget": "Space cruiser",
+      "timeIssued": 3,
+      "QTime": 15,
+      "timeCreated": 19
+    },
+    {
+      "missionName": "Meeseeks are not born into this world fumbling for meaning, Jerry! We are created to serve a single purpose, for which we go to any lengths to fulfill.",
+      "M": 4,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "001"
+      ],
+      "agentsName": [
+        "Baby Legs"
+      ],
+      "gadget": "Dark matter",
+      "timeIssued": 8,
+      "QTime": 19,
+      "timeCreated": 31
+    }
+  ]
+}

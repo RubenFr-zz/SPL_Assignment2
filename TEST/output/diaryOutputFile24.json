@@ -1,0 +1,336 @@
+{
+  "total": 40,
+  "reports": [
+    {
+      "missionName": "I like what you got.",
+      "M": 3,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "005",
+        "002",
+        "001"
+      ],
+      "agentsName": [
+        "Unity",
+        "Scary Terry",
+        "Snuffles"
+      ],
+      "gadget": "Meeseeks Box",
+      "timeIssued": 6,
+      "QTime": 6,
+      "timeCreated": 8
+    },
+    {
+      "missionName": "Ohh yea, you gotta get schwifty.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "003",
+        "006"
+      ],
+      "agentsName": [
+        "Stealy",
+        "Beta VII"
+      ],
+      "gadget": "Shrink ray",
+      "timeIssued": 1,
+      "QTime": 1,
+      "timeCreated": 10
+    },
+    {
+      "missionName": "Traditionally, science fairs are a father/son thing. Well, scientifically, traditions are an idiot thing.",
+      "M": 5,
+      "MoneyPenny": 10,
+      "agentsSerialNumbers": [
+        "003",
+        "004",
+        "001"
+      ],
+      "agentsName": [
+        "Stealy",
+        "Jan Michael Vincent",
+        "Snuffles"
+      ],
+      "gadget": "Grappling Shoes2",
+      "timeIssued": 9,
+      "QTime": 10,
+      "timeCreated": 13
+    },
+    {
+      "missionName": "Aww, gee, you got me there Rick.",
+      "M": 4,
+      "MoneyPenny": 8,
+      "agentsSerialNumbers": [
+        "000"
+      ],
+      "agentsName": [
+        "Baby Legs"
+      ],
+      "gadget": "Emergency Bionic Arm",
+      "timeIssued": 8,
+      "QTime": 8,
+      "timeCreated": 20
+    },
+    {
+      "missionName": "Don’t even trip dawg.",
+      "M": 2,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "006"
+      ],
+      "agentsName": [
+        "Beta VII"
+      ],
+      "gadget": "Combat suit",
+      "timeIssued": 1,
+      "QTime": 9,
+      "timeCreated": 23
+    },
+    {
+      "missionName": "Traditionally, science fairs are a father/son thing. Well, scientifically, traditions are an idiot thing.",
+      "M": 7,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "003",
+        "000",
+        "006",
+        "002"
+      ],
+      "agentsName": [
+        "Stealy",
+        "Baby Legs",
+        "Beta VII",
+        "Scary Terry"
+      ],
+      "gadget": "Grappling Shoes",
+      "timeIssued": 13,
+      "QTime": 23,
+      "timeCreated": 25
+    },
+    {
+      "missionName": "Oh, I\u0027m sorry Morty, are you the scientist or are you the kid who wanted to get laid?",
+      "M": 9,
+      "MoneyPenny": 8,
+      "agentsSerialNumbers": [
+        "001",
+        "007"
+      ],
+      "agentsName": [
+        "Snuffles",
+        "Snowball"
+      ],
+      "gadget": "Meeseeks Box2",
+      "timeIssued": 15,
+      "QTime": 15,
+      "timeCreated": 27
+    },
+    {
+      "missionName": "I want that Mulan McNugget sauce, Morty!",
+      "M": 12,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "000"
+      ],
+      "agentsName": [
+        "Baby Legs"
+      ],
+      "gadget": "Demonic Alien Containment Box2",
+      "timeIssued": 26,
+      "QTime": 26,
+      "timeCreated": 28
+    },
+    {
+      "missionName": "You\u0027re like Hitler, except...Hitler cared about Germany, or something.",
+      "M": 8,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "003"
+      ],
+      "agentsName": [
+        "Stealy"
+      ],
+      "gadget": "Microverse battery2",
+      "timeIssued": 15,
+      "QTime": 28,
+      "timeCreated": 40
+    },
+    {
+      "missionName": "The first rule of space travel kids is always check out distress beacons. Nine out of ten times it\u0027s a ship full of dead aliens and a bunch of free shit! One out of ten times it\u0027s a deadly trap, but... I\u0027m ready to roll those dice!",
+      "M": 4,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "005",
+        "002",
+        "000",
+        "004"
+      ],
+      "agentsName": [
+        "Unity",
+        "Scary Terry",
+        "Baby Legs",
+        "Jan Michael Vincent"
+      ],
+      "gadget": "Curse Remover2",
+      "timeIssued": 40,
+      "QTime": 40,
+      "timeCreated": 46
+    },
+    {
+      "missionName": "WUBBA LUBBA DUB DUBS!!!",
+      "M": 5,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "001",
+        "004"
+      ],
+      "agentsName": [
+        "Snuffles",
+        "Jan Michael Vincent"
+      ],
+      "gadget": "Space cruiser",
+      "timeIssued": 42,
+      "QTime": 46,
+      "timeCreated": 55
+    },
+    {
+      "missionName": "I like what you got.",
+      "M": 7,
+      "MoneyPenny": 8,
+      "agentsSerialNumbers": [
+        "005"
+      ],
+      "agentsName": [
+        "Unity"
+      ],
+      "gadget": "Morty\u0027s Mind Blowers",
+      "timeIssued": 45,
+      "QTime": 46,
+      "timeCreated": 58
+    },
+    {
+      "missionName": "Well then get your shit together. Get it all together and put it in a backpack, all your shit, so it\u0027s together. ...and if you gotta take it somewhere, take it somewhere ya know? Take it to the shit store and sell it, or put it in a shit museum. I don\u0027t care what you do, you just gotta get it together... Get your shit together.",
+      "M": 8,
+      "MoneyPenny": 10,
+      "agentsSerialNumbers": [
+        "006"
+      ],
+      "agentsName": [
+        "Beta VII"
+      ],
+      "gadget": "Cognition amplifier",
+      "timeIssued": 54,
+      "QTime": 54,
+      "timeCreated": 63
+    },
+    {
+      "missionName": "I\u0027m more than just a hammer.",
+      "M": 1,
+      "MoneyPenny": 10,
+      "agentsSerialNumbers": [
+        "002"
+      ],
+      "agentsName": [
+        "Scary Terry"
+      ],
+      "gadget": "Love Potion3",
+      "timeIssued": 61,
+      "QTime": 61,
+      "timeCreated": 67
+    },
+    {
+      "missionName": "Aw, c\u0027mon Rick. That doesn\u0027t seem so bad.",
+      "M": 9,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "006",
+        "004"
+      ],
+      "agentsName": [
+        "Beta VII",
+        "Jan Michael Vincent"
+      ],
+      "gadget": "Time freezer",
+      "timeIssued": 57,
+      "QTime": 62,
+      "timeCreated": 68
+    },
+    {
+      "missionName": "Great, now I have to take over an entire planet because of your stupid boobs.",
+      "M": 6,
+      "MoneyPenny": 10,
+      "agentsSerialNumbers": [
+        "005",
+        "002",
+        "003"
+      ],
+      "agentsName": [
+        "Unity",
+        "Scary Terry",
+        "Stealy"
+      ],
+      "gadget": "Love Potion",
+      "timeIssued": 77,
+      "QTime": 77,
+      "timeCreated": 87
+    },
+    {
+      "missionName": "Having a family doesn\u0027t mean that you stop being an individual.",
+      "M": 7,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "000",
+        "006",
+        "005",
+        "001"
+      ],
+      "agentsName": [
+        "Baby Legs",
+        "Beta VII",
+        "Unity",
+        "Snuffles"
+      ],
+      "gadget": "Love Potion2",
+      "timeIssued": 78,
+      "QTime": 87,
+      "timeCreated": 89
+    },
+    {
+      "missionName": "That just sounds like slavery with extra steps.",
+      "M": 9,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "005",
+        "003"
+      ],
+      "agentsName": [
+        "Unity",
+        "Stealy"
+      ],
+      "gadget": "Grappling Shoes3",
+      "timeIssued": 88,
+      "QTime": 89,
+      "timeCreated": 95
+    },
+    {
+      "missionName": "Pluto\u0027s a planet.",
+      "M": 1,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "002",
+        "006",
+        "001",
+        "000"
+      ],
+      "agentsName": [
+        "Scary Terry",
+        "Beta VII",
+        "Snuffles",
+        "Baby Legs"
+      ],
+      "gadget": "Dark matter",
+      "timeIssued": 98,
+      "QTime": 98,
+      "timeCreated": 106
+    }
+  ]
+}

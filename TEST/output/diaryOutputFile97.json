@@ -1,0 +1,22 @@
+{
+  "total": 30,
+  "reports": [
+    {
+      "missionName": "Nobody exists on purpose. Nobody belongs anywhere. Everybody is going to die.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "002",
+        "005"
+      ],
+      "agentsName": [
+        "Summer Smith",
+        "Beta VII"
+      ],
+      "gadget": "Purge Suit",
+      "timeIssued": 1,
+      "QTime": 1,
+      "timeCreated": 9
+    }
+  ]
+}

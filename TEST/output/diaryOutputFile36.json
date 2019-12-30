@@ -1,0 +1,22 @@
+{
+  "total": 10,
+  "reports": [
+    {
+      "missionName": "Traditionally, science fairs are a father/son thing. Well, scientifically, traditions are an idiot thing.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "000",
+        "001"
+      ],
+      "agentsName": [
+        "Jessica",
+        "Unity"
+      ],
+      "gadget": "Meeseeks Box",
+      "timeIssued": 1,
+      "QTime": 1,
+      "timeCreated": 9
+    }
+  ]
+}

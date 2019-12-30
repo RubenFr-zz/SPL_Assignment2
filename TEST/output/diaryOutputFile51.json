@@ -1,0 +1,71 @@
+{
+  "total": 51,
+  "reports": [
+    {
+      "missionName": "He\u0027s not a hot girl. He can\u0027t just bail on his life and set up shop in someone else\u0027s.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "000"
+      ],
+      "agentsName": [
+        "Scary Terry"
+      ],
+      "gadget": "Demonic Alien Containment Box",
+      "timeIssued": 3,
+      "QTime": 3,
+      "timeCreated": 9
+    },
+    {
+      "missionName": "Oh yeah, If you think my Rick is Dead, then he is alive. If you think you\u0027re safe, then he\u0027s coming for you.",
+      "M": 13,
+      "MoneyPenny": 8,
+      "agentsSerialNumbers": [
+        "002"
+      ],
+      "agentsName": [
+        "Jerry Smith"
+      ],
+      "gadget": "Space cruiser2",
+      "timeIssued": 15,
+      "QTime": 15,
+      "timeCreated": 20
+    },
+    {
+      "missionName": "Snuffles was my slave name, you can call me snowball because my fur is pretty and white.",
+      "M": 3,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "001",
+        "003",
+        "006"
+      ],
+      "agentsName": [
+        "Rick Sanchez",
+        "Mr. Needful",
+        "Birdperson"
+      ],
+      "gadget": "Dream inceptor2",
+      "timeIssued": 6,
+      "QTime": 9,
+      "timeCreated": 24
+    },
+    {
+      "missionName": "Aww, gee, you got me there Rick.",
+      "M": 4,
+      "MoneyPenny": 8,
+      "agentsSerialNumbers": [
+        "008",
+        "000"
+      ],
+      "agentsName": [
+        "Tammy Gueterman",
+        "Scary Terry"
+      ],
+      "gadget": "Purge Suit3",
+      "timeIssued": 7,
+      "QTime": 9,
+      "timeCreated": 24
+    }
+  ]
+}

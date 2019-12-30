@@ -1,0 +1,184 @@
+{
+  "total": 23,
+  "reports": [
+    {
+      "missionName": "Nobody exists on purpose. Nobody belongs anywhere. Everybody is going to die.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "003",
+        "001"
+      ],
+      "agentsName": [
+        "Tammy Gueterman",
+        "Unity"
+      ],
+      "gadget": "Cognition amplifier2",
+      "timeIssued": 1,
+      "QTime": 1,
+      "timeCreated": 12
+    },
+    {
+      "missionName": "I hate to break it to you, but what people call \u0027love\u0027 is just a chemical reaction that compels animals to breed. It hits hard Morty then it slowly fades leaving you stranded in a failing marriage. I did it. Your parents are going to do it. Break the cycle Morty, rise above, focus on science.",
+      "M": 2,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "002"
+      ],
+      "agentsName": [
+        "King Jellybean"
+      ],
+      "gadget": "Laser Gun",
+      "timeIssued": 5,
+      "QTime": 5,
+      "timeCreated": 17
+    },
+    {
+      "missionName": "Well then get your shit together. Get it all together and put it in a backpack, all your shit, so it\u0027s together. ...and if you gotta take it somewhere, take it somewhere ya know? Take it to the shit store and sell it, or put it in a shit museum. I don\u0027t care what you do, you just gotta get it together... Get your shit together.",
+      "M": 3,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "000",
+        "003"
+      ],
+      "agentsName": [
+        "Mr. Goldenfold",
+        "Tammy Gueterman"
+      ],
+      "gadget": "Time freezer2",
+      "timeIssued": 9,
+      "QTime": 12,
+      "timeCreated": 27
+    },
+    {
+      "missionName": "It\u0027s a figure of speech, Morty! They\u0027re bureaucrats! I don\u0027t respect them. Just keep shooting, Morty! You have no idea what prison is like here!",
+      "M": 4,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "003",
+        "002"
+      ],
+      "agentsName": [
+        "Tammy Gueterman",
+        "King Jellybean"
+      ],
+      "gadget": "Ionic Defibulizer",
+      "timeIssued": 10,
+      "QTime": 27,
+      "timeCreated": 37
+    },
+    {
+      "missionName": "Having a family doesn\u0027t mean that you stop being an individual.",
+      "M": 5,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "003",
+        "001"
+      ],
+      "agentsName": [
+        "Tammy Gueterman",
+        "Unity"
+      ],
+      "gadget": "Time freezer",
+      "timeIssued": 10,
+      "QTime": 37,
+      "timeCreated": 49
+    },
+    {
+      "missionName": "Oh Summer, haha first race war, huh?",
+      "M": 2,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "003"
+      ],
+      "agentsName": [
+        "Tammy Gueterman"
+      ],
+      "gadget": "Timeline viewer",
+      "timeIssued": 30,
+      "QTime": 49,
+      "timeCreated": 55
+    },
+    {
+      "missionName": "It\u0027s fine, everything is fine. Theres an infinite number of realities Morty and in a few dozen of those I got lucky and turned everything back to normal.",
+      "M": 3,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "003"
+      ],
+      "agentsName": [
+        "Tammy Gueterman"
+      ],
+      "gadget": "Grappling Shoes",
+      "timeIssued": 32,
+      "QTime": 55,
+      "timeCreated": 61
+    },
+    {
+      "missionName": "Get off the high road Summer. We all got pink eye because you wouldn\u0027t stop texting on the toilet.",
+      "M": 4,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "000",
+        "002"
+      ],
+      "agentsName": [
+        "Mr. Goldenfold",
+        "King Jellybean"
+      ],
+      "gadget": "Portal gun",
+      "timeIssued": 67,
+      "QTime": 67,
+      "timeCreated": 77
+    },
+    {
+      "missionName": "Oh Summer, haha first race war, huh?",
+      "M": 6,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "000"
+      ],
+      "agentsName": [
+        "Mr. Goldenfold"
+      ],
+      "gadget": "Curse Remover2",
+      "timeIssued": 71,
+      "QTime": 77,
+      "timeCreated": 82
+    },
+    {
+      "missionName": "Meeseeks are not born into this world fumbling for meaning, Jerry! We are created to serve a single purpose, for which we go to any lengths to fulfill.",
+      "M": 1,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "001",
+        "003"
+      ],
+      "agentsName": [
+        "Unity",
+        "Tammy Gueterman"
+      ],
+      "gadget": "Love Potion",
+      "timeIssued": 72,
+      "QTime": 72,
+      "timeCreated": 83
+    },
+    {
+      "missionName": "Aw, c\u0027mon Rick. That doesn\u0027t seem so bad.",
+      "M": 4,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "002",
+        "001"
+      ],
+      "agentsName": [
+        "King Jellybean",
+        "Unity"
+      ],
+      "gadget": "Cognition amplifier",
+      "timeIssued": 81,
+      "QTime": 82,
+      "timeCreated": 90
+    }
+  ]
+}

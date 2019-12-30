@@ -1,0 +1,94 @@
+{
+  "total": 44,
+  "reports": [
+    {
+      "missionName": "I\u0027m the devil. What should I do when I fail? Give myself an ice cream?",
+      "M": 2,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "005"
+      ],
+      "agentsName": [
+        "Tophat Jones"
+      ],
+      "gadget": "Meeseeks Box",
+      "timeIssued": 3,
+      "QTime": 3,
+      "timeCreated": 9
+    },
+    {
+      "missionName": "Snuffles was my slave name, you can call me snowball because my fur is pretty and white.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "006",
+        "004",
+        "002"
+      ],
+      "agentsName": [
+        "Fart",
+        "Morty Jr.",
+        "Eyeholes Man"
+      ],
+      "gadget": "Futuristic guns",
+      "timeIssued": 1,
+      "QTime": 1,
+      "timeCreated": 15
+    },
+    {
+      "missionName": "So what if the most meaningful day in your life was a simulation operating at minimum complexity.",
+      "M": 5,
+      "MoneyPenny": 10,
+      "agentsSerialNumbers": [
+        "002",
+        "007"
+      ],
+      "agentsName": [
+        "Eyeholes Man",
+        "Jessica"
+      ],
+      "gadget": "Curse Remover",
+      "timeIssued": 8,
+      "QTime": 15,
+      "timeCreated": 25
+    },
+    {
+      "missionName": "The first rule of space travel kids is always check out distress beacons. Nine out of ten times it\u0027s a ship full of dead aliens and a bunch of free shit! One out of ten times it\u0027s a deadly trap, but... I\u0027m ready to roll those dice!",
+      "M": 4,
+      "MoneyPenny": 8,
+      "agentsSerialNumbers": [
+        "001",
+        "003",
+        "000",
+        "006"
+      ],
+      "agentsName": [
+        "Tammy Gueterman",
+        "Jerry\u0027s Mytholog",
+        "Mr. Meeseeks",
+        "Fart"
+      ],
+      "gadget": "Futuristic guns2",
+      "timeIssued": 6,
+      "QTime": 15,
+      "timeCreated": 27
+    },
+    {
+      "missionName": "Great, now I have to take over an entire planet because of your stupid boobs.",
+      "M": 3,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "004",
+        "005"
+      ],
+      "agentsName": [
+        "Morty Jr.",
+        "Tophat Jones"
+      ],
+      "gadget": "Dark matter",
+      "timeIssued": 4,
+      "QTime": 15,
+      "timeCreated": 29
+    }
+  ]
+}

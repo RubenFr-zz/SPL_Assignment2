@@ -1,0 +1,201 @@
+{
+  "total": 35,
+  "reports": [
+    {
+      "missionName": "Snuffles was my slave name, you can call me snowball because my fur is pretty and white.",
+      "M": 2,
+      "MoneyPenny": 4,
+      "agentsSerialNumbers": [
+        "002"
+      ],
+      "agentsName": [
+        "Jessica"
+      ],
+      "gadget": "Ionic Defibulizer3",
+      "timeIssued": 7,
+      "QTime": 7,
+      "timeCreated": 9
+    },
+    {
+      "missionName": "Oh, I\u0027m sorry Morty, are you the scientist or are you the kid who wanted to get laid?",
+      "M": 3,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "003",
+        "004"
+      ],
+      "agentsName": [
+        "Rick Sanchez",
+        "Stealy"
+      ],
+      "gadget": "Butter-passing robot3",
+      "timeIssued": 8,
+      "QTime": 8,
+      "timeCreated": 11
+    },
+    {
+      "missionName": "Well then get your shit together. Get it all together and put it in a backpack, all your shit, so it\u0027s together. ...and if you gotta take it somewhere, take it somewhere ya know? Take it to the shit store and sell it, or put it in a shit museum. I don\u0027t care what you do, you just gotta get it together... Get your shit together.",
+      "M": 5,
+      "MoneyPenny": 10,
+      "agentsSerialNumbers": [
+        "003",
+        "005",
+        "004"
+      ],
+      "agentsName": [
+        "Rick Sanchez",
+        "Mr. Meeseeks",
+        "Stealy"
+      ],
+      "gadget": "Emergency Bionic Arm",
+      "timeIssued": 8,
+      "QTime": 11,
+      "timeCreated": 16
+    },
+    {
+      "missionName": "It\u0027s fine, everything is fine. Theres an infinite number of realities Morty and in a few dozen of those I got lucky and turned everything back to normal.",
+      "M": 1,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "001"
+      ],
+      "agentsName": [
+        "Jerry Smith"
+      ],
+      "gadget": "Dark matter",
+      "timeIssued": 6,
+      "QTime": 6,
+      "timeCreated": 17
+    },
+    {
+      "missionName": "Weddings are basically funerals with cake.",
+      "M": 9,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "003"
+      ],
+      "agentsName": [
+        "Rick Sanchez"
+      ],
+      "gadget": "Microverse battery3",
+      "timeIssued": 11,
+      "QTime": 16,
+      "timeCreated": 17
+    },
+    {
+      "missionName": "I\u0027m more than just a hammer.",
+      "M": 13,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "005"
+      ],
+      "agentsName": [
+        "Mr. Meeseeks"
+      ],
+      "gadget": "Shrink ray",
+      "timeIssued": 14,
+      "QTime": 16,
+      "timeCreated": 23
+    },
+    {
+      "missionName": "That\u0027s the difference between you and me, Morty. I never go back to the carpet store.",
+      "M": 10,
+      "MoneyPenny": 8,
+      "agentsSerialNumbers": [
+        "003",
+        "002",
+        "005"
+      ],
+      "agentsName": [
+        "Rick Sanchez",
+        "Jessica",
+        "Mr. Meeseeks"
+      ],
+      "gadget": "Timeline viewer2",
+      "timeIssued": 12,
+      "QTime": 23,
+      "timeCreated": 27
+    },
+    {
+      "missionName": "This isn\u0027t Game of Thrones, Morty.",
+      "M": 4,
+      "MoneyPenny": 8,
+      "agentsSerialNumbers": [
+        "001"
+      ],
+      "agentsName": [
+        "Jerry Smith"
+      ],
+      "gadget": "Futuristic guns5",
+      "timeIssued": 8,
+      "QTime": 17,
+      "timeCreated": 31
+    },
+    {
+      "missionName": "Oh yeah, If you think my Rick is Dead, then he is alive. If you think you\u0027re safe, then he\u0027s coming for you.",
+      "M": 7,
+      "MoneyPenny": 12,
+      "agentsSerialNumbers": [
+        "001"
+      ],
+      "agentsName": [
+        "Jerry Smith"
+      ],
+      "gadget": "Demonic Alien Containment Box2",
+      "timeIssued": 10,
+      "QTime": 30,
+      "timeCreated": 35
+    },
+    {
+      "missionName": "Pluto\u0027s a planet.",
+      "M": 3,
+      "MoneyPenny": 6,
+      "agentsSerialNumbers": [
+        "000",
+        "006",
+        "003"
+      ],
+      "agentsName": [
+        "Cousin Nicky",
+        "Beta VII",
+        "Rick Sanchez"
+      ],
+      "gadget": "Ionic Defibulizer4",
+      "timeIssued": 17,
+      "QTime": 27,
+      "timeCreated": 39
+    },
+    {
+      "missionName": "WUBBA LUBBA DUB DUBS!!!",
+      "M": 13,
+      "MoneyPenny": 2,
+      "agentsSerialNumbers": [
+        "005",
+        "002"
+      ],
+      "agentsName": [
+        "Mr. Meeseeks",
+        "Jessica"
+      ],
+      "gadget": "Space cruiser5",
+      "timeIssued": 26,
+      "QTime": 27,
+      "timeCreated": 42
+    },
+    {
+      "missionName": "There is no god, Summer; gotta rip that band-aid off now you\u0027ll thank me later.",
+      "M": 11,
+      "MoneyPenny": 10,
+      "agentsSerialNumbers": [
+        "001"
+      ],
+      "agentsName": [
+        "Jerry Smith"
+      ],
+      "gadget": "Futuristic guns4",
+      "timeIssued": 14,
+      "QTime": 35,
+      "timeCreated": 49
+    }
+  ]
+}
